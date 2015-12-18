@@ -1,0 +1,29 @@
+{
+  "name"            : "<%= appname %>",
+  "description"     : "...",
+  "version"         : "0.0.1",
+  "author"          : {
+    "name"  : "Your name",
+    "email" : "your@email.com",
+    "url"   : "https://your.github.io"
+  },
+  "license"         : "MIT",
+  "repository"      : {
+    "type" : "git",
+    "url"  : "git://github.com/yourid/<%= appname %>.git"
+  },
+  "devDependencies" : {
+    "angular2" : "latest",
+    "rxjs"     : "latest"
+  },
+  "jspm"            : {
+    "devDependencies" : {
+      "clean-css"  : "npm:clean-css@^3.4.8",
+      "typescript" : "npm:typescript@^1.7.5"
+    }
+  },
+  "scripts"         : {
+    "build"  : "jspm bundle app - dist/vendor.js dist/app.js",
+    "serve"  : "live-server --open=. --port=3004"
+  }
+}

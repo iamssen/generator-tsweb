@@ -1,0 +1,10 @@
+.idea
+*.iml
+
+node_modules
+*.log
+
+dist
+jspm_packages
+typings
+vendor
