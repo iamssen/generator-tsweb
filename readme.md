@@ -9,5 +9,8 @@ yo tsweb
 
 # Update log
 
+## 2015.12.20
+- Source code improved
+
 ## 2015.12.18
 - First release
