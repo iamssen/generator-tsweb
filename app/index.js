@@ -1,118 +1,17 @@
 'use strict';
 
-var chalk = require('chalk');
-var path = require('path');
-var yo = require('yeoman-generator');
-var ejs = require('ejs');
-
-let moduleList = [
-	{
-		name: 'typescript',
-		jspm: 'typescript'
-	},
-	{
-		name: 'css',
-		jspm: 'css'
-	},
-	{
-		name: 'clean-css',
-		jspm: 'npm:clean-css'
-	},
-	{
-		name: 'es6-promise',
-		jspm: 'npm:es6-promise',
-		tsd: 'es6-promise',
-		bundle: ['es6-promise']
-	},
-	{
-		name: 'es6-shim',
-		jspm: 'es6-shim'
-	},
-	{
-		name: 'angular2',
-		jspm: 'angular2',
-		npm: 'angular2',
-		bundle: ['angular2/core', 'angular2/common', 'angular2/platform/browser', 'angular2/router', 'angular2/http']
-	},
-	{
-		name: 'rxjs',
-		jspm: 'rxjs',
-		npm: 'rxjs',
-		bundle: ['rxjs'],
-		optional: {
-			name: 'RxJs',
-			checked: true
-		}
-	},
-	{
-		name: 'jquery',
-		jspm: 'jquery',
-		tsd: 'jquery',
-		bundle: ['jquery'],
-		optional: {
-			name: 'jQuery',
-			checked: true
-		}
-	},
-	{
-		name: 'lodash',
-		jspm: 'lodash',
-		tsd: 'lodash',
-		bundle: ['lodash'],
-		optional: {
-			name: 'Lodash',
-			checked: true
-		}
-	},
-	{
-		name: 'pixi.js',
-		jspm: 'pixi.js',
-		tsd: 'pixi.js',
-		bundle: ['pixi.js'],
-		optional: {
-			name: 'Pixi.js',
-			checked: false
-		}
-	},
-	{
-		name: 'd3',
-		jspm: 'd3',
-		tsd: 'd3',
-		bundle: ['d3'],
-		optional: {
-			name: 'D3',
-			checked: false
-		}
-	},
-	{
-		name: 'd3tip',
-		jspm: 'npm:d3tip',
-		npm: 'd3tip',
-		bundle: ['d3tip', 'd3tip/dist/d3tip.css!'],
-		optional: {
-			name: 'D3 Tooltip',
-			checked: false
-		}
-	},
-	{
-		name: 'tween.js',
-		jspm: 'tween.js',
-		tsd: 'tween.js',
-		bundle: ['tween.js'],
-		optional: {
-			name: 'Tween.js',
-			checked: false
-		}
-	}
-]
+let chalk = require('chalk');
+let path = require('path');
+let yo = require('yeoman-generator');
+let ejs = require('ejs');
+let moduleList = require('./modules.json');
 
 module.exports = yo.Base.extend({
 	constructor: function () {
 		yo.Base.apply(this, arguments);
 	},
 
-	//initializing: function () {
-	//},
+	//initializing: function () {},
 
 	prompting: function () {
 		let done = this.async();
@@ -213,8 +112,7 @@ module.exports = yo.Base.extend({
 		});
 		this.spawnCommand('tsd', ['install'].concat(tsd, ['--resolve', '--save']));
 	}
-	//,
-	//
+
 	//end: function () {
 	//	this.spawnCommand('npm', ['run', 'bundle']);
 	//}

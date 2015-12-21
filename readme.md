@@ -9,6 +9,10 @@ yo tsweb
 
 # Update log
 
+## 2015.12.21
+- Excluded ignore `/dist`
+- Separated `modules.json`
+
 ## 2015.12.20
 - Source code improved
 
