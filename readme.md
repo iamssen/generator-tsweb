@@ -9,6 +9,11 @@ yo tsweb
 
 # Update log
 
+## 2015.12.31
+- `[routerLink]` with `*ngFor`
+- Add `main.scss`
+- Remove `use strict`
+
 ## 2015.12.21
 - Excluded ignore `/dist`
 - Separated `modules.json`

@@ -1,4 +1,3 @@
-'use strict';
 import {Component, View, Inject} from 'angular2/core';
 import {SampleModel} from "../main/main.models";
 

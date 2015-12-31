@@ -1,4 +1,3 @@
-'use strict';
 import {Component, View} from 'angular2/core';
 
 @Component({

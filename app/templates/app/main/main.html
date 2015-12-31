@@ -1,8 +1,8 @@
-<div>
-	<a [routerLink]="['Index']">Index</a>
-	<span> | </span>
-	<a [routerLink]="['Sample']">Sample</a>
-</div>
+<ul class="main-menu">
+	<li *ngFor="#route of routeConfig">
+		<a [class.main-menu-active]="isActive(route.path)" [routerLink]="[route.name]">{{route.name}}</a>
+	</li>
+</ul>
 
 <div>
 	<router-outlet></router-outlet>
