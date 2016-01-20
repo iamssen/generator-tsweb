@@ -8,6 +8,6 @@ import {SampleModel} from "../main/main.models";
 	template: `<h1>hello {{model.appName}}</h1>`
 })
 export class Index {
-	constructor(@Inject(SampleModel) private model:SampleModel) {
+	constructor(private model:SampleModel) {
 	}
 }
