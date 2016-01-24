@@ -1,0 +1,18 @@
+ul.main-menu {
+  padding-left: 0;
+}
+
+ul.main-menu li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 4px;
+  font-size: 0.85rem;
+}
+
+ul.main-menu li a {
+  text-decoration: none;
+}
+
+ul.main-menu li a.main-menu-active {
+  text-decoration: underline;
+}

@@ -1,21 +1,25 @@
 {
-  "name"            : "<%= appname %>",
-  "description"     : "...",
-  "version"         : "0.0.1",
-  "author"          : {
-    "name"  : "Your name",
+  "name" : "<%= appname %>",
+  "description" : "...",
+  "version" : "0.0.1",
+  "author" : {
+    "name" : "Your name",
     "email" : "your@email.com",
-    "url"   : "https://your.github.io"
+    "url" : "https://your.github.io"
   },
-  "license"         : "MIT",
-  "repository"      : {
+  "license" : "MIT",
+  "repository" : {
     "type" : "git",
-    "url"  : "git://github.com/yourid/<%= appname %>.git"
+    "url" : "git://github.com/yourid/<%= appname %>.git"
   },
-  "jspm"            : {
+  "main" : "index.js",
+  "jspm" : {
   },
-  "scripts"         : {
-    "build" : "jspm bundle app - dist/vendor.js dist/app.js",
-    "serve" : "live-server --open=. --port=3004"
+  "scripts" : {
+    "build" : "gulp build.web",
+    "serve" : "live-server --open=. --port=3004",
+    "build.electron" : "gulp build.electron",
+    "serve.electron" : "electron .",
+    "bundle" : "gulp build.vendor"
   }
 }

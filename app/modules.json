@@ -1,23 +1,33 @@
 [
   {
-    "name": "typescript",
-    "jspm": "typescript"
+    "name": "gulp",
+    "npm": "gulp"
+  },
+  {
+    "name": "systemjs-builder",
+    "npm": "systemjs-builder"
+  },
+  {
+    "name": "babel",
+    "jspm": "babel"
+  },
+  {
+    "name": "ts",
+    "jspm": "ts"
   },
   {
     "name": "css",
     "jspm": "css"
   },
   {
-    "name": "sass",
-    "jspm": "scss=sass"
-  },
-  {
-    "name": "clean-css",
-    "jspm": "npm:clean-css"
-  },
-  {
     "name": "systemjs",
     "tsd": "systemjs"
+  },
+  {
+    "name": "es6-shim",
+    "jspm": "es6-shim",
+    "tsd": "es6-shim",
+    "bundle": ["es6-shim"]
   },
   {
     "name": "es6-promise",
@@ -26,23 +36,35 @@
     "bundle": ["es6-promise"]
   },
   {
-    "name": "es6-shim",
-    "jspm": "es6-shim"
-  },
-  {
     "name": "angular2",
     "jspm": "angular2",
     "npm": "angular2",
     "bundle": ["angular2/core", "angular2/common", "angular2/platform/browser", "angular2/router", "angular2/http"]
   },
   {
-    "name": "rxjs",
-    "jspm": "rxjs",
-    "npm": "rxjs",
-    "bundle": ["rxjs"],
+    "name": "angular2-reflow",
+    "jspm": "npm:angular2-reflow",
+    "npm": "angular2-reflow",
+    "bundle": ["angular2-reflow"]
+  },
+  {
+    "name": "d3",
+    "jspm": "d3",
+    "tsd": "d3",
+    "bundle": ["d3"],
     "optional": {
-      "name": "RxJs",
+      "name": "D3",
       "checked": true
+    }
+  },
+  {
+    "name": "d3tip",
+    "jspm": "npm:d3tip",
+    "npm": "d3tip",
+    "bundle": ["d3tip", "d3tip/dist/d3tip.css!"],
+    "optional": {
+      "name": "D3 Tooltip",
+      "checked": false
     }
   },
   {
@@ -56,13 +78,23 @@
     }
   },
   {
+    "name": "rxjs",
+    "jspm": "rxjs",
+    "npm": "rxjs",
+    "bundle": ["rxjs"],
+    "optional": {
+      "name": "RxJs",
+      "checked": false
+    }
+  },
+  {
     "name": "lodash",
     "jspm": "lodash",
     "tsd": "lodash",
     "bundle": ["lodash"],
     "optional": {
       "name": "Lodash",
-      "checked": true
+      "checked": false
     }
   },
   {
@@ -72,26 +104,6 @@
     "bundle": ["pixi.js"],
     "optional": {
       "name": "Pixi.js",
-      "checked": false
-    }
-  },
-  {
-    "name": "d3",
-    "jspm": "d3",
-    "tsd": "d3",
-    "bundle": ["d3"],
-    "optional": {
-      "name": "D3",
-      "checked": false
-    }
-  },
-  {
-    "name": "d3tip",
-    "jspm": "npm:d3tip",
-    "npm": "d3tip",
-    "bundle": ["d3tip", "d3tip/dist/d3tip.css!"],
-    "optional": {
-      "name": "D3 Tooltip",
       "checked": false
     }
   },

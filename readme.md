@@ -9,6 +9,11 @@ yo tsweb
 
 # Update log
 
+## 2016.1.25
+- Add electron build
+- Add `angular2-reflow`
+- Redesign all directory structure
+
 ## 2015.12.31
 - `[routerLink]` with `*ngFor`
 - Add `main.scss`

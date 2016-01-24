@@ -1,7 +1,7 @@
 {
   "name": "generator-tsweb",
   "description": "Yeoman generator for Typescript + Web",
-  "version": "2016.1.21",
+  "version": "2016.1.25",
   "author": {
     "name": "SSen",
     "email": "i@ssen.name",
@@ -22,7 +22,8 @@
   "keywords": [
     "yeoman-generator",
     "angular2",
-    "typescript"
+    "typescript",
+    "electron"
   ],
   "dependencies": {
     "chalk": "latest",
