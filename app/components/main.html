@@ -1,0 +1,19 @@
+<div class="main-menu">
+  <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar">
+      &#9776;
+    </button>
+    <div class="collapse navbar-toggleable-xs" id="navbar">
+      <a class="navbar-brand" href="#">TSWEB</a>
+      <ul class="nav navbar-nav">
+        <li *ngFor="#route of routeConfig" class="nav-item" [class.active]="isActive(route.path)">
+          <a class="nav-link" [routerLink]="[route.name]">{{route.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container main-content">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,44 @@
+{
+  "name": "tsweb",
+  "description": "...",
+  "version": "0.0.1",
+  "author": {
+    "name": "Your name",
+    "email": "your@email.com",
+    "url": "https://your.github.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yourid/tsweb.git"
+  },
+  "main": "index.js",
+  "jspm": {
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.2",
+      "angular2-reflow": "npm:angular2-reflow@^0.0.6",
+      "babel": "npm:babel-core@^6.4.5",
+      "clean-css": "npm:clean-css@^3.4.9",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "d3": "github:mbostock/d3@^3.5.14",
+      "es6-promise": "npm:es6-promise@^3.0.2",
+      "es6-shim": "github:es-shims/es6-shim@^0.34.2",
+      "jquery": "npm:jquery@^2.2.0",
+      "moment": "npm:moment@^2.11.1",
+      "request": "npm:request@^2.69.0",
+      "rxjs": "npm:rxjs@^5.0.0-beta.1",
+      "ts": "github:frankwallis/plugin-typescript@^2.5.6"
+    },
+    "devDependencies": {
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "scripts": {
+    "build": "gulp build.web",
+    "serve": "live-server --open=. --port=3004",
+    "build.electron": "gulp build.electron",
+    "serve.electron": "electron .",
+    "bundle": "gulp build.vendor"
+  }
+}
