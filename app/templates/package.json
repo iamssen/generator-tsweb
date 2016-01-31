@@ -16,10 +16,9 @@
   "jspm" : {
   },
   "scripts" : {
-    "build" : "gulp build.web",
+    "build" : "gulp build.web && gulp build.electron",
     "serve" : "live-server --open=. --port=3004",
-    "build.electron" : "gulp build.electron",
-    "serve.electron" : "electron .",
+    "electron" : "electron .",
     "bundle" : "gulp build.vendor"
   }
 }

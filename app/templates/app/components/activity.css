@@ -1,0 +1,19 @@
+h1.content-activity {
+  font-weight: 200;
+}
+
+div.content-activity h4 {
+  font-weight: 400;
+}
+
+div.content-activity div.card-block {
+  padding: 0.8rem;
+}
+
+div.content-activity div.card p.card-text {
+  line-height: 130%;
+}
+
+div.content-activity div.card a.btn {
+  margin-right: 4px;
+}

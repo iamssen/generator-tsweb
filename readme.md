@@ -7,12 +7,20 @@ cd your-project
 yo tsweb
 ```
 
+# Generated Files Preview
+
+<http://iamssen.github.io/generator-tsweb>
+
+
 # Update log
+
+## 2016.2.1
+- Redesign all
 
 ## 2016.1.25
 - Add electron build
 - Add `angular2-reflow`
-- Redesign all directory structure
+- Redesign all
 
 ## 2015.12.31
 - `[routerLink]` with `*ngFor`

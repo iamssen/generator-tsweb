@@ -1,7 +1,7 @@
 {
   "name": "generator-tsweb",
   "description": "Yeoman generator for Typescript + Web",
-  "version": "2016.1.25",
+  "version": "2016.2.1",
   "author": {
     "name": "SSen",
     "email": "i@ssen.name",

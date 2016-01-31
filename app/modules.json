@@ -20,6 +20,10 @@
     "jspm": "css"
   },
   {
+    "name": "clean-css",
+    "jspm": "npm:clean-css"
+  },
+  {
     "name": "systemjs",
     "tsd": "systemjs"
   },
@@ -84,7 +88,17 @@
     "bundle": ["rxjs"],
     "optional": {
       "name": "RxJs",
-      "checked": false
+      "checked": true
+    }
+  },
+  {
+    "name": "moment",
+    "jspm": "moment",
+    "tsd": "moment",
+    "bundle": ["moment"],
+    "optional": {
+      "name": "Moment.js",
+      "checked": true
     }
   },
   {
@@ -115,6 +129,15 @@
     "optional": {
       "name": "Tween.js",
       "checked": false
+    }
+  },
+  {
+    "name": "request",
+    "jspm": "npm:request",
+    "tsd": "request",
+    "optional": {
+      "name": "Request (for electron app)",
+      "checked": true
     }
   }
 ]

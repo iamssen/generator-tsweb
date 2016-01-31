@@ -1,5 +1,4 @@
 'use strict';
-
 let chalk = require('chalk');
 let path = require('path');
 let yo = require('yeoman-generator');
@@ -81,17 +80,31 @@ module.exports = yo.Base.extend({
 
   writing: {
     app: function () {
-      this.directory('app', 'app', null);
-      this.copy('_gitignore', '.gitignore');
-      this.copy('config.electron.js', 'config.electron.js');
-      this.copy('config.js', 'config.js');
-      this.copy('config.web.js', 'config.web.js');
-      this.copy('gulpfile.js', 'gulpfile.js');
-      this.copy('index.electron.html', 'index.electron.html');
-      this.copy('index.html', 'index.html');
-      this.copy('index.js', 'index.js');
-      this.copy('package.json', 'package.json');
-      this.copy('tsd.json', 'tsd.json');
+      [
+        'app',
+        'assets',
+        'contexts.electron',
+        'contexts.web'
+      ].forEach(directory => {
+        this.directory(directory, directory, null);
+      });
+
+      [
+        '_gitignore',
+        'config.electron.js',
+        'config.js',
+        'config.web.js',
+        'favicon.ico',
+        'gulpfile.js',
+        'index.electron.html',
+        'index.html',
+        'index.js',
+        'package.json',
+        'tsd.json'
+      ].forEach(file => {
+        this.copy(file, (file.charAt(0) === '_') ? `_${file.substr(1)}` : file);
+      });
+
       this.mkdir('dist');
     }
     //packageJson: function () {

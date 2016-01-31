@@ -6,14 +6,14 @@ gulp.task('build.vendor', function () {
     baseURL: "."
   })
   builder.loadConfigSync('./config.js')
-  builder.bundle('<%= bundles %>', 'dist/vendor.js')
+  builder.bundle('es6-shim + es6-promise + angular2/core + angular2/common + angular2/platform/browser + angular2/router + angular2/http + angular2-reflow + d3 + jquery + rxjs + moment', 'dist/vendor.js')
 })
 
 gulp.task('build.web', function () {
   var builder = new Builder({
     baseURL: ".",
     paths: {
-      "impl:*": "app/impl.web/*"
+      "contexts:*": "contexts.web/*"
     }
   })
   builder.loadConfigSync('./config.js')
@@ -24,7 +24,7 @@ gulp.task('build.electron', function () {
   var builder = new Builder({
     baseURL: __dirname,
     paths: {
-      "impl:*": "app/impl.electron/*"
+      "contexts:*": "contexts.electron/*"
     }
   })
   builder.loadConfigSync('./config.js')

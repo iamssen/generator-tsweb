@@ -1,0 +1,18 @@
+<h1 class="content-activity">Activities</h1>
+<div class="content-activity card-columns">
+  <div class="card" *ngFor="#item of items">
+    <img class="card-img-top" data-src="{{item.preview}}" alt="{{item.name}}" width="100%">
+    <div class="card-block">
+      <!--<h4 class="card-title">{{item.name}}</h4>-->
+      <h4 class="card-title">{{item.date}}</h4>
+      <p class="card-text">
+        {{item.name}}
+      </p>
+      <p class="card-text">
+        <a *ngFor="#link of item.links" href="{{link.url}}" class="btn btn-info btn-sm" target="_blank">
+          {{link.name}}
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
