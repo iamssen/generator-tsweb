@@ -6,34 +6,34 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "d3/d3.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     },
     "es6-promise/es6-promise.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     },
     "es6-shim/es6-shim.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
-    },
-    "systemjs/systemjs.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     },
     "jquery/jquery.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
-    },
-    "moment/moment.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
-    },
-    "moment/moment-node.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
-    },
-    "node/node.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     },
     "request/request.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
+    },
+    "moment/moment.d.ts": {
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     },
     "form-data/form-data.d.ts": {
-      "commit": "5d0f2126c8dac8fce0ff020218aea06607213b0d"
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
+    },
+    "node/node.d.ts": {
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
+    },
+    "systemjs/systemjs.d.ts": {
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
+    },
+    "moment/moment-node.d.ts": {
+      "commit": "3d2f9971a107e2eee2de3ec5318f5c54071e16ed"
     }
   }
 }

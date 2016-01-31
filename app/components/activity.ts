@@ -18,7 +18,7 @@ interface Item {
 }
 
 @ng.Component({
-  selector: 'content-jsfiddle',
+  selector: 'content-activity',
   templateUrl: 'app/components/activity.html'
 })
 export class Activity implements ng.OnInit {
@@ -30,8 +30,6 @@ export class Activity implements ng.OnInit {
   ngOnInit() {
     let subscription = this.activityService
       .activities()
-      .concatAll()
-      .bufferCount(100, 100)
       .map((activities:Activity[]) => activities.sort((a, b) => (a.date > b.date) ? -1 : 1))
       .map((activities:Activity[]) => {
         return activities
@@ -62,7 +60,7 @@ export class Activity implements ng.OnInit {
       .subscribe(
         x => this.items = x,
         e => console.log(e),
-        () => subscription.unsubscribe()
+        () => subscription && subscription.unsubscribe()
       )
   }
 }

@@ -73,8 +73,8 @@ System.config({
     "moment": "npm:moment@2.11.1",
     "request": "npm:request@2.69.0",
     "rxjs": "npm:rxjs@5.0.0-beta.1",
-    "ts": "github:frankwallis/plugin-typescript@2.5.6",
-    "github:frankwallis/plugin-typescript@2.5.6": {
+    "ts": "github:frankwallis/plugin-typescript@2.5.8",
+    "github:frankwallis/plugin-typescript@2.5.8": {
       "typescript": "npm:typescript@1.7.5"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -735,7 +735,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0"
     },
-    "npm:oauth-sign@0.8.0": {
+    "npm:oauth-sign@0.8.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
@@ -779,10 +779,7 @@ System.config({
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:pinkie-promise@2.0.0": {
-      "pinkie": "npm:pinkie@2.0.1"
-    },
-    "npm:pinkie@2.0.1": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
+      "pinkie": "npm:pinkie@2.0.2"
     },
     "npm:process-nextick-args@1.0.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -859,7 +856,7 @@ System.config({
       "json-stringify-safe": "npm:json-stringify-safe@5.0.1",
       "mime-types": "npm:mime-types@2.1.9",
       "node-uuid": "npm:node-uuid@1.4.7",
-      "oauth-sign": "npm:oauth-sign@0.8.0",
+      "oauth-sign": "npm:oauth-sign@0.8.1",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "qs": "npm:qs@6.0.2",
       "querystring": "github:jspm/nodelibs-querystring@0.1.0",

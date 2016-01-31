@@ -1,9 +1,9 @@
 import * as ng from 'angular2/core';
 import * as rx from 'rxjs';
 import * as service from '../services';
+import request from 'request';
 import {github, jsfiddle, Activity} from '../models';
 import {GITHUB_USER_ID, JSFIDDLE_USER_ID} from '../consts';
-import request from 'request';
 
 function http<T>(req):rx.Observable<T> {
   return rx.Observable.fromPromise<T>(new Promise((resolve, reject) => {
@@ -43,49 +43,5 @@ export class JsFiddleService implements service.JsFiddleService {
   }
 }
 
-export class ActivityService implements service.ActivityService {
-  constructor(@ng.Inject(service.GITHUB_SERVICE) private githubService:service.GithubService,
-              @ng.Inject(service.JSFIDDLE_SERVICE) private jsfiddleService:service.JsFiddleService) {
-  }
+export {ActivityService} from '../services';
 
-  activities():rx.Observable<Activity[]> {
-    return rx.Observable.merge(
-      this.githubService
-        .repositories()
-        .map<Activity[]>((repositories:github.Repository[]) => {
-          return repositories.map(repository => {
-            return {
-              name: repository.name,
-              date: new Date(repository.updated_at),
-              from: 'github',
-              github: repository
-            }
-          })
-        }),
-      this.githubService
-        .gists()
-        .map<Activity[]>((gists:github.Gist[]) => {
-          return gists.map(gist => {
-            return {
-              name: gist.description,
-              date: new Date(gist.updated_at),
-              from: 'gist',
-              gist: gist
-            }
-          })
-        }),
-      this.jsfiddleService
-        .fiddles()
-        .map<Activity[]>((fiddles:jsfiddle.Fiddle[]) => {
-          return fiddles.map(fiddle => {
-            return {
-              name: fiddle.title,
-              date: new Date(fiddle.created),
-              from: 'jsfiddle',
-              jsfiddle: fiddle
-            }
-          })
-        })
-    )
-  }
-}

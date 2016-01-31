@@ -1,6 +1,8 @@
 import * as ng from 'angular2/core';
+import * as rf from 'angular2-reflow';
 import * as rx from 'rxjs';
 import {github} from '../models';
+import {ActionEvent} from '../events';
 import {GITHUB_SERVICE, GithubService} from '../services';
 
 @ng.Component({
@@ -17,7 +19,7 @@ import {GITHUB_SERVICE, GithubService} from '../services';
   <h1>Github Gists</h1>
   <ul>
     <li *ngFor="#gist of gists">
-      <a href="{{gist.html_url}}" target="_blank">
+      <a (click)="openLink(gist.html_url)">
         {{gist.description}}
       </a>
     </li>
@@ -28,7 +30,12 @@ export class Github implements ng.OnInit {
   private repositories:github.Repository[];
   private gists:github.Gist[];
 
-  constructor(@ng.Inject(GITHUB_SERVICE) private githubService:GithubService) {
+  constructor(@ng.Inject(GITHUB_SERVICE) private githubService:GithubService,
+              @ng.Inject(rf.EVENT_BUS) private eventBus:rf.EventBus) {
+  }
+
+  openLink(url:string) {
+    this.eventBus.dispatchEvent(new ActionEvent(ActionEvent.ACTION, `Open Gist Link: ${url}`));
   }
 
   ngOnInit() {
@@ -37,7 +44,7 @@ export class Github implements ng.OnInit {
       .subscribe(
         x => this.repositories = x,
         e => console.log(e),
-        () => subscription1.unsubscribe()
+        () => subscription1 && subscription1.unsubscribe()
       );
 
     let subscription2 = this.githubService
@@ -45,7 +52,7 @@ export class Github implements ng.OnInit {
       .subscribe(
         x => this.gists = x,
         e => console.log(e),
-        () => subscription2.unsubscribe()
+        () => subscription2 && subscription2.unsubscribe()
       );
   }
 }

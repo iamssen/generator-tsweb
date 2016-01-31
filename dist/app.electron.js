@@ -1,15 +1,3 @@
-System.register("app/consts.ts", [], function(exports_1) {
-  var GITHUB_USER_ID,
-      JSFIDDLE_USER_ID;
-  return {
-    setters: [],
-    execute: function() {
-      exports_1("GITHUB_USER_ID", GITHUB_USER_ID = 'iamssen');
-      exports_1("JSFIDDLE_USER_ID", JSFIDDLE_USER_ID = 'iamssen');
-    }
-  };
-});
-
 System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_transform", ["./_stream_duplex", "core-util-is", "inherits", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
@@ -31350,254 +31338,252 @@ System.registerDynamic("github:jspm/nodelibs-fs@0.1.2", ["github:jspm/nodelibs-f
   return module.exports;
 });
 
-System.registerDynamic("npm:pinkie@2.0.1/index", ["process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pinkie@2.0.2/index", [], true, function($__require, exports, module) {
+  "use strict";
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  (function(process) {
-    'use strict';
-    var PENDING = 'pending';
-    var SETTLED = 'settled';
-    var FULFILLED = 'fulfilled';
-    var REJECTED = 'rejected';
-    var NOOP = function() {};
-    var isNode = typeof process !== 'undefined' && typeof process.emit === 'function';
-    var asyncSetTimer = typeof setImmediate === 'undefined' ? setTimeout : setImmediate;
-    var asyncQueue = [];
-    var asyncTimer;
-    function asyncFlush() {
-      for (var i = 0; i < asyncQueue.length; i++) {
-        asyncQueue[i][0](asyncQueue[i][1]);
-      }
-      asyncQueue = [];
-      asyncTimer = false;
+  var PENDING = 'pending';
+  var SETTLED = 'settled';
+  var FULFILLED = 'fulfilled';
+  var REJECTED = 'rejected';
+  var NOOP = function() {};
+  var isNode = global.process !== 'undefined' && typeof global.process.emit === 'function';
+  var asyncSetTimer = typeof setImmediate === 'undefined' ? setTimeout : setImmediate;
+  var asyncQueue = [];
+  var asyncTimer;
+  function asyncFlush() {
+    for (var i = 0; i < asyncQueue.length; i++) {
+      asyncQueue[i][0](asyncQueue[i][1]);
     }
-    function asyncCall(callback, arg) {
-      asyncQueue.push([callback, arg]);
-      if (!asyncTimer) {
-        asyncTimer = true;
-        asyncSetTimer(asyncFlush, 0);
+    asyncQueue = [];
+    asyncTimer = false;
+  }
+  function asyncCall(callback, arg) {
+    asyncQueue.push([callback, arg]);
+    if (!asyncTimer) {
+      asyncTimer = true;
+      asyncSetTimer(asyncFlush, 0);
+    }
+  }
+  function invokeResolver(resolver, promise) {
+    function resolvePromise(value) {
+      resolve(promise, value);
+    }
+    function rejectPromise(reason) {
+      reject(promise, reason);
+    }
+    try {
+      resolver(resolvePromise, rejectPromise);
+    } catch (e) {
+      rejectPromise(e);
+    }
+  }
+  function invokeCallback(subscriber) {
+    var owner = subscriber.owner;
+    var settled = owner._state;
+    var value = owner._data;
+    var callback = subscriber[settled];
+    var promise = subscriber.then;
+    if (typeof callback === 'function') {
+      settled = FULFILLED;
+      try {
+        value = callback(value);
+      } catch (e) {
+        reject(promise, e);
       }
     }
-    function invokeResolver(resolver, promise) {
-      function resolvePromise(value) {
+    if (!handleThenable(promise, value)) {
+      if (settled === FULFILLED) {
         resolve(promise, value);
       }
-      function rejectPromise(reason) {
-        reject(promise, reason);
-      }
-      try {
-        resolver(resolvePromise, rejectPromise);
-      } catch (e) {
-        rejectPromise(e);
+      if (settled === REJECTED) {
+        reject(promise, value);
       }
     }
-    function invokeCallback(subscriber) {
-      var owner = subscriber.owner;
-      var settled = owner._state;
-      var value = owner._data;
-      var callback = subscriber[settled];
-      var promise = subscriber.then;
-      if (typeof callback === 'function') {
-        settled = FULFILLED;
-        try {
-          value = callback(value);
-        } catch (e) {
-          reject(promise, e);
-        }
+  }
+  function handleThenable(promise, value) {
+    var resolved;
+    try {
+      if (promise === value) {
+        throw new TypeError('A promises callback cannot return that same promise.');
       }
-      if (!handleThenable(promise, value)) {
-        if (settled === FULFILLED) {
-          resolve(promise, value);
-        }
-        if (settled === REJECTED) {
-          reject(promise, value);
-        }
-      }
-    }
-    function handleThenable(promise, value) {
-      var resolved;
-      try {
-        if (promise === value) {
-          throw new TypeError('A promises callback cannot return that same promise.');
-        }
-        if (value && (typeof value === 'function' || typeof value === 'object')) {
-          var then = value.then;
-          if (typeof then === 'function') {
-            then.call(value, function(val) {
-              if (!resolved) {
-                resolved = true;
-                if (value === val) {
-                  fulfill(promise, val);
-                } else {
-                  resolve(promise, val);
-                }
+      if (value && (typeof value === 'function' || typeof value === 'object')) {
+        var then = value.then;
+        if (typeof then === 'function') {
+          then.call(value, function(val) {
+            if (!resolved) {
+              resolved = true;
+              if (value === val) {
+                fulfill(promise, val);
+              } else {
+                resolve(promise, val);
               }
-            }, function(reason) {
-              if (!resolved) {
-                resolved = true;
-                reject(promise, reason);
-              }
-            });
-            return true;
-          }
-        }
-      } catch (e) {
-        if (!resolved) {
-          reject(promise, e);
-        }
-        return true;
-      }
-      return false;
-    }
-    function resolve(promise, value) {
-      if (promise === value || !handleThenable(promise, value)) {
-        fulfill(promise, value);
-      }
-    }
-    function fulfill(promise, value) {
-      if (promise._state === PENDING) {
-        promise._state = SETTLED;
-        promise._data = value;
-        asyncCall(publishFulfillment, promise);
-      }
-    }
-    function reject(promise, reason) {
-      if (promise._state === PENDING) {
-        promise._state = SETTLED;
-        promise._data = reason;
-        asyncCall(publishRejection, promise);
-      }
-    }
-    function publish(promise) {
-      promise._then = promise._then.forEach(invokeCallback);
-    }
-    function publishFulfillment(promise) {
-      promise._state = FULFILLED;
-      publish(promise);
-    }
-    function publishRejection(promise) {
-      promise._state = REJECTED;
-      publish(promise);
-      if (!promise._handled && isNode) {
-        process.emit('unhandledRejection', promise._data, promise);
-      }
-    }
-    function notifyRejectionHandled(promise) {
-      process.emit('rejectionHandled', promise);
-    }
-    function Promise(resolver) {
-      if (typeof resolver !== 'function') {
-        throw new TypeError('Promise resolver ' + resolver + ' is not a function');
-      }
-      if (this instanceof Promise === false) {
-        throw new TypeError('Failed to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called as a function.');
-      }
-      this._then = [];
-      invokeResolver(resolver, this);
-    }
-    Promise.prototype = {
-      constructor: Promise,
-      _state: PENDING,
-      _then: null,
-      _data: undefined,
-      _handled: false,
-      then: function(onFulfillment, onRejection) {
-        var subscriber = {
-          owner: this,
-          then: new this.constructor(NOOP),
-          fulfilled: onFulfillment,
-          rejected: onRejection
-        };
-        if ((onRejection || onFulfillment) && !this._handled) {
-          this._handled = true;
-          if (this._state === REJECTED && isNode) {
-            asyncCall(notifyRejectionHandled, this);
-          }
-        }
-        if (this._state === FULFILLED || this._state === REJECTED) {
-          asyncCall(invokeCallback, subscriber);
-        } else {
-          this._then.push(subscriber);
-        }
-        return subscriber.then;
-      },
-      catch: function(onRejection) {
-        return this.then(null, onRejection);
-      }
-    };
-    Promise.all = function(promises) {
-      if (!Array.isArray(promises)) {
-        throw new TypeError('You must pass an array to Promise.all().');
-      }
-      return new Promise(function(resolve, reject) {
-        var results = [];
-        var remaining = 0;
-        function resolver(index) {
-          remaining++;
-          return function(value) {
-            results[index] = value;
-            if (!--remaining) {
-              resolve(results);
             }
-          };
+          }, function(reason) {
+            if (!resolved) {
+              resolved = true;
+              reject(promise, reason);
+            }
+          });
+          return true;
         }
-        for (var i = 0,
-            promise; i < promises.length; i++) {
-          promise = promises[i];
-          if (promise && typeof promise.then === 'function') {
-            promise.then(resolver(i), reject);
-          } else {
-            results[i] = promise;
-          }
-        }
-        if (!remaining) {
-          resolve(results);
-        }
-      });
-    };
-    Promise.race = function(promises) {
-      if (!Array.isArray(promises)) {
-        throw new TypeError('You must pass an array to Promise.race().');
       }
-      return new Promise(function(resolve, reject) {
-        for (var i = 0,
-            promise; i < promises.length; i++) {
-          promise = promises[i];
-          if (promise && typeof promise.then === 'function') {
-            promise.then(resolve, reject);
-          } else {
-            resolve(promise);
-          }
-        }
-      });
-    };
-    Promise.resolve = function(value) {
-      if (value && typeof value === 'object' && value.constructor === Promise) {
-        return value;
+    } catch (e) {
+      if (!resolved) {
+        reject(promise, e);
       }
-      return new Promise(function(resolve) {
-        resolve(value);
-      });
-    };
-    Promise.reject = function(reason) {
-      return new Promise(function(resolve, reject) {
-        reject(reason);
-      });
-    };
-    module.exports = Promise;
-  })($__require('process'));
+      return true;
+    }
+    return false;
+  }
+  function resolve(promise, value) {
+    if (promise === value || !handleThenable(promise, value)) {
+      fulfill(promise, value);
+    }
+  }
+  function fulfill(promise, value) {
+    if (promise._state === PENDING) {
+      promise._state = SETTLED;
+      promise._data = value;
+      asyncCall(publishFulfillment, promise);
+    }
+  }
+  function reject(promise, reason) {
+    if (promise._state === PENDING) {
+      promise._state = SETTLED;
+      promise._data = reason;
+      asyncCall(publishRejection, promise);
+    }
+  }
+  function publish(promise) {
+    promise._then = promise._then.forEach(invokeCallback);
+  }
+  function publishFulfillment(promise) {
+    promise._state = FULFILLED;
+    publish(promise);
+  }
+  function publishRejection(promise) {
+    promise._state = REJECTED;
+    publish(promise);
+    if (!promise._handled && isNode) {
+      global.process.emit('unhandledRejection', promise._data, promise);
+    }
+  }
+  function notifyRejectionHandled(promise) {
+    global.process.emit('rejectionHandled', promise);
+  }
+  function Promise(resolver) {
+    if (typeof resolver !== 'function') {
+      throw new TypeError('Promise resolver ' + resolver + ' is not a function');
+    }
+    if (this instanceof Promise === false) {
+      throw new TypeError('Failed to construct \'Promise\': Please use the \'new\' operator, this object constructor cannot be called as a function.');
+    }
+    this._then = [];
+    invokeResolver(resolver, this);
+  }
+  Promise.prototype = {
+    constructor: Promise,
+    _state: PENDING,
+    _then: null,
+    _data: undefined,
+    _handled: false,
+    then: function(onFulfillment, onRejection) {
+      var subscriber = {
+        owner: this,
+        then: new this.constructor(NOOP),
+        fulfilled: onFulfillment,
+        rejected: onRejection
+      };
+      if ((onRejection || onFulfillment) && !this._handled) {
+        this._handled = true;
+        if (this._state === REJECTED && isNode) {
+          asyncCall(notifyRejectionHandled, this);
+        }
+      }
+      if (this._state === FULFILLED || this._state === REJECTED) {
+        asyncCall(invokeCallback, subscriber);
+      } else {
+        this._then.push(subscriber);
+      }
+      return subscriber.then;
+    },
+    catch: function(onRejection) {
+      return this.then(null, onRejection);
+    }
+  };
+  Promise.all = function(promises) {
+    if (!Array.isArray(promises)) {
+      throw new TypeError('You must pass an array to Promise.all().');
+    }
+    return new Promise(function(resolve, reject) {
+      var results = [];
+      var remaining = 0;
+      function resolver(index) {
+        remaining++;
+        return function(value) {
+          results[index] = value;
+          if (!--remaining) {
+            resolve(results);
+          }
+        };
+      }
+      for (var i = 0,
+          promise; i < promises.length; i++) {
+        promise = promises[i];
+        if (promise && typeof promise.then === 'function') {
+          promise.then(resolver(i), reject);
+        } else {
+          results[i] = promise;
+        }
+      }
+      if (!remaining) {
+        resolve(results);
+      }
+    });
+  };
+  Promise.race = function(promises) {
+    if (!Array.isArray(promises)) {
+      throw new TypeError('You must pass an array to Promise.race().');
+    }
+    return new Promise(function(resolve, reject) {
+      for (var i = 0,
+          promise; i < promises.length; i++) {
+        promise = promises[i];
+        if (promise && typeof promise.then === 'function') {
+          promise.then(resolve, reject);
+        } else {
+          resolve(promise);
+        }
+      }
+    });
+  };
+  Promise.resolve = function(value) {
+    if (value && typeof value === 'object' && value.constructor === Promise) {
+      return value;
+    }
+    return new Promise(function(resolve) {
+      resolve(value);
+    });
+  };
+  Promise.reject = function(reason) {
+    return new Promise(function(resolve, reject) {
+      reject(reason);
+    });
+  };
+  module.exports = Promise;
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:pinkie@2.0.1", ["npm:pinkie@2.0.1/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pinkie@2.0.2", ["npm:pinkie@2.0.2/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('npm:pinkie@2.0.1/index');
+  module.exports = $__require('npm:pinkie@2.0.2/index');
   global.define = __define;
   return module.exports;
 });
@@ -33880,7 +33866,7 @@ System.registerDynamic("npm:caseless@0.11.0", ["npm:caseless@0.11.0/index.js"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:oauth-sign@0.8.0/index", ["crypto", "querystring"], true, function($__require, exports, module) {
+System.registerDynamic("npm:oauth-sign@0.8.1/index", ["crypto", "querystring"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33967,16 +33953,17 @@ System.registerDynamic("npm:oauth-sign@0.8.0/index", ["crypto", "querystring"], 
   exports.plaintext = plaintext;
   exports.sign = sign;
   exports.rfc3986 = rfc3986;
+  exports.generateBase = generateBase;
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:oauth-sign@0.8.0", ["npm:oauth-sign@0.8.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:oauth-sign@0.8.1", ["npm:oauth-sign@0.8.1/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('npm:oauth-sign@0.8.0/index.js');
+  module.exports = $__require('npm:oauth-sign@0.8.1/index.js');
   global.define = __define;
   return module.exports;
 });
@@ -54301,7 +54288,301 @@ System.registerDynamic("npm:request@2.69.0", ["npm:request@2.69.0/index.js"], tr
   return module.exports;
 });
 
-System.register("app/services/services.electron.ts", ["angular2/core", "rxjs", "../services", "../consts", "request"], function(exports_1) {
+System.register("app/consts.ts", [], function(exports_1) {
+  var GITHUB_USER_ID,
+      JSFIDDLE_USER_ID;
+  return {
+    setters: [],
+    execute: function() {
+      exports_1("GITHUB_USER_ID", GITHUB_USER_ID = 'iamssen');
+      exports_1("JSFIDDLE_USER_ID", JSFIDDLE_USER_ID = 'iamssen');
+    }
+  };
+});
+
+System.register("app/services/services.electron.ts", ["rxjs", "request", "../consts", "../services"], function(exports_1) {
+  var rx,
+      request_1,
+      consts_1;
+  var GithubService,
+      JsFiddleService;
+  function http(req) {
+    return rx.Observable.fromPromise(new Promise(function(resolve, reject) {
+      request_1.default(req, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+          resolve(JSON.parse(body));
+        } else {
+          reject(error);
+        }
+      });
+    }));
+  }
+  function githubHttp(url) {
+    return http({
+      url: url,
+      headers: {
+        'User-Agent': 'tsweb-http-request',
+        'Authorization': "token cd4981226b72e9bffd3f8796026aa6865c81cb73"
+      }
+    });
+  }
+  return {
+    setters: [function(rx_1) {
+      rx = rx_1;
+    }, function(request_1_1) {
+      request_1 = request_1_1;
+    }, function(consts_1_1) {
+      consts_1 = consts_1_1;
+    }, function(services_1_1) {
+      exports_1({"ActivityService": services_1_1["ActivityService"]});
+    }],
+    execute: function() {
+      GithubService = (function() {
+        function GithubService() {}
+        GithubService.prototype.repositories = function() {
+          return githubHttp("https://api.github.com/users/" + consts_1.GITHUB_USER_ID + "/repos");
+        };
+        GithubService.prototype.gists = function() {
+          return githubHttp("https://api.github.com/users/" + consts_1.GITHUB_USER_ID + "/gists");
+        };
+        return GithubService;
+      })();
+      exports_1("GithubService", GithubService);
+      JsFiddleService = (function() {
+        function JsFiddleService() {}
+        JsFiddleService.prototype.fiddles = function() {
+          return http("http://jsfiddle.net/api/user/" + consts_1.JSFIDDLE_USER_ID + "/demo/list.json");
+        };
+        return JsFiddleService;
+      })();
+      exports_1("JsFiddleService", JsFiddleService);
+    }
+  };
+});
+
+System.register("contexts.electron/main.ts", ["angular2/core", "angular2-reflow", "../app/services", "../app/services/services.electron", "../app/stores"], function(exports_1) {
+  var __extends = (this && this.__extends) || function(d, b) {
+    for (var p in b)
+      if (b.hasOwnProperty(p))
+        d[p] = b[p];
+    function __() {
+      this.constructor = d;
+    }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+  };
+  var ng,
+      rf,
+      services_1,
+      services_electron_1,
+      stores_1;
+  var ContextFactory;
+  return {
+    setters: [function(ng_1) {
+      ng = ng_1;
+    }, function(rf_1) {
+      rf = rf_1;
+    }, function(services_1_1) {
+      services_1 = services_1_1;
+    }, function(services_electron_1_1) {
+      services_electron_1 = services_electron_1_1;
+    }, function(stores_1_1) {
+      stores_1 = stores_1_1;
+    }],
+    execute: function() {
+      ContextFactory = (function(_super) {
+        __extends(ContextFactory, _super);
+        function ContextFactory() {
+          _super.apply(this, arguments);
+        }
+        ContextFactory.prototype.mapDependency = function() {
+          this.provide(new ng.Provider(stores_1.ACTIVITY_STORE, {useClass: stores_1.ActivityStore}));
+          this.provide(new ng.Provider(services_1.GITHUB_SERVICE, {useClass: services_electron_1.GithubService}));
+          this.provide(new ng.Provider(services_1.JSFIDDLE_SERVICE, {useClass: services_electron_1.JsFiddleService}));
+          this.provide(new ng.Provider(services_1.ACTIVITY_SERVICE, {useClass: services_electron_1.ActivityService}));
+        };
+        return ContextFactory;
+      })(rf.ContextFactory);
+      exports_1("ContextFactory", ContextFactory);
+    }
+  };
+});
+
+System.register("app/components/github.ts", ["angular2/core", "angular2-reflow", "../events", "../services"], function(exports_1) {
+  var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+      r = Reflect.decorate(decorators, target, key, desc);
+    else
+      for (var i = decorators.length - 1; i >= 0; i--)
+        if (d = decorators[i])
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+  };
+  var __metadata = (this && this.__metadata) || function(k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+      return Reflect.metadata(k, v);
+  };
+  var __param = (this && this.__param) || function(paramIndex, decorator) {
+    return function(target, key) {
+      decorator(target, key, paramIndex);
+    };
+  };
+  var ng,
+      rf,
+      events_1,
+      services_1;
+  var Github;
+  return {
+    setters: [function(ng_1) {
+      ng = ng_1;
+    }, function(rf_1) {
+      rf = rf_1;
+    }, function(events_1_1) {
+      events_1 = events_1_1;
+    }, function(services_1_1) {
+      services_1 = services_1_1;
+    }],
+    execute: function() {
+      Github = (function() {
+        function Github(githubService, eventBus) {
+          this.githubService = githubService;
+          this.eventBus = eventBus;
+        }
+        Github.prototype.openLink = function(url) {
+          this.eventBus.dispatchEvent(new events_1.ActionEvent(events_1.ActionEvent.ACTION, "Open Gist Link: " + url));
+        };
+        Github.prototype.ngOnInit = function() {
+          var _this = this;
+          var subscription1 = this.githubService.repositories().subscribe(function(x) {
+            return _this.repositories = x;
+          }, function(e) {
+            return console.log(e);
+          }, function() {
+            return subscription1 && subscription1.unsubscribe();
+          });
+          var subscription2 = this.githubService.gists().subscribe(function(x) {
+            return _this.gists = x;
+          }, function(e) {
+            return console.log(e);
+          }, function() {
+            return subscription2 && subscription2.unsubscribe();
+          });
+        };
+        Github = __decorate([ng.Component({
+          selector: 'content-github',
+          template: "\n  <h1>Github Repositories</h1>\n  <ul>\n    <li *ngFor=\"#repository of repositories\">\n      <a href=\"{{repository.html_url}}\" target=\"_blank\">\n        {{repository.name}}\n      </a>\n    </li>\n  </ul>\n  <h1>Github Gists</h1>\n  <ul>\n    <li *ngFor=\"#gist of gists\">\n      <a (click)=\"openLink(gist.html_url)\">\n        {{gist.description}}\n      </a>\n    </li>\n  </ul>\n  "
+        }), __param(0, ng.Inject(services_1.GITHUB_SERVICE)), __param(1, ng.Inject(rf.EVENT_BUS)), __metadata('design:paramtypes', [(typeof(_a = typeof services_1.GithubService !== 'undefined' && services_1.GithubService) === 'function' && _a) || Object, Object])], Github);
+        return Github;
+        var _a;
+      })();
+      exports_1("Github", Github);
+    }
+  };
+});
+
+System.register("app/components/jsfiddle.ts", ["angular2/core", "angular2-reflow", "../events", "../services"], function(exports_1) {
+  var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+      r = Reflect.decorate(decorators, target, key, desc);
+    else
+      for (var i = decorators.length - 1; i >= 0; i--)
+        if (d = decorators[i])
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+  };
+  var __metadata = (this && this.__metadata) || function(k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+      return Reflect.metadata(k, v);
+  };
+  var __param = (this && this.__param) || function(paramIndex, decorator) {
+    return function(target, key) {
+      decorator(target, key, paramIndex);
+    };
+  };
+  var ng,
+      rf,
+      events_1,
+      services_1;
+  var JsFiddle;
+  return {
+    setters: [function(ng_1) {
+      ng = ng_1;
+    }, function(rf_1) {
+      rf = rf_1;
+    }, function(events_1_1) {
+      events_1 = events_1_1;
+    }, function(services_1_1) {
+      services_1 = services_1_1;
+    }],
+    execute: function() {
+      JsFiddle = (function() {
+        function JsFiddle(jsfiddleService, eventBus) {
+          this.jsfiddleService = jsfiddleService;
+          this.eventBus = eventBus;
+        }
+        JsFiddle.prototype.openLink = function(url) {
+          this.eventBus.dispatchEvent(new events_1.ActionEvent(events_1.ActionEvent.ACTION, "Open Fiddle Link: " + url));
+        };
+        JsFiddle.prototype.ngOnInit = function() {
+          var _this = this;
+          var subscription = this.jsfiddleService.fiddles().subscribe(function(x) {
+            return _this.fiddles = x;
+          }, function(e) {
+            return console.log(e);
+          }, function() {
+            return subscription && subscription.unsubscribe();
+          });
+        };
+        JsFiddle = __decorate([ng.Component({
+          selector: 'content-jsfiddle',
+          template: "\n  <h1>Js Fiddle</h1>\n  <ul>\n    <li *ngFor=\"#fiddle of fiddles\">\n      <a (click)=\"openLink(fiddle.url)\">\n        {{fiddle.title}}\n      </a>\n    </li>\n  </ul>\n  "
+        }), __param(0, ng.Inject(services_1.JSFIDDLE_SERVICE)), __param(1, ng.Inject(rf.EVENT_BUS)), __metadata('design:paramtypes', [(typeof(_a = typeof services_1.JsFiddleService !== 'undefined' && services_1.JsFiddleService) === 'function' && _a) || Object, Object])], JsFiddle);
+        return JsFiddle;
+        var _a;
+      })();
+      exports_1("JsFiddle", JsFiddle);
+    }
+  };
+});
+
+System.register("app/stores.ts", [], function(exports_1) {
+  var ACTIVITY_STORE,
+      CACHE_LIFE,
+      ActivityStore;
+  return {
+    setters: [],
+    execute: function() {
+      exports_1("ACTIVITY_STORE", ACTIVITY_STORE = "activityStore");
+      CACHE_LIFE = 1000 * 60;
+      ActivityStore = (function() {
+        function ActivityStore() {}
+        Object.defineProperty(ActivityStore.prototype, "activities", {
+          get: function() {
+            if (this._activities && (+new Date - this._activitiesCached) > CACHE_LIFE) {
+              this._activities = null;
+            }
+            return this._activities;
+          },
+          set: function(value) {
+            this._activitiesCached = +new Date;
+            this._activities = value;
+          },
+          enumerable: true,
+          configurable: true
+        });
+        return ActivityStore;
+      })();
+      exports_1("ActivityStore", ActivityStore);
+    }
+  };
+});
+
+System.register("app/services.ts", ["angular2/core", "rxjs", "./stores"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
     var c = arguments.length,
         r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
@@ -54325,70 +54606,34 @@ System.register("app/services/services.electron.ts", ["angular2/core", "rxjs", "
   };
   var ng,
       rx,
-      service,
-      consts_1,
-      request_1;
-  var GithubService,
-      JsFiddleService,
+      stores_1;
+  var GITHUB_SERVICE,
+      JSFIDDLE_SERVICE,
+      ACTIVITY_SERVICE,
       ActivityService;
-  function http(req) {
-    return rx.Observable.fromPromise(new Promise(function(resolve, reject) {
-      request_1.default(req, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-          resolve(JSON.parse(body));
-        } else {
-          reject(error);
-        }
-      });
-    }));
-  }
-  function githubHttp(url) {
-    return http({
-      url: url,
-      headers: {
-        'User-Agent': 'tsweb-http-request',
-        'Authorization': "token cd4981226b72e9bffd3f8796026aa6865c81cb73"
-      }
-    });
-  }
   return {
     setters: [function(ng_1) {
       ng = ng_1;
     }, function(rx_1) {
       rx = rx_1;
-    }, function(service_1) {
-      service = service_1;
-    }, function(consts_1_1) {
-      consts_1 = consts_1_1;
-    }, function(request_1_1) {
-      request_1 = request_1_1;
+    }, function(stores_1_1) {
+      stores_1 = stores_1_1;
     }],
     execute: function() {
-      GithubService = (function() {
-        function GithubService() {}
-        GithubService.prototype.repositories = function() {
-          return githubHttp("https://api.github.com/users/" + consts_1.GITHUB_USER_ID + "/repos");
-        };
-        GithubService.prototype.gists = function() {
-          return githubHttp("https://api.github.com/users/" + consts_1.GITHUB_USER_ID + "/gists");
-        };
-        return GithubService;
-      })();
-      exports_1("GithubService", GithubService);
-      JsFiddleService = (function() {
-        function JsFiddleService() {}
-        JsFiddleService.prototype.fiddles = function() {
-          return http("http://jsfiddle.net/api/user/" + consts_1.JSFIDDLE_USER_ID + "/demo/list.json");
-        };
-        return JsFiddleService;
-      })();
-      exports_1("JsFiddleService", JsFiddleService);
+      exports_1("GITHUB_SERVICE", GITHUB_SERVICE = 'githubService');
+      exports_1("JSFIDDLE_SERVICE", JSFIDDLE_SERVICE = 'jsfiddleService');
+      exports_1("ACTIVITY_SERVICE", ACTIVITY_SERVICE = 'activityService');
       ActivityService = (function() {
-        function ActivityService(githubService, jsfiddleService) {
+        function ActivityService(githubService, jsfiddleService, activityStore) {
           this.githubService = githubService;
           this.jsfiddleService = jsfiddleService;
+          this.activityStore = activityStore;
         }
         ActivityService.prototype.activities = function() {
+          var _this = this;
+          if (this.activityStore.activities) {
+            return rx.Observable.of(this.activityStore.activities);
+          }
           return rx.Observable.merge(this.githubService.repositories().map(function(repositories) {
             return repositories.map(function(repository) {
               return {
@@ -54416,192 +54661,15 @@ System.register("app/services/services.electron.ts", ["angular2/core", "rxjs", "
                 jsfiddle: fiddle
               };
             });
-          }));
+          })).concatAll().bufferCount(Infinity, Infinity).do(function(activities) {
+            return _this.activityStore.activities = activities;
+          });
         };
-        ActivityService = __decorate([__param(0, ng.Inject(service.GITHUB_SERVICE)), __param(1, ng.Inject(service.JSFIDDLE_SERVICE)), __metadata('design:paramtypes', [Object, Object])], ActivityService);
+        ActivityService = __decorate([__param(0, ng.Inject(GITHUB_SERVICE)), __param(1, ng.Inject(JSFIDDLE_SERVICE)), __param(2, ng.Inject(stores_1.ACTIVITY_STORE)), __metadata('design:paramtypes', [Object, Object, (typeof(_a = typeof stores_1.ActivityStore !== 'undefined' && stores_1.ActivityStore) === 'function' && _a) || Object])], ActivityService);
         return ActivityService;
+        var _a;
       })();
       exports_1("ActivityService", ActivityService);
-    }
-  };
-});
-
-System.register("contexts.electron/main.ts", ["angular2/core", "angular2-reflow", "../app/services", "../app/services/services.electron"], function(exports_1) {
-  var __extends = (this && this.__extends) || function(d, b) {
-    for (var p in b)
-      if (b.hasOwnProperty(p))
-        d[p] = b[p];
-    function __() {
-      this.constructor = d;
-    }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-  };
-  var ng,
-      rf,
-      services_1,
-      services_electron_1;
-  var ContextFactory;
-  return {
-    setters: [function(ng_1) {
-      ng = ng_1;
-    }, function(rf_1) {
-      rf = rf_1;
-    }, function(services_1_1) {
-      services_1 = services_1_1;
-    }, function(services_electron_1_1) {
-      services_electron_1 = services_electron_1_1;
-    }],
-    execute: function() {
-      ContextFactory = (function(_super) {
-        __extends(ContextFactory, _super);
-        function ContextFactory() {
-          _super.apply(this, arguments);
-        }
-        ContextFactory.prototype.mapDependency = function() {
-          this.provide(new ng.Provider(services_1.GITHUB_SERVICE, {useClass: services_electron_1.GithubService}));
-          this.provide(new ng.Provider(services_1.JSFIDDLE_SERVICE, {useClass: services_electron_1.JsFiddleService}));
-          this.provide(new ng.Provider(services_1.ACTIVITY_SERVICE, {useClass: services_electron_1.ActivityService}));
-        };
-        return ContextFactory;
-      })(rf.ContextFactory);
-      exports_1("ContextFactory", ContextFactory);
-    }
-  };
-});
-
-System.register("app/components/github.ts", ["angular2/core", "../services"], function(exports_1) {
-  var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
-    var c = arguments.length,
-        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-        d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-      r = Reflect.decorate(decorators, target, key, desc);
-    else
-      for (var i = decorators.length - 1; i >= 0; i--)
-        if (d = decorators[i])
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-  };
-  var __metadata = (this && this.__metadata) || function(k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-      return Reflect.metadata(k, v);
-  };
-  var __param = (this && this.__param) || function(paramIndex, decorator) {
-    return function(target, key) {
-      decorator(target, key, paramIndex);
-    };
-  };
-  var ng,
-      services_1;
-  var Github;
-  return {
-    setters: [function(ng_1) {
-      ng = ng_1;
-    }, function(services_1_1) {
-      services_1 = services_1_1;
-    }],
-    execute: function() {
-      Github = (function() {
-        function Github(githubService) {
-          this.githubService = githubService;
-        }
-        Github.prototype.ngOnInit = function() {
-          var _this = this;
-          var subscription1 = this.githubService.repositories().subscribe(function(x) {
-            return _this.repositories = x;
-          }, function(e) {
-            return console.log(e);
-          }, function() {
-            return subscription1.unsubscribe();
-          });
-          var subscription2 = this.githubService.gists().subscribe(function(x) {
-            return _this.gists = x;
-          }, function(e) {
-            return console.log(e);
-          }, function() {
-            return subscription2.unsubscribe();
-          });
-        };
-        Github = __decorate([ng.Component({
-          selector: 'content-github',
-          template: "\n  <h1>Github Repositories</h1>\n  <ul>\n    <li *ngFor=\"#repository of repositories\">\n      <a href=\"{{repository.html_url}}\" target=\"_blank\">\n        {{repository.name}}\n      </a>\n    </li>\n  </ul>\n  <h1>Github Gists</h1>\n  <ul>\n    <li *ngFor=\"#gist of gists\">\n      <a href=\"{{gist.html_url}}\" target=\"_blank\">\n        {{gist.description}}\n      </a>\n    </li>\n  </ul>\n  "
-        }), __param(0, ng.Inject(services_1.GITHUB_SERVICE)), __metadata('design:paramtypes', [(typeof(_a = typeof services_1.GithubService !== 'undefined' && services_1.GithubService) === 'function' && _a) || Object])], Github);
-        return Github;
-        var _a;
-      })();
-      exports_1("Github", Github);
-    }
-  };
-});
-
-System.register("app/components/jsfiddle.ts", ["angular2/core", "../services"], function(exports_1) {
-  var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
-    var c = arguments.length,
-        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-        d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-      r = Reflect.decorate(decorators, target, key, desc);
-    else
-      for (var i = decorators.length - 1; i >= 0; i--)
-        if (d = decorators[i])
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-  };
-  var __metadata = (this && this.__metadata) || function(k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-      return Reflect.metadata(k, v);
-  };
-  var __param = (this && this.__param) || function(paramIndex, decorator) {
-    return function(target, key) {
-      decorator(target, key, paramIndex);
-    };
-  };
-  var ng,
-      services_1;
-  var JsFiddle;
-  return {
-    setters: [function(ng_1) {
-      ng = ng_1;
-    }, function(services_1_1) {
-      services_1 = services_1_1;
-    }],
-    execute: function() {
-      JsFiddle = (function() {
-        function JsFiddle(jsfiddleService) {
-          this.jsfiddleService = jsfiddleService;
-        }
-        JsFiddle.prototype.ngOnInit = function() {
-          var _this = this;
-          var subscription = this.jsfiddleService.fiddles().subscribe(function(x) {
-            return _this.fiddles = x;
-          }, function(e) {
-            return console.log(e);
-          }, function() {
-            return subscription.unsubscribe();
-          });
-        };
-        JsFiddle = __decorate([ng.Component({
-          selector: 'content-jsfiddle',
-          template: "\n  <h1>Js Fiddle</h1>\n  <ul>\n    <li *ngFor=\"#fiddle of fiddles\">\n      <a href=\"{{fiddle.url}}\" target=\"_blank\">\n        {{fiddle.title}}\n      </a>\n    </li>\n  </ul>\n  "
-        }), __param(0, ng.Inject(services_1.JSFIDDLE_SERVICE)), __metadata('design:paramtypes', [(typeof(_a = typeof services_1.JsFiddleService !== 'undefined' && services_1.JsFiddleService) === 'function' && _a) || Object])], JsFiddle);
-        return JsFiddle;
-        var _a;
-      })();
-      exports_1("JsFiddle", JsFiddle);
-    }
-  };
-});
-
-System.register("app/services.ts", [], function(exports_1) {
-  var GITHUB_SERVICE,
-      JSFIDDLE_SERVICE,
-      ACTIVITY_SERVICE;
-  return {
-    setters: [],
-    execute: function() {
-      exports_1("GITHUB_SERVICE", GITHUB_SERVICE = 'githubService');
-      exports_1("JSFIDDLE_SERVICE", JSFIDDLE_SERVICE = 'jsfiddleService');
-      exports_1("ACTIVITY_SERVICE", ACTIVITY_SERVICE = 'activityService');
     }
   };
 });
@@ -54649,7 +54717,7 @@ System.register("app/components/activity.ts", ["angular2/core", "moment", "../se
         }
         Activity.prototype.ngOnInit = function() {
           var _this = this;
-          var subscription = this.activityService.activities().concatAll().bufferCount(100, 100).map(function(activities) {
+          var subscription = this.activityService.activities().map(function(activities) {
             return activities.sort(function(a, b) {
               return (a.date > b.date) ? -1 : 1;
             });
@@ -54696,11 +54764,11 @@ System.register("app/components/activity.ts", ["angular2/core", "moment", "../se
           }, function(e) {
             return console.log(e);
           }, function() {
-            return subscription.unsubscribe();
+            return subscription && subscription.unsubscribe();
           });
         };
         Activity = __decorate([ng.Component({
-          selector: 'content-jsfiddle',
+          selector: 'content-activity',
           templateUrl: 'app/components/activity.html'
         }), __param(0, ng.Inject(services_1.ACTIVITY_SERVICE)), __metadata('design:paramtypes', [(typeof(_a = typeof services_1.ActivityService !== 'undefined' && services_1.ActivityService) === 'function' && _a) || Object])], Activity);
         return Activity;
@@ -54711,9 +54779,112 @@ System.register("app/components/activity.ts", ["angular2/core", "moment", "../se
   };
 });
 
+System.register("app/events.ts", [], function(exports_1) {
+  var ActionEvent;
+  return {
+    setters: [],
+    execute: function() {
+      ActionEvent = (function() {
+        function ActionEvent(_type, _action) {
+          this._type = _type;
+          this._action = _action;
+        }
+        Object.defineProperty(ActionEvent.prototype, "type", {
+          get: function() {
+            return this._type;
+          },
+          enumerable: true,
+          configurable: true
+        });
+        Object.defineProperty(ActionEvent.prototype, "action", {
+          get: function() {
+            return this._action;
+          },
+          enumerable: true,
+          configurable: true
+        });
+        ActionEvent.ACTION = "actionEvent:action";
+        return ActionEvent;
+      })();
+      exports_1("ActionEvent", ActionEvent);
+    }
+  };
+});
+
+System.register("app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
+
+System.register("app/components/event-bus-listener.ts", ["angular2/core", "angular2-reflow", "../events", "./event-bus-listener.css!"], function(exports_1) {
+  var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+      r = Reflect.decorate(decorators, target, key, desc);
+    else
+      for (var i = decorators.length - 1; i >= 0; i--)
+        if (d = decorators[i])
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+  };
+  var __metadata = (this && this.__metadata) || function(k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+      return Reflect.metadata(k, v);
+  };
+  var __param = (this && this.__param) || function(paramIndex, decorator) {
+    return function(target, key) {
+      decorator(target, key, paramIndex);
+    };
+  };
+  var ng,
+      rf,
+      events_1;
+  var EventBusListener;
+  return {
+    setters: [function(ng_1) {
+      ng = ng_1;
+    }, function(rf_1) {
+      rf = rf_1;
+    }, function(events_1_1) {
+      events_1 = events_1_1;
+    }, function(_1) {}],
+    execute: function() {
+      EventBusListener = (function() {
+        function EventBusListener(eventBus) {
+          this.eventBus = eventBus;
+          this.opacity = 0;
+          this.timeout = -1;
+        }
+        EventBusListener.prototype.ngOnInit = function() {
+          var _this = this;
+          this.listener = this.eventBus.addEventListener(events_1.ActionEvent.ACTION, function(event) {
+            if (_this.timeout > -1)
+              clearTimeout(_this.timeout);
+            _this.action = event.action;
+            _this.opacity = 1;
+            _this.timeout = setTimeout(function() {
+              _this.opacity = 0;
+              _this.timeout = -1;
+            }, 1200);
+          });
+        };
+        EventBusListener.prototype.ngOnDestroy = function() {
+          this.listener.remove();
+          this.listener = null;
+        };
+        EventBusListener = __decorate([ng.Component({
+          selector: 'event-bus-listener',
+          template: "\n  <div class=\"event-bus-listener\" [style.opacity]=\"opacity\">\n    <div class=\"container\">\n      {{action}}\n    </div>\n  </div>\n  "
+        }), __param(0, ng.Inject(rf.EVENT_BUS)), __metadata('design:paramtypes', [Object])], EventBusListener);
+        return EventBusListener;
+      })();
+      exports_1("EventBusListener", EventBusListener);
+    }
+  };
+});
+
 System.register("app/components/main.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
 
-System.register("app/components/main.ts", ["angular2/core", "angular2/router", "angular2-reflow", "contexts:main", "./github", "./jsfiddle", "./activity", "./main.css!"], function(exports_1) {
+System.register("app/components/main.ts", ["angular2/core", "angular2/router", "angular2-reflow", "contexts:main", "./github", "./jsfiddle", "./activity", "./event-bus-listener", "./main.css!"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
     var c = arguments.length,
         r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
@@ -54737,11 +54908,12 @@ System.register("app/components/main.ts", ["angular2/core", "angular2/router", "
   };
   var ng,
       router,
-      Rf,
+      rf,
       contexts_main_1,
       github_1,
       jsfiddle_1,
-      activity_1;
+      activity_1,
+      event_bus_listener_1;
   var context,
       routeConfig,
       Main;
@@ -54750,8 +54922,8 @@ System.register("app/components/main.ts", ["angular2/core", "angular2/router", "
       ng = ng_1;
     }, function(router_1) {
       router = router_1;
-    }, function(Rf_1) {
-      Rf = Rf_1;
+    }, function(rf_1) {
+      rf = rf_1;
     }, function(contexts_main_1_1) {
       contexts_main_1 = contexts_main_1_1;
     }, function(github_1_1) {
@@ -54760,6 +54932,8 @@ System.register("app/components/main.ts", ["angular2/core", "angular2/router", "
       jsfiddle_1 = jsfiddle_1_1;
     }, function(activity_1_1) {
       activity_1 = activity_1_1;
+    }, function(event_bus_listener_1_1) {
+      event_bus_listener_1 = event_bus_listener_1_1;
     }, function(_1) {}],
     execute: function() {
       context = new contexts_main_1.ContextFactory;
@@ -54797,8 +54971,8 @@ System.register("app/components/main.ts", ["angular2/core", "angular2/router", "
           selector: 'app-main',
           providers: [context.providers, router.ROUTER_PROVIDERS, ng.provide(router.LocationStrategy, {useClass: router.HashLocationStrategy})],
           templateUrl: 'app/components/main.html',
-          directives: [router.ROUTER_DIRECTIVES]
-        }), router.RouteConfig(routeConfig), __param(0, ng.Inject(router.Location)), __param(1, ng.Inject(Rf.CONTEXT)), __metadata('design:paramtypes', [Object, Object])], Main);
+          directives: [router.ROUTER_DIRECTIVES, event_bus_listener_1.EventBusListener]
+        }), router.RouteConfig(routeConfig), __param(0, ng.Inject(router.Location)), __param(1, ng.Inject(rf.CONTEXT)), __metadata('design:paramtypes', [Object, Object])], Main);
         return Main;
       })();
       exports_1("Main", Main);
@@ -54822,4 +54996,5 @@ System.register("app/boot.ts", ["angular2/platform/browser", "./components/main"
 });
 
 System.register('app/components/activity.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
+System.register('app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
 System.register('app/components/main.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
