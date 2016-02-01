@@ -102,7 +102,7 @@ module.exports = yo.Base.extend({
         'package.json',
         'tsd.json'
       ].forEach(file => {
-        this.copy(file, (file.charAt(0) === '_') ? `_${file.substr(1)}` : file);
+        this.copy(file, (file.charAt(0) === '_') ? `.${file.substr(1)}` : file);
       });
 
       this.mkdir('dist');

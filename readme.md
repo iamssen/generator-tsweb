@@ -9,8 +9,7 @@ yo tsweb
 
 # Generated Files Preview
 
-<http://iamssen.github.io/generator-tsweb>
-
+<http://iamssen.github.io/generator-tsweb> [Source Code](https://github.com/iamssen/generator-tsweb/tree/gh-pages)
 
 # Update log
 
