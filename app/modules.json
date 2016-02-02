@@ -41,9 +41,7 @@
   },
   {
     "name": "angular2",
-    "jspm": "angular2",
-    "npm": "angular2",
-    "bundle": ["angular2/core", "angular2/common", "angular2/platform/browser", "angular2/router", "angular2/http"]
+    "npm": "angular2"
   },
   {
     "name": "rxjs",
@@ -53,9 +51,7 @@
   },
   {
     "name": "angular2-reflow",
-    "jspm": "npm:angular2-reflow",
-    "npm": "angular2-reflow",
-    "bundle": ["angular2-reflow"]
+    "npm": "angular2-reflow"
   },
   {
     "name": "d3",

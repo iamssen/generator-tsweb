@@ -13,7 +13,7 @@
     <!--<link rel="stylesheet" href="dist/vendor.css"/>-->
     <script src="https://npmcdn.com/es6-shim/es6-shim.min.js"></script>
     <script src="https://npmcdn.com/systemjs/dist/system-polyfills.js"></script>
-    <script src="https://npmcdn.com/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="https://npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2-polyfills.js"></script>
     <script src="https://npmcdn.com/systemjs/dist/system.js"></script>
     <script src="https://npmcdn.com/tether/dist/js/tether.min.js"></script>
     <script src="config.web.js"></script>
@@ -28,7 +28,13 @@
   <body>
     <app-main></app-main>
     <script>
-      System.import('app')
+      System.import('https://npmcdn.com/angular2@2.0.0-beta.0/bundles/angular2.dev.js').then(function () {
+        System.import('https://npmcdn.com/angular2@2.0.0-beta.0/bundles/router.js').then(function () {
+          System.import('https://npmcdn.com/angular2-reflow/dist/angular2-reflow.system.js').then(function () {
+            System.import('app')
+          })
+        })
+      })
     </script>
   </body>
 </html>
