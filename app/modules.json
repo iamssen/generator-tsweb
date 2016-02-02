@@ -46,6 +46,12 @@
     "bundle": ["angular2/core", "angular2/common", "angular2/platform/browser", "angular2/router", "angular2/http"]
   },
   {
+    "name": "rxjs",
+    "jspm": "rxjs",
+    "npm": "rxjs",
+    "bundle": ["rxjs"]
+  },
+  {
     "name": "angular2-reflow",
     "jspm": "npm:angular2-reflow",
     "npm": "angular2-reflow",
@@ -78,16 +84,6 @@
     "bundle": ["jquery"],
     "optional": {
       "name": "jQuery",
-      "checked": true
-    }
-  },
-  {
-    "name": "rxjs",
-    "jspm": "rxjs",
-    "npm": "rxjs",
-    "bundle": ["rxjs"],
-    "optional": {
-      "name": "RxJs",
       "checked": true
     }
   },
