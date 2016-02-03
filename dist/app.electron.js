@@ -1,4 +1,4 @@
-System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_transform", ["./_stream_duplex", "core-util-is", "inherits", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_transform.js", ["./_stream_duplex", "core-util-is", "inherits", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -103,7 +103,7 @@ System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_transform", ["./_s
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@2.0.5/transform", ["./lib/_stream_transform"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@2.0.5/transform.js", ["./lib/_stream_transform"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -113,7 +113,7 @@ System.registerDynamic("npm:readable-stream@2.0.5/transform", ["./lib/_stream_tr
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/zstream", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/zstream.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -138,7 +138,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/zstream", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/trees", ["../utils/common", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/trees.js", ["../utils/common", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -749,7 +749,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/trees", ["../utils/common", "pro
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/messages", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/messages.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -770,7 +770,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/messages", [], true, function($_
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/deflate", ["../utils/common", "./trees", "./adler32", "./crc32", "./messages", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/deflate.js", ["../utils/common", "./trees", "./adler32", "./crc32", "./messages", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -1738,7 +1738,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/deflate", ["../utils/common", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/adler32", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/adler32.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -1765,7 +1765,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/adler32", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/crc32", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/crc32.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -1798,7 +1798,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/crc32", [], true, function($__re
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/inffast", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/inffast.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -2028,7 +2028,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/inffast", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/utils/common", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/utils/common.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -2122,7 +2122,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/utils/common", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/inftrees", ["../utils/common", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/inftrees.js", ["../utils/common", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -2314,7 +2314,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/inftrees", ["../utils/common", "
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/inflate", ["../utils/common", "./adler32", "./crc32", "./inffast", "./inftrees", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/inflate.js", ["../utils/common", "./adler32", "./crc32", "./inffast", "./inftrees", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3498,7 +3498,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/inflate", ["../utils/common", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:pako@0.2.8/lib/zlib/constants", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pako@0.2.8/lib/zlib/constants.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3536,7 +3536,7 @@ System.registerDynamic("npm:pako@0.2.8/lib/zlib/constants", [], true, function($
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-zlib@0.1.4/src/binding", ["pako/lib/zlib/messages", "pako/lib/zlib/zstream", "pako/lib/zlib/deflate", "pako/lib/zlib/inflate", "pako/lib/zlib/constants", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-zlib@0.1.4/src/binding.js", ["pako/lib/zlib/messages", "pako/lib/zlib/zstream", "pako/lib/zlib/deflate", "pako/lib/zlib/inflate", "pako/lib/zlib/constants", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -3722,7 +3722,7 @@ System.registerDynamic("npm:browserify-zlib@0.1.4/src/binding", ["pako/lib/zlib/
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-zlib@0.1.4/src/index", ["readable-stream/transform", "./binding", "util", "assert", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-zlib@0.1.4/src/index.js", ["readable-stream/transform", "./binding", "util", "assert", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4149,7 +4149,7 @@ System.registerDynamic("npm:browserify-zlib@0.1.4/src/index", ["readable-stream/
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-zlib@0.1.4", ["npm:browserify-zlib@0.1.4/src/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-zlib@0.1.4.js", ["npm:browserify-zlib@0.1.4/src/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4159,7 +4159,7 @@ System.registerDynamic("npm:browserify-zlib@0.1.4", ["npm:browserify-zlib@0.1.4/
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-zlib@0.1.0/index", ["browserify-zlib"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-zlib@0.1.0/index.js", ["browserify-zlib"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4169,7 +4169,7 @@ System.registerDynamic("github:jspm/nodelibs-zlib@0.1.0/index", ["browserify-zli
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-zlib@0.1.0", ["github:jspm/nodelibs-zlib@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-zlib@0.1.0.js", ["github:jspm/nodelibs-zlib@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4179,7 +4179,7 @@ System.registerDynamic("github:jspm/nodelibs-zlib@0.1.0", ["github:jspm/nodelibs
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_readable", ["process-nextick-args", "isarray", "buffer", "events", "core-util-is", "inherits", "@empty", "./_stream_duplex", "string_decoder", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_readable.js", ["process-nextick-args", "isarray", "buffer", "events", "core-util-is", "inherits", "@empty", "./_stream_duplex", "string_decoder", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4836,7 +4836,7 @@ System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_readable", ["proce
   return module.exports;
 });
 
-System.registerDynamic("npm:process-nextick-args@1.0.6/index", ["process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:process-nextick-args@1.0.6/index.js", ["process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4863,7 +4863,7 @@ System.registerDynamic("npm:process-nextick-args@1.0.6/index", ["process"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:process-nextick-args@1.0.6", ["npm:process-nextick-args@1.0.6/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:process-nextick-args@1.0.6.js", ["npm:process-nextick-args@1.0.6/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4873,7 +4873,7 @@ System.registerDynamic("npm:process-nextick-args@1.0.6", ["npm:process-nextick-a
   return module.exports;
 });
 
-System.registerDynamic("npm:util-deprecate@1.0.2/browser", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:util-deprecate@1.0.2/browser.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -4915,17 +4915,17 @@ System.registerDynamic("npm:util-deprecate@1.0.2/browser", [], true, function($_
   return module.exports;
 });
 
-System.registerDynamic("npm:util-deprecate@1.0.2", ["npm:util-deprecate@1.0.2/browser"], true, function($__require, exports, module) {
+System.registerDynamic("npm:util-deprecate@1.0.2.js", ["npm:util-deprecate@1.0.2/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('npm:util-deprecate@1.0.2/browser');
+  module.exports = $__require('npm:util-deprecate@1.0.2/browser.js');
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_writable", ["process-nextick-args", "buffer", "core-util-is", "inherits", "util-deprecate", "events", "./_stream_duplex", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_writable.js", ["process-nextick-args", "buffer", "core-util-is", "inherits", "util-deprecate", "events", "./_stream_duplex", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5264,7 +5264,7 @@ System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_writable", ["proce
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_duplex", ["process-nextick-args", "core-util-is", "inherits", "./_stream_readable", "./_stream_writable", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_duplex.js", ["process-nextick-args", "core-util-is", "inherits", "./_stream_readable", "./_stream_writable", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5323,7 +5323,7 @@ System.registerDynamic("npm:readable-stream@2.0.5/lib/_stream_duplex", ["process
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@2.0.5/duplex", ["./lib/_stream_duplex"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@2.0.5/duplex.js", ["./lib/_stream_duplex"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5333,7 +5333,7 @@ System.registerDynamic("npm:readable-stream@2.0.5/duplex", ["./lib/_stream_duple
   return module.exports;
 });
 
-System.registerDynamic("npm:bl@1.0.1/bl", ["readable-stream/duplex", "util", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:bl@1.0.1/bl.js", ["readable-stream/duplex", "util", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5521,7 +5521,7 @@ System.registerDynamic("npm:bl@1.0.1/bl", ["readable-stream/duplex", "util", "bu
   return module.exports;
 });
 
-System.registerDynamic("npm:bl@1.0.1", ["npm:bl@1.0.1/bl.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:bl@1.0.1.js", ["npm:bl@1.0.1/bl.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -5531,7 +5531,7 @@ System.registerDynamic("npm:bl@1.0.1", ["npm:bl@1.0.1/bl.js"], true, function($_
   return module.exports;
 });
 
-System.registerDynamic("npm:hawk@3.1.3/lib/browser", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:hawk@3.1.3/lib/browser.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6286,7 +6286,7 @@ System.registerDynamic("npm:hawk@3.1.3/lib/browser", [], true, function($__requi
   return module.exports;
 });
 
-System.registerDynamic("npm:hawk@3.1.3", ["npm:hawk@3.1.3/lib/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hawk@3.1.3.js", ["npm:hawk@3.1.3/lib/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6296,7 +6296,7 @@ System.registerDynamic("npm:hawk@3.1.3", ["npm:hawk@3.1.3/lib/browser.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:aws-sign2@0.6.0/index", ["crypto", "url"], true, function($__require, exports, module) {
+System.registerDynamic("npm:aws-sign2@0.6.0/index.js", ["crypto", "url"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6371,7 +6371,7 @@ System.registerDynamic("npm:aws-sign2@0.6.0/index", ["crypto", "url"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:aws-sign2@0.6.0", ["npm:aws-sign2@0.6.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:aws-sign2@0.6.0.js", ["npm:aws-sign2@0.6.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6381,7 +6381,7 @@ System.registerDynamic("npm:aws-sign2@0.6.0", ["npm:aws-sign2@0.6.0/index.js"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:http-signature@1.1.1/lib/parser", ["assert-plus", "util", "./utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:http-signature@1.1.1/lib/parser.js", ["assert-plus", "util", "./utils"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6584,7 +6584,7 @@ System.registerDynamic("npm:http-signature@1.1.1/lib/parser", ["assert-plus", "u
   return module.exports;
 });
 
-System.registerDynamic("npm:extsprintf@1.0.2/lib/extsprintf", ["assert", "util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:extsprintf@1.0.2/lib/extsprintf.js", ["assert", "util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6690,7 +6690,7 @@ System.registerDynamic("npm:extsprintf@1.0.2/lib/extsprintf", ["assert", "util"]
   return module.exports;
 });
 
-System.registerDynamic("npm:extsprintf@1.0.2", ["npm:extsprintf@1.0.2/lib/extsprintf.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:extsprintf@1.0.2.js", ["npm:extsprintf@1.0.2/lib/extsprintf.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6700,7 +6700,7 @@ System.registerDynamic("npm:extsprintf@1.0.2", ["npm:extsprintf@1.0.2/lib/extspr
   return module.exports;
 });
 
-System.registerDynamic("npm:verror@1.3.6/lib/verror", ["assert", "util", "extsprintf"], true, function($__require, exports, module) {
+System.registerDynamic("npm:verror@1.3.6/lib/verror.js", ["assert", "util", "extsprintf"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6806,7 +6806,7 @@ System.registerDynamic("npm:verror@1.3.6/lib/verror", ["assert", "util", "extspr
   return module.exports;
 });
 
-System.registerDynamic("npm:verror@1.3.6", ["npm:verror@1.3.6/lib/verror.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:verror@1.3.6.js", ["npm:verror@1.3.6/lib/verror.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -6816,7 +6816,7 @@ System.registerDynamic("npm:verror@1.3.6", ["npm:verror@1.3.6/lib/verror.js"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:json-schema@0.2.2/lib/validate", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:json-schema@0.2.2/lib/validate.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7052,7 +7052,7 @@ System.registerDynamic("npm:json-schema@0.2.2/lib/validate", [], true, function(
   return module.exports;
 });
 
-System.registerDynamic("npm:json-schema@0.2.2", ["npm:json-schema@0.2.2/lib/validate.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:json-schema@0.2.2.js", ["npm:json-schema@0.2.2/lib/validate.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7062,7 +7062,7 @@ System.registerDynamic("npm:json-schema@0.2.2", ["npm:json-schema@0.2.2/lib/vali
   return module.exports;
 });
 
-System.registerDynamic("npm:jsprim@1.2.2/lib/jsprim", ["assert", "util", "extsprintf", "verror", "json-schema", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jsprim@1.2.2/lib/jsprim.js", ["assert", "util", "extsprintf", "verror", "json-schema", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7337,7 +7337,7 @@ System.registerDynamic("npm:jsprim@1.2.2/lib/jsprim", ["assert", "util", "extspr
   return module.exports;
 });
 
-System.registerDynamic("npm:jsprim@1.2.2", ["npm:jsprim@1.2.2/lib/jsprim.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jsprim@1.2.2.js", ["npm:jsprim@1.2.2/lib/jsprim.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7347,7 +7347,7 @@ System.registerDynamic("npm:jsprim@1.2.2", ["npm:jsprim@1.2.2/lib/jsprim.js"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:http-signature@1.1.1/lib/signer", ["assert-plus", "crypto", "http", "util", "sshpk", "jsprim", "./utils", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:http-signature@1.1.1/lib/signer.js", ["assert-plus", "crypto", "http", "util", "sshpk", "jsprim", "./utils", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7577,7 +7577,7 @@ System.registerDynamic("npm:http-signature@1.1.1/lib/signer", ["assert-plus", "c
   return module.exports;
 });
 
-System.registerDynamic("npm:http-signature@1.1.1/lib/verify", ["assert-plus", "crypto", "sshpk", "./utils", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:http-signature@1.1.1/lib/verify.js", ["assert-plus", "crypto", "sshpk", "./utils", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7632,7 +7632,7 @@ System.registerDynamic("npm:http-signature@1.1.1/lib/verify", ["assert-plus", "c
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/fingerprint", ["assert-plus", "./algs", "crypto", "./errors", "./key", "./utils", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/fingerprint.js", ["assert-plus", "./algs", "crypto", "./errors", "./key", "./utils", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7751,7 +7751,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/fingerprint", ["assert-plus", "./alg
   return module.exports;
 });
 
-System.registerDynamic("npm:ecc-jsbn@0.1.1/lib/sec", ["jsbn", "./ec"], true, function($__require, exports, module) {
+System.registerDynamic("npm:ecc-jsbn@0.1.1/lib/sec.js", ["jsbn", "./ec"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7883,7 +7883,7 @@ System.registerDynamic("npm:ecc-jsbn@0.1.1/lib/sec", ["jsbn", "./ec"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:ecc-jsbn@0.1.1/index", ["crypto", "jsbn", "./lib/ec", "./lib/sec", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:ecc-jsbn@0.1.1/index.js", ["crypto", "jsbn", "./lib/ec", "./lib/sec", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7934,7 +7934,7 @@ System.registerDynamic("npm:ecc-jsbn@0.1.1/index", ["crypto", "jsbn", "./lib/ec"
   return module.exports;
 });
 
-System.registerDynamic("npm:ecc-jsbn@0.1.1", ["npm:ecc-jsbn@0.1.1/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:ecc-jsbn@0.1.1.js", ["npm:ecc-jsbn@0.1.1/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -7944,7 +7944,7 @@ System.registerDynamic("npm:ecc-jsbn@0.1.1", ["npm:ecc-jsbn@0.1.1/index.js"], tr
   return module.exports;
 });
 
-System.registerDynamic("npm:ecc-jsbn@0.1.1/lib/ec", ["jsbn"], true, function($__require, exports, module) {
+System.registerDynamic("npm:ecc-jsbn@0.1.1/lib/ec.js", ["jsbn"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -8377,7 +8377,7 @@ System.registerDynamic("npm:ecc-jsbn@0.1.1/lib/ec", ["jsbn"], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/dhe", ["assert-plus", "crypto", "./algs", "./utils", "./key", "./private-key", "ecc-jsbn", "ecc-jsbn/lib/ec", "jsbn", "jodid25519", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/dhe.js", ["assert-plus", "crypto", "./algs", "./utils", "./key", "./private-key", "ecc-jsbn", "ecc-jsbn/lib/ec", "jsbn", "jodid25519", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -8678,7 +8678,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/dhe", ["assert-plus", "crypto", "./a
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/signature", ["assert-plus", "./algs", "crypto", "./errors", "./utils", "asn1", "./ssh-buffer", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/signature.js", ["assert-plus", "./algs", "crypto", "./errors", "./utils", "asn1", "./ssh-buffer", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -8899,7 +8899,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/signature", ["assert-plus", "./algs"
   return module.exports;
 });
 
-System.registerDynamic("npm:tweetnacl@0.13.3/nacl-fast", ["@empty"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tweetnacl@0.13.3/nacl-fast.js", ["@empty"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11369,7 +11369,7 @@ System.registerDynamic("npm:tweetnacl@0.13.3/nacl-fast", ["@empty"], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:tweetnacl@0.13.3", ["npm:tweetnacl@0.13.3/nacl-fast.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tweetnacl@0.13.3.js", ["npm:tweetnacl@0.13.3/nacl-fast.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11379,7 +11379,7 @@ System.registerDynamic("npm:tweetnacl@0.13.3", ["npm:tweetnacl@0.13.3/nacl-fast.
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/ed-compat", ["stream", "util", "assert-plus", "./signature", "tweetnacl", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/ed-compat.js", ["stream", "util", "assert-plus", "./signature", "tweetnacl", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11458,7 +11458,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/ed-compat", ["stream", "util", "asse
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/formats/auto", ["assert-plus", "../utils", "../key", "../private-key", "./pem", "./ssh", "./rfc4253", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/formats/auto.js", ["assert-plus", "../utils", "../key", "../private-key", "./pem", "./ssh", "./rfc4253", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11527,7 +11527,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/formats/auto", ["assert-plus", "../u
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1@0.2.3/lib/ber/reader", ["assert", "./types", "./errors", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1@0.2.3/lib/ber/reader.js", ["assert", "./types", "./errors", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11692,7 +11692,7 @@ System.registerDynamic("npm:asn1@0.2.3/lib/ber/reader", ["assert", "./types", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1@0.2.3/lib/ber/types", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1@0.2.3/lib/ber/types.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11734,7 +11734,7 @@ System.registerDynamic("npm:asn1@0.2.3/lib/ber/types", [], true, function($__req
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1@0.2.3/lib/ber/errors", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1@0.2.3/lib/ber/errors.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11749,7 +11749,7 @@ System.registerDynamic("npm:asn1@0.2.3/lib/ber/errors", [], true, function($__re
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1@0.2.3/lib/ber/writer", ["assert", "./types", "./errors", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1@0.2.3/lib/ber/writer.js", ["assert", "./types", "./errors", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -11994,7 +11994,7 @@ System.registerDynamic("npm:asn1@0.2.3/lib/ber/writer", ["assert", "./types", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1@0.2.3/lib/ber/index", ["./errors", "./types", "./reader", "./writer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1@0.2.3/lib/ber/index.js", ["./errors", "./types", "./reader", "./writer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -12019,7 +12019,7 @@ System.registerDynamic("npm:asn1@0.2.3/lib/ber/index", ["./errors", "./types", "
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1@0.2.3/lib/index", ["./ber/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1@0.2.3/lib/index.js", ["./ber/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -12034,7 +12034,7 @@ System.registerDynamic("npm:asn1@0.2.3/lib/index", ["./ber/index"], true, functi
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1@0.2.3", ["npm:asn1@0.2.3/lib/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1@0.2.3.js", ["npm:asn1@0.2.3/lib/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -12044,7 +12044,7 @@ System.registerDynamic("npm:asn1@0.2.3", ["npm:asn1@0.2.3/lib/index.js"], true, 
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/algs", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/algs.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -12130,7 +12130,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/algs", ["buffer"], true, function($_
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pkcs1", ["assert-plus", "asn1", "../algs", "../utils", "../key", "../private-key", "./pem", "./pkcs8", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pkcs1.js", ["assert-plus", "asn1", "../algs", "../utils", "../key", "../private-key", "./pem", "./pkcs8", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -12442,7 +12442,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pkcs1", ["assert-plus", "asn
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pem", ["assert-plus", "asn1", "../algs", "../utils", "../key", "../private-key", "./pkcs1", "./pkcs8", "./ssh-private", "./rfc4253", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pem.js", ["assert-plus", "asn1", "../algs", "../utils", "../key", "../private-key", "./pkcs1", "./pkcs8", "./ssh-private", "./rfc4253", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -12566,7 +12566,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pem", ["assert-plus", "asn1"
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pkcs8", ["assert-plus", "asn1", "../algs", "../utils", "../key", "../private-key", "./pem", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pkcs8.js", ["assert-plus", "asn1", "../algs", "../utils", "../key", "../private-key", "./pem", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13009,7 +13009,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/formats/pkcs8", ["assert-plus", "asn
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/utils", ["assert-plus", "./private-key", "jsbn", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/utils.js", ["assert-plus", "./private-key", "jsbn", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13204,7 +13204,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/utils", ["assert-plus", "./private-k
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/formats/ssh", ["assert-plus", "./rfc4253", "../utils", "../key", "../private-key", "./ssh-private", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/formats/ssh.js", ["assert-plus", "./rfc4253", "../utils", "../key", "../private-key", "./ssh-private", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13285,7 +13285,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/formats/ssh", ["assert-plus", "./rfc
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/key", ["assert-plus", "./algs", "crypto", "./fingerprint", "./signature", "./dhe", "./errors", "./utils", "./private-key", "./ed-compat", "./formats/auto", "./formats/pem", "./formats/pkcs1", "./formats/pkcs8", "./formats/rfc4253", "./formats/ssh", "./formats/ssh-private", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/key.js", ["assert-plus", "./algs", "crypto", "./fingerprint", "./signature", "./dhe", "./errors", "./utils", "./private-key", "./ed-compat", "./formats/auto", "./formats/pem", "./formats/pkcs1", "./formats/pkcs8", "./formats/rfc4253", "./formats/ssh", "./formats/ssh-private", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13503,7 +13503,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/key", ["assert-plus", "./algs", "cry
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/formats/rfc4253", ["assert-plus", "../algs", "../utils", "../key", "../private-key", "../ssh-buffer", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/formats/rfc4253.js", ["assert-plus", "../algs", "../utils", "../key", "../private-key", "../ssh-buffer", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13627,7 +13627,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/formats/rfc4253", ["assert-plus", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/ssh-buffer", ["assert-plus", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/ssh-buffer.js", ["assert-plus", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13736,7 +13736,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/ssh-buffer", ["assert-plus", "buffer
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/formats/ssh-private", ["assert-plus", "asn1", "../algs", "../utils", "crypto", "../key", "../private-key", "./pem", "./rfc4253", "../ssh-buffer", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/formats/ssh-private.js", ["assert-plus", "asn1", "../algs", "../utils", "crypto", "../key", "../private-key", "./pem", "./rfc4253", "../ssh-buffer", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13847,7 +13847,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/formats/ssh-private", ["assert-plus"
   return module.exports;
 });
 
-System.registerDynamic("npm:jodid25519@1.0.2/lib/dh", ["./core", "./utils", "./curve255", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jodid25519@1.0.2/lib/dh.js", ["./core", "./utils", "./curve255", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -13894,7 +13894,7 @@ System.registerDynamic("npm:jodid25519@1.0.2/lib/dh", ["./core", "./utils", "./c
   return module.exports;
 });
 
-System.registerDynamic("npm:jsbn@0.1.0/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:jsbn@0.1.0/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -15378,7 +15378,7 @@ System.registerDynamic("npm:jsbn@0.1.0/index", [], true, function($__require, ex
   return module.exports;
 });
 
-System.registerDynamic("npm:jsbn@0.1.0", ["npm:jsbn@0.1.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jsbn@0.1.0.js", ["npm:jsbn@0.1.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -15388,7 +15388,7 @@ System.registerDynamic("npm:jsbn@0.1.0", ["npm:jsbn@0.1.0/index.js"], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:jodid25519@1.0.2/lib/eddsa", ["./core", "./curve255", "./utils", "jsbn", "crypto", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jodid25519@1.0.2/lib/eddsa.js", ["./core", "./curve255", "./utils", "jsbn", "crypto", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -15791,7 +15791,7 @@ System.registerDynamic("npm:jodid25519@1.0.2/lib/eddsa", ["./core", "./curve255"
   return module.exports;
 });
 
-System.registerDynamic("npm:jodid25519@1.0.2/lib/curve255", ["./core", "./utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jodid25519@1.0.2/lib/curve255.js", ["./core", "./utils"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15865,7 +15865,7 @@ System.registerDynamic("npm:jodid25519@1.0.2/lib/curve255", ["./core", "./utils"
   return module.exports;
 });
 
-System.registerDynamic("npm:jodid25519@1.0.2/lib/core", ["crypto"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jodid25519@1.0.2/lib/core.js", ["crypto"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16219,7 +16219,7 @@ System.registerDynamic("npm:jodid25519@1.0.2/lib/core", ["crypto"], true, functi
   return module.exports;
 });
 
-System.registerDynamic("npm:jodid25519@1.0.2/lib/utils", ["./core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jodid25519@1.0.2/lib/utils.js", ["./core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16313,7 +16313,7 @@ System.registerDynamic("npm:jodid25519@1.0.2/lib/utils", ["./core"], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:jodid25519@1.0.2/index", ["./lib/dh", "./lib/eddsa", "./lib/curve255", "./lib/utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jodid25519@1.0.2/index.js", ["./lib/dh", "./lib/eddsa", "./lib/curve255", "./lib/utils"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16334,7 +16334,7 @@ System.registerDynamic("npm:jodid25519@1.0.2/index", ["./lib/dh", "./lib/eddsa",
   return module.exports;
 });
 
-System.registerDynamic("npm:jodid25519@1.0.2", ["npm:jodid25519@1.0.2/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jodid25519@1.0.2.js", ["npm:jodid25519@1.0.2/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16344,7 +16344,7 @@ System.registerDynamic("npm:jodid25519@1.0.2", ["npm:jodid25519@1.0.2/index.js"]
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/private-key", ["assert-plus", "./algs", "crypto", "./fingerprint", "./signature", "./errors", "util", "./utils", "./ed-compat", "./key", "./formats/auto", "./formats/pem", "./formats/pkcs1", "./formats/pkcs8", "./formats/rfc4253", "./formats/ssh-private", "jodid25519", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/private-key.js", ["assert-plus", "./algs", "crypto", "./fingerprint", "./signature", "./errors", "util", "./utils", "./ed-compat", "./key", "./formats/auto", "./formats/pem", "./formats/pkcs1", "./formats/pkcs8", "./formats/rfc4253", "./formats/ssh-private", "jodid25519", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16539,7 +16539,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/private-key", ["assert-plus", "./alg
   return module.exports;
 });
 
-System.registerDynamic("npm:assert-plus@0.2.0/assert", ["assert", "stream", "util", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:assert-plus@0.2.0/assert.js", ["assert", "stream", "util", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16724,7 +16724,7 @@ System.registerDynamic("npm:assert-plus@0.2.0/assert", ["assert", "stream", "uti
   return module.exports;
 });
 
-System.registerDynamic("npm:assert-plus@0.2.0", ["npm:assert-plus@0.2.0/assert.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:assert-plus@0.2.0.js", ["npm:assert-plus@0.2.0/assert.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16734,7 +16734,7 @@ System.registerDynamic("npm:assert-plus@0.2.0", ["npm:assert-plus@0.2.0/assert.j
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/errors", ["assert-plus", "util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/errors.js", ["assert-plus", "util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16792,7 +16792,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/errors", ["assert-plus", "util"], tr
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3/lib/index", ["./key", "./fingerprint", "./signature", "./private-key", "./errors"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3/lib/index.js", ["./key", "./fingerprint", "./signature", "./private-key", "./errors"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16820,7 +16820,7 @@ System.registerDynamic("npm:sshpk@1.7.3/lib/index", ["./key", "./fingerprint", "
   return module.exports;
 });
 
-System.registerDynamic("npm:sshpk@1.7.3", ["npm:sshpk@1.7.3/lib/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sshpk@1.7.3.js", ["npm:sshpk@1.7.3/lib/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16830,7 +16830,7 @@ System.registerDynamic("npm:sshpk@1.7.3", ["npm:sshpk@1.7.3/lib/index.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:http-signature@1.1.1/lib/utils", ["assert-plus", "sshpk", "util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:http-signature@1.1.1/lib/utils.js", ["assert-plus", "sshpk", "util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16899,7 +16899,7 @@ System.registerDynamic("npm:http-signature@1.1.1/lib/utils", ["assert-plus", "ss
   return module.exports;
 });
 
-System.registerDynamic("npm:http-signature@1.1.1/lib/index", ["./parser", "./signer", "./verify", "./utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:http-signature@1.1.1/lib/index.js", ["./parser", "./signer", "./verify", "./utils"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16926,7 +16926,7 @@ System.registerDynamic("npm:http-signature@1.1.1/lib/index", ["./parser", "./sig
   return module.exports;
 });
 
-System.registerDynamic("npm:http-signature@1.1.1", ["npm:http-signature@1.1.1/lib/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:http-signature@1.1.1.js", ["npm:http-signature@1.1.1/lib/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16936,7 +16936,7 @@ System.registerDynamic("npm:http-signature@1.1.1", ["npm:http-signature@1.1.1/li
   return module.exports;
 });
 
-System.registerDynamic("npm:mime-db@1.21.0/db.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:mime-db@1.21.0/db.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21513,7 +21513,7 @@ System.registerDynamic("npm:mime-db@1.21.0/db.json!github:systemjs/plugin-json@0
   return module.exports;
 });
 
-System.registerDynamic("npm:mime-db@1.21.0/index", ["./db.json!systemjs-json"], true, function($__require, exports, module) {
+System.registerDynamic("npm:mime-db@1.21.0/index.js", ["./db.json!systemjs-json"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21523,7 +21523,7 @@ System.registerDynamic("npm:mime-db@1.21.0/index", ["./db.json!systemjs-json"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:mime-db@1.21.0", ["npm:mime-db@1.21.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:mime-db@1.21.0.js", ["npm:mime-db@1.21.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21533,7 +21533,7 @@ System.registerDynamic("npm:mime-db@1.21.0", ["npm:mime-db@1.21.0/index"], true,
   return module.exports;
 });
 
-System.registerDynamic("npm:path-browserify@0.0.0/index", ["process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:path-browserify@0.0.0/index.js", ["process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21690,7 +21690,7 @@ System.registerDynamic("npm:path-browserify@0.0.0/index", ["process"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:path-browserify@0.0.0", ["npm:path-browserify@0.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:path-browserify@0.0.0.js", ["npm:path-browserify@0.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21700,7 +21700,7 @@ System.registerDynamic("npm:path-browserify@0.0.0", ["npm:path-browserify@0.0.0/
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-path@0.1.0/index", ["path-browserify"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-path@0.1.0/index.js", ["path-browserify"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21710,7 +21710,7 @@ System.registerDynamic("github:jspm/nodelibs-path@0.1.0/index", ["path-browserif
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-path@0.1.0", ["github:jspm/nodelibs-path@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-path@0.1.0.js", ["github:jspm/nodelibs-path@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21720,7 +21720,7 @@ System.registerDynamic("github:jspm/nodelibs-path@0.1.0", ["github:jspm/nodelibs
   return module.exports;
 });
 
-System.registerDynamic("npm:mime-types@2.1.9/index", ["mime-db", "path"], true, function($__require, exports, module) {
+System.registerDynamic("npm:mime-types@2.1.9/index.js", ["mime-db", "path"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21814,7 +21814,7 @@ System.registerDynamic("npm:mime-types@2.1.9/index", ["mime-db", "path"], true, 
   return module.exports;
 });
 
-System.registerDynamic("npm:mime-types@2.1.9", ["npm:mime-types@2.1.9/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:mime-types@2.1.9.js", ["npm:mime-types@2.1.9/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21824,7 +21824,7 @@ System.registerDynamic("npm:mime-types@2.1.9", ["npm:mime-types@2.1.9/index"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:stringstream@0.0.5/stringstream", ["util", "stream", "string_decoder", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:stringstream@0.0.5/stringstream.js", ["util", "stream", "string_decoder", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21927,7 +21927,7 @@ System.registerDynamic("npm:stringstream@0.0.5/stringstream", ["util", "stream",
   return module.exports;
 });
 
-System.registerDynamic("npm:stringstream@0.0.5", ["npm:stringstream@0.0.5/stringstream.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:stringstream@0.0.5.js", ["npm:stringstream@0.0.5/stringstream.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -21937,7 +21937,7 @@ System.registerDynamic("npm:stringstream@0.0.5", ["npm:stringstream@0.0.5/string
   return module.exports;
 });
 
-System.registerDynamic("npm:forever-agent@0.6.1/index", ["util", "http", "net", "tls", "https"], true, function($__require, exports, module) {
+System.registerDynamic("npm:forever-agent@0.6.1/index.js", ["util", "http", "net", "tls", "https"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22056,7 +22056,7 @@ System.registerDynamic("npm:forever-agent@0.6.1/index", ["util", "http", "net", 
   return module.exports;
 });
 
-System.registerDynamic("npm:forever-agent@0.6.1", ["npm:forever-agent@0.6.1/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:forever-agent@0.6.1.js", ["npm:forever-agent@0.6.1/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22066,7 +22066,7 @@ System.registerDynamic("npm:forever-agent@0.6.1", ["npm:forever-agent@0.6.1/inde
   return module.exports;
 });
 
-System.registerDynamic("npm:form-data@1.0.0-rc3/lib/browser", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:form-data@1.0.0-rc3/lib/browser.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22076,7 +22076,7 @@ System.registerDynamic("npm:form-data@1.0.0-rc3/lib/browser", [], true, function
   return module.exports;
 });
 
-System.registerDynamic("npm:form-data@1.0.0-rc3", ["npm:form-data@1.0.0-rc3/lib/browser"], true, function($__require, exports, module) {
+System.registerDynamic("npm:form-data@1.0.0-rc3.js", ["npm:form-data@1.0.0-rc3/lib/browser"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22086,7 +22086,7 @@ System.registerDynamic("npm:form-data@1.0.0-rc3", ["npm:form-data@1.0.0-rc3/lib/
   return module.exports;
 });
 
-System.registerDynamic("npm:is-typedarray@1.0.0/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:is-typedarray@1.0.0/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22119,7 +22119,7 @@ System.registerDynamic("npm:is-typedarray@1.0.0/index", [], true, function($__re
   return module.exports;
 });
 
-System.registerDynamic("npm:is-typedarray@1.0.0", ["npm:is-typedarray@1.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:is-typedarray@1.0.0.js", ["npm:is-typedarray@1.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22129,7 +22129,7 @@ System.registerDynamic("npm:is-typedarray@1.0.0", ["npm:is-typedarray@1.0.0/inde
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1/lib/store", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1/lib/store.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22163,7 +22163,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1/lib/store", [], true, function($_
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1/lib/memstore", ["./store", "./permuteDomain", "./pathMatch", "util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1/lib/memstore.js", ["./store", "./permuteDomain", "./pathMatch", "util"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22284,7 +22284,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1/lib/memstore", ["./store", "./per
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1/lib/pathMatch", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1/lib/pathMatch.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22310,7 +22310,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1/lib/pathMatch", [], true, functio
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1/package.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1/package.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22367,7 +22367,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1/package.json!github:systemjs/plug
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-punycode@0.1.0/index", ["punycode"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-punycode@0.1.0/index.js", ["punycode"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22377,7 +22377,7 @@ System.registerDynamic("github:jspm/nodelibs-punycode@0.1.0/index", ["punycode"]
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-punycode@0.1.0", ["github:jspm/nodelibs-punycode@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-punycode@0.1.0.js", ["github:jspm/nodelibs-punycode@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -22387,7 +22387,7 @@ System.registerDynamic("github:jspm/nodelibs-punycode@0.1.0", ["github:jspm/node
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1/lib/pubsuffix", ["punycode"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1/lib/pubsuffix.js", ["punycode"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -30226,7 +30226,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1/lib/pubsuffix", ["punycode"], tru
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1/lib/permuteDomain", ["./pubsuffix"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1/lib/permuteDomain.js", ["./pubsuffix"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -30256,7 +30256,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1/lib/permuteDomain", ["./pubsuffix
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1/lib/cookie", ["net", "url", "./pubsuffix", "./store", "./memstore", "./pathMatch", "../package.json!systemjs-json", "punycode", "./permuteDomain"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1/lib/cookie.js", ["net", "url", "./pubsuffix", "./store", "./memstore", "./pathMatch", "../package.json!systemjs-json", "punycode", "./permuteDomain"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31150,7 +31150,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1/lib/cookie", ["net", "url", "./pu
   return module.exports;
 });
 
-System.registerDynamic("npm:tough-cookie@2.2.1", ["npm:tough-cookie@2.2.1/lib/cookie"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tough-cookie@2.2.1.js", ["npm:tough-cookie@2.2.1/lib/cookie"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31160,7 +31160,7 @@ System.registerDynamic("npm:tough-cookie@2.2.1", ["npm:tough-cookie@2.2.1/lib/co
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/cookies", ["tough-cookie"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/cookies.js", ["tough-cookie"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31201,7 +31201,7 @@ System.registerDynamic("npm:request@2.69.0/lib/cookies", ["tough-cookie"], true,
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/getProxyFromURI", ["process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/getProxyFromURI.js", ["process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31258,7 +31258,7 @@ System.registerDynamic("npm:request@2.69.0/lib/getProxyFromURI", ["process"], tr
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/querystring", ["qs", "querystring"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/querystring.js", ["qs", "querystring"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31299,7 +31299,7 @@ System.registerDynamic("npm:request@2.69.0/lib/querystring", ["qs", "querystring
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-fs@0.1.2/index", [], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-fs@0.1.2/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31328,7 +31328,7 @@ System.registerDynamic("github:jspm/nodelibs-fs@0.1.2/index", [], true, function
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-fs@0.1.2", ["github:jspm/nodelibs-fs@0.1.2/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-fs@0.1.2.js", ["github:jspm/nodelibs-fs@0.1.2/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31338,7 +31338,7 @@ System.registerDynamic("github:jspm/nodelibs-fs@0.1.2", ["github:jspm/nodelibs-f
   return module.exports;
 });
 
-System.registerDynamic("npm:pinkie@2.0.2/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:pinkie@2.0.4/index.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31349,7 +31349,7 @@ System.registerDynamic("npm:pinkie@2.0.2/index", [], true, function($__require, 
   var FULFILLED = 'fulfilled';
   var REJECTED = 'rejected';
   var NOOP = function() {};
-  var isNode = global.process !== 'undefined' && typeof global.process.emit === 'function';
+  var isNode = typeof global !== 'undefined' && typeof global.process !== 'undefined' && typeof global.process.emit === 'function';
   var asyncSetTimer = typeof setImmediate === 'undefined' ? setTimeout : setImmediate;
   var asyncQueue = [];
   var asyncTimer;
@@ -31578,17 +31578,17 @@ System.registerDynamic("npm:pinkie@2.0.2/index", [], true, function($__require, 
   return module.exports;
 });
 
-System.registerDynamic("npm:pinkie@2.0.2", ["npm:pinkie@2.0.2/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pinkie@2.0.4.js", ["npm:pinkie@2.0.4/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('npm:pinkie@2.0.2/index');
+  module.exports = $__require('npm:pinkie@2.0.4/index');
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:pinkie-promise@2.0.0/index", ["pinkie"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pinkie-promise@2.0.0/index.js", ["pinkie"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31599,7 +31599,7 @@ System.registerDynamic("npm:pinkie-promise@2.0.0/index", ["pinkie"], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:pinkie-promise@2.0.0", ["npm:pinkie-promise@2.0.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pinkie-promise@2.0.0.js", ["npm:pinkie-promise@2.0.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31609,7 +31609,7 @@ System.registerDynamic("npm:pinkie-promise@2.0.0", ["npm:pinkie-promise@2.0.0/in
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/error", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/error.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31625,7 +31625,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/error", [], true, function($
   return module.exports;
 });
 
-System.registerDynamic("npm:is-property@1.0.2/is-property", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:is-property@1.0.2/is-property.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31639,7 +31639,7 @@ System.registerDynamic("npm:is-property@1.0.2/is-property", [], true, function($
   return module.exports;
 });
 
-System.registerDynamic("npm:is-property@1.0.2", ["npm:is-property@1.0.2/is-property.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:is-property@1.0.2.js", ["npm:is-property@1.0.2/is-property.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31649,7 +31649,7 @@ System.registerDynamic("npm:is-property@1.0.2", ["npm:is-property@1.0.2/is-prope
   return module.exports;
 });
 
-System.registerDynamic("npm:generate-object-property@1.2.0/index", ["is-property"], true, function($__require, exports, module) {
+System.registerDynamic("npm:generate-object-property@1.2.0/index.js", ["is-property"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31667,7 +31667,7 @@ System.registerDynamic("npm:generate-object-property@1.2.0/index", ["is-property
   return module.exports;
 });
 
-System.registerDynamic("npm:generate-object-property@1.2.0", ["npm:generate-object-property@1.2.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:generate-object-property@1.2.0.js", ["npm:generate-object-property@1.2.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31677,7 +31677,7 @@ System.registerDynamic("npm:generate-object-property@1.2.0", ["npm:generate-obje
   return module.exports;
 });
 
-System.registerDynamic("npm:generate-function@2.0.0/index", ["util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:generate-function@2.0.0/index.js", ["util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31737,7 +31737,7 @@ System.registerDynamic("npm:generate-function@2.0.0/index", ["util"], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:generate-function@2.0.0", ["npm:generate-function@2.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:generate-function@2.0.0.js", ["npm:generate-function@2.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31747,7 +31747,7 @@ System.registerDynamic("npm:generate-function@2.0.0", ["npm:generate-function@2.
   return module.exports;
 });
 
-System.registerDynamic("npm:jsonpointer@2.0.0/jsonpointer", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:jsonpointer@2.0.0/jsonpointer.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31819,7 +31819,7 @@ System.registerDynamic("npm:jsonpointer@2.0.0/jsonpointer", [], true, function($
   return module.exports;
 });
 
-System.registerDynamic("npm:jsonpointer@2.0.0", ["npm:jsonpointer@2.0.0/jsonpointer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:jsonpointer@2.0.0.js", ["npm:jsonpointer@2.0.0/jsonpointer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31829,7 +31829,7 @@ System.registerDynamic("npm:jsonpointer@2.0.0", ["npm:jsonpointer@2.0.0/jsonpoin
   return module.exports;
 });
 
-System.registerDynamic("npm:xtend@4.0.1/immutable", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:xtend@4.0.1/immutable.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31852,7 +31852,7 @@ System.registerDynamic("npm:xtend@4.0.1/immutable", [], true, function($__requir
   return module.exports;
 });
 
-System.registerDynamic("npm:xtend@4.0.1", ["npm:xtend@4.0.1/immutable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:xtend@4.0.1.js", ["npm:xtend@4.0.1/immutable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31862,7 +31862,7 @@ System.registerDynamic("npm:xtend@4.0.1", ["npm:xtend@4.0.1/immutable"], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:is-my-json-valid@2.12.4/formats", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:is-my-json-valid@2.12.4/formats.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -31885,7 +31885,7 @@ System.registerDynamic("npm:is-my-json-valid@2.12.4/formats", [], true, function
   return module.exports;
 });
 
-System.registerDynamic("npm:is-my-json-valid@2.12.4/index", ["generate-object-property", "generate-function", "jsonpointer", "xtend", "./formats"], true, function($__require, exports, module) {
+System.registerDynamic("npm:is-my-json-valid@2.12.4/index.js", ["generate-object-property", "generate-function", "jsonpointer", "xtend", "./formats"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32385,7 +32385,7 @@ System.registerDynamic("npm:is-my-json-valid@2.12.4/index", ["generate-object-pr
   return module.exports;
 });
 
-System.registerDynamic("npm:is-my-json-valid@2.12.4", ["npm:is-my-json-valid@2.12.4/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:is-my-json-valid@2.12.4.js", ["npm:is-my-json-valid@2.12.4/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32395,7 +32395,7 @@ System.registerDynamic("npm:is-my-json-valid@2.12.4", ["npm:is-my-json-valid@2.1
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/runner", ["./schemas/index", "./error", "is-my-json-valid"], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/runner.js", ["./schemas/index", "./error", "is-my-json-valid"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32423,7 +32423,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/runner", ["./schemas/index",
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cache.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cache.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32437,7 +32437,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cache.json!github:sy
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cacheEntry.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cacheEntry.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32461,7 +32461,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cacheEntry.json!gith
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/content.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/content.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32482,7 +32482,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/content.json!github:
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cookie.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cookie.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32508,7 +32508,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/cookie.json!github:s
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/creator.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/creator.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32526,7 +32526,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/creator.json!github:
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/entry.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/entry.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32562,7 +32562,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/entry.json!github:sy
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/har.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/har.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32576,7 +32576,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/har.json!github:syst
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/log.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/log.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32603,7 +32603,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/log.json!github:syst
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/page.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/page.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32631,7 +32631,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/page.json!github:sys
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/pageTimings.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/pageTimings.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32654,7 +32654,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/pageTimings.json!git
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/postData.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/postData.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32684,7 +32684,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/postData.json!github
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/record.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/record.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32702,7 +32702,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/record.json!github:s
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/request.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/request.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32739,7 +32739,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/request.json!github:
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/response.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/response.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32770,7 +32770,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/response.json!github
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/timings.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/timings.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32813,7 +32813,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/timings.json!github:
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/index", ["./cache.json!systemjs-json", "./cacheEntry.json!systemjs-json", "./content.json!systemjs-json", "./cookie.json!systemjs-json", "./creator.json!systemjs-json", "./entry.json!systemjs-json", "./har.json!systemjs-json", "./log.json!systemjs-json", "./page.json!systemjs-json", "./pageTimings.json!systemjs-json", "./postData.json!systemjs-json", "./record.json!systemjs-json", "./request.json!systemjs-json", "./response.json!systemjs-json", "./timings.json!systemjs-json"], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/index.js", ["./cache.json!systemjs-json", "./cacheEntry.json!systemjs-json", "./content.json!systemjs-json", "./cookie.json!systemjs-json", "./creator.json!systemjs-json", "./entry.json!systemjs-json", "./har.json!systemjs-json", "./log.json!systemjs-json", "./page.json!systemjs-json", "./pageTimings.json!systemjs-json", "./postData.json!systemjs-json", "./record.json!systemjs-json", "./request.json!systemjs-json", "./response.json!systemjs-json", "./timings.json!systemjs-json"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32860,7 +32860,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/schemas/index", ["./cache.js
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6/lib/index", ["pinkie-promise", "./runner", "./schemas/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6/lib/index.js", ["pinkie-promise", "./runner", "./schemas/index"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32886,7 +32886,7 @@ System.registerDynamic("npm:har-validator@2.0.6/lib/index", ["pinkie-promise", "
   return module.exports;
 });
 
-System.registerDynamic("npm:har-validator@2.0.6", ["npm:har-validator@2.0.6/lib/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:har-validator@2.0.6.js", ["npm:har-validator@2.0.6/lib/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32896,7 +32896,7 @@ System.registerDynamic("npm:har-validator@2.0.6", ["npm:har-validator@2.0.6/lib/
   return module.exports;
 });
 
-System.registerDynamic("npm:extend@3.0.0/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:extend@3.0.0/index.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32969,7 +32969,7 @@ System.registerDynamic("npm:extend@3.0.0/index", [], true, function($__require, 
   return module.exports;
 });
 
-System.registerDynamic("npm:extend@3.0.0", ["npm:extend@3.0.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:extend@3.0.0.js", ["npm:extend@3.0.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32979,7 +32979,7 @@ System.registerDynamic("npm:extend@3.0.0", ["npm:extend@3.0.0/index"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/har", ["fs", "querystring", "har-validator", "extend", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/har.js", ["fs", "querystring", "har-validator", "extend", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33130,7 +33130,7 @@ System.registerDynamic("npm:request@2.69.0/lib/har", ["fs", "querystring", "har-
   return module.exports;
 });
 
-System.registerDynamic("npm:json-stringify-safe@5.0.1/stringify", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:json-stringify-safe@5.0.1/stringify.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33165,7 +33165,7 @@ System.registerDynamic("npm:json-stringify-safe@5.0.1/stringify", [], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:json-stringify-safe@5.0.1", ["npm:json-stringify-safe@5.0.1/stringify.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:json-stringify-safe@5.0.1.js", ["npm:json-stringify-safe@5.0.1/stringify.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33175,7 +33175,7 @@ System.registerDynamic("npm:json-stringify-safe@5.0.1", ["npm:json-stringify-saf
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/helpers", ["json-stringify-safe", "crypto", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/helpers.js", ["json-stringify-safe", "crypto", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33243,7 +33243,7 @@ System.registerDynamic("npm:request@2.69.0/lib/helpers", ["json-stringify-safe",
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/auth", ["caseless", "node-uuid", "./helpers"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/auth.js", ["caseless", "node-uuid", "./helpers"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33380,7 +33380,7 @@ System.registerDynamic("npm:request@2.69.0/lib/auth", ["caseless", "node-uuid", 
   return module.exports;
 });
 
-System.registerDynamic("npm:qs@6.0.2/lib/stringify", ["./utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:qs@6.0.2/lib/stringify.js", ["./utils"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33496,7 +33496,7 @@ System.registerDynamic("npm:qs@6.0.2/lib/stringify", ["./utils"], true, function
   return module.exports;
 });
 
-System.registerDynamic("npm:qs@6.0.2/lib/utils", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:qs@6.0.2/lib/utils.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33625,7 +33625,7 @@ System.registerDynamic("npm:qs@6.0.2/lib/utils", [], true, function($__require, 
   return module.exports;
 });
 
-System.registerDynamic("npm:qs@6.0.2/lib/parse", ["./utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:qs@6.0.2/lib/parse.js", ["./utils"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33747,7 +33747,7 @@ System.registerDynamic("npm:qs@6.0.2/lib/parse", ["./utils"], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:qs@6.0.2/lib/index", ["./stringify", "./parse"], true, function($__require, exports, module) {
+System.registerDynamic("npm:qs@6.0.2/lib/index.js", ["./stringify", "./parse"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33763,7 +33763,7 @@ System.registerDynamic("npm:qs@6.0.2/lib/index", ["./stringify", "./parse"], tru
   return module.exports;
 });
 
-System.registerDynamic("npm:qs@6.0.2", ["npm:qs@6.0.2/lib/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:qs@6.0.2.js", ["npm:qs@6.0.2/lib/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33773,7 +33773,7 @@ System.registerDynamic("npm:qs@6.0.2", ["npm:qs@6.0.2/lib/index.js"], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:caseless@0.11.0/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:caseless@0.11.0/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33856,7 +33856,7 @@ System.registerDynamic("npm:caseless@0.11.0/index", [], true, function($__requir
   return module.exports;
 });
 
-System.registerDynamic("npm:caseless@0.11.0", ["npm:caseless@0.11.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:caseless@0.11.0.js", ["npm:caseless@0.11.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33866,7 +33866,7 @@ System.registerDynamic("npm:caseless@0.11.0", ["npm:caseless@0.11.0/index.js"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:oauth-sign@0.8.1/index", ["crypto", "querystring"], true, function($__require, exports, module) {
+System.registerDynamic("npm:oauth-sign@0.8.1/index.js", ["crypto", "querystring"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33958,7 +33958,7 @@ System.registerDynamic("npm:oauth-sign@0.8.1/index", ["crypto", "querystring"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:oauth-sign@0.8.1", ["npm:oauth-sign@0.8.1/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:oauth-sign@0.8.1.js", ["npm:oauth-sign@0.8.1/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33968,7 +33968,7 @@ System.registerDynamic("npm:oauth-sign@0.8.1", ["npm:oauth-sign@0.8.1/index.js"]
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/oauth", ["url", "qs", "caseless", "node-uuid", "oauth-sign", "crypto", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/oauth.js", ["url", "qs", "caseless", "node-uuid", "oauth-sign", "crypto", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34089,7 +34089,7 @@ System.registerDynamic("npm:request@2.69.0/lib/oauth", ["url", "qs", "caseless",
   return module.exports;
 });
 
-System.registerDynamic("npm:node-uuid@1.4.7/uuid", ["crypto", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:node-uuid@1.4.7/uuid.js", ["crypto", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34265,7 +34265,7 @@ System.registerDynamic("npm:node-uuid@1.4.7/uuid", ["crypto", "buffer"], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:node-uuid@1.4.7", ["npm:node-uuid@1.4.7/uuid.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:node-uuid@1.4.7.js", ["npm:node-uuid@1.4.7/uuid.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34275,7 +34275,7 @@ System.registerDynamic("npm:node-uuid@1.4.7", ["npm:node-uuid@1.4.7/uuid.js"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:delayed-stream@1.0.0/lib/delayed_stream", ["stream", "util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:delayed-stream@1.0.0/lib/delayed_stream.js", ["stream", "util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34368,7 +34368,7 @@ System.registerDynamic("npm:delayed-stream@1.0.0/lib/delayed_stream", ["stream",
   return module.exports;
 });
 
-System.registerDynamic("npm:delayed-stream@1.0.0", ["npm:delayed-stream@1.0.0/lib/delayed_stream"], true, function($__require, exports, module) {
+System.registerDynamic("npm:delayed-stream@1.0.0.js", ["npm:delayed-stream@1.0.0/lib/delayed_stream"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34378,7 +34378,7 @@ System.registerDynamic("npm:delayed-stream@1.0.0", ["npm:delayed-stream@1.0.0/li
   return module.exports;
 });
 
-System.registerDynamic("npm:combined-stream@1.0.5/lib/combined_stream", ["util", "stream", "delayed-stream", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:combined-stream@1.0.5/lib/combined_stream.js", ["util", "stream", "delayed-stream", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34537,7 +34537,7 @@ System.registerDynamic("npm:combined-stream@1.0.5/lib/combined_stream", ["util",
   return module.exports;
 });
 
-System.registerDynamic("npm:combined-stream@1.0.5", ["npm:combined-stream@1.0.5/lib/combined_stream"], true, function($__require, exports, module) {
+System.registerDynamic("npm:combined-stream@1.0.5.js", ["npm:combined-stream@1.0.5/lib/combined_stream"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34547,7 +34547,7 @@ System.registerDynamic("npm:combined-stream@1.0.5", ["npm:combined-stream@1.0.5/
   return module.exports;
 });
 
-System.registerDynamic("npm:isstream@0.1.2/isstream", ["stream"], true, function($__require, exports, module) {
+System.registerDynamic("npm:isstream@0.1.2/isstream.js", ["stream"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34573,7 +34573,7 @@ System.registerDynamic("npm:isstream@0.1.2/isstream", ["stream"], true, function
   return module.exports;
 });
 
-System.registerDynamic("npm:isstream@0.1.2", ["npm:isstream@0.1.2/isstream.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:isstream@0.1.2.js", ["npm:isstream@0.1.2/isstream.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34583,7 +34583,7 @@ System.registerDynamic("npm:isstream@0.1.2", ["npm:isstream@0.1.2/isstream.js"],
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/multipart", ["node-uuid", "combined-stream", "isstream", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/multipart.js", ["node-uuid", "combined-stream", "isstream", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34685,7 +34685,7 @@ System.registerDynamic("npm:request@2.69.0/lib/multipart", ["node-uuid", "combin
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/redirect", ["url"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/redirect.js", ["url"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34815,7 +34815,7 @@ System.registerDynamic("npm:request@2.69.0/lib/redirect", ["url"], true, functio
   return module.exports;
 });
 
-System.registerDynamic("npm:timers-browserify@1.4.2/main", ["process/browser", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:timers-browserify@1.4.2/main.js", ["process/browser", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34885,7 +34885,7 @@ System.registerDynamic("npm:timers-browserify@1.4.2/main", ["process/browser", "
   return module.exports;
 });
 
-System.registerDynamic("npm:timers-browserify@1.4.2", ["npm:timers-browserify@1.4.2/main.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:timers-browserify@1.4.2.js", ["npm:timers-browserify@1.4.2/main.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34895,7 +34895,7 @@ System.registerDynamic("npm:timers-browserify@1.4.2", ["npm:timers-browserify@1.
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-timers@0.1.0/index", ["timers-browserify"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-timers@0.1.0/index.js", ["timers-browserify"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34905,7 +34905,7 @@ System.registerDynamic("github:jspm/nodelibs-timers@0.1.0/index", ["timers-brows
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-timers@0.1.0", ["github:jspm/nodelibs-timers@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-timers@0.1.0.js", ["github:jspm/nodelibs-timers@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -34915,7 +34915,7 @@ System.registerDynamic("github:jspm/nodelibs-timers@0.1.0", ["github:jspm/nodeli
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-net@0.1.2/index", ["stream", "util", "timers", "http", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-net@0.1.2/index.js", ["stream", "util", "timers", "http", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35239,7 +35239,7 @@ System.registerDynamic("github:jspm/nodelibs-net@0.1.2/index", ["stream", "util"
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-net@0.1.2", ["github:jspm/nodelibs-net@0.1.2/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-net@0.1.2.js", ["github:jspm/nodelibs-net@0.1.2/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35249,7 +35249,7 @@ System.registerDynamic("github:jspm/nodelibs-net@0.1.2", ["github:jspm/nodelibs-
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-tls@0.1.0/index", [], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-tls@0.1.0/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35262,7 +35262,7 @@ System.registerDynamic("github:jspm/nodelibs-tls@0.1.0/index", [], true, functio
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-tls@0.1.0", ["github:jspm/nodelibs-tls@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-tls@0.1.0.js", ["github:jspm/nodelibs-tls@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35272,7 +35272,7 @@ System.registerDynamic("github:jspm/nodelibs-tls@0.1.0", ["github:jspm/nodelibs-
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-http@1.7.1/lib/response", ["stream", "util"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-http@1.7.1/lib/response.js", ["stream", "util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35381,7 +35381,7 @@ System.registerDynamic("github:jspm/nodelibs-http@1.7.1/lib/response", ["stream"
   return module.exports;
 });
 
-System.registerDynamic("npm:Base64@0.2.1/base64", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:Base64@0.2.1/base64.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35429,7 +35429,7 @@ System.registerDynamic("npm:Base64@0.2.1/base64", [], true, function($__require,
   return module.exports;
 });
 
-System.registerDynamic("npm:Base64@0.2.1", ["npm:Base64@0.2.1/base64.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:Base64@0.2.1.js", ["npm:Base64@0.2.1/base64.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35439,7 +35439,7 @@ System.registerDynamic("npm:Base64@0.2.1", ["npm:Base64@0.2.1/base64.js"], true,
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-http@1.7.1/lib/request", ["stream", "./response", "Base64", "inherits"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-http@1.7.1/lib/request.js", ["stream", "./response", "Base64", "inherits"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35601,7 +35601,7 @@ System.registerDynamic("github:jspm/nodelibs-http@1.7.1/lib/request", ["stream",
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-http@1.7.1/index", ["events", "./lib/request", "url"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-http@1.7.1/index.js", ["events", "./lib/request", "url"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35745,7 +35745,7 @@ System.registerDynamic("github:jspm/nodelibs-http@1.7.1/index", ["events", "./li
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-http@1.7.1", ["github:jspm/nodelibs-http@1.7.1/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-http@1.7.1.js", ["github:jspm/nodelibs-http@1.7.1/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35755,7 +35755,7 @@ System.registerDynamic("github:jspm/nodelibs-http@1.7.1", ["github:jspm/nodelibs
   return module.exports;
 });
 
-System.registerDynamic("npm:https-browserify@0.0.0/index", ["http"], true, function($__require, exports, module) {
+System.registerDynamic("npm:https-browserify@0.0.0/index.js", ["http"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35777,7 +35777,7 @@ System.registerDynamic("npm:https-browserify@0.0.0/index", ["http"], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:https-browserify@0.0.0", ["npm:https-browserify@0.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:https-browserify@0.0.0.js", ["npm:https-browserify@0.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35787,7 +35787,7 @@ System.registerDynamic("npm:https-browserify@0.0.0", ["npm:https-browserify@0.0.
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-https@0.1.0/index", ["https-browserify"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-https@0.1.0/index.js", ["https-browserify"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35797,7 +35797,7 @@ System.registerDynamic("github:jspm/nodelibs-https@0.1.0/index", ["https-browser
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-https@0.1.0", ["github:jspm/nodelibs-https@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-https@0.1.0.js", ["github:jspm/nodelibs-https@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -35807,7 +35807,7 @@ System.registerDynamic("github:jspm/nodelibs-https@0.1.0", ["github:jspm/nodelib
   return module.exports;
 });
 
-System.registerDynamic("npm:assert@1.3.0/assert", ["util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:assert@1.3.0/assert.js", ["util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36030,7 +36030,7 @@ System.registerDynamic("npm:assert@1.3.0/assert", ["util"], true, function($__re
   return module.exports;
 });
 
-System.registerDynamic("npm:assert@1.3.0", ["npm:assert@1.3.0/assert.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:assert@1.3.0.js", ["npm:assert@1.3.0/assert.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36040,7 +36040,7 @@ System.registerDynamic("npm:assert@1.3.0", ["npm:assert@1.3.0/assert.js"], true,
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-assert@0.1.0/index", ["assert"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-assert@0.1.0/index.js", ["assert"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36050,7 +36050,7 @@ System.registerDynamic("github:jspm/nodelibs-assert@0.1.0/index", ["assert"], tr
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-assert@0.1.0", ["github:jspm/nodelibs-assert@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-assert@0.1.0.js", ["github:jspm/nodelibs-assert@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36060,7 +36060,7 @@ System.registerDynamic("github:jspm/nodelibs-assert@0.1.0", ["github:jspm/nodeli
   return module.exports;
 });
 
-System.registerDynamic("npm:util@0.10.3/support/isBufferBrowser", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:util@0.10.3/support/isBufferBrowser.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36072,7 +36072,7 @@ System.registerDynamic("npm:util@0.10.3/support/isBufferBrowser", [], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:util@0.10.3/util", ["./support/isBufferBrowser", "inherits", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:util@0.10.3/util.js", ["./support/isBufferBrowser", "inherits", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36504,7 +36504,7 @@ System.registerDynamic("npm:util@0.10.3/util", ["./support/isBufferBrowser", "in
   return module.exports;
 });
 
-System.registerDynamic("npm:util@0.10.3", ["npm:util@0.10.3/util.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:util@0.10.3.js", ["npm:util@0.10.3/util.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36514,7 +36514,7 @@ System.registerDynamic("npm:util@0.10.3", ["npm:util@0.10.3/util.js"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-util@0.1.0/index", ["util"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-util@0.1.0/index.js", ["util"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36524,7 +36524,7 @@ System.registerDynamic("github:jspm/nodelibs-util@0.1.0/index", ["util"], true, 
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-util@0.1.0", ["github:jspm/nodelibs-util@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-util@0.1.0.js", ["github:jspm/nodelibs-util@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36534,7 +36534,7 @@ System.registerDynamic("github:jspm/nodelibs-util@0.1.0", ["github:jspm/nodelibs
   return module.exports;
 });
 
-System.registerDynamic("npm:tunnel-agent@0.4.2/index", ["net", "tls", "http", "https", "events", "assert", "util", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tunnel-agent@0.4.2/index.js", ["net", "tls", "http", "https", "events", "assert", "util", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36752,7 +36752,7 @@ System.registerDynamic("npm:tunnel-agent@0.4.2/index", ["net", "tls", "http", "h
   return module.exports;
 });
 
-System.registerDynamic("npm:tunnel-agent@0.4.2", ["npm:tunnel-agent@0.4.2/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:tunnel-agent@0.4.2.js", ["npm:tunnel-agent@0.4.2/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -36762,7 +36762,7 @@ System.registerDynamic("npm:tunnel-agent@0.4.2", ["npm:tunnel-agent@0.4.2/index.
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/lib/tunnel", ["url", "tunnel-agent"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/lib/tunnel.js", ["url", "tunnel-agent"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -36882,7 +36882,7 @@ System.registerDynamic("npm:request@2.69.0/lib/tunnel", ["url", "tunnel-agent"],
   return module.exports;
 });
 
-System.registerDynamic("npm:punycode@1.3.2/punycode", ["process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:punycode@1.3.2/punycode.js", ["process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37171,7 +37171,7 @@ System.registerDynamic("npm:punycode@1.3.2/punycode", ["process"], true, functio
   return module.exports;
 });
 
-System.registerDynamic("npm:punycode@1.3.2", ["npm:punycode@1.3.2/punycode.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:punycode@1.3.2.js", ["npm:punycode@1.3.2/punycode.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37181,7 +37181,7 @@ System.registerDynamic("npm:punycode@1.3.2", ["npm:punycode@1.3.2/punycode.js"],
   return module.exports;
 });
 
-System.registerDynamic("npm:url@0.10.3/url", ["punycode", "querystring"], true, function($__require, exports, module) {
+System.registerDynamic("npm:url@0.10.3/url.js", ["punycode", "querystring"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37675,7 +37675,7 @@ System.registerDynamic("npm:url@0.10.3/url", ["punycode", "querystring"], true, 
   return module.exports;
 });
 
-System.registerDynamic("npm:url@0.10.3", ["npm:url@0.10.3/url.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:url@0.10.3.js", ["npm:url@0.10.3/url.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37685,7 +37685,7 @@ System.registerDynamic("npm:url@0.10.3", ["npm:url@0.10.3/url.js"], true, functi
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-url@0.1.0/index", ["url"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-url@0.1.0/index.js", ["url"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37695,7 +37695,7 @@ System.registerDynamic("github:jspm/nodelibs-url@0.1.0/index", ["url"], true, fu
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-url@0.1.0", ["github:jspm/nodelibs-url@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-url@0.1.0.js", ["github:jspm/nodelibs-url@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37705,7 +37705,7 @@ System.registerDynamic("github:jspm/nodelibs-url@0.1.0", ["github:jspm/nodelibs-
   return module.exports;
 });
 
-System.registerDynamic("npm:querystring@0.2.0/decode", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:querystring@0.2.0/decode.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -37761,7 +37761,7 @@ System.registerDynamic("npm:querystring@0.2.0/decode", [], true, function($__req
   return module.exports;
 });
 
-System.registerDynamic("npm:querystring@0.2.0/encode", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:querystring@0.2.0/encode.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -37805,7 +37805,7 @@ System.registerDynamic("npm:querystring@0.2.0/encode", [], true, function($__req
   return module.exports;
 });
 
-System.registerDynamic("npm:querystring@0.2.0/index", ["./decode", "./encode"], true, function($__require, exports, module) {
+System.registerDynamic("npm:querystring@0.2.0/index.js", ["./decode", "./encode"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -37817,7 +37817,7 @@ System.registerDynamic("npm:querystring@0.2.0/index", ["./decode", "./encode"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:querystring@0.2.0", ["npm:querystring@0.2.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:querystring@0.2.0.js", ["npm:querystring@0.2.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37827,7 +37827,7 @@ System.registerDynamic("npm:querystring@0.2.0", ["npm:querystring@0.2.0/index"],
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-querystring@0.1.0/index", ["querystring"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-querystring@0.1.0/index.js", ["querystring"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37837,7 +37837,7 @@ System.registerDynamic("github:jspm/nodelibs-querystring@0.1.0/index", ["queryst
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-querystring@0.1.0", ["github:jspm/nodelibs-querystring@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-querystring@0.1.0.js", ["github:jspm/nodelibs-querystring@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37847,7 +37847,7 @@ System.registerDynamic("github:jspm/nodelibs-querystring@0.1.0", ["github:jspm/n
   return module.exports;
 });
 
-System.registerDynamic("npm:des.js@1.0.0/lib/des/utils", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:des.js@1.0.0/lib/des/utils.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38019,7 +38019,7 @@ System.registerDynamic("npm:des.js@1.0.0/lib/des/utils", [], true, function($__r
   return module.exports;
 });
 
-System.registerDynamic("npm:des.js@1.0.0/lib/des/cipher", ["minimalistic-assert", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:des.js@1.0.0/lib/des/cipher.js", ["minimalistic-assert", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38130,7 +38130,7 @@ System.registerDynamic("npm:des.js@1.0.0/lib/des/cipher", ["minimalistic-assert"
   return module.exports;
 });
 
-System.registerDynamic("npm:des.js@1.0.0/lib/des/des", ["minimalistic-assert", "inherits", "../des"], true, function($__require, exports, module) {
+System.registerDynamic("npm:des.js@1.0.0/lib/des/des.js", ["minimalistic-assert", "inherits", "../des"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38238,7 +38238,7 @@ System.registerDynamic("npm:des.js@1.0.0/lib/des/des", ["minimalistic-assert", "
   return module.exports;
 });
 
-System.registerDynamic("npm:des.js@1.0.0/lib/des/cbc", ["minimalistic-assert", "inherits"], true, function($__require, exports, module) {
+System.registerDynamic("npm:des.js@1.0.0/lib/des/cbc.js", ["minimalistic-assert", "inherits"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38296,7 +38296,7 @@ System.registerDynamic("npm:des.js@1.0.0/lib/des/cbc", ["minimalistic-assert", "
   return module.exports;
 });
 
-System.registerDynamic("npm:des.js@1.0.0/lib/des/ede", ["minimalistic-assert", "inherits", "../des"], true, function($__require, exports, module) {
+System.registerDynamic("npm:des.js@1.0.0/lib/des/ede.js", ["minimalistic-assert", "inherits", "../des"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38358,7 +38358,7 @@ System.registerDynamic("npm:des.js@1.0.0/lib/des/ede", ["minimalistic-assert", "
   return module.exports;
 });
 
-System.registerDynamic("npm:des.js@1.0.0/lib/des", ["./des/utils", "./des/cipher", "./des/des", "./des/cbc", "./des/ede"], true, function($__require, exports, module) {
+System.registerDynamic("npm:des.js@1.0.0/lib/des.js", ["./des/utils", "./des/cipher", "./des/des", "./des/cbc", "./des/ede"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38373,7 +38373,7 @@ System.registerDynamic("npm:des.js@1.0.0/lib/des", ["./des/utils", "./des/cipher
   return module.exports;
 });
 
-System.registerDynamic("npm:des.js@1.0.0", ["npm:des.js@1.0.0/lib/des.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:des.js@1.0.0.js", ["npm:des.js@1.0.0/lib/des.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38383,7 +38383,7 @@ System.registerDynamic("npm:des.js@1.0.0", ["npm:des.js@1.0.0/lib/des.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-des@1.0.0/index", ["cipher-base", "des.js", "inherits", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-des@1.0.0/index.js", ["cipher-base", "des.js", "inherits", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38436,7 +38436,7 @@ System.registerDynamic("npm:browserify-des@1.0.0/index", ["cipher-base", "des.js
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-des@1.0.0", ["npm:browserify-des@1.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-des@1.0.0.js", ["npm:browserify-des@1.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38446,7 +38446,7 @@ System.registerDynamic("npm:browserify-des@1.0.0", ["npm:browserify-des@1.0.0/in
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-des@1.0.0/modes", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-des@1.0.0/modes.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38479,7 +38479,7 @@ System.registerDynamic("npm:browserify-des@1.0.0/modes", [], true, function($__r
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-cipher@1.0.0/browser", ["evp_bytestokey", "browserify-aes/browser", "browserify-des", "browserify-des/modes", "browserify-aes/modes"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-cipher@1.0.0/browser.js", ["evp_bytestokey", "browserify-aes/browser", "browserify-des", "browserify-des/modes", "browserify-aes/modes"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38562,7 +38562,7 @@ System.registerDynamic("npm:browserify-cipher@1.0.0/browser", ["evp_bytestokey",
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-cipher@1.0.0", ["npm:browserify-cipher@1.0.0/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-cipher@1.0.0.js", ["npm:browserify-cipher@1.0.0/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38572,7 +38572,7 @@ System.registerDynamic("npm:browserify-cipher@1.0.0", ["npm:browserify-cipher@1.
   return module.exports;
 });
 
-System.registerDynamic("npm:diffie-hellman@5.0.2/lib/primes.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:diffie-hellman@5.0.2/lib/primes.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38615,7 +38615,7 @@ System.registerDynamic("npm:diffie-hellman@5.0.2/lib/primes.json!github:systemjs
   return module.exports;
 });
 
-System.registerDynamic("npm:miller-rabin@4.0.0/lib/mr", ["bn.js", "brorand"], true, function($__require, exports, module) {
+System.registerDynamic("npm:miller-rabin@4.0.0/lib/mr.js", ["bn.js", "brorand"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38706,7 +38706,7 @@ System.registerDynamic("npm:miller-rabin@4.0.0/lib/mr", ["bn.js", "brorand"], tr
   return module.exports;
 });
 
-System.registerDynamic("npm:miller-rabin@4.0.0", ["npm:miller-rabin@4.0.0/lib/mr.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:miller-rabin@4.0.0.js", ["npm:miller-rabin@4.0.0/lib/mr.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38716,7 +38716,7 @@ System.registerDynamic("npm:miller-rabin@4.0.0", ["npm:miller-rabin@4.0.0/lib/mr
   return module.exports;
 });
 
-System.registerDynamic("npm:diffie-hellman@5.0.2/lib/generatePrime", ["randombytes", "bn.js", "miller-rabin"], true, function($__require, exports, module) {
+System.registerDynamic("npm:diffie-hellman@5.0.2/lib/generatePrime.js", ["randombytes", "bn.js", "miller-rabin"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38817,7 +38817,7 @@ System.registerDynamic("npm:diffie-hellman@5.0.2/lib/generatePrime", ["randombyt
   return module.exports;
 });
 
-System.registerDynamic("npm:diffie-hellman@5.0.2/lib/dh", ["bn.js", "miller-rabin", "./generatePrime", "randombytes", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:diffie-hellman@5.0.2/lib/dh.js", ["bn.js", "miller-rabin", "./generatePrime", "randombytes", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -38968,7 +38968,7 @@ System.registerDynamic("npm:diffie-hellman@5.0.2/lib/dh", ["bn.js", "miller-rabi
   return module.exports;
 });
 
-System.registerDynamic("npm:diffie-hellman@5.0.2/browser", ["./lib/generatePrime", "./lib/primes.json!systemjs-json", "./lib/dh", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:diffie-hellman@5.0.2/browser.js", ["./lib/generatePrime", "./lib/primes.json!systemjs-json", "./lib/dh", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39012,7 +39012,7 @@ System.registerDynamic("npm:diffie-hellman@5.0.2/browser", ["./lib/generatePrime
   return module.exports;
 });
 
-System.registerDynamic("npm:diffie-hellman@5.0.2", ["npm:diffie-hellman@5.0.2/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:diffie-hellman@5.0.2.js", ["npm:diffie-hellman@5.0.2/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39022,7 +39022,7 @@ System.registerDynamic("npm:diffie-hellman@5.0.2", ["npm:diffie-hellman@5.0.2/br
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-sign@4.0.0/algos", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-sign@4.0.0/algos.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39104,7 +39104,7 @@ System.registerDynamic("npm:browserify-sign@4.0.0/algos", ["buffer"], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-sign@4.0.0/sign", ["create-hmac", "browserify-rsa", "./curves", "elliptic", "parse-asn1", "bn.js", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-sign@4.0.0/sign.js", ["create-hmac", "browserify-rsa", "./curves", "elliptic", "parse-asn1", "bn.js", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39257,7 +39257,7 @@ System.registerDynamic("npm:browserify-sign@4.0.0/sign", ["create-hmac", "browse
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-sign@4.0.0/curves", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-sign@4.0.0/curves.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39273,7 +39273,7 @@ System.registerDynamic("npm:browserify-sign@4.0.0/curves", [], true, function($_
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-sign@4.0.0/verify", ["./curves", "elliptic", "parse-asn1", "bn.js", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-sign@4.0.0/verify.js", ["./curves", "elliptic", "parse-asn1", "bn.js", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39369,7 +39369,7 @@ System.registerDynamic("npm:browserify-sign@4.0.0/verify", ["./curves", "ellipti
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-sign@4.0.0/browser", ["./algos", "create-hash", "inherits", "./sign", "stream", "./verify", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-sign@4.0.0/browser.js", ["./algos", "create-hash", "inherits", "./sign", "stream", "./verify", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39461,7 +39461,7 @@ System.registerDynamic("npm:browserify-sign@4.0.0/browser", ["./algos", "create-
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-sign@4.0.0", ["npm:browserify-sign@4.0.0/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-sign@4.0.0.js", ["npm:browserify-sign@4.0.0/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39471,7 +39471,7 @@ System.registerDynamic("npm:browserify-sign@4.0.0", ["npm:browserify-sign@4.0.0/
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/package.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/package.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39518,7 +39518,7 @@ System.registerDynamic("npm:elliptic@6.2.3/package.json!github:systemjs/plugin-j
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/utils", ["bn.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/utils.js", ["bn.js"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39671,7 +39671,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/utils", ["bn.js"], true,
   return module.exports;
 });
 
-System.registerDynamic("npm:brorand@1.0.5/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:brorand@1.0.5/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39726,7 +39726,7 @@ System.registerDynamic("npm:brorand@1.0.5/index", [], true, function($__require,
   return module.exports;
 });
 
-System.registerDynamic("npm:brorand@1.0.5", ["npm:brorand@1.0.5/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:brorand@1.0.5.js", ["npm:brorand@1.0.5/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39736,7 +39736,7 @@ System.registerDynamic("npm:brorand@1.0.5", ["npm:brorand@1.0.5/index.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/hmac-drbg", ["hash.js", "../elliptic"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/hmac-drbg.js", ["hash.js", "../elliptic"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39828,7 +39828,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/hmac-drbg", ["hash.js", 
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/base", ["bn.js", "../../elliptic"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/base.js", ["bn.js", "../../elliptic"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -40102,7 +40102,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/base", ["bn.js", "
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/short", ["./index", "../../elliptic", "bn.js", "inherits"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/short.js", ["./index", "../../elliptic", "bn.js", "inherits"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -40783,7 +40783,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/short", ["./index"
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/mont", ["./index", "bn.js", "inherits", "../../elliptic"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/mont.js", ["./index", "bn.js", "inherits", "../../elliptic"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -40912,7 +40912,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/mont", ["./index",
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/edwards", ["./index", "../../elliptic", "bn.js", "inherits"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/edwards.js", ["./index", "../../elliptic", "bn.js", "inherits"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41191,7 +41191,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/edwards", ["./inde
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/index", ["./base", "./short", "./mont", "./edwards"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/index.js", ["./base", "./short", "./mont", "./edwards"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41206,7 +41206,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curve/index", ["./base",
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/precomputed/secp256k1", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/precomputed/secp256k1.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -41225,7 +41225,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/precomputed/secp256k1", 
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curves", ["hash.js", "../elliptic", "./precomputed/secp256k1"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curves.js", ["hash.js", "../elliptic", "./precomputed/secp256k1"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41373,7 +41373,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/curves", ["hash.js", "..
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/key", ["bn.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/key.js", ["bn.js"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41472,7 +41472,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/key", ["bn.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/signature", ["bn.js", "../../elliptic"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/signature.js", ["bn.js", "../../elliptic"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41599,7 +41599,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/signature", ["bn.js",
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/index", ["bn.js", "../../elliptic", "./key", "./signature"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/index.js", ["bn.js", "../../elliptic", "./key", "./signature"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41771,7 +41771,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/ec/index", ["bn.js", "..
   return module.exports;
 });
 
-System.registerDynamic("npm:hash.js@1.0.3/lib/hash/utils", ["inherits"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hash.js@1.0.3/lib/hash/utils.js", ["inherits"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42015,7 +42015,7 @@ System.registerDynamic("npm:hash.js@1.0.3/lib/hash/utils", ["inherits"], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:hash.js@1.0.3/lib/hash/common", ["../hash"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hash.js@1.0.3/lib/hash/common.js", ["../hash"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42097,7 +42097,7 @@ System.registerDynamic("npm:hash.js@1.0.3/lib/hash/common", ["../hash"], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:hash.js@1.0.3/lib/hash/sha", ["../hash"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hash.js@1.0.3/lib/hash/sha.js", ["../hash"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42493,7 +42493,7 @@ System.registerDynamic("npm:hash.js@1.0.3/lib/hash/sha", ["../hash"], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:hash.js@1.0.3/lib/hash/ripemd", ["../hash"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hash.js@1.0.3/lib/hash/ripemd.js", ["../hash"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42600,7 +42600,7 @@ System.registerDynamic("npm:hash.js@1.0.3/lib/hash/ripemd", ["../hash"], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:hash.js@1.0.3/lib/hash/hmac", ["../hash"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hash.js@1.0.3/lib/hash/hmac.js", ["../hash"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42645,7 +42645,7 @@ System.registerDynamic("npm:hash.js@1.0.3/lib/hash/hmac", ["../hash"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:hash.js@1.0.3/lib/hash", ["./hash/utils", "./hash/common", "./hash/sha", "./hash/ripemd", "./hash/hmac"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hash.js@1.0.3/lib/hash.js", ["./hash/utils", "./hash/common", "./hash/sha", "./hash/ripemd", "./hash/hmac"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42666,7 +42666,7 @@ System.registerDynamic("npm:hash.js@1.0.3/lib/hash", ["./hash/utils", "./hash/co
   return module.exports;
 });
 
-System.registerDynamic("npm:hash.js@1.0.3", ["npm:hash.js@1.0.3/lib/hash.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:hash.js@1.0.3.js", ["npm:hash.js@1.0.3/lib/hash.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42676,7 +42676,7 @@ System.registerDynamic("npm:hash.js@1.0.3", ["npm:hash.js@1.0.3/lib/hash.js"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/key", ["../../elliptic"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/key.js", ["../../elliptic"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42754,7 +42754,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/key", ["../../elli
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/signature", ["bn.js", "../../elliptic"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/signature.js", ["bn.js", "../../elliptic"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42807,7 +42807,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/signature", ["bn.j
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/index", ["hash.js", "../../elliptic", "./key", "./signature"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/index.js", ["hash.js", "../../elliptic", "./key", "./signature"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42899,7 +42899,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic/eddsa/index", ["hash.js"
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic", ["../package.json!systemjs-json", "./elliptic/utils", "brorand", "./elliptic/hmac-drbg", "./elliptic/curve/index", "./elliptic/curves", "./elliptic/ec/index", "./elliptic/eddsa/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic.js", ["../package.json!systemjs-json", "./elliptic/utils", "brorand", "./elliptic/hmac-drbg", "./elliptic/curve/index", "./elliptic/curves", "./elliptic/ec/index", "./elliptic/eddsa/index"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42918,7 +42918,7 @@ System.registerDynamic("npm:elliptic@6.2.3/lib/elliptic", ["../package.json!syst
   return module.exports;
 });
 
-System.registerDynamic("npm:elliptic@6.2.3", ["npm:elliptic@6.2.3/lib/elliptic.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:elliptic@6.2.3.js", ["npm:elliptic@6.2.3/lib/elliptic.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42928,7 +42928,7 @@ System.registerDynamic("npm:elliptic@6.2.3", ["npm:elliptic@6.2.3/lib/elliptic.j
   return module.exports;
 });
 
-System.registerDynamic("npm:create-ecdh@4.0.0/browser", ["elliptic", "bn.js", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-ecdh@4.0.0/browser.js", ["elliptic", "bn.js", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43048,7 +43048,7 @@ System.registerDynamic("npm:create-ecdh@4.0.0/browser", ["elliptic", "bn.js", "b
   return module.exports;
 });
 
-System.registerDynamic("npm:create-ecdh@4.0.0", ["npm:create-ecdh@4.0.0/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-ecdh@4.0.0.js", ["npm:create-ecdh@4.0.0/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43058,7 +43058,7 @@ System.registerDynamic("npm:create-ecdh@4.0.0", ["npm:create-ecdh@4.0.0/browser.
   return module.exports;
 });
 
-System.registerDynamic("npm:public-encrypt@4.0.0/publicEncrypt", ["parse-asn1", "randombytes", "create-hash", "./mgf", "./xor", "bn.js", "./withPublic", "browserify-rsa", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:public-encrypt@4.0.0/publicEncrypt.js", ["parse-asn1", "randombytes", "create-hash", "./mgf", "./xor", "bn.js", "./withPublic", "browserify-rsa", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43161,7 +43161,7 @@ System.registerDynamic("npm:public-encrypt@4.0.0/publicEncrypt", ["parse-asn1", 
   return module.exports;
 });
 
-System.registerDynamic("npm:indexof@0.0.1/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:indexof@0.0.1/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43180,7 +43180,7 @@ System.registerDynamic("npm:indexof@0.0.1/index", [], true, function($__require,
   return module.exports;
 });
 
-System.registerDynamic("npm:indexof@0.0.1", ["npm:indexof@0.0.1/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:indexof@0.0.1.js", ["npm:indexof@0.0.1/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43190,7 +43190,7 @@ System.registerDynamic("npm:indexof@0.0.1", ["npm:indexof@0.0.1/index"], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:vm-browserify@0.0.4/index", ["indexof"], true, function($__require, exports, module) {
+System.registerDynamic("npm:vm-browserify@0.0.4/index.js", ["indexof"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43311,7 +43311,7 @@ System.registerDynamic("npm:vm-browserify@0.0.4/index", ["indexof"], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:vm-browserify@0.0.4", ["npm:vm-browserify@0.0.4/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:vm-browserify@0.0.4.js", ["npm:vm-browserify@0.0.4/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43321,7 +43321,7 @@ System.registerDynamic("npm:vm-browserify@0.0.4", ["npm:vm-browserify@0.0.4/inde
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-vm@0.1.0/index", ["vm-browserify"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-vm@0.1.0/index.js", ["vm-browserify"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43331,7 +43331,7 @@ System.registerDynamic("github:jspm/nodelibs-vm@0.1.0/index", ["vm-browserify"],
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-vm@0.1.0", ["github:jspm/nodelibs-vm@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-vm@0.1.0.js", ["github:jspm/nodelibs-vm@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43341,7 +43341,7 @@ System.registerDynamic("github:jspm/nodelibs-vm@0.1.0", ["github:jspm/nodelibs-v
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/api", ["../asn1", "inherits", "vm"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/api.js", ["../asn1", "inherits", "vm"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43394,7 +43394,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/api", ["../asn1", "inherits",
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/reporter", ["inherits"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/base/reporter.js", ["inherits"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43486,7 +43486,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/reporter", ["inherits"],
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/buffer", ["inherits", "./index", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/base/buffer.js", ["inherits", "./index", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43596,7 +43596,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/buffer", ["inherits", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:minimalistic-assert@1.0.0/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:minimalistic-assert@1.0.0/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43614,7 +43614,7 @@ System.registerDynamic("npm:minimalistic-assert@1.0.0/index", [], true, function
   return module.exports;
 });
 
-System.registerDynamic("npm:minimalistic-assert@1.0.0", ["npm:minimalistic-assert@1.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:minimalistic-assert@1.0.0.js", ["npm:minimalistic-assert@1.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -43624,7 +43624,7 @@ System.registerDynamic("npm:minimalistic-assert@1.0.0", ["npm:minimalistic-asser
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/node", ["./index", "minimalistic-assert"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/base/node.js", ["./index", "minimalistic-assert"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44067,7 +44067,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/node", ["./index", "mini
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/index", ["./reporter", "./buffer", "./node"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/base/index.js", ["./reporter", "./buffer", "./node"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44081,7 +44081,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/base/index", ["./reporter", "
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/constants/der", ["./index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/constants/der.js", ["./index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44130,7 +44130,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/constants/der", ["./index"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/constants/index", ["./der"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/constants/index.js", ["./der"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44151,7 +44151,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/constants/index", ["./der"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/decoders/der", ["inherits", "../../asn1"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/decoders/der.js", ["inherits", "../../asn1"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44280,6 +44280,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/decoders/der", ["inherits", "
     }
   };
   DERNode.prototype._decodeObjid = function decodeObjid(buffer, values, relative) {
+    var result;
     var identifiers = [];
     var ident = 0;
     while (!buffer.isEmpty()) {
@@ -44408,7 +44409,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/decoders/der", ["inherits", "
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/decoders/pem", ["inherits", "buffer", "../../asn1", "./der"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/decoders/pem.js", ["inherits", "buffer", "../../asn1", "./der"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44460,7 +44461,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/decoders/pem", ["inherits", "
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/decoders/index", ["./der", "./pem"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/decoders/index.js", ["./der", "./pem"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44472,7 +44473,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/decoders/index", ["./der", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/encoders/der", ["inherits", "buffer", "../../asn1"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/encoders/der.js", ["inherits", "buffer", "../../asn1"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44695,7 +44696,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/encoders/der", ["inherits", "
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/encoders/pem", ["inherits", "buffer", "../../asn1", "./der"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/encoders/pem.js", ["inherits", "buffer", "../../asn1", "./der"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44726,7 +44727,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/encoders/pem", ["inherits", "
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/encoders/index", ["./der", "./pem"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1/encoders/index.js", ["./der", "./pem"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44738,7 +44739,7 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1/encoders/index", ["./der", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1", ["bn.js", "./asn1/api", "./asn1/base/index", "./asn1/constants/index", "./asn1/decoders/index", "./asn1/encoders/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1/lib/asn1.js", ["bn.js", "./asn1/api", "./asn1/base/index", "./asn1/constants/index", "./asn1/decoders/index", "./asn1/encoders/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44754,17 +44755,17 @@ System.registerDynamic("npm:asn1.js@4.3.0/lib/asn1", ["bn.js", "./asn1/api", "./
   return module.exports;
 });
 
-System.registerDynamic("npm:asn1.js@4.3.0", ["npm:asn1.js@4.3.0/lib/asn1.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:asn1.js@4.3.1.js", ["npm:asn1.js@4.3.1/lib/asn1.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('npm:asn1.js@4.3.0/lib/asn1.js');
+  module.exports = $__require('npm:asn1.js@4.3.1/lib/asn1.js');
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:parse-asn1@5.0.0/asn1", ["asn1.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:parse-asn1@5.0.0/asn1.js", ["asn1.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44814,7 +44815,7 @@ System.registerDynamic("npm:parse-asn1@5.0.0/asn1", ["asn1.js"], true, function(
   return module.exports;
 });
 
-System.registerDynamic("npm:parse-asn1@5.0.0/aesid.json!github:systemjs/plugin-json@0.1.0", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:parse-asn1@5.0.0/aesid.json!github:systemjs/plugin-json@0.1.0.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44837,7 +44838,7 @@ System.registerDynamic("npm:parse-asn1@5.0.0/aesid.json!github:systemjs/plugin-j
   return module.exports;
 });
 
-System.registerDynamic("npm:parse-asn1@5.0.0/fixProc", ["evp_bytestokey", "browserify-aes", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:parse-asn1@5.0.0/fixProc.js", ["evp_bytestokey", "browserify-aes", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -44877,7 +44878,7 @@ System.registerDynamic("npm:parse-asn1@5.0.0/fixProc", ["evp_bytestokey", "brows
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/encrypter", ["./aes", "cipher-base", "inherits", "./modes", "evp_bytestokey", "./streamCipher", "./authCipher", "./modes/ecb", "./modes/cbc", "./modes/cfb", "./modes/cfb8", "./modes/cfb1", "./modes/ofb", "./modes/ctr", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/encrypter.js", ["./aes", "cipher-base", "inherits", "./modes", "evp_bytestokey", "./streamCipher", "./authCipher", "./modes/ecb", "./modes/cbc", "./modes/cfb", "./modes/cfb8", "./modes/cfb1", "./modes/ofb", "./modes/ctr", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45005,7 +45006,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/encrypter", ["./aes", "cipher-b
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/streamCipher", ["./aes", "cipher-base", "inherits", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/streamCipher.js", ["./aes", "cipher-base", "inherits", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45040,7 +45041,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/streamCipher", ["./aes", "ciphe
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/aes", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/aes.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45226,7 +45227,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/aes", ["buffer"], true, functio
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/ghash", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/ghash.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45314,7 +45315,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/ghash", ["buffer"], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/authCipher", ["./aes", "cipher-base", "inherits", "./ghash", "buffer-xor", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/authCipher.js", ["./aes", "cipher-base", "inherits", "./ghash", "buffer-xor", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45421,7 +45422,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/authCipher", ["./aes", "cipher-
   return module.exports;
 });
 
-System.registerDynamic("npm:evp_bytestokey@1.0.0/index", ["create-hash/md5", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:evp_bytestokey@1.0.0/index.js", ["create-hash/md5", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45500,7 +45501,7 @@ System.registerDynamic("npm:evp_bytestokey@1.0.0/index", ["create-hash/md5", "bu
   return module.exports;
 });
 
-System.registerDynamic("npm:evp_bytestokey@1.0.0", ["npm:evp_bytestokey@1.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:evp_bytestokey@1.0.0.js", ["npm:evp_bytestokey@1.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45510,7 +45511,7 @@ System.registerDynamic("npm:evp_bytestokey@1.0.0", ["npm:evp_bytestokey@1.0.0/in
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes/ecb", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes/ecb.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45525,7 +45526,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes/ecb", [], true, function(
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes/cbc", ["buffer-xor"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes/cbc.js", ["buffer-xor"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45546,7 +45547,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes/cbc", ["buffer-xor"], tru
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb", ["buffer-xor", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb.js", ["buffer-xor", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45584,7 +45585,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb", ["buffer-xor", "buf
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb8", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb8.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45610,7 +45611,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb8", ["buffer"], true, 
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb1", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb1.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45656,7 +45657,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes/cfb1", ["buffer"], true, 
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes/ofb", ["buffer-xor", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes/ofb.js", ["buffer-xor", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45680,7 +45681,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes/ofb", ["buffer-xor", "buf
   return module.exports;
 });
 
-System.registerDynamic("npm:buffer-xor@1.0.3/index", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:buffer-xor@1.0.3/index.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45699,7 +45700,7 @@ System.registerDynamic("npm:buffer-xor@1.0.3/index", ["buffer"], true, function(
   return module.exports;
 });
 
-System.registerDynamic("npm:buffer-xor@1.0.3", ["npm:buffer-xor@1.0.3/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:buffer-xor@1.0.3.js", ["npm:buffer-xor@1.0.3/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45709,7 +45710,7 @@ System.registerDynamic("npm:buffer-xor@1.0.3", ["npm:buffer-xor@1.0.3/index.js"]
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes/ctr", ["buffer-xor", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes/ctr.js", ["buffer-xor", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45748,7 +45749,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes/ctr", ["buffer-xor", "buf
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/decrypter", ["./aes", "cipher-base", "inherits", "./modes", "./streamCipher", "./authCipher", "evp_bytestokey", "./modes/ecb", "./modes/cbc", "./modes/cfb", "./modes/cfb8", "./modes/cfb1", "./modes/ofb", "./modes/ctr", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/decrypter.js", ["./aes", "cipher-base", "inherits", "./modes", "./streamCipher", "./authCipher", "evp_bytestokey", "./modes/ecb", "./modes/cbc", "./modes/cfb", "./modes/cfb8", "./modes/cfb1", "./modes/ofb", "./modes/ctr", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -45891,7 +45892,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/decrypter", ["./aes", "cipher-b
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/modes", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/modes.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46071,7 +46072,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/modes", [], true, function($__r
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6/browser", ["./encrypter", "./decrypter", "./modes"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6/browser.js", ["./encrypter", "./decrypter", "./modes"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46091,7 +46092,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6/browser", ["./encrypter", "./de
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-aes@1.0.6", ["npm:browserify-aes@1.0.6/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-aes@1.0.6.js", ["npm:browserify-aes@1.0.6/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46101,7 +46102,7 @@ System.registerDynamic("npm:browserify-aes@1.0.6", ["npm:browserify-aes@1.0.6/br
   return module.exports;
 });
 
-System.registerDynamic("npm:create-hmac@1.1.4/browser", ["create-hash/browser", "inherits", "stream", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-hmac@1.1.4/browser.js", ["create-hash/browser", "inherits", "stream", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46160,7 +46161,7 @@ System.registerDynamic("npm:create-hmac@1.1.4/browser", ["create-hash/browser", 
   return module.exports;
 });
 
-System.registerDynamic("npm:create-hmac@1.1.4", ["npm:create-hmac@1.1.4/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-hmac@1.1.4.js", ["npm:create-hmac@1.1.4/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46170,7 +46171,7 @@ System.registerDynamic("npm:create-hmac@1.1.4", ["npm:create-hmac@1.1.4/browser.
   return module.exports;
 });
 
-System.registerDynamic("npm:pbkdf2@3.0.4/browser", ["create-hmac", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pbkdf2@3.0.4/browser.js", ["create-hmac", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46245,7 +46246,7 @@ System.registerDynamic("npm:pbkdf2@3.0.4/browser", ["create-hmac", "buffer"], tr
   return module.exports;
 });
 
-System.registerDynamic("npm:pbkdf2@3.0.4", ["npm:pbkdf2@3.0.4/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:pbkdf2@3.0.4.js", ["npm:pbkdf2@3.0.4/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46255,7 +46256,7 @@ System.registerDynamic("npm:pbkdf2@3.0.4", ["npm:pbkdf2@3.0.4/browser.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:parse-asn1@5.0.0/index", ["./asn1", "./aesid.json!systemjs-json", "./fixProc", "browserify-aes", "pbkdf2", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:parse-asn1@5.0.0/index.js", ["./asn1", "./aesid.json!systemjs-json", "./fixProc", "browserify-aes", "pbkdf2", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46367,7 +46368,7 @@ System.registerDynamic("npm:parse-asn1@5.0.0/index", ["./asn1", "./aesid.json!sy
   return module.exports;
 });
 
-System.registerDynamic("npm:parse-asn1@5.0.0", ["npm:parse-asn1@5.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:parse-asn1@5.0.0.js", ["npm:parse-asn1@5.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46377,7 +46378,7 @@ System.registerDynamic("npm:parse-asn1@5.0.0", ["npm:parse-asn1@5.0.0/index.js"]
   return module.exports;
 });
 
-System.registerDynamic("npm:public-encrypt@4.0.0/mgf", ["create-hash", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:public-encrypt@4.0.0/mgf.js", ["create-hash", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46404,7 +46405,7 @@ System.registerDynamic("npm:public-encrypt@4.0.0/mgf", ["create-hash", "buffer"]
   return module.exports;
 });
 
-System.registerDynamic("npm:public-encrypt@4.0.0/xor", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:public-encrypt@4.0.0/xor.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46421,7 +46422,7 @@ System.registerDynamic("npm:public-encrypt@4.0.0/xor", [], true, function($__req
   return module.exports;
 });
 
-System.registerDynamic("npm:randombytes@2.0.2/browser", ["buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:randombytes@2.0.2/browser.js", ["buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46455,7 +46456,7 @@ System.registerDynamic("npm:randombytes@2.0.2/browser", ["buffer", "process"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:randombytes@2.0.2", ["npm:randombytes@2.0.2/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:randombytes@2.0.2.js", ["npm:randombytes@2.0.2/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46465,7 +46466,7 @@ System.registerDynamic("npm:randombytes@2.0.2", ["npm:randombytes@2.0.2/browser.
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-rsa@4.0.0/index", ["bn.js", "randombytes", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-rsa@4.0.0/index.js", ["bn.js", "randombytes", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46515,7 +46516,7 @@ System.registerDynamic("npm:browserify-rsa@4.0.0/index", ["bn.js", "randombytes"
   return module.exports;
 });
 
-System.registerDynamic("npm:browserify-rsa@4.0.0", ["npm:browserify-rsa@4.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:browserify-rsa@4.0.0.js", ["npm:browserify-rsa@4.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46525,7 +46526,7 @@ System.registerDynamic("npm:browserify-rsa@4.0.0", ["npm:browserify-rsa@4.0.0/in
   return module.exports;
 });
 
-System.registerDynamic("npm:create-hash@1.1.2/helpers", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-hash@1.1.2/helpers.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46568,7 +46569,7 @@ System.registerDynamic("npm:create-hash@1.1.2/helpers", ["buffer"], true, functi
   return module.exports;
 });
 
-System.registerDynamic("npm:create-hash@1.1.2/md5", ["./helpers"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-hash@1.1.2/md5.js", ["./helpers"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -46688,7 +46689,7 @@ System.registerDynamic("npm:create-hash@1.1.2/md5", ["./helpers"], true, functio
   return module.exports;
 });
 
-System.registerDynamic("npm:ripemd160@1.0.1/lib/ripemd160", ["buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:ripemd160@1.0.1/lib/ripemd160.js", ["buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46830,7 +46831,7 @@ System.registerDynamic("npm:ripemd160@1.0.1/lib/ripemd160", ["buffer", "process"
   return module.exports;
 });
 
-System.registerDynamic("npm:ripemd160@1.0.1", ["npm:ripemd160@1.0.1/lib/ripemd160.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:ripemd160@1.0.1.js", ["npm:ripemd160@1.0.1/lib/ripemd160.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46840,7 +46841,7 @@ System.registerDynamic("npm:ripemd160@1.0.1", ["npm:ripemd160@1.0.1/lib/ripemd16
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/sha", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/sha.js", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -46923,7 +46924,7 @@ System.registerDynamic("npm:sha.js@2.4.4/sha", ["inherits", "./hash", "buffer"],
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/sha1", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/sha1.js", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47006,7 +47007,7 @@ System.registerDynamic("npm:sha.js@2.4.4/sha1", ["inherits", "./hash", "buffer"]
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/sha224", ["inherits", "./sha256", "./hash", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/sha224.js", ["inherits", "./sha256", "./hash", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47050,7 +47051,7 @@ System.registerDynamic("npm:sha.js@2.4.4/sha224", ["inherits", "./sha256", "./ha
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/sha256", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/sha256.js", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47154,7 +47155,7 @@ System.registerDynamic("npm:sha.js@2.4.4/sha256", ["inherits", "./hash", "buffer
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/sha384", ["inherits", "./sha512", "./hash", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/sha384.js", ["inherits", "./sha512", "./hash", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47209,7 +47210,7 @@ System.registerDynamic("npm:sha.js@2.4.4/sha384", ["inherits", "./sha512", "./ha
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/hash", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/hash.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47267,7 +47268,7 @@ System.registerDynamic("npm:sha.js@2.4.4/hash", ["buffer"], true, function($__re
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/sha512", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/sha512.js", ["inherits", "./hash", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47458,7 +47459,7 @@ System.registerDynamic("npm:sha.js@2.4.4/sha512", ["inherits", "./hash", "buffer
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4/index", ["./sha", "./sha1", "./sha224", "./sha256", "./sha384", "./sha512"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4/index.js", ["./sha", "./sha1", "./sha224", "./sha256", "./sha384", "./sha512"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47480,7 +47481,7 @@ System.registerDynamic("npm:sha.js@2.4.4/index", ["./sha", "./sha1", "./sha224",
   return module.exports;
 });
 
-System.registerDynamic("npm:sha.js@2.4.4", ["npm:sha.js@2.4.4/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:sha.js@2.4.4.js", ["npm:sha.js@2.4.4/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47490,7 +47491,7 @@ System.registerDynamic("npm:sha.js@2.4.4", ["npm:sha.js@2.4.4/index"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/readable", ["./lib/_stream_readable", "stream-browserify/index", "./lib/_stream_writable", "./lib/_stream_duplex", "./lib/_stream_transform", "./lib/_stream_passthrough"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/readable.js", ["./lib/_stream_readable", "stream-browserify/index", "./lib/_stream_writable", "./lib/_stream_duplex", "./lib/_stream_transform", "./lib/_stream_passthrough"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47506,7 +47507,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/readable", ["./lib/_stream_re
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/writable", ["./lib/_stream_writable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/writable.js", ["./lib/_stream_writable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47516,7 +47517,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/writable", ["./lib/_stream_wr
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/duplex", ["./lib/_stream_duplex"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/duplex.js", ["./lib/_stream_duplex"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47526,7 +47527,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/duplex", ["./lib/_stream_dupl
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/transform", ["./lib/_stream_transform"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/transform.js", ["./lib/_stream_transform"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47536,7 +47537,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/transform", ["./lib/_stream_t
   return module.exports;
 });
 
-System.registerDynamic("npm:isarray@0.0.1/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:isarray@0.0.1/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47548,7 +47549,7 @@ System.registerDynamic("npm:isarray@0.0.1/index", [], true, function($__require,
   return module.exports;
 });
 
-System.registerDynamic("npm:isarray@0.0.1", ["npm:isarray@0.0.1/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:isarray@0.0.1.js", ["npm:isarray@0.0.1/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47558,7 +47559,7 @@ System.registerDynamic("npm:isarray@0.0.1", ["npm:isarray@0.0.1/index.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:events@1.0.2/events", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:events@1.0.2/events.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47780,7 +47781,7 @@ System.registerDynamic("npm:events@1.0.2/events", [], true, function($__require,
   return module.exports;
 });
 
-System.registerDynamic("npm:events@1.0.2", ["npm:events@1.0.2/events.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:events@1.0.2.js", ["npm:events@1.0.2/events.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47790,7 +47791,7 @@ System.registerDynamic("npm:events@1.0.2", ["npm:events@1.0.2/events.js"], true,
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-events@0.1.1/index", ["events"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-events@0.1.1/index.js", ["events"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47800,7 +47801,7 @@ System.registerDynamic("github:jspm/nodelibs-events@0.1.1/index", ["events"], tr
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-events@0.1.1", ["github:jspm/nodelibs-events@0.1.1/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-events@0.1.1.js", ["github:jspm/nodelibs-events@0.1.1/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -47810,7 +47811,7 @@ System.registerDynamic("github:jspm/nodelibs-events@0.1.1", ["github:jspm/nodeli
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_readable", ["isarray", "buffer", "events", "stream-browserify/index", "core-util-is", "inherits", "@empty", "./_stream_duplex", "string_decoder", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_readable.js", ["isarray", "buffer", "events", "stream-browserify/index", "core-util-is", "inherits", "@empty", "./_stream_duplex", "string_decoder", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48441,7 +48442,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_readable", ["isar
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_writable", ["buffer", "core-util-is", "inherits", "stream-browserify/index", "./_stream_duplex", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_writable.js", ["buffer", "core-util-is", "inherits", "stream-browserify/index", "./_stream_duplex", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48733,7 +48734,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_writable", ["buff
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_duplex", ["core-util-is", "inherits", "./_stream_readable", "./_stream_writable", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_duplex.js", ["core-util-is", "inherits", "./_stream_readable", "./_stream_writable", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48785,7 +48786,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_duplex", ["core-u
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_transform", ["./_stream_duplex", "core-util-is", "inherits", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_transform.js", ["./_stream_duplex", "core-util-is", "inherits", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48883,7 +48884,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_transform", ["./_
   return module.exports;
 });
 
-System.registerDynamic("npm:core-util-is@1.0.2/lib/util", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:core-util-is@1.0.2/lib/util.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48957,7 +48958,7 @@ System.registerDynamic("npm:core-util-is@1.0.2/lib/util", ["buffer"], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:core-util-is@1.0.2", ["npm:core-util-is@1.0.2/lib/util.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:core-util-is@1.0.2.js", ["npm:core-util-is@1.0.2/lib/util.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48967,7 +48968,7 @@ System.registerDynamic("npm:core-util-is@1.0.2", ["npm:core-util-is@1.0.2/lib/ut
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_passthrough", ["./_stream_transform", "core-util-is", "inherits"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_passthrough.js", ["./_stream_transform", "core-util-is", "inherits"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48989,7 +48990,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/lib/_stream_passthrough", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:readable-stream@1.1.13/passthrough", ["./lib/_stream_passthrough"], true, function($__require, exports, module) {
+System.registerDynamic("npm:readable-stream@1.1.13/passthrough.js", ["./lib/_stream_passthrough"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -48999,7 +49000,7 @@ System.registerDynamic("npm:readable-stream@1.1.13/passthrough", ["./lib/_stream
   return module.exports;
 });
 
-System.registerDynamic("npm:stream-browserify@1.0.0/index", ["events", "inherits", "readable-stream/readable", "readable-stream/writable", "readable-stream/duplex", "readable-stream/transform", "readable-stream/passthrough"], true, function($__require, exports, module) {
+System.registerDynamic("npm:stream-browserify@1.0.0/index.js", ["events", "inherits", "readable-stream/readable", "readable-stream/writable", "readable-stream/duplex", "readable-stream/transform", "readable-stream/passthrough"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49080,7 +49081,7 @@ System.registerDynamic("npm:stream-browserify@1.0.0/index", ["events", "inherits
   return module.exports;
 });
 
-System.registerDynamic("npm:stream-browserify@1.0.0", ["npm:stream-browserify@1.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:stream-browserify@1.0.0.js", ["npm:stream-browserify@1.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49090,7 +49091,7 @@ System.registerDynamic("npm:stream-browserify@1.0.0", ["npm:stream-browserify@1.
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-stream@0.1.0/index", ["stream-browserify"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-stream@0.1.0/index.js", ["stream-browserify"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49100,7 +49101,7 @@ System.registerDynamic("github:jspm/nodelibs-stream@0.1.0/index", ["stream-brows
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-stream@0.1.0", ["github:jspm/nodelibs-stream@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-stream@0.1.0.js", ["github:jspm/nodelibs-stream@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49110,7 +49111,7 @@ System.registerDynamic("github:jspm/nodelibs-stream@0.1.0", ["github:jspm/nodeli
   return module.exports;
 });
 
-System.registerDynamic("npm:inherits@2.0.1/inherits_browser", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:inherits@2.0.1/inherits_browser.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49138,7 +49139,7 @@ System.registerDynamic("npm:inherits@2.0.1/inherits_browser", [], true, function
   return module.exports;
 });
 
-System.registerDynamic("npm:inherits@2.0.1", ["npm:inherits@2.0.1/inherits_browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:inherits@2.0.1.js", ["npm:inherits@2.0.1/inherits_browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49148,7 +49149,7 @@ System.registerDynamic("npm:inherits@2.0.1", ["npm:inherits@2.0.1/inherits_brows
   return module.exports;
 });
 
-System.registerDynamic("npm:string_decoder@0.10.31/index", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:string_decoder@0.10.31/index.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49291,7 +49292,7 @@ System.registerDynamic("npm:string_decoder@0.10.31/index", ["buffer"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:string_decoder@0.10.31", ["npm:string_decoder@0.10.31/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:string_decoder@0.10.31.js", ["npm:string_decoder@0.10.31/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49301,7 +49302,7 @@ System.registerDynamic("npm:string_decoder@0.10.31", ["npm:string_decoder@0.10.3
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-string_decoder@0.1.0/index", ["string_decoder"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-string_decoder@0.1.0/index.js", ["string_decoder"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49311,7 +49312,7 @@ System.registerDynamic("github:jspm/nodelibs-string_decoder@0.1.0/index", ["stri
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-string_decoder@0.1.0", ["github:jspm/nodelibs-string_decoder@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-string_decoder@0.1.0.js", ["github:jspm/nodelibs-string_decoder@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49321,7 +49322,7 @@ System.registerDynamic("github:jspm/nodelibs-string_decoder@0.1.0", ["github:jsp
   return module.exports;
 });
 
-System.registerDynamic("npm:cipher-base@1.0.2/index", ["stream", "inherits", "string_decoder", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:cipher-base@1.0.2/index.js", ["stream", "inherits", "string_decoder", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49416,7 +49417,7 @@ System.registerDynamic("npm:cipher-base@1.0.2/index", ["stream", "inherits", "st
   return module.exports;
 });
 
-System.registerDynamic("npm:cipher-base@1.0.2", ["npm:cipher-base@1.0.2/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:cipher-base@1.0.2.js", ["npm:cipher-base@1.0.2/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49426,7 +49427,7 @@ System.registerDynamic("npm:cipher-base@1.0.2", ["npm:cipher-base@1.0.2/index.js
   return module.exports;
 });
 
-System.registerDynamic("npm:create-hash@1.1.2/browser", ["inherits", "./md5", "ripemd160", "sha.js", "cipher-base", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-hash@1.1.2/browser.js", ["inherits", "./md5", "ripemd160", "sha.js", "cipher-base", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49477,7 +49478,7 @@ System.registerDynamic("npm:create-hash@1.1.2/browser", ["inherits", "./md5", "r
   return module.exports;
 });
 
-System.registerDynamic("npm:create-hash@1.1.2", ["npm:create-hash@1.1.2/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:create-hash@1.1.2.js", ["npm:create-hash@1.1.2/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49487,7 +49488,7 @@ System.registerDynamic("npm:create-hash@1.1.2", ["npm:create-hash@1.1.2/browser.
   return module.exports;
 });
 
-System.registerDynamic("npm:bn.js@4.9.0/lib/bn", ["@empty"], true, function($__require, exports, module) {
+System.registerDynamic("npm:bn.js@4.10.0/lib/bn.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -49531,7 +49532,7 @@ System.registerDynamic("npm:bn.js@4.9.0/lib/bn", ["@empty"], true, function($__r
       BN.wordSize = 26;
       var Buffer;
       try {
-        Buffer = $__require('@empty').Buffer;
+        Buffer = $__require('buf' + 'fer').Buffer;
       } catch (e) {}
       BN.max = function max(left, right) {
         if (left.cmp(right) > 0)
@@ -49839,16 +49840,19 @@ System.registerDynamic("npm:bn.js@4.9.0/lib/bn", ["@empty"], true, function($__r
       };
       BN.prototype.toBuffer = function toBuffer(endian, length) {
         assert(typeof Buffer !== 'undefined');
-        return new Buffer(this.toArray(endian, length));
+        return this.toArrayLike(Buffer, endian, length);
       };
       BN.prototype.toArray = function toArray(endian, length) {
+        return this.toArrayLike(Array, endian, length);
+      };
+      BN.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
         var byteLength = this.byteLength();
         var reqLength = length || Math.max(1, byteLength);
         assert(byteLength <= reqLength, 'byte array longer than desired length');
         assert(reqLength > 0, 'Requested array length <= 0');
         this.strip();
         var littleEndian = endian === 'le';
-        var res = new Array(reqLength);
+        var res = new ArrayType(reqLength);
         var b,
             i;
         var q = this.clone();
@@ -52189,22 +52193,22 @@ System.registerDynamic("npm:bn.js@4.9.0/lib/bn", ["@empty"], true, function($__r
         return res._forceRed(this);
       };
     })(typeof module === 'undefined' || module, this);
-  })($__require('@empty').Buffer);
+  })($__require('buffer').Buffer);
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:bn.js@4.9.0", ["npm:bn.js@4.9.0/lib/bn.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:bn.js@4.10.0.js", ["npm:bn.js@4.10.0/lib/bn.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('npm:bn.js@4.9.0/lib/bn.js');
+  module.exports = $__require('npm:bn.js@4.10.0/lib/bn.js');
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:public-encrypt@4.0.0/withPublic", ["bn.js", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:public-encrypt@4.0.0/withPublic.js", ["bn.js", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52220,7 +52224,7 @@ System.registerDynamic("npm:public-encrypt@4.0.0/withPublic", ["bn.js", "buffer"
   return module.exports;
 });
 
-System.registerDynamic("npm:public-encrypt@4.0.0/privateDecrypt", ["parse-asn1", "./mgf", "./xor", "bn.js", "browserify-rsa", "create-hash", "./withPublic", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:public-encrypt@4.0.0/privateDecrypt.js", ["parse-asn1", "./mgf", "./xor", "bn.js", "browserify-rsa", "create-hash", "./withPublic", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52335,7 +52339,7 @@ System.registerDynamic("npm:public-encrypt@4.0.0/privateDecrypt", ["parse-asn1",
   return module.exports;
 });
 
-System.registerDynamic("npm:public-encrypt@4.0.0/browser", ["./publicEncrypt", "./privateDecrypt"], true, function($__require, exports, module) {
+System.registerDynamic("npm:public-encrypt@4.0.0/browser.js", ["./publicEncrypt", "./privateDecrypt"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52352,7 +52356,7 @@ System.registerDynamic("npm:public-encrypt@4.0.0/browser", ["./publicEncrypt", "
   return module.exports;
 });
 
-System.registerDynamic("npm:public-encrypt@4.0.0", ["npm:public-encrypt@4.0.0/browser.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:public-encrypt@4.0.0.js", ["npm:public-encrypt@4.0.0/browser.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52362,7 +52366,7 @@ System.registerDynamic("npm:public-encrypt@4.0.0", ["npm:public-encrypt@4.0.0/br
   return module.exports;
 });
 
-System.registerDynamic("npm:crypto-browserify@3.11.0/index", ["randombytes", "create-hash", "create-hmac", "browserify-sign/algos", "pbkdf2", "browserify-cipher", "diffie-hellman", "browserify-sign", "create-ecdh", "public-encrypt"], true, function($__require, exports, module) {
+System.registerDynamic("npm:crypto-browserify@3.11.0/index.js", ["randombytes", "create-hash", "create-hmac", "browserify-sign/algos", "pbkdf2", "browserify-cipher", "diffie-hellman", "browserify-sign", "create-ecdh", "public-encrypt"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -52409,7 +52413,7 @@ System.registerDynamic("npm:crypto-browserify@3.11.0/index", ["randombytes", "cr
   return module.exports;
 });
 
-System.registerDynamic("npm:crypto-browserify@3.11.0", ["npm:crypto-browserify@3.11.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("npm:crypto-browserify@3.11.0.js", ["npm:crypto-browserify@3.11.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52419,7 +52423,7 @@ System.registerDynamic("npm:crypto-browserify@3.11.0", ["npm:crypto-browserify@3
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-crypto@0.1.0/index", ["crypto-browserify"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-crypto@0.1.0/index.js", ["crypto-browserify"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52429,7 +52433,7 @@ System.registerDynamic("github:jspm/nodelibs-crypto@0.1.0/index", ["crypto-brows
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-crypto@0.1.0", ["github:jspm/nodelibs-crypto@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-crypto@0.1.0.js", ["github:jspm/nodelibs-crypto@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52439,7 +52443,7 @@ System.registerDynamic("github:jspm/nodelibs-crypto@0.1.0", ["github:jspm/nodeli
   return module.exports;
 });
 
-System.registerDynamic("npm:lru-cache@2.7.3/lib/lru-cache", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:lru-cache@2.7.3/lib/lru-cache.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52747,7 +52751,7 @@ System.registerDynamic("npm:lru-cache@2.7.3/lib/lru-cache", [], true, function($
   return module.exports;
 });
 
-System.registerDynamic("npm:lru-cache@2.7.3", ["npm:lru-cache@2.7.3/lib/lru-cache.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:lru-cache@2.7.3.js", ["npm:lru-cache@2.7.3/lib/lru-cache.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52757,7 +52761,7 @@ System.registerDynamic("npm:lru-cache@2.7.3", ["npm:lru-cache@2.7.3/lib/lru-cach
   return module.exports;
 });
 
-System.registerDynamic("npm:aws4@1.2.1/aws4", ["url", "querystring", "crypto", "lru-cache", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:aws4@1.2.1/aws4.js", ["url", "querystring", "crypto", "lru-cache", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -52998,7 +53002,7 @@ System.registerDynamic("npm:aws4@1.2.1/aws4", ["url", "querystring", "crypto", "
   return module.exports;
 });
 
-System.registerDynamic("npm:aws4@1.2.1", ["npm:aws4@1.2.1/aws4.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:aws4@1.2.1.js", ["npm:aws4@1.2.1/aws4.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -53008,7 +53012,7 @@ System.registerDynamic("npm:aws4@1.2.1", ["npm:aws4@1.2.1/aws4.js"], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/request", ["http", "https", "url", "util", "stream", "zlib", "bl", "hawk", "aws-sign2", "http-signature", "mime-types", "stringstream", "caseless", "forever-agent", "form-data", "extend", "is-typedarray", "./lib/helpers", "./lib/cookies", "./lib/getProxyFromURI", "./lib/querystring", "./lib/har", "./lib/auth", "./lib/oauth", "./lib/multipart", "./lib/redirect", "./lib/tunnel", "aws4", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/request.js", ["http", "https", "url", "util", "stream", "zlib", "bl", "hawk", "aws-sign2", "http-signature", "mime-types", "stringstream", "caseless", "forever-agent", "form-data", "extend", "is-typedarray", "./lib/helpers", "./lib/cookies", "./lib/getProxyFromURI", "./lib/querystring", "./lib/har", "./lib/auth", "./lib/oauth", "./lib/multipart", "./lib/redirect", "./lib/tunnel", "aws4", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54163,7 +54167,7 @@ System.registerDynamic("npm:request@2.69.0/request", ["http", "https", "url", "u
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0/index", ["extend", "./lib/cookies", "./lib/helpers", "./request"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0/index.js", ["extend", "./lib/cookies", "./lib/helpers", "./request"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -54278,7 +54282,7 @@ System.registerDynamic("npm:request@2.69.0/index", ["extend", "./lib/cookies", "
   return module.exports;
 });
 
-System.registerDynamic("npm:request@2.69.0", ["npm:request@2.69.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:request@2.69.0.js", ["npm:request@2.69.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54360,7 +54364,7 @@ System.register("app/services/services.electron.ts", ["rxjs", "request", "../con
   };
 });
 
-System.register("contexts.electron/main.ts", ["angular2/core", "angular2-reflow", "../app/services", "../app/services/services.electron", "../app/stores"], function(exports_1) {
+System.register("contexts:main.ts", ["angular2/core", "angular2-reflow", "../app/services", "../app/services/services.electron", "../app/stores"], function(exports_1) {
   var __extends = (this && this.__extends) || function(d, b) {
     for (var p in b)
       if (b.hasOwnProperty(p))
@@ -54674,7 +54678,7 @@ System.register("app/services.ts", ["angular2/core", "rxjs", "./stores"], functi
   };
 });
 
-System.register("app/components/activity.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
+System.register("app/components/activity.css!github:systemjs/plugin-css@0.1.20.js", [], function() { return { setters: [], execute: function() {} } });
 
 System.register("app/components/activity.ts", ["angular2/core", "moment", "../services", "./activity.css!"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
@@ -54811,7 +54815,7 @@ System.register("app/events.ts", [], function(exports_1) {
   };
 });
 
-System.register("app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
+System.register("app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20.js", [], function() { return { setters: [], execute: function() {} } });
 
 System.register("app/components/event-bus-listener.ts", ["angular2/core", "angular2-reflow", "../events", "./event-bus-listener.css!"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
@@ -54882,7 +54886,7 @@ System.register("app/components/event-bus-listener.ts", ["angular2/core", "angul
   };
 });
 
-System.register("app/components/main.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
+System.register("app/components/main.css!github:systemjs/plugin-css@0.1.20.js", [], function() { return { setters: [], execute: function() {} } });
 
 System.register("app/components/main.ts", ["angular2/core", "angular2/router", "angular2-reflow", "contexts:main", "./github", "./jsfiddle", "./activity", "./event-bus-listener", "./main.css!"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
@@ -54980,21 +54984,25 @@ System.register("app/components/main.ts", ["angular2/core", "angular2/router", "
   };
 });
 
-System.register("app/boot.ts", ["angular2/platform/browser", "./components/main"], function(exports_1) {
-  var browser_1,
+System.register("app/boot.ts", ["es6-shim", "es6-promise", "zone.js/lib/browser/zone-microtask", "reflect-metadata", "angular2/core", "angular2/platform/browser", "./components/main"], function(exports_1) {
+  var core_1,
+      browser_1,
       main_1;
   return {
-    setters: [function(browser_1_1) {
+    setters: [function(_1) {}, function(_2) {}, function(_3) {}, function(_4) {}, function(core_1_1) {
+      core_1 = core_1_1;
+    }, function(browser_1_1) {
       browser_1 = browser_1_1;
     }, function(main_1_1) {
       main_1 = main_1_1;
     }],
     execute: function() {
+      core_1.enableProdMode();
       browser_1.bootstrap(main_1.Main);
     }
   };
 });
 
-System.register('app/components/activity.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
-System.register('app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
-System.register('app/components/main.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
+System.register('app/components/activity.css!github:systemjs/plugin-css@0.1.20.js', [], false, function() {});
+System.register('app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20.js', [], false, function() {});
+System.register('app/components/main.css!github:systemjs/plugin-css@0.1.20.js', [], false, function() {});

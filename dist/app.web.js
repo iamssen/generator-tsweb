@@ -70,7 +70,7 @@ System.register("app/services/services.web.ts", ["rxjs", "../consts", "../servic
   };
 });
 
-System.register("contexts.web/main.ts", ["angular2/core", "angular2-reflow", "../app/services", "../app/services/services.web", "../app/stores"], function(exports_1) {
+System.register("contexts:main.ts", ["angular2/core", "angular2-reflow", "../app/services", "../app/services/services.web", "../app/stores"], function(exports_1) {
   var __extends = (this && this.__extends) || function(d, b) {
     for (var p in b)
       if (b.hasOwnProperty(p))
@@ -384,7 +384,7 @@ System.register("app/services.ts", ["angular2/core", "rxjs", "./stores"], functi
   };
 });
 
-System.register("app/components/activity.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
+System.register("app/components/activity.css!github:systemjs/plugin-css@0.1.20.js", [], function() { return { setters: [], execute: function() {} } });
 
 System.register("app/components/activity.ts", ["angular2/core", "moment", "../services", "./activity.css!"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
@@ -521,7 +521,7 @@ System.register("app/events.ts", [], function(exports_1) {
   };
 });
 
-System.register("app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
+System.register("app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20.js", [], function() { return { setters: [], execute: function() {} } });
 
 System.register("app/components/event-bus-listener.ts", ["angular2/core", "angular2-reflow", "../events", "./event-bus-listener.css!"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
@@ -592,7 +592,7 @@ System.register("app/components/event-bus-listener.ts", ["angular2/core", "angul
   };
 });
 
-System.register("app/components/main.css!github:systemjs/plugin-css@0.1.20", [], function() { return { setters: [], execute: function() {} } });
+System.register("app/components/main.css!github:systemjs/plugin-css@0.1.20.js", [], function() { return { setters: [], execute: function() {} } });
 
 System.register("app/components/main.ts", ["angular2/core", "angular2/router", "angular2-reflow", "contexts:main", "./github", "./jsfiddle", "./activity", "./event-bus-listener", "./main.css!"], function(exports_1) {
   var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
@@ -690,21 +690,25 @@ System.register("app/components/main.ts", ["angular2/core", "angular2/router", "
   };
 });
 
-System.register("app/boot.ts", ["angular2/platform/browser", "./components/main"], function(exports_1) {
-  var browser_1,
+System.register("app/boot.ts", ["es6-shim", "es6-promise", "zone.js/lib/browser/zone-microtask", "reflect-metadata", "angular2/core", "angular2/platform/browser", "./components/main"], function(exports_1) {
+  var core_1,
+      browser_1,
       main_1;
   return {
-    setters: [function(browser_1_1) {
+    setters: [function(_1) {}, function(_2) {}, function(_3) {}, function(_4) {}, function(core_1_1) {
+      core_1 = core_1_1;
+    }, function(browser_1_1) {
       browser_1 = browser_1_1;
     }, function(main_1_1) {
       main_1 = main_1_1;
     }],
     execute: function() {
+      core_1.enableProdMode();
       browser_1.bootstrap(main_1.Main);
     }
   };
 });
 
-System.register('app/components/activity.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
-System.register('app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
-System.register('app/components/main.css!github:systemjs/plugin-css@0.1.20', [], false, function() {});
+System.register('app/components/activity.css!github:systemjs/plugin-css@0.1.20.js', [], false, function() {});
+System.register('app/components/event-bus-listener.css!github:systemjs/plugin-css@0.1.20.js', [], false, function() {});
+System.register('app/components/main.css!github:systemjs/plugin-css@0.1.20.js', [], false, function() {});

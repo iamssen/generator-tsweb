@@ -3,7 +3,7 @@
 var _removeDefine = System.get("@@amd-helpers").createDefine();
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define("github:es-shims/es6-shim@0.34.2/es6-shim", [], factory);
+    define("github:es-shims/es6-shim@0.34.2/es6-shim.js", [], factory);
   } else if (typeof exports === 'object') {
     module.exports = factory();
   } else {
@@ -3368,13 +3368,13 @@ _removeDefine();
 })();
 (function() {
 var _removeDefine = System.get("@@amd-helpers").createDefine();
-define("github:es-shims/es6-shim@0.34.2", ["github:es-shims/es6-shim@0.34.2/es6-shim"], function(main) {
+define("github:es-shims/es6-shim@0.34.2.js", ["github:es-shims/es6-shim@0.34.2/es6-shim"], function(main) {
   return main;
 });
 
 _removeDefine();
 })();
-System.registerDynamic("github:mbostock/d3@3.5.14/d3", [], false, function(__require, __exports, __module) {
+System.registerDynamic("github:mbostock/d3@3.5.14/d3.js", [], false, function(__require, __exports, __module) {
   var _retrieveGlobal = System.get("@@global-helpers").prepareGlobal(__module.id, "d3", null);
   (function() {
     "format global";
@@ -15324,7 +15324,7 @@ System.registerDynamic("github:mbostock/d3@3.5.14/d3", [], false, function(__req
   return _retrieveGlobal();
 });
 
-System.registerDynamic("github:mbostock/d3@3.5.14", ["github:mbostock/d3@3.5.14/d3"], true, function($__require, exports, module) {
+System.registerDynamic("github:mbostock/d3@3.5.14.js", ["github:mbostock/d3@3.5.14/d3"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -15334,7 +15334,8 @@ System.registerDynamic("github:mbostock/d3@3.5.14", ["github:mbostock/d3@3.5.14/
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow.core", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2-reflow@0.0.10/dist/angular2-reflow.core.js", [], true, function($__require, exports, module) {
+  "use strict";
   ;
   var global = this,
       __define = global.define;
@@ -15345,7 +15346,8 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow.core", [], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core", "./reflow.core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2-reflow@0.0.10/dist/angular2-reflow.js", ["angular2/core", "./angular2-reflow.core"], true, function($__require, exports, module) {
+  "use strict";
   ;
   var global = this,
       __define = global.define;
@@ -15377,15 +15379,15 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
         exports[p] = m[p];
   }
   var core_1 = $__require('angular2/core');
-  var Rf = $__require('./reflow.core');
-  __export($__require('./reflow.core'));
+  var rf = $__require('./angular2-reflow.core');
+  __export($__require('./angular2-reflow.core'));
   var COMMAND_MAP_SETTINGS = '__commandMapSettings__';
   var PROVIDER_TOKENS = '__providerTokens__';
   var ContextFactory = (function() {
     function ContextFactory() {
       this._commandMapSettings = [];
-      this._providerTokens = [Rf.CONTEXT, Rf.EVENT_BUS];
-      this._providers = [new core_1.Provider(Rf.CONTEXT, {useClass: Context}), new core_1.Provider(Rf.EVENT_BUS, {useClass: EventBus}), new core_1.Provider(COMMAND_MAP_SETTINGS, {useValue: this._commandMapSettings}), new core_1.Provider(PROVIDER_TOKENS, {useValue: this._providerTokens})];
+      this._providerTokens = [rf.CONTEXT, rf.EVENT_BUS];
+      this._providers = [new core_1.Provider(rf.CONTEXT, {useClass: Context}), new core_1.Provider(rf.EVENT_BUS, {useClass: EventBus}), new core_1.Provider(COMMAND_MAP_SETTINGS, {useValue: this._commandMapSettings}), new core_1.Provider(PROVIDER_TOKENS, {useValue: this._providerTokens})];
       this.mapDependency();
     }
     Object.defineProperty(ContextFactory.prototype, "providers", {
@@ -15411,7 +15413,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
     };
     ContextFactory.prototype.mapDependency = function() {};
     return ContextFactory;
-  })();
+  }());
   exports.ContextFactory = ContextFactory;
   var Context = (function() {
     function Context(injector, eventBus, commandMapSettings, providerTokens) {
@@ -15435,9 +15437,9 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       this.commandMap = null;
       this.eventBus = null;
     };
-    Context = __decorate([__param(0, core_1.Inject(core_1.Injector)), __param(1, core_1.Inject(Rf.EVENT_BUS)), __param(2, core_1.Inject(COMMAND_MAP_SETTINGS)), __param(3, core_1.Inject(PROVIDER_TOKENS)), __metadata('design:paramtypes', [core_1.Injector, EventBus, Array, Array])], Context);
+    Context = __decorate([__param(0, core_1.Inject(core_1.Injector)), __param(1, core_1.Inject(rf.EVENT_BUS)), __param(2, core_1.Inject(COMMAND_MAP_SETTINGS)), __param(3, core_1.Inject(PROVIDER_TOKENS)), __metadata('design:paramtypes', [core_1.Injector, EventBus, Array, Array])], Context);
     return Context;
-  })();
+  }());
   var Commands = (function() {
     function Commands(commands) {
       this.commands = commands;
@@ -15448,7 +15450,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       return new SequentialCommandFlow(this.commands);
     };
     return Commands;
-  })();
+  }());
   var SequentialCommandFlow = (function() {
     function SequentialCommandFlow(commands) {
       this.commands = commands;
@@ -15464,7 +15466,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       return null;
     };
     return SequentialCommandFlow;
-  })();
+  }());
   var CommandChain = (function() {
     function CommandChain(_event, injector, commands, deconstructCallback) {
       this._event = _event;
@@ -15514,7 +15516,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       this.commands = null;
     };
     return CommandChain;
-  })();
+  }());
   var CommandMap = (function() {
     function CommandMap(eventBus, injector, commandMapSettings) {
       var _this = this;
@@ -15577,7 +15579,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       this.injector = null;
     };
     return CommandMap;
-  })();
+  }());
   var EventBus = (function() {
     function EventBus() {
       this.dispatcher = new EventDispatcher;
@@ -15614,7 +15616,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
     };
     EventBus.dispatchers = new Set();
     return EventBus;
-  })();
+  }());
   var EventDispatcher = (function() {
     function EventDispatcher() {
       this.collection = new EventCollection;
@@ -15635,7 +15637,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       this.collection = null;
     };
     return EventDispatcher;
-  })();
+  }());
   var EventCollection = (function() {
     function EventCollection() {
       this.types = new Map();
@@ -15697,7 +15699,7 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       this.types = null;
     };
     return EventCollection;
-  })();
+  }());
   var EventListener = (function() {
     function EventListener(_type, _listener, _collection) {
       this._type = _type;
@@ -15726,22 +15728,22 @@ System.registerDynamic("npm:angular2-reflow@0.0.6/dist/reflow", ["angular2/core"
       this._collection = null;
     };
     return EventListener;
-  })();
+  }());
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2-reflow@0.0.6", ["npm:angular2-reflow@0.0.6/dist/reflow.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2-reflow@0.0.10.js", ["npm:angular2-reflow@0.0.10/dist/angular2-reflow.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
-  module.exports = $__require('npm:angular2-reflow@0.0.6/dist/reflow.js');
+  module.exports = $__require('npm:angular2-reflow@0.0.10/dist/angular2-reflow.js');
   global.define = __define;
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/http", ["../facade/lang", "../facade/exceptions", "../../core", "./interfaces", "./static_request", "./base_request_options", "./enums"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/http.js", ["../facade/lang", "../facade/exceptions", "../../core", "./interfaces", "./static_request", "./base_request_options", "./enums"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15868,7 +15870,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/http", ["../facade/la
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/xhr_backend", ["../enums", "../static_response", "../headers", "../base_response_options", "../../../core", "./browser_xhr", "../../facade/lang", "rxjs/Observable", "../http_utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/xhr_backend.js", ["../enums", "../static_response", "../headers", "../base_response_options", "../../../core", "./browser_xhr", "../../facade/lang", "rxjs/Observable", "../http_utils"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -15975,7 +15977,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/xhr_backend"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/jsonp_backend", ["../interfaces", "../enums", "../static_response", "../base_response_options", "../../../core", "./browser_jsonp", "../../facade/exceptions", "../../facade/lang", "rxjs/Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/jsonp_backend.js", ["../interfaces", "../enums", "../static_response", "../base_response_options", "../../../core", "./browser_jsonp", "../../facade/exceptions", "../../facade/lang", "rxjs/Observable"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16136,7 +16138,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/jsonp_backen
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/browser_xhr", ["../../../core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/browser_xhr.js", ["../../../core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16172,7 +16174,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/browser_xhr"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/browser_jsonp", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/browser_jsonp.js", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16242,7 +16244,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/backends/browser_json
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/base_request_options", ["../facade/lang", "./headers", "./enums", "../../core", "./url_search_params", "./http_utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/base_request_options.js", ["../facade/lang", "./headers", "./enums", "../../core", "./url_search_params", "./http_utils"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16321,7 +16323,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/base_request_options"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/base_response_options", ["../../core", "../facade/lang", "./headers", "./enums"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/base_response_options.js", ["../../core", "../facade/lang", "./headers", "./enums"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16403,7 +16405,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/base_response_options
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/static_request", ["./headers", "./http_utils", "../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/static_request.js", ["./headers", "./http_utils", "../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16440,7 +16442,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/static_request", ["./
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/http_utils", ["../facade/lang", "./enums", "../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/http_utils.js", ["../facade/lang", "./enums", "../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16481,7 +16483,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/http_utils", ["../fac
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/static_response", ["../facade/lang", "../facade/exceptions", "./http_utils"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/static_response.js", ["../facade/lang", "../facade/exceptions", "./http_utils"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16524,7 +16526,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/static_response", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/interfaces", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/interfaces.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16544,7 +16546,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/interfaces", [], true
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/headers", ["../facade/lang", "../facade/exceptions", "../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/headers.js", ["../facade/lang", "../facade/exceptions", "../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16632,7 +16634,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/headers", ["../facade
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/enums", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/enums.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16669,7 +16671,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/enums", [], true, fun
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/url_search_params", ["../facade/lang", "../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/url_search_params.js", ["../facade/lang", "../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16788,7 +16790,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/http/url_search_params", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/http", ["./core", "./src/http/http", "./src/http/backends/xhr_backend", "./src/http/backends/jsonp_backend", "./src/http/backends/browser_xhr", "./src/http/backends/browser_jsonp", "./src/http/base_request_options", "./src/http/base_response_options", "./src/http/static_request", "./src/http/static_response", "./src/http/interfaces", "./src/http/headers", "./src/http/enums", "./src/http/url_search_params"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/http.js", ["./core", "./src/http/http", "./src/http/backends/xhr_backend", "./src/http/backends/jsonp_backend", "./src/http/backends/browser_xhr", "./src/http/backends/browser_jsonp", "./src/http/base_request_options", "./src/http/base_response_options", "./src/http/static_request", "./src/http/static_response", "./src/http/interfaces", "./src/http/headers", "./src/http/enums", "./src/http/url_search_params"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -16852,7 +16854,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/http", ["./core", "./src/http/
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/angular_entrypoint", ["../facade/lang", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/angular_entrypoint.js", ["../facade/lang", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -16889,7 +16891,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/angular_entrypoint", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/async_pipe", ["../../facade/lang", "../../facade/async", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/async_pipe.js", ["../../facade/lang", "../../facade/async", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17014,7 +17016,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/async_pipe", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/uppercase_pipe", ["../../facade/lang", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/uppercase_pipe.js", ["../../facade/lang", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17060,7 +17062,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/uppercase_pip
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/lowercase_pipe", ["../../facade/lang", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/lowercase_pipe.js", ["../../facade/lang", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17106,7 +17108,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/lowercase_pip
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/json_pipe", ["../../facade/lang", "../../../core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/json_pipe.js", ["../../facade/lang", "../../../core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17149,7 +17151,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/json_pipe", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/slice_pipe", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/slice_pipe.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../../../core", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17211,7 +17213,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/slice_pipe", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/date_pipe", ["../../facade/lang", "../../facade/intl", "../../../core", "../../facade/collection", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/date_pipe.js", ["../../facade/lang", "../../facade/intl", "../../../core", "../../facade/collection", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17280,7 +17282,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/date_pipe", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/intl", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/intl.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17401,7 +17403,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/intl", [], true, fu
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/invalid_pipe_argument_exception", ["../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/invalid_pipe_argument_exception.js", ["../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17430,7 +17432,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/invalid_pipe_
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/number_pipe", ["../../facade/lang", "../../facade/exceptions", "../../facade/intl", "../../../core", "../../facade/collection", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/number_pipe.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/intl", "../../../core", "../../facade/collection", "./invalid_pipe_argument_exception"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17558,7 +17560,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes/number_pipe",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes", ["./pipes/async_pipe", "./pipes/uppercase_pipe", "./pipes/lowercase_pipe", "./pipes/json_pipe", "./pipes/slice_pipe", "./pipes/date_pipe", "./pipes/number_pipe", "../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes.js", ["./pipes/async_pipe", "./pipes/uppercase_pipe", "./pipes/lowercase_pipe", "./pipes/json_pipe", "./pipes/slice_pipe", "./pipes/date_pipe", "./pipes/number_pipe", "../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17594,7 +17596,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/pipes", ["./pipes/a
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control_name", ["../../../facade/lang", "../../../facade/async", "../../../../core", "./control_container", "./ng_control", "./control_value_accessor", "./shared", "../validators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control_name.js", ["../../../facade/lang", "../../../facade/async", "../../../../core", "./control_container", "./ng_control", "./control_value_accessor", "./shared", "../validators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17718,7 +17720,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_form_control", ["../../../facade/lang", "../../../facade/collection", "../../../facade/async", "../../../../core", "./ng_control", "../validators", "./control_value_accessor", "./shared"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_form_control.js", ["../../../facade/lang", "../../../facade/collection", "../../../facade/async", "../../../../core", "./ng_control", "../validators", "./control_value_accessor", "./shared"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17833,7 +17835,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_model", ["../../../facade/lang", "../../../facade/async", "../../../../core", "./control_value_accessor", "./ng_control", "../model", "../validators", "./shared"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_model.js", ["../../../facade/lang", "../../../facade/async", "../../../../core", "./control_value_accessor", "./ng_control", "../model", "../validators", "./shared"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -17948,7 +17950,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control_group", ["../../../../core", "../../../facade/lang", "./control_container", "./shared", "../validators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control_group.js", ["../../../../core", "../../../facade/lang", "./control_container", "./shared", "../validators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18054,7 +18056,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_form_model", ["../../../facade/lang", "../../../facade/collection", "../../../facade/async", "../../../../core", "./control_container", "./shared", "../validators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_form_model.js", ["../../../facade/lang", "../../../facade/collection", "../../../facade/async", "../../../../core", "./control_container", "./shared", "../validators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18195,7 +18197,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/control_container", ["./abstract_control_directive"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/control_container.js", ["./abstract_control_directive"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18237,7 +18239,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/co
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/normalize_validator", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/normalize_validator.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18257,7 +18259,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/no
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/shared", ["../../../facade/collection", "../../../facade/lang", "../../../facade/exceptions", "../validators", "./default_value_accessor", "./number_value_accessor", "./checkbox_value_accessor", "./select_control_value_accessor", "./normalize_validator"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/shared.js", ["../../../facade/collection", "../../../facade/lang", "../../../facade/exceptions", "../validators", "./default_value_accessor", "./number_value_accessor", "./checkbox_value_accessor", "./select_control_value_accessor", "./normalize_validator"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18360,7 +18362,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/sh
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_form", ["../../../facade/async", "../../../facade/collection", "../../../facade/lang", "../../../../core", "./control_container", "../model", "./shared", "../validators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_form.js", ["../../../facade/async", "../../../facade/collection", "../../../facade/lang", "../../../../core", "./control_container", "../model", "./shared", "../validators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18517,7 +18519,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/default_value_accessor", ["../../../../core", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/default_value_accessor.js", ["../../../../core", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18580,7 +18582,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/de
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/checkbox_value_accessor", ["../../../../core", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/checkbox_value_accessor.js", ["../../../../core", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18642,7 +18644,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ch
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/number_value_accessor", ["../../../../core", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/number_value_accessor.js", ["../../../../core", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18707,7 +18709,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/nu
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control_status", ["../../../../core", "./ng_control", "../../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control_status.js", ["../../../../core", "./ng_control", "../../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18801,7 +18803,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/control_value_accessor", ["../../../../core", "../../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/control_value_accessor.js", ["../../../../core", "../../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18814,7 +18816,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/co
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/select_control_value_accessor", ["../../../../core", "../../../facade/async", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/select_control_value_accessor.js", ["../../../../core", "../../../facade/async", "./control_value_accessor", "../../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18896,7 +18898,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/se
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/abstract_control_directive", ["../../../facade/lang", "../../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/abstract_control_directive.js", ["../../../facade/lang", "../../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -18976,7 +18978,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ab
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control", ["./abstract_control_directive", "../../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng_control.js", ["./abstract_control_directive", "../../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19021,7 +19023,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/ng
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives", ["../../facade/lang", "./directives/ng_control_name", "./directives/ng_form_control", "./directives/ng_model", "./directives/ng_control_group", "./directives/ng_form_model", "./directives/ng_form", "./directives/default_value_accessor", "./directives/checkbox_value_accessor", "./directives/number_value_accessor", "./directives/ng_control_status", "./directives/select_control_value_accessor", "./directives/validators", "./directives/ng_control"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives.js", ["../../facade/lang", "./directives/ng_control_name", "./directives/ng_form_control", "./directives/ng_model", "./directives/ng_control_group", "./directives/ng_form_model", "./directives/ng_form", "./directives/default_value_accessor", "./directives/checkbox_value_accessor", "./directives/number_value_accessor", "./directives/ng_control_status", "./directives/select_control_value_accessor", "./directives/validators", "./directives/ng_control"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19074,7 +19076,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/validators", ["../../facade/lang", "../../facade/promise", "../../facade/async", "../../facade/collection", "../../../core", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/validators.js", ["../../facade/lang", "../../facade/promise", "../../facade/async", "../../facade/collection", "../../../core", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -19161,7 +19163,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/validators", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/validators", ["../../../../core", "../../../facade/lang", "../validators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/validators.js", ["../../../../core", "../../../facade/lang", "../validators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19249,7 +19251,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/directives/va
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/model", ["../../facade/lang", "../../facade/async", "../../facade/promise", "../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/model.js", ["../../facade/lang", "../../facade/async", "../../facade/promise", "../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19689,7 +19691,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/model", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/form_builder", ["../../../core", "../../facade/collection", "../../facade/lang", "./model"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/form_builder.js", ["../../../core", "../../facade/collection", "../../facade/lang", "./model"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19779,7 +19781,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms/form_builder"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms", ["./forms/model", "./forms/directives/abstract_control_directive", "./forms/directives/control_container", "./forms/directives/ng_control_name", "./forms/directives/ng_form_control", "./forms/directives/ng_model", "./forms/directives/ng_control", "./forms/directives/ng_control_group", "./forms/directives/ng_form_model", "./forms/directives/ng_form", "./forms/directives/control_value_accessor", "./forms/directives/default_value_accessor", "./forms/directives/ng_control_status", "./forms/directives/checkbox_value_accessor", "./forms/directives/select_control_value_accessor", "./forms/directives", "./forms/validators", "./forms/directives/validators", "./forms/form_builder"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms.js", ["./forms/model", "./forms/directives/abstract_control_directive", "./forms/directives/control_container", "./forms/directives/ng_control_name", "./forms/directives/ng_form_control", "./forms/directives/ng_model", "./forms/directives/ng_control", "./forms/directives/ng_control_group", "./forms/directives/ng_form_model", "./forms/directives/ng_form", "./forms/directives/control_value_accessor", "./forms/directives/default_value_accessor", "./forms/directives/ng_control_status", "./forms/directives/checkbox_value_accessor", "./forms/directives/select_control_value_accessor", "./forms/directives", "./forms/validators", "./forms/directives/validators", "./forms/form_builder"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19837,7 +19839,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/forms", ["./forms/m
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/observable_list_diff", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/observable_list_diff.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -19848,7 +19850,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/observab
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_class", ["../../facade/lang", "../../../core", "../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_class.js", ["../../facade/lang", "../../../core", "../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20005,7 +20007,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_class
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_for", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_for.js", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20138,7 +20140,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_for",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_if", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_if.js", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20192,7 +20194,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_if", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_style", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_style.js", ["../../../core", "../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20266,7 +20268,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_style
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_switch", ["../../../core", "../../facade/lang", "../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_switch.js", ["../../../core", "../../facade/lang", "../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20424,7 +20426,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/ng_switc
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/core_directives", ["../../facade/lang", "./ng_class", "./ng_for", "./ng_if", "./ng_style", "./ng_switch"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/core_directives.js", ["../../facade/lang", "./ng_class", "./ng_for", "./ng_if", "./ng_style", "./ng_switch"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20441,7 +20443,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives/core_dir
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives", ["./directives/ng_class", "./directives/ng_for", "./directives/ng_if", "./directives/ng_style", "./directives/ng_switch", "./directives/observable_list_diff", "./directives/core_directives"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives.js", ["./directives/ng_class", "./directives/ng_for", "./directives/ng_if", "./directives/ng_style", "./directives/ng_switch", "./directives/observable_list_diff", "./directives/core_directives"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20471,7 +20473,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/directives", ["./di
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/common_directives", ["../facade/lang", "./forms", "./directives"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/common_directives.js", ["../facade/lang", "./forms", "./directives"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20485,7 +20487,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/common/common_directives",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/common", ["./src/common/pipes", "./src/common/directives", "./src/common/forms", "./src/common/common_directives"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/common.js", ["./src/common/pipes", "./src/common/directives", "./src/common/forms", "./src/common/common_directives"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20504,7 +20506,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/common", ["./src/common/pipes"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/key_events", ["../dom_adapter", "../../../facade/lang", "../../../facade/collection", "./event_manager", "../../../core/di", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/key_events.js", ["../dom_adapter", "../../../facade/lang", "../../../facade/collection", "./event_manager", "../../../core/di", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -20640,7 +20642,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/key_ev
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/hammer_common", ["./event_manager", "../../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/hammer_common.js", ["./event_manager", "../../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20704,7 +20706,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/hammer
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/hammer_gestures", ["./hammer_common", "../../../facade/lang", "../../../facade/exceptions", "../../../core/di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/hammer_gestures.js", ["./hammer_common", "../../../facade/lang", "../../../facade/exceptions", "../../../core/di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20778,7 +20780,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/hammer
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/generic_browser_adapter", ["../../facade/collection", "../../facade/lang", "../dom/dom_adapter", "./xhr_impl"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/generic_browser_adapter.js", ["../../facade/collection", "../../facade/lang", "../dom/dom_adapter", "./xhr_impl"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -20864,7 +20866,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/generic_b
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/browser_adapter", ["../../facade/collection", "../../facade/lang", "../dom/dom_adapter", "./generic_browser_adapter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/browser_adapter.js", ["../../facade/collection", "../../facade/lang", "../dom/dom_adapter", "./generic_browser_adapter"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21393,7 +21395,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/browser_a
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/testability", ["../../facade/collection", "../../facade/lang", "../dom/dom_adapter", "../../../core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/testability.js", ["../../facade/collection", "../../facade/lang", "../dom/dom_adapter", "../../../core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21485,7 +21487,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/testabili
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/wtf_init", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/wtf_init.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21497,7 +21499,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/wtf_init", []
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/title", ["../dom/dom_adapter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/title.js", ["../dom/dom_adapter"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21519,7 +21521,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/title", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/css_animation_options", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/css_animation_options.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21538,7 +21540,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/css_animation_opti
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/animation", ["../facade/lang", "../facade/math", "../platform/dom/util", "../facade/collection", "../platform/dom/dom_adapter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/animation.js", ["../facade/lang", "../facade/math", "../platform/dom/util", "../facade/collection", "../platform/dom/dom_adapter"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21682,7 +21684,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/animation", ["../f
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/css_animation_builder", ["./css_animation_options", "./animation"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/css_animation_builder.js", ["./css_animation_options", "./animation"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21736,7 +21738,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/css_animation_buil
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/math", ["./lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/math.js", ["./lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21749,7 +21751,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/math", ["./lang"], 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/browser_details", ["../core/di", "../facade/math", "../platform/dom/dom_adapter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/browser_details.js", ["../core/di", "../facade/math", "../platform/dom/dom_adapter"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21835,7 +21837,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/browser_details", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/animation_builder", ["../core/di", "./css_animation_builder", "./browser_details"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/animation_builder.js", ["../core/di", "./css_animation_builder", "./browser_details"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21875,7 +21877,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/animate/animation_builder"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/util", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/util.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -21900,7 +21902,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/util", ["../.
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_renderer", ["../../core/di", "../../animate/animation_builder", "../../facade/lang", "../../facade/exceptions", "./shared_styles_host", "./events/event_manager", "./dom_tokens", "../../core/metadata", "./dom_adapter", "./util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_renderer.js", ["../../core/di", "../../animate/animation_builder", "../../facade/lang", "../../facade/exceptions", "./shared_styles_host", "./events/event_manager", "./dom_tokens", "../../core/metadata", "./dom_adapter", "./util"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22211,7 +22213,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_renderer"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_tokens", ["../../core/di", "../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_tokens.js", ["../../core/di", "../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22224,7 +22226,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_tokens", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/shared_styles_host", ["./dom_adapter", "../../core/di", "../../facade/collection", "./dom_tokens"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/shared_styles_host.js", ["./dom_adapter", "../../core/di", "../../facade/collection", "./dom_tokens"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22323,7 +22325,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/shared_styles
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/dom_events", ["../dom_adapter", "../../../../core", "./event_manager"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/dom_events.js", ["../dom_adapter", "../../../../core", "./event_manager"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22396,7 +22398,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/dom_ev
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/event_manager", ["../../../facade/lang", "../../../facade/exceptions", "../../../core/di", "../../../core/zone/ng_zone", "../../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/event_manager.js", ["../../../facade/lang", "../../../facade/exceptions", "../../../core/di", "../../../core/zone/ng_zone", "../../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22481,7 +22483,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/events/event_
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/debug/by", ["../../../facade/lang", "../dom_adapter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/debug/by.js", ["../../../facade/lang", "../dom_adapter"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22513,7 +22515,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/debug/by", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/debug/debug_element_view_listener", ["../../../facade/lang", "../../../facade/collection", "../../../core/di", "../../../core/linker/view_listener", "../dom_adapter", "../../../core/debug/debug_element"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/debug/debug_element_view_listener.js", ["../../../facade/lang", "../../../facade/collection", "../../../core/di", "../../../core/linker/view_listener", "../dom_adapter", "../../../core/debug/debug_element"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22601,7 +22603,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/debug/debug_e
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/platform/common_dom", ["../src/platform/dom/dom_adapter", "../src/platform/dom/dom_renderer", "../src/platform/dom/dom_tokens", "../src/platform/dom/shared_styles_host", "../src/platform/dom/events/dom_events", "../src/platform/dom/events/event_manager", "../src/platform/dom/debug/by", "../src/platform/dom/debug/debug_element_view_listener"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/platform/common_dom.js", ["../src/platform/dom/dom_adapter", "../src/platform/dom/dom_renderer", "../src/platform/dom/dom_tokens", "../src/platform/dom/shared_styles_host", "../src/platform/dom/events/dom_events", "../src/platform/dom/events/event_manager", "../src/platform/dom/debug/by", "../src/platform/dom/debug/debug_element_view_listener"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22635,7 +22637,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/platform/common_dom", ["../src
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/browser", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/browser.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22662,7 +22664,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/browser", [], true,
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/tools/common_tools", ["../../../core/application_ref", "../../../facade/lang", "../../../facade/browser", "../../dom/dom_adapter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/tools/common_tools.js", ["../../../core/application_ref", "../../../facade/lang", "../../../facade/browser", "../../dom/dom_adapter"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22711,7 +22713,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/tools/com
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/tools/tools", ["../../../facade/lang", "./common_tools"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/tools/tools.js", ["../../../facade/lang", "./common_tools"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22732,7 +22734,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/tools/too
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser_common", ["../facade/lang", "../core/di", "../../core", "../../common", "../core/testability/testability", "./dom/dom_adapter", "./dom/events/dom_events", "./dom/events/key_events", "./dom/events/hammer_gestures", "./dom/dom_tokens", "./dom/dom_renderer", "./dom/shared_styles_host", "../animate/browser_details", "../animate/animation_builder", "./browser/browser_adapter", "./browser/testability", "../core/profile/wtf_init", "./dom/events/event_manager", "./browser/title", "../../platform/common_dom", "./browser/tools/tools"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser_common.js", ["../facade/lang", "../core/di", "../../core", "../../common", "../core/testability/testability", "./dom/dom_adapter", "./dom/events/dom_events", "./dom/events/key_events", "./dom/events/hammer_gestures", "./dom/dom_tokens", "./dom/dom_renderer", "./dom/shared_styles_host", "../animate/browser_details", "../animate/animation_builder", "./browser/browser_adapter", "./browser/testability", "../core/profile/wtf_init", "./dom/events/event_manager", "./browser/title", "../../platform/common_dom", "./browser/tools/tools"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22814,7 +22816,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser_common", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/runtime_compiler", ["../core/linker/compiler", "../core/linker/view_ref", "./template_compiler", "../core/di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/runtime_compiler.js", ["../core/linker/compiler", "../core/linker/view_ref", "./template_compiler", "../core/di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -22880,7 +22882,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/runtime_compiler"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_compiler", ["../facade/lang", "../facade/exceptions", "../facade/collection", "../facade/async", "./directive_metadata", "./template_ast", "../core/di", "./source_module", "./change_detector_compiler", "./style_compiler", "./view_compiler", "./proto_view_compiler", "./template_parser", "./template_normalizer", "./runtime_metadata", "../core/linker/view", "../core/change_detection/change_detection", "../core/linker/resolved_metadata_cache", "./util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_compiler.js", ["../facade/lang", "../facade/exceptions", "../facade/collection", "../facade/async", "./directive_metadata", "./template_ast", "../core/di", "./source_module", "./change_detector_compiler", "./style_compiler", "./view_compiler", "./proto_view_compiler", "./template_parser", "./template_normalizer", "./runtime_metadata", "../core/linker/view", "../core/change_detection/change_detection", "../core/linker/resolved_metadata_cache", "./util"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -23270,7 +23272,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_compiler
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_parser", ["../facade/collection", "../facade/lang", "../../core", "../facade/exceptions", "../core/change_detection/change_detection", "./html_parser", "./html_tags", "./parse_util", "../core/change_detection/parser/ast", "./template_ast", "./selector", "./schema/element_schema_registry", "./template_preparser", "./style_url_resolver", "./html_ast", "./util", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_parser.js", ["../facade/collection", "../facade/lang", "../../core", "../facade/exceptions", "../core/change_detection/change_detection", "./html_parser", "./html_tags", "./parse_util", "../core/change_detection/parser/ast", "./template_ast", "./selector", "./schema/element_schema_registry", "./template_preparser", "./style_url_resolver", "./html_ast", "./util", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -23901,7 +23903,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_parser",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_ast", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_ast.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -23962,7 +23964,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_ast", ["../f
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_lexer", ["../facade/lang", "../facade/collection", "./parse_util", "./html_tags", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_lexer.js", ["../facade/lang", "../facade/collection", "./parse_util", "./html_tags", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -24513,7 +24515,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_lexer", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/parse_util", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/parse_util.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -24595,7 +24597,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/parse_util", [], 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_parser", ["../facade/lang", "../facade/collection", "./html_ast", "../core/di", "./html_lexer", "./parse_util", "./html_tags"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_parser.js", ["../facade/lang", "../facade/collection", "./html_ast", "../core/di", "./html_lexer", "./parse_util", "./html_tags"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -24842,7 +24844,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_parser", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_preparser", ["../facade/lang", "./html_tags"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_preparser.js", ["../facade/lang", "./html_tags"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -24919,7 +24921,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_preparse
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_normalizer", ["./directive_metadata", "../facade/lang", "../facade/exceptions", "../facade/async", "./xhr", "./url_resolver", "./style_url_resolver", "../core/di", "../core/metadata/view", "./html_ast", "./html_parser", "./template_preparser"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_normalizer.js", ["./directive_metadata", "../facade/lang", "../facade/exceptions", "../facade/async", "./xhr", "./url_resolver", "./style_url_resolver", "../core/di", "../core/metadata/view", "./html_ast", "./html_parser", "./template_preparser"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -25062,7 +25064,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_normaliz
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/selector", ["../facade/collection", "../facade/lang", "../facade/exceptions", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/selector.js", ["../facade/collection", "../facade/lang", "../facade/exceptions", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -25387,7 +25389,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/selector", ["../f
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/directive_metadata", ["../facade/lang", "../facade/exceptions", "../facade/collection", "../core/change_detection/change_detection", "../core/metadata/view", "./selector", "./util", "../core/linker/interfaces"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/directive_metadata.js", ["../facade/lang", "../facade/exceptions", "../facade/collection", "../core/change_detection/change_detection", "../core/metadata/view", "./selector", "./util", "../core/linker/interfaces"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -25678,7 +25680,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/directive_metadat
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/directive_lifecycle_reflector", ["../../facade/lang", "./interfaces"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/directive_lifecycle_reflector.js", ["../../facade/lang", "./interfaces"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -25716,7 +25718,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/directive_life
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/runtime_metadata", ["../core/di", "../facade/lang", "../facade/exceptions", "./directive_metadata", "../core/metadata/directives", "../core/linker/directive_resolver", "../core/linker/pipe_resolver", "../core/linker/view_resolver", "../core/linker/directive_lifecycle_reflector", "../core/linker/interfaces", "../core/reflection/reflection", "../core/platform_directives_and_pipes", "./util", "./url_resolver"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/runtime_metadata.js", ["../core/di", "../facade/lang", "../facade/exceptions", "./directive_metadata", "../core/metadata/directives", "../core/linker/directive_resolver", "../core/linker/pipe_resolver", "../core/linker/view_resolver", "../core/linker/directive_lifecycle_reflector", "../core/linker/interfaces", "../core/reflection/reflection", "../core/platform_directives_and_pipes", "./util", "./url_resolver"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -25905,7 +25907,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/runtime_metadata"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/interfaces", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/interfaces.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -25927,7 +25929,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/interfaces", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/change_definition_factory", ["../facade/collection", "../facade/lang", "../core/reflection/reflection", "../core/change_detection/change_detection", "./template_ast", "../core/linker/interfaces"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/change_definition_factory.js", ["../facade/collection", "../facade/lang", "../core/reflection/reflection", "../core/change_detection/change_detection", "./template_ast", "../core/linker/interfaces"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -26089,7 +26091,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/change_definition
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/transform/template_compiler/change_detector_codegen", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/transform/template_compiler/change_detector_codegen.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -26110,7 +26112,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/transform/template_compile
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/change_detector_compiler", ["./source_module", "../core/change_detection/change_detection_jit_generator", "../core/change_detection/abstract_change_detector", "../core/change_detection/change_detection_util", "../core/change_detection/constants", "./change_definition_factory", "../facade/lang", "../core/change_detection/change_detection", "../transform/template_compiler/change_detector_codegen", "./util", "../core/di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/change_detector_compiler.js", ["./source_module", "../core/change_detection/change_detection_jit_generator", "../core/change_detection/abstract_change_detector", "../core/change_detection/change_detection_util", "../core/change_detection/constants", "./change_definition_factory", "../facade/lang", "../core/change_detection/change_detection", "../transform/template_compiler/change_detector_codegen", "./util", "../core/di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -26204,7 +26206,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/change_detector_c
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/shadow_css", ["../facade/collection", "../facade/lang", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/shadow_css.js", ["../facade/collection", "../facade/lang", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -26482,7 +26484,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/shadow_css", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/style_url_resolver", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/style_url_resolver.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -26523,7 +26525,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/style_url_resolve
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/style_compiler", ["./source_module", "../core/metadata/view", "./xhr", "../facade/lang", "../facade/async", "./shadow_css", "./url_resolver", "./style_url_resolver", "./util", "../core/di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/style_compiler.js", ["./source_module", "../core/metadata/view", "./xhr", "../facade/lang", "../facade/async", "./shadow_css", "./url_resolver", "./style_url_resolver", "./util", "../core/di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -26636,7 +26638,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/style_compiler", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/view_compiler", ["../facade/lang", "../facade/collection", "./template_ast", "./source_module", "../core/linker/view", "../core/linker/view_type", "../core/linker/element", "../core/metadata/view", "./util", "../core/di", "./proto_view_compiler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/view_compiler.js", ["../facade/lang", "../facade/collection", "./template_ast", "./source_module", "../core/linker/view", "../core/linker/view_type", "../core/linker/element", "../core/metadata/view", "./util", "../core/di", "./proto_view_compiler"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -27056,7 +27058,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/view_compiler", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_ast", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_ast.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -27254,7 +27256,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/template_ast", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/source_module", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/source_module.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -27327,7 +27329,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/source_module", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/util", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/util.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -27520,7 +27522,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/util", ["../facad
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/proto_view_compiler", ["../facade/lang", "../facade/collection", "./template_ast", "./source_module", "../core/linker/view", "../core/linker/view_type", "../core/linker/element", "./util", "../core/di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/proto_view_compiler.js", ["../facade/lang", "../facade/collection", "./template_ast", "./source_module", "../core/linker/view", "../core/linker/view_type", "../core/linker/element", "./util", "../core/di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -27872,7 +27874,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/proto_view_compil
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_tags", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_tags.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28296,7 +28298,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/html_tags", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/schema/element_schema_registry", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/schema/element_schema_registry.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28317,7 +28319,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/schema/element_sc
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/schema/dom_element_schema_registry", ["../../core/di", "../../facade/lang", "../../facade/collection", "../../platform/dom/dom_adapter", "../html_tags", "./element_schema_registry"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/schema/dom_element_schema_registry.js", ["../../core/di", "../../facade/lang", "../../facade/collection", "../../platform/dom/dom_adapter", "../html_tags", "./element_schema_registry"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28393,7 +28395,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/schema/dom_elemen
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/url_resolver", ["../core/di", "../facade/lang", "../core/application_tokens"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/url_resolver.js", ["../core/di", "../facade/lang", "../core/application_tokens"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28565,7 +28567,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/url_resolver", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/compiler", ["./runtime_compiler", "./template_compiler", "./directive_metadata", "./source_module", "../core/platform_directives_and_pipes", "./template_ast", "./template_parser", "../facade/lang", "../core/di", "./html_parser", "./template_normalizer", "./runtime_metadata", "./change_detector_compiler", "./style_compiler", "./view_compiler", "./proto_view_compiler", "../core/change_detection/change_detection", "../core/linker/compiler", "./schema/element_schema_registry", "./schema/dom_element_schema_registry", "./url_resolver"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/compiler.js", ["./runtime_compiler", "./template_compiler", "./directive_metadata", "./source_module", "../core/platform_directives_and_pipes", "./template_ast", "./template_parser", "../facade/lang", "../core/di", "./html_parser", "./template_normalizer", "./runtime_metadata", "./change_detector_compiler", "./style_compiler", "./view_compiler", "./proto_view_compiler", "../core/change_detection/change_detection", "../core/linker/compiler", "./schema/element_schema_registry", "./schema/dom_element_schema_registry", "./url_resolver"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28621,7 +28623,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/compiler", ["./ru
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/compiler", ["./src/compiler/url_resolver", "./src/compiler/xhr", "./src/compiler/compiler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/compiler.js", ["./src/compiler/url_resolver", "./src/compiler/xhr", "./src/compiler/compiler"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28639,7 +28641,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/compiler", ["./src/compiler/ur
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/xhr", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/xhr.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28657,7 +28659,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/compiler/xhr", [], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/xhr_impl", ["../../facade/promise", "../../facade/lang", "../../compiler/xhr"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/xhr_impl.js", ["../../facade/promise", "../../facade/lang", "../../compiler/xhr"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28710,7 +28712,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/browser/xhr_impl"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/platform/browser", ["../src/core/angular_entrypoint", "../src/platform/browser_common", "../src/facade/lang", "../compiler", "../core", "../src/core/reflection/reflection_capabilities", "../src/platform/browser/xhr_impl", "../src/core/di", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/platform/browser.js", ["../src/core/angular_entrypoint", "../src/platform/browser_common", "../src/facade/lang", "../compiler", "../core", "../src/core/reflection/reflection_capabilities", "../src/platform/browser/xhr_impl", "../src/core/di", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -28750,7 +28752,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/platform/browser", ["../src/co
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router_outlet", ["../facade/async", "../facade/collection", "../facade/lang", "../facade/exceptions", "../../core", "./router", "./instruction", "./lifecycle_annotations", "./route_lifecycle_reflector"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router_outlet.js", ["../facade/async", "../facade/collection", "../facade/lang", "../facade/exceptions", "../../core", "./router", "./instruction", "./lifecycle_annotations", "./route_lifecycle_reflector"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28865,7 +28867,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router_outlet", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_lifecycle_reflector", ["../facade/lang", "./lifecycle_annotations_impl", "../core/reflection/reflection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_lifecycle_reflector.js", ["../facade/lang", "./lifecycle_annotations_impl", "../core/reflection/reflection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -28895,7 +28897,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_lifecycle_ref
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router", ["../facade/async", "../facade/collection", "../facade/lang", "../facade/exceptions", "../../core", "./route_registry", "./location", "./route_lifecycle_reflector"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router.js", ["../facade/async", "../facade/collection", "../facade/lang", "../facade/exceptions", "../../core", "./route_registry", "./location", "./route_lifecycle_reflector"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -29317,7 +29319,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router", ["../facad
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router_link", ["../../core", "../facade/lang", "./router", "./location"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router_link.js", ["../../core", "../facade/lang", "./router", "./location"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -29395,7 +29397,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/router_link", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/path_recognizer", ["../facade/lang", "../facade/exceptions", "../facade/collection", "./url_parser"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/path_recognizer.js", ["../facade/lang", "../facade/exceptions", "../facade/collection", "./url_parser"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -29643,7 +29645,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/path_recognizer", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_recognizer", ["../facade/lang", "../facade/exceptions", "../facade/promise", "../facade/collection", "./instruction", "./path_recognizer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_recognizer.js", ["../facade/lang", "../facade/exceptions", "../facade/promise", "../facade/collection", "./instruction", "./path_recognizer"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -29760,7 +29762,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_recognizer", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/async_route_handler", ["../facade/lang", "./instruction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/async_route_handler.js", ["../facade/lang", "./instruction"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -29794,7 +29796,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/async_route_handler
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/sync_route_handler", ["../facade/async", "../facade/lang", "./instruction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/sync_route_handler.js", ["../facade/async", "../facade/lang", "./instruction"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -29820,7 +29822,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/sync_route_handler"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/component_recognizer", ["../facade/lang", "../facade/exceptions", "../facade/collection", "../facade/async", "./route_recognizer", "./route_config_impl", "./async_route_handler", "./sync_route_handler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/component_recognizer.js", ["../facade/lang", "../facade/exceptions", "../facade/collection", "../facade/async", "./route_recognizer", "./route_config_impl", "./async_route_handler", "./sync_route_handler"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -29943,7 +29945,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/component_recognize
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/instruction", ["../facade/collection", "../facade/lang", "../facade/async"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/instruction.js", ["../facade/collection", "../facade/lang", "../facade/async"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -30187,7 +30189,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/instruction", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_nomalizer", ["./route_config_decorator", "../facade/lang", "../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_nomalizer.js", ["./route_config_decorator", "../facade/lang", "../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -30286,7 +30288,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_nomali
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/url_parser", ["../facade/collection", "../facade/lang", "../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/url_parser.js", ["../facade/collection", "../facade/lang", "../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -30520,7 +30522,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/url_parser", ["../f
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_registry", ["../facade/collection", "../facade/async", "../facade/lang", "../facade/exceptions", "../core/reflection/reflection", "../../core", "./route_config_impl", "./route_recognizer", "./component_recognizer", "./instruction", "./route_config_nomalizer", "./url_parser"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_registry.js", ["../facade/collection", "../facade/async", "../facade/lang", "../facade/exceptions", "../core/reflection/reflection", "../../core", "./route_config_impl", "./route_recognizer", "./component_recognizer", "./instruction", "./route_config_nomalizer", "./url_parser"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -30901,7 +30903,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_registry", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/hash_location_strategy", ["../../core", "./location_strategy", "../facade/lang", "./platform_location"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/hash_location_strategy.js", ["../../core", "./location_strategy", "../facade/lang", "./platform_location"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -30994,7 +30996,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/hash_location_strat
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_adapter", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_adapter.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31029,7 +31031,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/platform/dom/dom_adapter",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/platform_location", ["../platform/dom/dom_adapter", "../../core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/platform_location.js", ["../platform/dom/dom_adapter", "../../core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31114,7 +31116,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/platform_location",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/path_location_strategy", ["../../core", "../facade/lang", "../facade/exceptions", "./location_strategy", "./platform_location"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/path_location_strategy.js", ["../../core", "../facade/lang", "../facade/exceptions", "./location_strategy", "./platform_location"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31203,7 +31205,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/path_location_strat
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/location_strategy", ["../facade/lang", "../../core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/location_strategy.js", ["../facade/lang", "../../core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31248,7 +31250,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/location_strategy",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/location", ["./location_strategy", "../facade/async", "../../core"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/location.js", ["./location_strategy", "../facade/async", "../../core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31353,7 +31355,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/location", ["./loca
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_impl", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_impl.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31460,7 +31462,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_impl",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_decorator", ["./route_config_impl", "../core/util/decorators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_decorator.js", ["./route_config_impl", "../core/util/decorators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31478,7 +31480,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_config_decora
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_definition", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_definition.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31489,7 +31491,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/route_definition", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/lifecycle_annotations_impl", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/lifecycle_annotations_impl.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31537,7 +31539,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/lifecycle_annotatio
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/lifecycle_annotations", ["../core/util/decorators", "./lifecycle_annotations_impl"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/lifecycle_annotations.js", ["../core/util/decorators", "./lifecycle_annotations_impl"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31556,7 +31558,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/router/lifecycle_annotatio
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/util", ["./util/decorators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/util.js", ["./util/decorators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31568,7 +31570,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/util", ["./util/decor
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/prod_mode", ["../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/prod_mode.js", ["../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31580,7 +31582,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/prod_mode", ["../faca
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/facade", ["./lang", "./async", "./exceptions", "./exception_handler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/facade.js", ["./lang", "./async", "./exceptions", "./exception_handler"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31598,7 +31600,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/facade", ["./lang",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_ref", ["./zone/ng_zone", "../facade/lang", "./di", "./application_tokens", "../facade/async", "../facade/collection", "./testability/testability", "./linker/dynamic_component_loader", "../facade/exceptions", "./console", "./profile/profile"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_ref.js", ["./zone/ng_zone", "../facade/lang", "./di", "./application_tokens", "../facade/async", "../facade/collection", "./testability/testability", "./linker/dynamic_component_loader", "../facade/exceptions", "./console", "./profile/profile"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -31995,7 +31997,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_ref", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/zone", ["./zone/ng_zone"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/zone.js", ["./zone/ng_zone"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32008,7 +32010,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/zone", ["./zone/ng_zo
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render", ["./render/api"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render.js", ["./render/api"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32022,7 +32024,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render", ["./render/a
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker", ["./linker/directive_resolver", "./linker/view_resolver", "./linker/compiler", "./linker/view_manager", "./linker/query_list", "./linker/dynamic_component_loader", "./linker/element_ref", "./linker/template_ref", "./linker/view_ref", "./linker/view_container_ref"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker.js", ["./linker/directive_resolver", "./linker/view_resolver", "./linker/compiler", "./linker/view_manager", "./linker/query_list", "./linker/dynamic_component_loader", "./linker/element_ref", "./linker/template_ref", "./linker/view_ref", "./linker/view_container_ref"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32057,7 +32059,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker", ["./linker/d
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/debug/debug_element", ["../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/debug/debug_element.js", ["../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32267,7 +32269,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/debug/debug_element",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/platform_directives_and_pipes", ["./di", "../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/platform_directives_and_pipes.js", ["./di", "../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32281,7 +32283,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/platform_directives_a
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/console", ["./di", "../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/console.js", ["./di", "../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32318,7 +32320,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/console", ["./di", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/zone/ng_zone", ["../../facade/collection", "../../facade/lang", "../../facade/async", "../profile/profile", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/zone/ng_zone.js", ["../../facade/collection", "../../facade/lang", "../../facade/async", "../profile/profile", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -32589,7 +32591,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/zone/ng_zone", ["../.
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/testability/testability", ["../di", "../../facade/collection", "../../facade/lang", "../../facade/exceptions", "../zone/ng_zone", "../../facade/async"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/testability/testability.js", ["../di", "../../facade/collection", "../../facade/lang", "../../facade/exceptions", "../zone/ng_zone", "../../facade/async"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32731,7 +32733,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/testability/testabili
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/platform_common_providers", ["../facade/lang", "./di", "./console", "./reflection/reflection", "./testability/testability"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/platform_common_providers.js", ["../facade/lang", "./di", "./console", "./reflection/reflection", "./testability/testability"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32753,7 +32755,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/platform_common_provi
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/resolved_metadata_cache", ["../di", "../../facade/lang", "./element", "./directive_resolver", "../pipes/pipe_provider", "./pipe_resolver"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/resolved_metadata_cache.js", ["../di", "../../facade/lang", "./element", "./directive_resolver", "../pipes/pipe_provider", "./pipe_resolver"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32813,7 +32815,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/resolved_metad
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_resolver", ["../di", "../metadata/view", "../metadata/directives", "../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../reflection/reflection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_resolver.js", ["../di", "../metadata/view", "../metadata/directives", "../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../reflection/reflection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -32915,7 +32917,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_resolver"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/directive_resolver", ["../di", "../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../metadata", "../reflection/reflection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/directive_resolver.js", ["../di", "../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../metadata", "../reflection/reflection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33056,7 +33058,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/directive_reso
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/view", ["../../facade/lang", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/view.js", ["../../facade/lang", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -33114,7 +33116,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/view", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata", ["./metadata/di", "./metadata/directives", "./metadata/view", "./util/decorators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata.js", ["./metadata/di", "./metadata/directives", "./metadata/view", "./util/decorators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33166,7 +33168,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata", ["./metada
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/pipe_resolver", ["../di", "../../facade/lang", "../../facade/exceptions", "../metadata", "../reflection/reflection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/pipe_resolver.js", ["../di", "../../facade/lang", "../../facade/exceptions", "../metadata", "../reflection/reflection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33217,7 +33219,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/pipe_resolver"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/compiler", ["../di", "../../facade/lang", "../../facade/exceptions", "../../facade/async", "../reflection/reflection", "./view", "./view_ref"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/compiler.js", ["../di", "../../facade/lang", "../../facade/exceptions", "../../facade/async", "../reflection/reflection", "./view", "./view_ref"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33285,7 +33287,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/compiler", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_ref", ["../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_ref.js", ["../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33418,7 +33420,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_ref", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pipes", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pipes.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33436,7 +33438,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pipe
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/pipes/pipes", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../change_detection/pipes"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/pipes/pipes.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../change_detection/pipes"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33492,7 +33494,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/pipes/pipes", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render/util", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render/util.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33517,7 +33519,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render/util", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view", ["../../facade/collection", "../change_detection/change_detection", "../change_detection/interfaces", "./element", "../../facade/lang", "../../facade/exceptions", "./view_ref", "../pipes/pipes", "../render/util", "./view_type"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view.js", ["../../facade/collection", "../change_detection/change_detection", "../change_detection/interfaces", "./element", "../../facade/lang", "../../facade/exceptions", "./view_ref", "../pipes/pipes", "../render/util", "./view_type"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33792,7 +33794,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/di", ["../../facade/lang", "../di", "../di/metadata"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/di.js", ["../../facade/lang", "../di", "../di/metadata"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -33969,7 +33971,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/di", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/element_ref", ["../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/element_ref.js", ["../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34013,7 +34015,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/element_ref", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_container_ref", ["../../facade/collection", "../../facade/exceptions", "../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_container_ref.js", ["../../facade/collection", "../../facade/exceptions", "../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34141,7 +34143,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_container
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/template_ref", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/template_ref.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34188,7 +34190,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/template_ref",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection", ["./change_detection/change_detection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection.js", ["./change_detection/change_detection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34207,7 +34209,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/directives", ["../../facade/lang", "../di/metadata", "../change_detection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/directives.js", ["../../facade/lang", "../di/metadata", "../change_detection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34438,7 +34440,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/metadata/directives",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/iterable_differs", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection", "../../di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/iterable_differs.js", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection", "../../di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34506,7 +34508,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/diff
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/default_iterable_differ", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/default_iterable_differ.js", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -34977,7 +34979,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/diff
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/keyvalue_differs", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection", "../../di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/keyvalue_differs.js", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection", "../../di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -35045,7 +35047,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/diff
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/default_keyvalue_differ", ["../../../facade/collection", "../../../facade/lang", "../../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/differs/default_keyvalue_differ.js", ["../../../facade/collection", "../../../facade/lang", "../../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -35336,7 +35338,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/diff
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/lexer", ["../../di/decorators", "../../../facade/collection", "../../../facade/lang", "../../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/lexer.js", ["../../di/decorators", "../../../facade/collection", "../../../facade/lang", "../../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -35786,7 +35788,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pars
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/parser", ["../../di/decorators", "../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection", "./lexer", "../../reflection/reflection", "./ast"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/parser.js", ["../../di/decorators", "../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection", "./lexer", "../../reflection/reflection", "./ast"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -36422,7 +36424,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pars
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/interfaces", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/interfaces.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -36466,7 +36468,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/inte
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/codegen_name_util", ["../../facade/lang", "../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/codegen_name_util.js", ["../../facade/lang", "../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -36649,7 +36651,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/code
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/codegen_logic_util", ["../../facade/lang", "./codegen_facade", "./proto_record", "./constants", "../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/codegen_logic_util.js", ["../../facade/lang", "./codegen_facade", "./proto_record", "./constants", "../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -36872,7 +36874,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/code
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/codegen_facade", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/codegen_facade.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -36894,7 +36896,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/code
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/ast", ["../../../facade/collection", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/ast.js", ["../../../facade/collection", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -37379,7 +37381,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pars
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/event_binding", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/event_binding.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -37399,7 +37401,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/even
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/coalesce", ["../../facade/lang", "../../facade/collection", "./proto_record"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/coalesce.js", ["../../facade/lang", "../../facade/collection", "./proto_record"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -37513,7 +37515,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/coal
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/proto_change_detector", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./parser/ast", "./change_detection_util", "./dynamic_change_detector", "./directive_record", "./event_binding", "./coalesce", "./proto_record"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/proto_change_detector.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./parser/ast", "./change_detection_util", "./dynamic_change_detector", "./directive_record", "./event_binding", "./coalesce", "./proto_record"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -37920,7 +37922,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/prot
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detection_jit_generator", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./abstract_change_detector", "./change_detection_util", "./proto_record", "./codegen_name_util", "./codegen_logic_util", "./codegen_facade", "./constants", "./proto_change_detector"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detection_jit_generator.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./abstract_change_detector", "./change_detection_util", "./proto_record", "./codegen_name_util", "./codegen_logic_util", "./codegen_facade", "./constants", "./proto_change_detector"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38224,7 +38226,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/chan
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/jit_proto_change_detector", ["./change_detection_jit_generator"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/jit_proto_change_detector.js", ["./change_detection_jit_generator"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38252,7 +38254,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/jit_
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/exceptions", ["../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/exceptions.js", ["../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38316,7 +38318,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/exce
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/locals", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/parser/locals.js", ["../../../facade/lang", "../../../facade/exceptions", "../../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38365,7 +38367,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pars
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/observable_facade", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/observable_facade.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38379,7 +38381,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/obse
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/abstract_change_detector", ["../../facade/lang", "../../facade/collection", "./change_detection_util", "./change_detector_ref", "./exceptions", "./parser/locals", "./constants", "../profile/profile", "./observable_facade", "../../facade/async"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/abstract_change_detector.js", ["../../facade/lang", "../../facade/collection", "./change_detection_util", "./change_detector_ref", "./exceptions", "./parser/locals", "./constants", "../profile/profile", "./observable_facade", "../../facade/async"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38683,7 +38685,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/abst
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/proto_record", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/proto_record.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -38760,7 +38762,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/prot
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/dynamic_change_detector", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./abstract_change_detector", "./change_detection_util", "./constants", "./proto_record", "../reflection/reflection", "../../facade/async"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/dynamic_change_detector.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./abstract_change_detector", "./change_detection_util", "./constants", "./proto_record", "../reflection/reflection", "../../facade/async"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39188,7 +39190,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/dyna
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detector_ref", ["./constants"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detector_ref.js", ["./constants"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39238,7 +39240,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/chan
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pipe_lifecycle_reflector", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pipe_lifecycle_reflector.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39252,7 +39254,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/pipe
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/binding_record", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/binding_record.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39383,7 +39385,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/bind
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/constants", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/constants.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39416,7 +39418,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/cons
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/directive_record", ["../../facade/lang", "./constants"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/directive_record.js", ["../../facade/lang", "./constants"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39475,7 +39477,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/dire
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detection_util", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./constants", "./pipe_lifecycle_reflector", "./binding_record", "./directive_record"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detection_util.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "./constants", "./pipe_lifecycle_reflector", "./binding_record", "./directive_record"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39699,7 +39701,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/chan
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detection", ["./differs/iterable_differs", "./differs/default_iterable_differ", "./differs/keyvalue_differs", "./differs/default_keyvalue_differ", "../../facade/lang", "./parser/ast", "./parser/lexer", "./parser/parser", "./parser/locals", "./exceptions", "./interfaces", "./constants", "./proto_change_detector", "./jit_proto_change_detector", "./binding_record", "./directive_record", "./dynamic_change_detector", "./change_detector_ref", "./change_detection_util"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/change_detection.js", ["./differs/iterable_differs", "./differs/default_iterable_differ", "./differs/keyvalue_differs", "./differs/default_keyvalue_differ", "../../facade/lang", "./parser/ast", "./parser/lexer", "./parser/parser", "./parser/locals", "./exceptions", "./interfaces", "./constants", "./proto_change_detector", "./jit_proto_change_detector", "./binding_record", "./directive_record", "./dynamic_change_detector", "./change_detector_ref", "./change_detection_util"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39763,7 +39765,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/change_detection/chan
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/promise", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/promise.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -39823,7 +39825,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/promise", [], true,
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/subject/SubjectSubscription", ["../Subscription", "../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/subject/SubjectSubscription.js", ["../Subscription", "../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -39873,7 +39875,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/subject/SubjectSubscription", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subject", ["./Observable", "./Subscriber", "./Subscription", "./subject/SubjectSubscription", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subject.js", ["./Observable", "./Subscriber", "./Subscription", "./subject/SubjectSubscription", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40051,7 +40053,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subject", ["./Observable", "./Subs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/QueueAction", ["../Subscription"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/QueueAction.js", ["../Subscription"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40108,7 +40110,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/QueueAction", ["../Subsc
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/FutureAction", ["./QueueAction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/FutureAction.js", ["./QueueAction"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40168,7 +40170,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/FutureAction", ["./Queue
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/QueueScheduler", ["./QueueAction", "./FutureAction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/QueueScheduler.js", ["./QueueAction", "./FutureAction"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40214,7 +40216,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/QueueScheduler", ["./Que
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/queue", ["./QueueScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/queue.js", ["./QueueScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40225,7 +40227,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/scheduler/queue", ["./QueueSchedul
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/observable/fromPromise", ["../Observable", "../Subscription", "../scheduler/queue"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/observable/fromPromise.js", ["../Observable", "../Subscription", "../scheduler/queue"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40329,7 +40331,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/observable/fromPromise", ["../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/operator/toPromise", ["../util/root"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/operator/toPromise.js", ["../util/root"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40363,7 +40365,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/operator/toPromise", ["../util/roo
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/throwError", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/throwError.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40376,7 +40378,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/throwError", [], true, functi
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/tryOrOnError", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/tryOrOnError.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40397,7 +40399,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/tryOrOnError", [], true, func
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/noop", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/noop.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40408,7 +40410,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/noop", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subscription", ["./util/noop"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subscription.js", ["./util/noop"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40488,7 +40490,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subscription", ["./util/noop"], tr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subscriber", ["./util/noop", "./util/throwError", "./util/tryOrOnError", "./Subscription", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subscriber.js", ["./util/noop", "./util/throwError", "./util/tryOrOnError", "./Subscription", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40619,7 +40621,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/Subscriber", ["./util/noop", "./ut
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/root", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/root.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40643,7 +40645,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/root", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/SymbolShim", ["./root"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/SymbolShim.js", ["./root"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40713,7 +40715,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/util/SymbolShim", ["./root"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/symbol/rxSubscriber", ["../util/SymbolShim"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/symbol/rxSubscriber.js", ["../util/SymbolShim"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40724,7 +40726,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/symbol/rxSubscriber", ["../util/Sy
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.0/Observable", ["./Subscriber", "./util/root", "./util/SymbolShim", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.0/Observable.js", ["./Subscriber", "./util/root", "./util/SymbolShim", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -40813,7 +40815,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.0/Observable", ["./Subscriber", "./u
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/async", ["./lang", "./promise", "rxjs/Subject", "rxjs/observable/fromPromise", "rxjs/operator/toPromise", "rxjs/Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/async.js", ["./lang", "./promise", "rxjs/Subject", "rxjs/observable/fromPromise", "rxjs/operator/toPromise", "rxjs/Observable"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -40985,7 +40987,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/async", ["./lang", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/query_list", ["../../facade/collection", "../../facade/lang", "../../facade/async"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/query_list.js", ["../../facade/collection", "../../facade/lang", "../../facade/async"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41058,7 +41060,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/query_list", [
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/pipes/pipe_provider", ["../di/provider", "../di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/pipes/pipe_provider.js", ["../di/provider", "../di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41094,7 +41096,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/pipes/pipe_provider",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/element", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../di", "../di/provider", "../di/injector", "../metadata/di", "./view_type", "./element_ref", "./view_container_ref", "../render/api", "./template_ref", "../metadata/directives", "../change_detection/change_detection", "./query_list", "../reflection/reflection", "../pipes/pipe_provider"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/element.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../di", "../di/provider", "../di/injector", "../metadata/di", "./view_type", "./element_ref", "./view_container_ref", "../render/api", "./template_ref", "../metadata/directives", "../change_detection/change_detection", "./query_list", "../reflection/reflection", "../pipes/pipe_provider"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41891,7 +41893,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/element", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_listener", ["../di"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_listener.js", ["../di"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41926,7 +41928,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_listener"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render/api", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render/api.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -41955,7 +41957,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/render/api", [], true
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/wtf_impl", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/wtf_impl.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42000,7 +42002,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/wtf_impl", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/profile", ["./wtf_impl"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/profile.js", ["./wtf_impl"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42027,7 +42029,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/profile/profile", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/util/decorators", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/util/decorators.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42195,7 +42197,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/util/decorators", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/decorators", ["./metadata", "../util/decorators"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/decorators.js", ["./metadata", "../util/decorators"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42213,7 +42215,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/decorators", ["./m
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/injector", ["../../facade/collection", "./provider", "./exceptions", "../../facade/lang", "./key", "./metadata", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/injector.js", ["../../facade/collection", "./provider", "./exceptions", "../../facade/lang", "./key", "./metadata", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -42881,7 +42883,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/injector", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/metadata", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/metadata.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -42974,7 +42976,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/metadata", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/provider", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../reflection/reflection", "./key", "./metadata", "./exceptions", "./forward_ref"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/provider.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection", "../reflection/reflection", "./key", "./metadata", "./exceptions", "./forward_ref"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43330,7 +43332,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/provider", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/type_literal", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/type_literal.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43352,7 +43354,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/type_literal", [],
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/forward_ref", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/forward_ref.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43379,7 +43381,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/forward_ref", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/key", ["../../facade/lang", "../../facade/exceptions", "./type_literal", "./forward_ref"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/key.js", ["../../facade/lang", "../../facade/exceptions", "./type_literal", "./forward_ref"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43453,7 +43455,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/key", ["../../faca
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/exceptions", ["../../facade/collection", "../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/exceptions.js", ["../../facade/collection", "../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43624,7 +43626,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/exceptions", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/opaque_token", ["../../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/opaque_token.js", ["../../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43662,7 +43664,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di/opaque_token", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di", ["./di/metadata", "./di/decorators", "./di/forward_ref", "./di/injector", "./di/provider", "./di/key", "./di/exceptions", "./di/opaque_token"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di.js", ["./di/metadata", "./di/decorators", "./di/forward_ref", "./di/injector", "./di/provider", "./di/key", "./di/exceptions", "./di/opaque_token"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43712,7 +43714,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/di", ["./di/metadata"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_tokens", ["./di", "../facade/lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_tokens.js", ["./di", "../facade/lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43740,7 +43742,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_tokens", 
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_type", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_type.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43756,7 +43758,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_type", []
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_manager", ["../di", "../../facade/lang", "../../facade/collection", "../../facade/exceptions", "./view", "./element", "./view_listener", "../render/api", "../profile/profile", "../application_tokens", "./view_type"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_manager.js", ["../di", "../../facade/lang", "../../facade/collection", "../../facade/exceptions", "./view", "./element", "./view_listener", "../render/api", "../profile/profile", "../application_tokens", "./view_type"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -43957,7 +43959,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/view_manager",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/dynamic_component_loader", ["../di", "./compiler", "../../facade/lang", "./view_manager"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/dynamic_component_loader.js", ["../di", "./compiler", "../../facade/lang", "./view_manager"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -44100,7 +44102,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/linker/dynamic_compon
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_common_providers", ["../facade/lang", "./di", "./application_tokens", "./change_detection/change_detection", "./linker/resolved_metadata_cache", "./linker/view_manager", "./linker/view_resolver", "./linker/view_listener", "./linker/directive_resolver", "./linker/pipe_resolver", "./linker/compiler", "./linker/dynamic_component_loader"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_common_providers.js", ["../facade/lang", "./di", "./application_tokens", "./change_detection/change_detection", "./linker/resolved_metadata_cache", "./linker/view_manager", "./linker/view_resolver", "./linker/view_listener", "./linker/directive_resolver", "./linker/pipe_resolver", "./linker/compiler", "./linker/dynamic_component_loader"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -44126,7 +44128,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/application_common_pr
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflector", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflector.js", ["../../facade/lang", "../../facade/exceptions", "../../facade/collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -44271,7 +44273,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflector"
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflection_capabilities", ["../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflection_capabilities.js", ["../../facade/lang", "../../facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -44465,7 +44467,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflection
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflection", ["./reflector", "./reflection_capabilities"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflection.js", ["./reflector", "./reflection_capabilities"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -44481,7 +44483,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/core/reflection/reflection
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/core", ["./src/core/metadata", "./src/core/util", "./src/core/prod_mode", "./src/core/di", "./src/facade/facade", "./src/facade/lang", "./src/core/application_ref", "./src/core/application_tokens", "./src/core/zone", "./src/core/render", "./src/core/linker", "./src/core/debug/debug_element", "./src/core/testability/testability", "./src/core/change_detection", "./src/core/platform_directives_and_pipes", "./src/core/platform_common_providers", "./src/core/application_common_providers", "./src/core/reflection/reflection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/core.js", ["./src/core/metadata", "./src/core/util", "./src/core/prod_mode", "./src/core/di", "./src/facade/facade", "./src/facade/lang", "./src/core/application_ref", "./src/core/application_tokens", "./src/core/zone", "./src/core/render", "./src/core/linker", "./src/core/debug/debug_element", "./src/core/testability/testability", "./src/core/change_detection", "./src/core/platform_directives_and_pipes", "./src/core/platform_common_providers", "./src/core/application_common_providers", "./src/core/reflection/reflection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -44528,7 +44530,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/core", ["./src/core/metadata",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/lang", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/lang.js", [], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -44987,7 +44989,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/lang", [], true, fu
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/collection", ["./lang"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/collection.js", ["./lang"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -45357,7 +45359,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/collection", ["./la
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/exception_handler", ["./lang", "./exceptions", "./collection"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/exception_handler.js", ["./lang", "./exceptions", "./collection"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -45480,7 +45482,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/exception_handler",
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/exceptions", ["./exception_handler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/exceptions.js", ["./exception_handler"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -45584,7 +45586,7 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/src/facade/exceptions", ["./ex
   return module.exports;
 });
 
-System.registerDynamic("npm:angular2@2.0.0-beta.2/router", ["./src/router/router", "./src/router/router_outlet", "./src/router/router_link", "./src/router/instruction", "./src/router/platform_location", "./src/router/route_registry", "./src/router/location_strategy", "./src/router/hash_location_strategy", "./src/router/path_location_strategy", "./src/router/location", "./src/router/route_config_decorator", "./src/router/route_definition", "./src/router/lifecycle_annotations", "./core", "./src/facade/lang", "./src/facade/exceptions"], true, function($__require, exports, module) {
+System.registerDynamic("npm:angular2@2.0.0-beta.2/router.js", ["./src/router/router", "./src/router/router_outlet", "./src/router/router_link", "./src/router/instruction", "./src/router/platform_location", "./src/router/route_registry", "./src/router/location_strategy", "./src/router/hash_location_strategy", "./src/router/path_location_strategy", "./src/router/location", "./src/router/route_config_decorator", "./src/router/route_definition", "./src/router/lifecycle_annotations", "./core", "./src/facade/lang", "./src/facade/exceptions"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -45660,549 +45662,6 @@ System.registerDynamic("npm:angular2@2.0.0-beta.2/router", ["./src/router/router
     }
     return app.componentTypes[0];
   }
-  global.define = __define;
-  return module.exports;
-});
-
-System.registerDynamic("npm:es6-promise@3.0.2/dist/es6-promise", ["process"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  "format cjs";
-  (function(process) {
-    (function() {
-      "use strict";
-      function lib$es6$promise$utils$$objectOrFunction(x) {
-        return typeof x === 'function' || (typeof x === 'object' && x !== null);
-      }
-      function lib$es6$promise$utils$$isFunction(x) {
-        return typeof x === 'function';
-      }
-      function lib$es6$promise$utils$$isMaybeThenable(x) {
-        return typeof x === 'object' && x !== null;
-      }
-      var lib$es6$promise$utils$$_isArray;
-      if (!Array.isArray) {
-        lib$es6$promise$utils$$_isArray = function(x) {
-          return Object.prototype.toString.call(x) === '[object Array]';
-        };
-      } else {
-        lib$es6$promise$utils$$_isArray = Array.isArray;
-      }
-      var lib$es6$promise$utils$$isArray = lib$es6$promise$utils$$_isArray;
-      var lib$es6$promise$asap$$len = 0;
-      var lib$es6$promise$asap$$toString = {}.toString;
-      var lib$es6$promise$asap$$vertxNext;
-      var lib$es6$promise$asap$$customSchedulerFn;
-      var lib$es6$promise$asap$$asap = function asap(callback, arg) {
-        lib$es6$promise$asap$$queue[lib$es6$promise$asap$$len] = callback;
-        lib$es6$promise$asap$$queue[lib$es6$promise$asap$$len + 1] = arg;
-        lib$es6$promise$asap$$len += 2;
-        if (lib$es6$promise$asap$$len === 2) {
-          if (lib$es6$promise$asap$$customSchedulerFn) {
-            lib$es6$promise$asap$$customSchedulerFn(lib$es6$promise$asap$$flush);
-          } else {
-            lib$es6$promise$asap$$scheduleFlush();
-          }
-        }
-      };
-      function lib$es6$promise$asap$$setScheduler(scheduleFn) {
-        lib$es6$promise$asap$$customSchedulerFn = scheduleFn;
-      }
-      function lib$es6$promise$asap$$setAsap(asapFn) {
-        lib$es6$promise$asap$$asap = asapFn;
-      }
-      var lib$es6$promise$asap$$browserWindow = (typeof window !== 'undefined') ? window : undefined;
-      var lib$es6$promise$asap$$browserGlobal = lib$es6$promise$asap$$browserWindow || {};
-      var lib$es6$promise$asap$$BrowserMutationObserver = lib$es6$promise$asap$$browserGlobal.MutationObserver || lib$es6$promise$asap$$browserGlobal.WebKitMutationObserver;
-      var lib$es6$promise$asap$$isNode = typeof process !== 'undefined' && {}.toString.call(process) === '[object process]';
-      var lib$es6$promise$asap$$isWorker = typeof Uint8ClampedArray !== 'undefined' && typeof importScripts !== 'undefined' && typeof MessageChannel !== 'undefined';
-      function lib$es6$promise$asap$$useNextTick() {
-        return function() {
-          process.nextTick(lib$es6$promise$asap$$flush);
-        };
-      }
-      function lib$es6$promise$asap$$useVertxTimer() {
-        return function() {
-          lib$es6$promise$asap$$vertxNext(lib$es6$promise$asap$$flush);
-        };
-      }
-      function lib$es6$promise$asap$$useMutationObserver() {
-        var iterations = 0;
-        var observer = new lib$es6$promise$asap$$BrowserMutationObserver(lib$es6$promise$asap$$flush);
-        var node = document.createTextNode('');
-        observer.observe(node, {characterData: true});
-        return function() {
-          node.data = (iterations = ++iterations % 2);
-        };
-      }
-      function lib$es6$promise$asap$$useMessageChannel() {
-        var channel = new MessageChannel();
-        channel.port1.onmessage = lib$es6$promise$asap$$flush;
-        return function() {
-          channel.port2.postMessage(0);
-        };
-      }
-      function lib$es6$promise$asap$$useSetTimeout() {
-        return function() {
-          setTimeout(lib$es6$promise$asap$$flush, 1);
-        };
-      }
-      var lib$es6$promise$asap$$queue = new Array(1000);
-      function lib$es6$promise$asap$$flush() {
-        for (var i = 0; i < lib$es6$promise$asap$$len; i += 2) {
-          var callback = lib$es6$promise$asap$$queue[i];
-          var arg = lib$es6$promise$asap$$queue[i + 1];
-          callback(arg);
-          lib$es6$promise$asap$$queue[i] = undefined;
-          lib$es6$promise$asap$$queue[i + 1] = undefined;
-        }
-        lib$es6$promise$asap$$len = 0;
-      }
-      function lib$es6$promise$asap$$attemptVertx() {
-        try {
-          var r = $__require;
-          var vertx = r('vertx');
-          lib$es6$promise$asap$$vertxNext = vertx.runOnLoop || vertx.runOnContext;
-          return lib$es6$promise$asap$$useVertxTimer();
-        } catch (e) {
-          return lib$es6$promise$asap$$useSetTimeout();
-        }
-      }
-      var lib$es6$promise$asap$$scheduleFlush;
-      if (lib$es6$promise$asap$$isNode) {
-        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useNextTick();
-      } else if (lib$es6$promise$asap$$BrowserMutationObserver) {
-        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useMutationObserver();
-      } else if (lib$es6$promise$asap$$isWorker) {
-        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useMessageChannel();
-      } else if (lib$es6$promise$asap$$browserWindow === undefined && typeof $__require === 'function') {
-        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$attemptVertx();
-      } else {
-        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useSetTimeout();
-      }
-      function lib$es6$promise$$internal$$noop() {}
-      var lib$es6$promise$$internal$$PENDING = void 0;
-      var lib$es6$promise$$internal$$FULFILLED = 1;
-      var lib$es6$promise$$internal$$REJECTED = 2;
-      var lib$es6$promise$$internal$$GET_THEN_ERROR = new lib$es6$promise$$internal$$ErrorObject();
-      function lib$es6$promise$$internal$$selfFulfillment() {
-        return new TypeError("You cannot resolve a promise with itself");
-      }
-      function lib$es6$promise$$internal$$cannotReturnOwn() {
-        return new TypeError('A promises callback cannot return that same promise.');
-      }
-      function lib$es6$promise$$internal$$getThen(promise) {
-        try {
-          return promise.then;
-        } catch (error) {
-          lib$es6$promise$$internal$$GET_THEN_ERROR.error = error;
-          return lib$es6$promise$$internal$$GET_THEN_ERROR;
-        }
-      }
-      function lib$es6$promise$$internal$$tryThen(then, value, fulfillmentHandler, rejectionHandler) {
-        try {
-          then.call(value, fulfillmentHandler, rejectionHandler);
-        } catch (e) {
-          return e;
-        }
-      }
-      function lib$es6$promise$$internal$$handleForeignThenable(promise, thenable, then) {
-        lib$es6$promise$asap$$asap(function(promise) {
-          var sealed = false;
-          var error = lib$es6$promise$$internal$$tryThen(then, thenable, function(value) {
-            if (sealed) {
-              return;
-            }
-            sealed = true;
-            if (thenable !== value) {
-              lib$es6$promise$$internal$$resolve(promise, value);
-            } else {
-              lib$es6$promise$$internal$$fulfill(promise, value);
-            }
-          }, function(reason) {
-            if (sealed) {
-              return;
-            }
-            sealed = true;
-            lib$es6$promise$$internal$$reject(promise, reason);
-          }, 'Settle: ' + (promise._label || ' unknown promise'));
-          if (!sealed && error) {
-            sealed = true;
-            lib$es6$promise$$internal$$reject(promise, error);
-          }
-        }, promise);
-      }
-      function lib$es6$promise$$internal$$handleOwnThenable(promise, thenable) {
-        if (thenable._state === lib$es6$promise$$internal$$FULFILLED) {
-          lib$es6$promise$$internal$$fulfill(promise, thenable._result);
-        } else if (thenable._state === lib$es6$promise$$internal$$REJECTED) {
-          lib$es6$promise$$internal$$reject(promise, thenable._result);
-        } else {
-          lib$es6$promise$$internal$$subscribe(thenable, undefined, function(value) {
-            lib$es6$promise$$internal$$resolve(promise, value);
-          }, function(reason) {
-            lib$es6$promise$$internal$$reject(promise, reason);
-          });
-        }
-      }
-      function lib$es6$promise$$internal$$handleMaybeThenable(promise, maybeThenable) {
-        if (maybeThenable.constructor === promise.constructor) {
-          lib$es6$promise$$internal$$handleOwnThenable(promise, maybeThenable);
-        } else {
-          var then = lib$es6$promise$$internal$$getThen(maybeThenable);
-          if (then === lib$es6$promise$$internal$$GET_THEN_ERROR) {
-            lib$es6$promise$$internal$$reject(promise, lib$es6$promise$$internal$$GET_THEN_ERROR.error);
-          } else if (then === undefined) {
-            lib$es6$promise$$internal$$fulfill(promise, maybeThenable);
-          } else if (lib$es6$promise$utils$$isFunction(then)) {
-            lib$es6$promise$$internal$$handleForeignThenable(promise, maybeThenable, then);
-          } else {
-            lib$es6$promise$$internal$$fulfill(promise, maybeThenable);
-          }
-        }
-      }
-      function lib$es6$promise$$internal$$resolve(promise, value) {
-        if (promise === value) {
-          lib$es6$promise$$internal$$reject(promise, lib$es6$promise$$internal$$selfFulfillment());
-        } else if (lib$es6$promise$utils$$objectOrFunction(value)) {
-          lib$es6$promise$$internal$$handleMaybeThenable(promise, value);
-        } else {
-          lib$es6$promise$$internal$$fulfill(promise, value);
-        }
-      }
-      function lib$es6$promise$$internal$$publishRejection(promise) {
-        if (promise._onerror) {
-          promise._onerror(promise._result);
-        }
-        lib$es6$promise$$internal$$publish(promise);
-      }
-      function lib$es6$promise$$internal$$fulfill(promise, value) {
-        if (promise._state !== lib$es6$promise$$internal$$PENDING) {
-          return;
-        }
-        promise._result = value;
-        promise._state = lib$es6$promise$$internal$$FULFILLED;
-        if (promise._subscribers.length !== 0) {
-          lib$es6$promise$asap$$asap(lib$es6$promise$$internal$$publish, promise);
-        }
-      }
-      function lib$es6$promise$$internal$$reject(promise, reason) {
-        if (promise._state !== lib$es6$promise$$internal$$PENDING) {
-          return;
-        }
-        promise._state = lib$es6$promise$$internal$$REJECTED;
-        promise._result = reason;
-        lib$es6$promise$asap$$asap(lib$es6$promise$$internal$$publishRejection, promise);
-      }
-      function lib$es6$promise$$internal$$subscribe(parent, child, onFulfillment, onRejection) {
-        var subscribers = parent._subscribers;
-        var length = subscribers.length;
-        parent._onerror = null;
-        subscribers[length] = child;
-        subscribers[length + lib$es6$promise$$internal$$FULFILLED] = onFulfillment;
-        subscribers[length + lib$es6$promise$$internal$$REJECTED] = onRejection;
-        if (length === 0 && parent._state) {
-          lib$es6$promise$asap$$asap(lib$es6$promise$$internal$$publish, parent);
-        }
-      }
-      function lib$es6$promise$$internal$$publish(promise) {
-        var subscribers = promise._subscribers;
-        var settled = promise._state;
-        if (subscribers.length === 0) {
-          return;
-        }
-        var child,
-            callback,
-            detail = promise._result;
-        for (var i = 0; i < subscribers.length; i += 3) {
-          child = subscribers[i];
-          callback = subscribers[i + settled];
-          if (child) {
-            lib$es6$promise$$internal$$invokeCallback(settled, child, callback, detail);
-          } else {
-            callback(detail);
-          }
-        }
-        promise._subscribers.length = 0;
-      }
-      function lib$es6$promise$$internal$$ErrorObject() {
-        this.error = null;
-      }
-      var lib$es6$promise$$internal$$TRY_CATCH_ERROR = new lib$es6$promise$$internal$$ErrorObject();
-      function lib$es6$promise$$internal$$tryCatch(callback, detail) {
-        try {
-          return callback(detail);
-        } catch (e) {
-          lib$es6$promise$$internal$$TRY_CATCH_ERROR.error = e;
-          return lib$es6$promise$$internal$$TRY_CATCH_ERROR;
-        }
-      }
-      function lib$es6$promise$$internal$$invokeCallback(settled, promise, callback, detail) {
-        var hasCallback = lib$es6$promise$utils$$isFunction(callback),
-            value,
-            error,
-            succeeded,
-            failed;
-        if (hasCallback) {
-          value = lib$es6$promise$$internal$$tryCatch(callback, detail);
-          if (value === lib$es6$promise$$internal$$TRY_CATCH_ERROR) {
-            failed = true;
-            error = value.error;
-            value = null;
-          } else {
-            succeeded = true;
-          }
-          if (promise === value) {
-            lib$es6$promise$$internal$$reject(promise, lib$es6$promise$$internal$$cannotReturnOwn());
-            return;
-          }
-        } else {
-          value = detail;
-          succeeded = true;
-        }
-        if (promise._state !== lib$es6$promise$$internal$$PENDING) {} else if (hasCallback && succeeded) {
-          lib$es6$promise$$internal$$resolve(promise, value);
-        } else if (failed) {
-          lib$es6$promise$$internal$$reject(promise, error);
-        } else if (settled === lib$es6$promise$$internal$$FULFILLED) {
-          lib$es6$promise$$internal$$fulfill(promise, value);
-        } else if (settled === lib$es6$promise$$internal$$REJECTED) {
-          lib$es6$promise$$internal$$reject(promise, value);
-        }
-      }
-      function lib$es6$promise$$internal$$initializePromise(promise, resolver) {
-        try {
-          resolver(function resolvePromise(value) {
-            lib$es6$promise$$internal$$resolve(promise, value);
-          }, function rejectPromise(reason) {
-            lib$es6$promise$$internal$$reject(promise, reason);
-          });
-        } catch (e) {
-          lib$es6$promise$$internal$$reject(promise, e);
-        }
-      }
-      function lib$es6$promise$enumerator$$Enumerator(Constructor, input) {
-        var enumerator = this;
-        enumerator._instanceConstructor = Constructor;
-        enumerator.promise = new Constructor(lib$es6$promise$$internal$$noop);
-        if (enumerator._validateInput(input)) {
-          enumerator._input = input;
-          enumerator.length = input.length;
-          enumerator._remaining = input.length;
-          enumerator._init();
-          if (enumerator.length === 0) {
-            lib$es6$promise$$internal$$fulfill(enumerator.promise, enumerator._result);
-          } else {
-            enumerator.length = enumerator.length || 0;
-            enumerator._enumerate();
-            if (enumerator._remaining === 0) {
-              lib$es6$promise$$internal$$fulfill(enumerator.promise, enumerator._result);
-            }
-          }
-        } else {
-          lib$es6$promise$$internal$$reject(enumerator.promise, enumerator._validationError());
-        }
-      }
-      lib$es6$promise$enumerator$$Enumerator.prototype._validateInput = function(input) {
-        return lib$es6$promise$utils$$isArray(input);
-      };
-      lib$es6$promise$enumerator$$Enumerator.prototype._validationError = function() {
-        return new Error('Array Methods must be provided an Array');
-      };
-      lib$es6$promise$enumerator$$Enumerator.prototype._init = function() {
-        this._result = new Array(this.length);
-      };
-      var lib$es6$promise$enumerator$$default = lib$es6$promise$enumerator$$Enumerator;
-      lib$es6$promise$enumerator$$Enumerator.prototype._enumerate = function() {
-        var enumerator = this;
-        var length = enumerator.length;
-        var promise = enumerator.promise;
-        var input = enumerator._input;
-        for (var i = 0; promise._state === lib$es6$promise$$internal$$PENDING && i < length; i++) {
-          enumerator._eachEntry(input[i], i);
-        }
-      };
-      lib$es6$promise$enumerator$$Enumerator.prototype._eachEntry = function(entry, i) {
-        var enumerator = this;
-        var c = enumerator._instanceConstructor;
-        if (lib$es6$promise$utils$$isMaybeThenable(entry)) {
-          if (entry.constructor === c && entry._state !== lib$es6$promise$$internal$$PENDING) {
-            entry._onerror = null;
-            enumerator._settledAt(entry._state, i, entry._result);
-          } else {
-            enumerator._willSettleAt(c.resolve(entry), i);
-          }
-        } else {
-          enumerator._remaining--;
-          enumerator._result[i] = entry;
-        }
-      };
-      lib$es6$promise$enumerator$$Enumerator.prototype._settledAt = function(state, i, value) {
-        var enumerator = this;
-        var promise = enumerator.promise;
-        if (promise._state === lib$es6$promise$$internal$$PENDING) {
-          enumerator._remaining--;
-          if (state === lib$es6$promise$$internal$$REJECTED) {
-            lib$es6$promise$$internal$$reject(promise, value);
-          } else {
-            enumerator._result[i] = value;
-          }
-        }
-        if (enumerator._remaining === 0) {
-          lib$es6$promise$$internal$$fulfill(promise, enumerator._result);
-        }
-      };
-      lib$es6$promise$enumerator$$Enumerator.prototype._willSettleAt = function(promise, i) {
-        var enumerator = this;
-        lib$es6$promise$$internal$$subscribe(promise, undefined, function(value) {
-          enumerator._settledAt(lib$es6$promise$$internal$$FULFILLED, i, value);
-        }, function(reason) {
-          enumerator._settledAt(lib$es6$promise$$internal$$REJECTED, i, reason);
-        });
-      };
-      function lib$es6$promise$promise$all$$all(entries) {
-        return new lib$es6$promise$enumerator$$default(this, entries).promise;
-      }
-      var lib$es6$promise$promise$all$$default = lib$es6$promise$promise$all$$all;
-      function lib$es6$promise$promise$race$$race(entries) {
-        var Constructor = this;
-        var promise = new Constructor(lib$es6$promise$$internal$$noop);
-        if (!lib$es6$promise$utils$$isArray(entries)) {
-          lib$es6$promise$$internal$$reject(promise, new TypeError('You must pass an array to race.'));
-          return promise;
-        }
-        var length = entries.length;
-        function onFulfillment(value) {
-          lib$es6$promise$$internal$$resolve(promise, value);
-        }
-        function onRejection(reason) {
-          lib$es6$promise$$internal$$reject(promise, reason);
-        }
-        for (var i = 0; promise._state === lib$es6$promise$$internal$$PENDING && i < length; i++) {
-          lib$es6$promise$$internal$$subscribe(Constructor.resolve(entries[i]), undefined, onFulfillment, onRejection);
-        }
-        return promise;
-      }
-      var lib$es6$promise$promise$race$$default = lib$es6$promise$promise$race$$race;
-      function lib$es6$promise$promise$resolve$$resolve(object) {
-        var Constructor = this;
-        if (object && typeof object === 'object' && object.constructor === Constructor) {
-          return object;
-        }
-        var promise = new Constructor(lib$es6$promise$$internal$$noop);
-        lib$es6$promise$$internal$$resolve(promise, object);
-        return promise;
-      }
-      var lib$es6$promise$promise$resolve$$default = lib$es6$promise$promise$resolve$$resolve;
-      function lib$es6$promise$promise$reject$$reject(reason) {
-        var Constructor = this;
-        var promise = new Constructor(lib$es6$promise$$internal$$noop);
-        lib$es6$promise$$internal$$reject(promise, reason);
-        return promise;
-      }
-      var lib$es6$promise$promise$reject$$default = lib$es6$promise$promise$reject$$reject;
-      var lib$es6$promise$promise$$counter = 0;
-      function lib$es6$promise$promise$$needsResolver() {
-        throw new TypeError('You must pass a resolver function as the first argument to the promise constructor');
-      }
-      function lib$es6$promise$promise$$needsNew() {
-        throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.");
-      }
-      var lib$es6$promise$promise$$default = lib$es6$promise$promise$$Promise;
-      function lib$es6$promise$promise$$Promise(resolver) {
-        this._id = lib$es6$promise$promise$$counter++;
-        this._state = undefined;
-        this._result = undefined;
-        this._subscribers = [];
-        if (lib$es6$promise$$internal$$noop !== resolver) {
-          if (!lib$es6$promise$utils$$isFunction(resolver)) {
-            lib$es6$promise$promise$$needsResolver();
-          }
-          if (!(this instanceof lib$es6$promise$promise$$Promise)) {
-            lib$es6$promise$promise$$needsNew();
-          }
-          lib$es6$promise$$internal$$initializePromise(this, resolver);
-        }
-      }
-      lib$es6$promise$promise$$Promise.all = lib$es6$promise$promise$all$$default;
-      lib$es6$promise$promise$$Promise.race = lib$es6$promise$promise$race$$default;
-      lib$es6$promise$promise$$Promise.resolve = lib$es6$promise$promise$resolve$$default;
-      lib$es6$promise$promise$$Promise.reject = lib$es6$promise$promise$reject$$default;
-      lib$es6$promise$promise$$Promise._setScheduler = lib$es6$promise$asap$$setScheduler;
-      lib$es6$promise$promise$$Promise._setAsap = lib$es6$promise$asap$$setAsap;
-      lib$es6$promise$promise$$Promise._asap = lib$es6$promise$asap$$asap;
-      lib$es6$promise$promise$$Promise.prototype = {
-        constructor: lib$es6$promise$promise$$Promise,
-        then: function(onFulfillment, onRejection) {
-          var parent = this;
-          var state = parent._state;
-          if (state === lib$es6$promise$$internal$$FULFILLED && !onFulfillment || state === lib$es6$promise$$internal$$REJECTED && !onRejection) {
-            return this;
-          }
-          var child = new this.constructor(lib$es6$promise$$internal$$noop);
-          var result = parent._result;
-          if (state) {
-            var callback = arguments[state - 1];
-            lib$es6$promise$asap$$asap(function() {
-              lib$es6$promise$$internal$$invokeCallback(state, child, callback, result);
-            });
-          } else {
-            lib$es6$promise$$internal$$subscribe(parent, child, onFulfillment, onRejection);
-          }
-          return child;
-        },
-        'catch': function(onRejection) {
-          return this.then(null, onRejection);
-        }
-      };
-      function lib$es6$promise$polyfill$$polyfill() {
-        var local;
-        if (typeof global !== 'undefined') {
-          local = global;
-        } else if (typeof self !== 'undefined') {
-          local = self;
-        } else {
-          try {
-            local = Function('return this')();
-          } catch (e) {
-            throw new Error('polyfill failed because global object is unavailable in this environment');
-          }
-        }
-        var P = local.Promise;
-        if (P && Object.prototype.toString.call(P.resolve()) === '[object Promise]' && !P.cast) {
-          return;
-        }
-        local.Promise = lib$es6$promise$promise$$default;
-      }
-      var lib$es6$promise$polyfill$$default = lib$es6$promise$polyfill$$polyfill;
-      var lib$es6$promise$umd$$ES6Promise = {
-        'Promise': lib$es6$promise$promise$$default,
-        'polyfill': lib$es6$promise$polyfill$$default
-      };
-      if (typeof define === 'function' && define['amd']) {
-        define(function() {
-          return lib$es6$promise$umd$$ES6Promise;
-        });
-      } else if (typeof module !== 'undefined' && module['exports']) {
-        module['exports'] = lib$es6$promise$umd$$ES6Promise;
-      } else if (typeof this !== 'undefined') {
-        this['ES6Promise'] = lib$es6$promise$umd$$ES6Promise;
-      }
-      lib$es6$promise$polyfill$$default();
-    }).call(this);
-  })($__require('process'));
-  global.define = __define;
-  return module.exports;
-});
-
-System.registerDynamic("npm:es6-promise@3.0.2", ["npm:es6-promise@3.0.2/dist/es6-promise.js"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = $__require('npm:es6-promise@3.0.2/dist/es6-promise.js');
   global.define = __define;
   return module.exports;
 });
@@ -52203,7 +51662,7 @@ var _removeDefine = System.get("@@amd-helpers").createDefine();
   });
   jQuery.fn.andSelf = jQuery.fn.addBack;
   if (typeof define === "function" && define.amd) {
-    define("npm:jquery@2.2.0/dist/jquery", [], function() {
+    define("npm:jquery@2.2.0/dist/jquery.js", [], function() {
       return jQuery;
     });
   }
@@ -52228,13 +51687,13 @@ _removeDefine();
 })();
 (function() {
 var _removeDefine = System.get("@@amd-helpers").createDefine();
-define("npm:jquery@2.2.0", ["npm:jquery@2.2.0/dist/jquery.js"], function(main) {
+define("npm:jquery@2.2.0.js", ["npm:jquery@2.2.0/dist/jquery.js"], function(main) {
   return main;
 });
 
 _removeDefine();
 })();
-System.registerDynamic("npm:moment@2.11.1/moment", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:moment@2.11.1/moment.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54868,7 +54327,7 @@ System.registerDynamic("npm:moment@2.11.1/moment", [], true, function($__require
   return module.exports;
 });
 
-System.registerDynamic("npm:moment@2.11.1", ["npm:moment@2.11.1/moment.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:moment@2.11.1.js", ["npm:moment@2.11.1/moment.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54878,7 +54337,565 @@ System.registerDynamic("npm:moment@2.11.1", ["npm:moment@2.11.1/moment.js"], tru
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest-static", ["../observable/fromArray", "./combineLatest-support", "../util/isScheduler", "../util/isArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:reflect-metadata@0.1.3/Reflect.js", ["@empty", "process"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  (function(process) {
+    var Reflect;
+    (function(Reflect) {
+      "use strict";
+      var functionPrototype = Object.getPrototypeOf(Function);
+      var _Map = typeof Map === "function" ? Map : CreateMapPolyfill();
+      var _Set = typeof Set === "function" ? Set : CreateSetPolyfill();
+      var _WeakMap = typeof WeakMap === "function" ? WeakMap : CreateWeakMapPolyfill();
+      var __Metadata__ = new _WeakMap();
+      function decorate(decorators, target, targetKey, targetDescriptor) {
+        if (!IsUndefined(targetDescriptor)) {
+          if (!IsArray(decorators)) {
+            throw new TypeError();
+          } else if (!IsObject(target)) {
+            throw new TypeError();
+          } else if (IsUndefined(targetKey)) {
+            throw new TypeError();
+          } else if (!IsObject(targetDescriptor)) {
+            throw new TypeError();
+          }
+          targetKey = ToPropertyKey(targetKey);
+          return DecoratePropertyWithDescriptor(decorators, target, targetKey, targetDescriptor);
+        } else if (!IsUndefined(targetKey)) {
+          if (!IsArray(decorators)) {
+            throw new TypeError();
+          } else if (!IsObject(target)) {
+            throw new TypeError();
+          }
+          targetKey = ToPropertyKey(targetKey);
+          return DecoratePropertyWithoutDescriptor(decorators, target, targetKey);
+        } else {
+          if (!IsArray(decorators)) {
+            throw new TypeError();
+          } else if (!IsConstructor(target)) {
+            throw new TypeError();
+          }
+          return DecorateConstructor(decorators, target);
+        }
+      }
+      Reflect.decorate = decorate;
+      function metadata(metadataKey, metadataValue) {
+        function decorator(target, targetKey) {
+          if (!IsUndefined(targetKey)) {
+            if (!IsObject(target)) {
+              throw new TypeError();
+            }
+            targetKey = ToPropertyKey(targetKey);
+            OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, targetKey);
+          } else {
+            if (!IsConstructor(target)) {
+              throw new TypeError();
+            }
+            OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, undefined);
+          }
+        }
+        return decorator;
+      }
+      Reflect.metadata = metadata;
+      function defineMetadata(metadataKey, metadataValue, target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        return OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, targetKey);
+      }
+      Reflect.defineMetadata = defineMetadata;
+      function hasMetadata(metadataKey, target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        return OrdinaryHasMetadata(metadataKey, target, targetKey);
+      }
+      Reflect.hasMetadata = hasMetadata;
+      function hasOwnMetadata(metadataKey, target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        return OrdinaryHasOwnMetadata(metadataKey, target, targetKey);
+      }
+      Reflect.hasOwnMetadata = hasOwnMetadata;
+      function getMetadata(metadataKey, target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        return OrdinaryGetMetadata(metadataKey, target, targetKey);
+      }
+      Reflect.getMetadata = getMetadata;
+      function getOwnMetadata(metadataKey, target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        return OrdinaryGetOwnMetadata(metadataKey, target, targetKey);
+      }
+      Reflect.getOwnMetadata = getOwnMetadata;
+      function getMetadataKeys(target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        return OrdinaryMetadataKeys(target, targetKey);
+      }
+      Reflect.getMetadataKeys = getMetadataKeys;
+      function getOwnMetadataKeys(target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        return OrdinaryOwnMetadataKeys(target, targetKey);
+      }
+      Reflect.getOwnMetadataKeys = getOwnMetadataKeys;
+      function deleteMetadata(metadataKey, target, targetKey) {
+        if (!IsObject(target)) {
+          throw new TypeError();
+        } else if (!IsUndefined(targetKey)) {
+          targetKey = ToPropertyKey(targetKey);
+        }
+        var metadataMap = GetOrCreateMetadataMap(target, targetKey, false);
+        if (IsUndefined(metadataMap)) {
+          return false;
+        }
+        if (!metadataMap.delete(metadataKey)) {
+          return false;
+        }
+        if (metadataMap.size > 0) {
+          return true;
+        }
+        var targetMetadata = __Metadata__.get(target);
+        targetMetadata.delete(targetKey);
+        if (targetMetadata.size > 0) {
+          return true;
+        }
+        __Metadata__.delete(target);
+        return true;
+      }
+      Reflect.deleteMetadata = deleteMetadata;
+      function DecorateConstructor(decorators, target) {
+        for (var i = decorators.length - 1; i >= 0; --i) {
+          var decorator = decorators[i];
+          var decorated = decorator(target);
+          if (!IsUndefined(decorated)) {
+            if (!IsConstructor(decorated)) {
+              throw new TypeError();
+            }
+            target = decorated;
+          }
+        }
+        return target;
+      }
+      function DecoratePropertyWithDescriptor(decorators, target, propertyKey, descriptor) {
+        for (var i = decorators.length - 1; i >= 0; --i) {
+          var decorator = decorators[i];
+          var decorated = decorator(target, propertyKey, descriptor);
+          if (!IsUndefined(decorated)) {
+            if (!IsObject(decorated)) {
+              throw new TypeError();
+            }
+            descriptor = decorated;
+          }
+        }
+        return descriptor;
+      }
+      function DecoratePropertyWithoutDescriptor(decorators, target, propertyKey) {
+        for (var i = decorators.length - 1; i >= 0; --i) {
+          var decorator = decorators[i];
+          decorator(target, propertyKey);
+        }
+      }
+      function GetOrCreateMetadataMap(target, targetKey, create) {
+        var targetMetadata = __Metadata__.get(target);
+        if (!targetMetadata) {
+          if (!create) {
+            return undefined;
+          }
+          targetMetadata = new _Map();
+          __Metadata__.set(target, targetMetadata);
+        }
+        var keyMetadata = targetMetadata.get(targetKey);
+        if (!keyMetadata) {
+          if (!create) {
+            return undefined;
+          }
+          keyMetadata = new _Map();
+          targetMetadata.set(targetKey, keyMetadata);
+        }
+        return keyMetadata;
+      }
+      function OrdinaryHasMetadata(MetadataKey, O, P) {
+        var hasOwn = OrdinaryHasOwnMetadata(MetadataKey, O, P);
+        if (hasOwn) {
+          return true;
+        }
+        var parent = GetPrototypeOf(O);
+        if (parent !== null) {
+          return OrdinaryHasMetadata(MetadataKey, parent, P);
+        }
+        return false;
+      }
+      function OrdinaryHasOwnMetadata(MetadataKey, O, P) {
+        var metadataMap = GetOrCreateMetadataMap(O, P, false);
+        if (metadataMap === undefined) {
+          return false;
+        }
+        return Boolean(metadataMap.has(MetadataKey));
+      }
+      function OrdinaryGetMetadata(MetadataKey, O, P) {
+        var hasOwn = OrdinaryHasOwnMetadata(MetadataKey, O, P);
+        if (hasOwn) {
+          return OrdinaryGetOwnMetadata(MetadataKey, O, P);
+        }
+        var parent = GetPrototypeOf(O);
+        if (parent !== null) {
+          return OrdinaryGetMetadata(MetadataKey, parent, P);
+        }
+        return undefined;
+      }
+      function OrdinaryGetOwnMetadata(MetadataKey, O, P) {
+        var metadataMap = GetOrCreateMetadataMap(O, P, false);
+        if (metadataMap === undefined) {
+          return undefined;
+        }
+        return metadataMap.get(MetadataKey);
+      }
+      function OrdinaryDefineOwnMetadata(MetadataKey, MetadataValue, O, P) {
+        var metadataMap = GetOrCreateMetadataMap(O, P, true);
+        metadataMap.set(MetadataKey, MetadataValue);
+      }
+      function OrdinaryMetadataKeys(O, P) {
+        var ownKeys = OrdinaryOwnMetadataKeys(O, P);
+        var parent = GetPrototypeOf(O);
+        if (parent === null) {
+          return ownKeys;
+        }
+        var parentKeys = OrdinaryMetadataKeys(parent, P);
+        if (parentKeys.length <= 0) {
+          return ownKeys;
+        }
+        if (ownKeys.length <= 0) {
+          return parentKeys;
+        }
+        var set = new _Set();
+        var keys = [];
+        for (var _i = 0; _i < ownKeys.length; _i++) {
+          var key = ownKeys[_i];
+          var hasKey = set.has(key);
+          if (!hasKey) {
+            set.add(key);
+            keys.push(key);
+          }
+        }
+        for (var _a = 0; _a < parentKeys.length; _a++) {
+          var key = parentKeys[_a];
+          var hasKey = set.has(key);
+          if (!hasKey) {
+            set.add(key);
+            keys.push(key);
+          }
+        }
+        return keys;
+      }
+      function OrdinaryOwnMetadataKeys(target, targetKey) {
+        var metadataMap = GetOrCreateMetadataMap(target, targetKey, false);
+        var keys = [];
+        if (metadataMap) {
+          metadataMap.forEach(function(_, key) {
+            return keys.push(key);
+          });
+        }
+        return keys;
+      }
+      function IsUndefined(x) {
+        return x === undefined;
+      }
+      function IsArray(x) {
+        return Array.isArray(x);
+      }
+      function IsObject(x) {
+        return typeof x === "object" ? x !== null : typeof x === "function";
+      }
+      function IsConstructor(x) {
+        return typeof x === "function";
+      }
+      function IsSymbol(x) {
+        return typeof x === "symbol";
+      }
+      function ToPropertyKey(value) {
+        if (IsSymbol(value)) {
+          return value;
+        }
+        return String(value);
+      }
+      function GetPrototypeOf(O) {
+        var proto = Object.getPrototypeOf(O);
+        if (typeof O !== "function" || O === functionPrototype) {
+          return proto;
+        }
+        if (proto !== functionPrototype) {
+          return proto;
+        }
+        var prototype = O.prototype;
+        var prototypeProto = Object.getPrototypeOf(prototype);
+        if (prototypeProto == null || prototypeProto === Object.prototype) {
+          return proto;
+        }
+        var constructor = prototypeProto.constructor;
+        if (typeof constructor !== "function") {
+          return proto;
+        }
+        if (constructor === O) {
+          return proto;
+        }
+        return constructor;
+      }
+      function CreateMapPolyfill() {
+        var cacheSentinel = {};
+        function Map() {
+          this._keys = [];
+          this._values = [];
+          this._cache = cacheSentinel;
+        }
+        Map.prototype = {
+          get size() {
+            return this._keys.length;
+          },
+          has: function(key) {
+            if (key === this._cache) {
+              return true;
+            }
+            if (this._find(key) >= 0) {
+              this._cache = key;
+              return true;
+            }
+            return false;
+          },
+          get: function(key) {
+            var index = this._find(key);
+            if (index >= 0) {
+              this._cache = key;
+              return this._values[index];
+            }
+            return undefined;
+          },
+          set: function(key, value) {
+            this.delete(key);
+            this._keys.push(key);
+            this._values.push(value);
+            this._cache = key;
+            return this;
+          },
+          delete: function(key) {
+            var index = this._find(key);
+            if (index >= 0) {
+              this._keys.splice(index, 1);
+              this._values.splice(index, 1);
+              this._cache = cacheSentinel;
+              return true;
+            }
+            return false;
+          },
+          clear: function() {
+            this._keys.length = 0;
+            this._values.length = 0;
+            this._cache = cacheSentinel;
+          },
+          forEach: function(callback, thisArg) {
+            var size = this.size;
+            for (var i = 0; i < size; ++i) {
+              var key = this._keys[i];
+              var value = this._values[i];
+              this._cache = key;
+              callback.call(this, value, key, this);
+            }
+          },
+          _find: function(key) {
+            var keys = this._keys;
+            var size = keys.length;
+            for (var i = 0; i < size; ++i) {
+              if (keys[i] === key) {
+                return i;
+              }
+            }
+            return -1;
+          }
+        };
+        return Map;
+      }
+      function CreateSetPolyfill() {
+        var cacheSentinel = {};
+        function Set() {
+          this._map = new _Map();
+        }
+        Set.prototype = {
+          get size() {
+            return this._map.length;
+          },
+          has: function(value) {
+            return this._map.has(value);
+          },
+          add: function(value) {
+            this._map.set(value, value);
+            return this;
+          },
+          delete: function(value) {
+            return this._map.delete(value);
+          },
+          clear: function() {
+            this._map.clear();
+          },
+          forEach: function(callback, thisArg) {
+            this._map.forEach(callback, thisArg);
+          }
+        };
+        return Set;
+      }
+      function CreateWeakMapPolyfill() {
+        var UUID_SIZE = 16;
+        var isNode = typeof global !== "undefined" && Object.prototype.toString.call(global.process) === '[object process]';
+        var nodeCrypto = isNode && $__require('@empty');
+        var hasOwn = Object.prototype.hasOwnProperty;
+        var keys = {};
+        var rootKey = CreateUniqueKey();
+        function WeakMap() {
+          this._key = CreateUniqueKey();
+        }
+        WeakMap.prototype = {
+          has: function(target) {
+            var table = GetOrCreateWeakMapTable(target, false);
+            if (table) {
+              return this._key in table;
+            }
+            return false;
+          },
+          get: function(target) {
+            var table = GetOrCreateWeakMapTable(target, false);
+            if (table) {
+              return table[this._key];
+            }
+            return undefined;
+          },
+          set: function(target, value) {
+            var table = GetOrCreateWeakMapTable(target, true);
+            table[this._key] = value;
+            return this;
+          },
+          delete: function(target) {
+            var table = GetOrCreateWeakMapTable(target, false);
+            if (table && this._key in table) {
+              return delete table[this._key];
+            }
+            return false;
+          },
+          clear: function() {
+            this._key = CreateUniqueKey();
+          }
+        };
+        function FillRandomBytes(buffer, size) {
+          for (var i = 0; i < size; ++i) {
+            buffer[i] = Math.random() * 255 | 0;
+          }
+        }
+        function GenRandomBytes(size) {
+          if (nodeCrypto) {
+            var data = nodeCrypto.randomBytes(size);
+            return data;
+          } else if (typeof Uint8Array === "function") {
+            var data = new Uint8Array(size);
+            if (typeof crypto !== "undefined") {
+              crypto.getRandomValues(data);
+            } else if (typeof msCrypto !== "undefined") {
+              msCrypto.getRandomValues(data);
+            } else {
+              FillRandomBytes(data, size);
+            }
+            return data;
+          } else {
+            var data = new Array(size);
+            FillRandomBytes(data, size);
+            return data;
+          }
+        }
+        function CreateUUID() {
+          var data = GenRandomBytes(UUID_SIZE);
+          data[6] = data[6] & 0x4f | 0x40;
+          data[8] = data[8] & 0xbf | 0x80;
+          var result = "";
+          for (var offset = 0; offset < UUID_SIZE; ++offset) {
+            var byte = data[offset];
+            if (offset === 4 || offset === 6 || offset === 8) {
+              result += "-";
+            }
+            if (byte < 16) {
+              result += "0";
+            }
+            result += byte.toString(16).toLowerCase();
+          }
+          return result;
+        }
+        function CreateUniqueKey() {
+          var key;
+          do {
+            key = "@@WeakMap@@" + CreateUUID();
+          } while (hasOwn.call(keys, key));
+          keys[key] = true;
+          return key;
+        }
+        function GetOrCreateWeakMapTable(target, create) {
+          if (!hasOwn.call(target, rootKey)) {
+            if (!create) {
+              return undefined;
+            }
+            Object.defineProperty(target, rootKey, {value: Object.create(null)});
+          }
+          return target[rootKey];
+        }
+        return WeakMap;
+      }
+      (function(__global) {
+        if (typeof __global.Reflect !== "undefined") {
+          if (__global.Reflect !== Reflect) {
+            for (var p in Reflect) {
+              __global.Reflect[p] = Reflect[p];
+            }
+          }
+        } else {
+          __global.Reflect = Reflect;
+        }
+      })(typeof window !== "undefined" ? window : typeof WorkerGlobalScope !== "undefined" ? self : typeof global !== "undefined" ? global : Function("return this;")());
+    })(Reflect || (Reflect = {}));
+  })($__require('process'));
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:reflect-metadata@0.1.3.js", ["npm:reflect-metadata@0.1.3/Reflect.js"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = $__require('npm:reflect-metadata@0.1.3/Reflect.js');
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest-static.js", ["../observable/fromArray", "./combineLatest-support", "../util/isScheduler", "../util/isArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54910,7 +54927,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest-static", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineLatest-static", ["../../Observable", "../../operator/combineLatest-static"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineLatest-static.js", ["../../Observable", "../../operator/combineLatest-static"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54922,7 +54939,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineLatest-static"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concat-static", ["../../Observable", "../../operator/concat-static"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concat-static.js", ["../../Observable", "../../operator/concat-static"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54934,7 +54951,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concat-static", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/merge-static", ["../../Observable", "../../operator/merge-static"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/merge-static.js", ["../../Observable", "../../operator/merge-static"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54946,7 +54963,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/merge-static", ["../.
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/race-static", ["../../Observable", "../../operator/race-static"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/race-static.js", ["../../Observable", "../../operator/race-static"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -54958,7 +54975,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/race-static", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/bindCallback", ["../Observable", "../util/tryCatch", "../util/errorObject", "../subject/AsyncSubject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/bindCallback.js", ["../Observable", "../util/tryCatch", "../util/errorObject", "../subject/AsyncSubject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55105,7 +55122,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/bindCallback", ["../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/bindCallback", ["../../Observable", "../../observable/bindCallback"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/bindCallback.js", ["../../Observable", "../../observable/bindCallback"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55117,7 +55134,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/bindCallback", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/bindNodeCallback", ["../Observable", "../util/tryCatch", "../util/errorObject", "../subject/AsyncSubject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/bindNodeCallback.js", ["../Observable", "../util/tryCatch", "../util/errorObject", "../subject/AsyncSubject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55270,7 +55287,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/bindNodeCallback", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/bindNodeCallback", ["../../Observable", "../../observable/bindNodeCallback"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/bindNodeCallback.js", ["../../Observable", "../../observable/bindNodeCallback"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55282,7 +55299,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/bindNodeCallback", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/defer", ["../Observable", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/defer.js", ["../Observable", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55323,7 +55340,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/defer", ["../Observable
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/defer", ["../../Observable", "../../observable/defer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/defer.js", ["../../Observable", "../../observable/defer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55335,7 +55352,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/defer", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/empty", ["../../Observable", "../../observable/empty"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/empty.js", ["../../Observable", "../../observable/empty"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55347,7 +55364,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/empty", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/forkJoin", ["../Observable", "../Subscriber", "./fromPromise", "./empty", "../util/isPromise", "../util/isArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/forkJoin.js", ["../Observable", "../Subscriber", "./fromPromise", "./empty", "../util/isPromise", "../util/isArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55456,7 +55473,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/forkJoin", ["../Observa
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/forkJoin", ["../../Observable", "../../observable/forkJoin"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/forkJoin.js", ["../../Observable", "../../observable/forkJoin"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55468,7 +55485,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/forkJoin", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/IteratorObservable", ["../util/root", "../util/isObject", "../util/tryCatch", "../Observable", "../util/isFunction", "../util/SymbolShim", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/IteratorObservable.js", ["../util/root", "../util/isObject", "../util/tryCatch", "../Observable", "../util/isFunction", "../util/SymbolShim", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55685,7 +55702,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/IteratorObservable", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/from", ["../util/isArray", "../util/isPromise", "./fromPromise", "./IteratorObservable", "./fromArray", "../util/SymbolShim", "../Observable", "../operator/observeOn-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/from.js", ["../util/isArray", "../util/isPromise", "./fromPromise", "./IteratorObservable", "./fromArray", "../util/SymbolShim", "../Observable", "../operator/observeOn-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55751,7 +55768,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/from", ["../util/isArra
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/from", ["../../Observable", "../../observable/from"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/from.js", ["../../Observable", "../../observable/from"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55763,7 +55780,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/from", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromArray", ["../../Observable", "../../observable/fromArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromArray.js", ["../../Observable", "../../observable/fromArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55776,7 +55793,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromArray", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromEvent", ["../Observable", "../util/tryCatch", "../util/errorObject", "../Subscription"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromEvent.js", ["../Observable", "../util/tryCatch", "../util/errorObject", "../Subscription"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55858,7 +55875,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromEvent", ["../Observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromEvent", ["../../Observable", "../../observable/fromEvent"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromEvent.js", ["../../Observable", "../../observable/fromEvent"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55870,7 +55887,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromEvent", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromEventPattern", ["../Observable", "../Subscription", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromEventPattern.js", ["../Observable", "../Subscription", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55928,7 +55945,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromEventPattern", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromEventPattern", ["../../Observable", "../../observable/fromEventPattern"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromEventPattern.js", ["../../Observable", "../../observable/fromEventPattern"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -55940,7 +55957,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromEventPattern", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromPromise", ["../util/root", "../Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromPromise.js", ["../util/root", "../Observable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56055,7 +56072,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromPromise", ["../util
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromPromise", ["../../Observable", "../../observable/fromPromise"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromPromise.js", ["../../Observable", "../../observable/fromPromise"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56067,7 +56084,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/fromPromise", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/interval", ["../util/isNumeric", "../Observable", "../scheduler/asap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/interval.js", ["../util/isNumeric", "../Observable", "../scheduler/asap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56140,7 +56157,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/interval", ["../util/is
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/interval", ["../../Observable", "../../observable/interval"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/interval.js", ["../../Observable", "../../observable/interval"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56152,7 +56169,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/interval", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/never", ["../Observable", "../util/noop"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/never.js", ["../Observable", "../util/noop"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56186,7 +56203,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/never", ["../Observable
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/never", ["../../Observable", "../../observable/never"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/never.js", ["../../Observable", "../../observable/never"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56198,7 +56215,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/never", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/range", ["../Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/range.js", ["../Observable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56279,7 +56296,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/range", ["../Observable
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/range", ["../../Observable", "../../observable/range"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/range.js", ["../../Observable", "../../observable/range"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56291,7 +56308,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/range", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/throw", ["../../Observable", "../../observable/throw"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/throw.js", ["../../Observable", "../../observable/throw"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56303,7 +56320,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/throw", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/timer", ["../util/isNumeric", "../Observable", "../scheduler/asap", "../util/isScheduler", "../util/isDate"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/timer.js", ["../util/isNumeric", "../Observable", "../scheduler/asap", "../util/isScheduler", "../util/isDate"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56381,7 +56398,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/timer", ["../util/isNum
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/timer", ["../../Observable", "../../observable/timer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/timer.js", ["../../Observable", "../../observable/timer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56393,7 +56410,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/observable/timer", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zip-static", ["../../Observable", "../../operator/zip-static"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zip-static.js", ["../../Observable", "../../operator/zip-static"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56405,7 +56422,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zip-static", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/buffer", ["../OuterSubscriber", "../util/subscribeToResult", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/buffer.js", ["../OuterSubscriber", "../util/subscribeToResult", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56457,7 +56474,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/buffer", ["../OuterSubscr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/buffer", ["../../Observable", "../../operator/buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/buffer.js", ["../../Observable", "../../operator/buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56469,7 +56486,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/buffer", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferCount", ["../Subscriber", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferCount.js", ["../Subscriber", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56552,7 +56569,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferCount", ["../Subscr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferCount", ["../../Observable", "../../operator/bufferCount"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferCount.js", ["../../Observable", "../../operator/bufferCount"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56564,7 +56581,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferCount", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferTime", ["../Subscriber", "../scheduler/asap", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferTime.js", ["../Subscriber", "../scheduler/asap", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56704,7 +56721,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferTime", ["../Subscri
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferTime", ["../../Observable", "../../operator/bufferTime"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferTime.js", ["../../Observable", "../../operator/bufferTime"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56716,7 +56733,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferTime", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferToggle", ["../Subscriber", "../Subscription", "../util/tryCatch", "../util/errorObject", "buffer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferToggle.js", ["../Subscriber", "../Subscription", "../util/tryCatch", "../util/errorObject", "buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56858,7 +56875,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferToggle", ["../Subsc
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferToggle", ["../../Observable", "../../operator/bufferToggle"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferToggle.js", ["../../Observable", "../../operator/bufferToggle"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56870,7 +56887,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferToggle", ["../.
   return module.exports;
 });
 
-System.registerDynamic("npm:base64-js@0.0.8/lib/b64", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:base64-js@0.0.8/lib/b64.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56976,7 +56993,7 @@ System.registerDynamic("npm:base64-js@0.0.8/lib/b64", [], true, function($__requ
   return module.exports;
 });
 
-System.registerDynamic("npm:base64-js@0.0.8", ["npm:base64-js@0.0.8/lib/b64.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:base64-js@0.0.8.js", ["npm:base64-js@0.0.8/lib/b64.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -56986,7 +57003,7 @@ System.registerDynamic("npm:base64-js@0.0.8", ["npm:base64-js@0.0.8/lib/b64.js"]
   return module.exports;
 });
 
-System.registerDynamic("npm:ieee754@1.1.6/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:ieee754@1.1.6/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -57071,7 +57088,7 @@ System.registerDynamic("npm:ieee754@1.1.6/index", [], true, function($__require,
   return module.exports;
 });
 
-System.registerDynamic("npm:ieee754@1.1.6", ["npm:ieee754@1.1.6/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:ieee754@1.1.6.js", ["npm:ieee754@1.1.6/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -57081,7 +57098,7 @@ System.registerDynamic("npm:ieee754@1.1.6", ["npm:ieee754@1.1.6/index.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:isarray@1.0.0/index", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:isarray@1.0.0/index.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -57094,7 +57111,7 @@ System.registerDynamic("npm:isarray@1.0.0/index", [], true, function($__require,
   return module.exports;
 });
 
-System.registerDynamic("npm:isarray@1.0.0", ["npm:isarray@1.0.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:isarray@1.0.0.js", ["npm:isarray@1.0.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -57104,7 +57121,7 @@ System.registerDynamic("npm:isarray@1.0.0", ["npm:isarray@1.0.0/index.js"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:buffer@3.6.0/index", ["base64-js", "ieee754", "isarray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:buffer@3.6.0/index.js", ["base64-js", "ieee754", "isarray"], true, function($__require, exports, module) {
   "use strict";
   ;
   var global = this,
@@ -58409,7 +58426,7 @@ System.registerDynamic("npm:buffer@3.6.0/index", ["base64-js", "ieee754", "isarr
   return module.exports;
 });
 
-System.registerDynamic("npm:buffer@3.6.0", ["npm:buffer@3.6.0/index.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:buffer@3.6.0.js", ["npm:buffer@3.6.0/index.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58419,7 +58436,7 @@ System.registerDynamic("npm:buffer@3.6.0", ["npm:buffer@3.6.0/index.js"], true, 
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-buffer@0.1.0/index", ["buffer"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-buffer@0.1.0/index.js", ["buffer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58429,7 +58446,7 @@ System.registerDynamic("github:jspm/nodelibs-buffer@0.1.0/index", ["buffer"], tr
   return module.exports;
 });
 
-System.registerDynamic("github:jspm/nodelibs-buffer@0.1.0", ["github:jspm/nodelibs-buffer@0.1.0/index"], true, function($__require, exports, module) {
+System.registerDynamic("github:jspm/nodelibs-buffer@0.1.0.js", ["github:jspm/nodelibs-buffer@0.1.0/index"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58439,7 +58456,7 @@ System.registerDynamic("github:jspm/nodelibs-buffer@0.1.0", ["github:jspm/nodeli
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferWhen", ["../Subscription", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult", "buffer", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferWhen.js", ["../Subscription", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult", "buffer", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58534,7 +58551,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/bufferWhen", ["../Subscri
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferWhen", ["../../Observable", "../../operator/bufferWhen"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferWhen.js", ["../../Observable", "../../operator/bufferWhen"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58546,7 +58563,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/bufferWhen", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/catch", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/catch.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58604,7 +58621,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/catch", ["../Subscriber",
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/catch", ["../../Observable", "../../operator/catch"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/catch.js", ["../../Observable", "../../operator/catch"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58616,7 +58633,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/catch", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineAll", ["./combineLatest-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineAll.js", ["./combineLatest-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58630,7 +58647,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineAll", ["./combineL
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineAll", ["../../Observable", "../../operator/combineAll"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineAll.js", ["../../Observable", "../../operator/combineAll"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58642,7 +58659,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineAll", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest-support", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest-support.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58735,7 +58752,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest-support", [
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest", ["../observable/fromArray", "./combineLatest-support", "../util/isArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest.js", ["../observable/fromArray", "./combineLatest-support", "../util/isArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58763,7 +58780,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/combineLatest", ["../obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineLatest", ["../../Observable", "../../operator/combineLatest"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineLatest.js", ["../../Observable", "../../operator/combineLatest"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58775,7 +58792,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/combineLatest", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concat", ["../util/isScheduler", "../observable/fromArray", "./mergeAll-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concat.js", ["../util/isScheduler", "../observable/fromArray", "./mergeAll-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58801,7 +58818,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concat", ["../util/isSche
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concat", ["../../Observable", "../../operator/concat"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concat.js", ["../../Observable", "../../operator/concat"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58813,7 +58830,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concat", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatAll", ["./mergeAll-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatAll.js", ["./mergeAll-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58827,7 +58844,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatAll", ["./mergeAll-
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatAll", ["../../Observable", "../../operator/concatAll"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatAll.js", ["../../Observable", "../../operator/concatAll"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58839,7 +58856,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatAll", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatMap", ["./mergeMap-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatMap.js", ["./mergeMap-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58853,7 +58870,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatMap", ["./mergeMap-
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatMap", ["../../Observable", "../../operator/concatMap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatMap.js", ["../../Observable", "../../operator/concatMap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58865,7 +58882,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatMap", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatMapTo", ["./mergeMapTo-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatMapTo.js", ["./mergeMapTo-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58879,7 +58896,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concatMapTo", ["./mergeMa
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatMapTo", ["../../Observable", "../../operator/concatMapTo"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatMapTo.js", ["../../Observable", "../../operator/concatMapTo"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58891,7 +58908,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/concatMapTo", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/count", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/count.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58955,7 +58972,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/count", ["../Subscriber",
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/count", ["../../Observable", "../../operator/count"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/count.js", ["../../Observable", "../../operator/count"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -58967,7 +58984,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/count", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/dematerialize", ["../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/dematerialize.js", ["../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59007,7 +59024,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/dematerialize", ["../Subs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/dematerialize", ["../../Observable", "../../operator/dematerialize"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/dematerialize.js", ["../../Observable", "../../operator/dematerialize"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59019,7 +59036,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/dematerialize", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/debounce", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/debounce.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59106,7 +59123,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/debounce", ["../util/tryC
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/debounce", ["../../Observable", "../../operator/debounce"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/debounce.js", ["../../Observable", "../../operator/debounce"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59118,7 +59135,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/debounce", ["../../Ob
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/debounceTime", ["../Subscriber", "../scheduler/asap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/debounceTime.js", ["../Subscriber", "../scheduler/asap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59196,7 +59213,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/debounceTime", ["../Subsc
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/debounceTime", ["../../Observable", "../../operator/debounceTime"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/debounceTime.js", ["../../Observable", "../../operator/debounceTime"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59208,7 +59225,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/debounceTime", ["../.
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/defaultIfEmpty", ["../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/defaultIfEmpty.js", ["../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59262,7 +59279,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/defaultIfEmpty", ["../Sub
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/defaultIfEmpty", ["../../Observable", "../../operator/defaultIfEmpty"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/defaultIfEmpty.js", ["../../Observable", "../../operator/defaultIfEmpty"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59274,7 +59291,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/defaultIfEmpty", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/delay", ["../scheduler/asap", "../util/isDate", "../Subscriber", "../Notification"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/delay.js", ["../scheduler/asap", "../util/isDate", "../Subscriber", "../Notification"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59379,7 +59396,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/delay", ["../scheduler/as
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/delay", ["../../Observable", "../../operator/delay"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/delay.js", ["../../Observable", "../../operator/delay"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59391,7 +59408,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/delay", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/distinctUntilChanged", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/distinctUntilChanged.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59464,7 +59481,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/distinctUntilChanged", ["
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/distinctUntilChanged", ["../../Observable", "../../operator/distinctUntilChanged"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/distinctUntilChanged.js", ["../../Observable", "../../operator/distinctUntilChanged"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59476,7 +59493,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/distinctUntilChanged"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/do", ["../Subscriber", "../util/noop", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/do.js", ["../Subscriber", "../util/noop", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59555,7 +59572,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/do", ["../Subscriber", ".
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/do", ["../../Observable", "../../operator/do"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/do.js", ["../../Observable", "../../operator/do"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59567,7 +59584,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/do", ["../../Observab
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/expand-support", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/expand-support.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59680,7 +59697,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/expand-support", ["../uti
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/expand", ["./expand-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/expand.js", ["./expand-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59701,7 +59718,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/expand", ["./expand-suppo
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/expand", ["../../Observable", "../../operator/expand"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/expand.js", ["../../Observable", "../../operator/expand"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59713,7 +59730,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/expand", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/filter", ["../../Observable", "../../operator/filter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/filter.js", ["../../Observable", "../../operator/filter"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59725,7 +59742,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/filter", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/finally", ["../Subscriber", "../Subscription"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/finally.js", ["../Subscriber", "../Subscription"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59766,7 +59783,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/finally", ["../Subscriber
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/finally", ["../../Observable", "../../operator/finally"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/finally.js", ["../../Observable", "../../operator/finally"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59778,7 +59795,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/finally", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/first", ["../Subscriber", "../util/tryCatch", "../util/errorObject", "../util/EmptyError"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/first.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject", "../util/EmptyError"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59867,7 +59884,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/first", ["../Subscriber",
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/first", ["../../Observable", "../../operator/first"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/first.js", ["../../Observable", "../../operator/first"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59879,7 +59896,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/first", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/MapPolyfill", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/MapPolyfill.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59927,7 +59944,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/MapPolyfill", [], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/Map", ["./root", "./MapPolyfill"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/Map.js", ["./root", "./MapPolyfill"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59941,7 +59958,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/Map", ["./root", "./MapPolyfi
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/FastMap", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/FastMap.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -59979,7 +59996,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/FastMap", [], true, function(
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/groupBy-support", ["../Subscription", "../Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/groupBy-support.js", ["../Subscription", "../Observable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60060,7 +60077,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/groupBy-support", ["../Su
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/groupBy", ["../Subscriber", "../Observable", "../Subject", "../util/Map", "../util/FastMap", "./groupBy-support", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/groupBy.js", ["../Subscriber", "../Observable", "../Subject", "../util/Map", "../util/FastMap", "./groupBy-support", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60206,7 +60223,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/groupBy", ["../Subscriber
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/groupBy", ["../../Observable", "../../operator/groupBy"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/groupBy.js", ["../../Observable", "../../operator/groupBy"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60218,7 +60235,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/groupBy", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/ignoreElements", ["../Subscriber", "../util/noop"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/ignoreElements.js", ["../Subscriber", "../util/noop"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60260,7 +60277,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/ignoreElements", ["../Sub
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/ignoreElements", ["../../Observable", "../../operator/ignoreElements"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/ignoreElements.js", ["../../Observable", "../../operator/ignoreElements"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60272,7 +60289,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/ignoreElements", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/throw", ["../Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/throw.js", ["../Observable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60321,7 +60338,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/throw", ["../Observable
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/every", ["../observable/ScalarObservable", "../observable/fromArray", "../observable/throw", "../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/every.js", ["../observable/ScalarObservable", "../observable/fromArray", "../observable/throw", "../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60406,7 +60423,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/every", ["../observable/S
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/every", ["../../Observable", "../../operator/every"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/every.js", ["../../Observable", "../../operator/every"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60418,7 +60435,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/every", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/last", ["../Subscriber", "../util/tryCatch", "../util/errorObject", "../util/EmptyError"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/last.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject", "../util/EmptyError"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60512,7 +60529,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/last", ["../Subscriber", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/last", ["../../Observable", "../../operator/last"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/last.js", ["../../Observable", "../../operator/last"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60524,7 +60541,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/last", ["../../Observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/let", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/let.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60537,7 +60554,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/let", [], true, function(
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/let", ["../../Observable", "../../operator/let"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/let.js", ["../../Observable", "../../operator/let"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60550,7 +60567,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/let", ["../../Observa
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/map", ["../../Observable", "../../operator/map"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/map.js", ["../../Observable", "../../operator/map"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60562,7 +60579,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/map", ["../../Observa
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mapTo", ["../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mapTo.js", ["../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60605,7 +60622,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mapTo", ["../Subscriber"]
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mapTo", ["../../Observable", "../../operator/mapTo"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mapTo.js", ["../../Observable", "../../operator/mapTo"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60617,7 +60634,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mapTo", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/materialize", ["../Subscriber", "../Notification"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/materialize.js", ["../Subscriber", "../Notification"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60668,7 +60685,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/materialize", ["../Subscr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/materialize", ["../../Observable", "../../operator/materialize"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/materialize.js", ["../../Observable", "../../operator/materialize"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60680,7 +60697,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/materialize", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/merge-static", ["../observable/fromArray", "./mergeAll-support", "../util/isScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/merge-static.js", ["../observable/fromArray", "./mergeAll-support", "../util/isScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60714,7 +60731,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/merge-static", ["../obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/merge", ["./merge-static"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/merge.js", ["./merge-static"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60733,7 +60750,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/merge", ["./merge-static"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/merge", ["../../Observable", "../../operator/merge"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/merge.js", ["../../Observable", "../../operator/merge"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60745,7 +60762,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/merge", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeAll", ["./mergeAll-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeAll.js", ["./mergeAll-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60762,7 +60779,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeAll", ["./mergeAll-s
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeAll", ["../../Observable", "../../operator/mergeAll"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeAll.js", ["../../Observable", "../../operator/mergeAll"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60774,7 +60791,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeAll", ["../../Ob
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMap-support", ["../util/tryCatch", "../util/errorObject", "../util/subscribeToResult", "../OuterSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMap-support.js", ["../util/tryCatch", "../util/errorObject", "../util/subscribeToResult", "../OuterSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60878,7 +60895,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMap-support", ["../u
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMap", ["./mergeMap-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMap.js", ["./mergeMap-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60895,7 +60912,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMap", ["./mergeMap-s
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeMap", ["../../Observable", "../../operator/mergeMap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeMap.js", ["../../Observable", "../../operator/mergeMap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -60908,7 +60925,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeMap", ["../../Ob
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMapTo-support", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMapTo-support.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61012,7 +61029,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMapTo-support", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMapTo", ["./mergeMapTo-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMapTo.js", ["./mergeMapTo-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61029,7 +61046,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeMapTo", ["./mergeMap
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeMapTo", ["../../Observable", "../../operator/mergeMapTo"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeMapTo.js", ["../../Observable", "../../operator/mergeMapTo"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61041,7 +61058,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/mergeMapTo", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/multicast", ["../../Observable", "../../operator/multicast"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/multicast.js", ["../../Observable", "../../operator/multicast"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61053,7 +61070,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/multicast", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/observeOn", ["./observeOn-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/observeOn.js", ["./observeOn-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61070,7 +61087,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/observeOn", ["./observeOn
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/observeOn", ["../../Observable", "../../operator/observeOn"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/observeOn.js", ["../../Observable", "../../operator/observeOn"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61082,7 +61099,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/observeOn", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/not", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/not.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61100,7 +61117,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/not", [], true, function($__r
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/filter", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/filter.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61154,7 +61171,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/filter", ["../Subscriber"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/partition", ["../util/not", "./filter"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/partition.js", ["../util/not", "./filter"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61169,7 +61186,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/partition", ["../util/not
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/partition", ["../../Observable", "../../operator/partition"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/partition.js", ["../../Observable", "../../operator/partition"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61181,7 +61198,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/partition", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/map", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/map.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61237,7 +61254,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/map", ["../Subscriber", "
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/pluck", ["./map"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/pluck.js", ["./map"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61274,7 +61291,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/pluck", ["./map"], true, 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/pluck", ["../../Observable", "../../operator/pluck"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/pluck.js", ["../../Observable", "../../operator/pluck"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61286,7 +61303,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/pluck", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publish", ["../Subject", "./multicast"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publish.js", ["../Subject", "./multicast"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61301,7 +61318,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publish", ["../Subject", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publish", ["../../Observable", "../../operator/publish"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publish.js", ["../../Observable", "../../operator/publish"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61313,7 +61330,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publish", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishBehavior", ["../subject/BehaviorSubject", "./multicast"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishBehavior.js", ["../subject/BehaviorSubject", "./multicast"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61328,7 +61345,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishBehavior", ["../su
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishBehavior", ["../../Observable", "../../operator/publishBehavior"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishBehavior.js", ["../../Observable", "../../operator/publishBehavior"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61340,7 +61357,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishBehavior", [".
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishReplay", ["../subject/ReplaySubject", "./multicast"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishReplay.js", ["../subject/ReplaySubject", "./multicast"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61361,7 +61378,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishReplay", ["../subj
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishReplay", ["../../Observable", "../../operator/publishReplay"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishReplay.js", ["../../Observable", "../../operator/publishReplay"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61373,7 +61390,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishReplay", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishLast", ["../subject/AsyncSubject", "./multicast"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishLast.js", ["../subject/AsyncSubject", "./multicast"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61388,7 +61405,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/publishLast", ["../subjec
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishLast", ["../../Observable", "../../operator/publishLast"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishLast.js", ["../../Observable", "../../operator/publishLast"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61400,7 +61417,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/publishLast", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race-support", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race-support.js", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61471,7 +61488,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race-support", ["../Outer
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race-static", ["../observable/fromArray", "./race-support", "../util/isArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race-static.js", ["../observable/fromArray", "./race-support", "../util/isArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61498,7 +61515,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race-static", ["../observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race", ["./race-static", "../util/isArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race.js", ["./race-static", "../util/isArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61521,7 +61538,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/race", ["./race-static", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/race", ["../../Observable", "../../operator/race"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/race.js", ["../../Observable", "../../operator/race"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61533,7 +61550,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/race", ["../../Observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/reduce-support", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/reduce-support.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61596,7 +61613,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/reduce-support", ["../Sub
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/reduce", ["./reduce-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/reduce.js", ["./reduce-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61610,7 +61627,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/reduce", ["./reduce-suppo
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/reduce", ["../../Observable", "../../operator/reduce"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/reduce.js", ["../../Observable", "../../operator/reduce"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61622,7 +61639,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/reduce", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/repeat", ["../Subscriber", "../observable/empty"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/repeat.js", ["../Subscriber", "../observable/empty"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61690,7 +61707,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/repeat", ["../Subscriber"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/repeat", ["../../Observable", "../../operator/repeat"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/repeat.js", ["../../Observable", "../../operator/repeat"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61702,7 +61719,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/repeat", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/retry", ["../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/retry.js", ["../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61763,7 +61780,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/retry", ["../Subscriber"]
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/retry", ["../../Observable", "../../operator/retry"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/retry.js", ["../../Observable", "../../operator/retry"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61775,7 +61792,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/retry", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/retryWhen", ["../Subject", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/retryWhen.js", ["../Subject", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61875,7 +61892,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/retryWhen", ["../Subject"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/retryWhen", ["../../Observable", "../../operator/retryWhen"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/retryWhen.js", ["../../Observable", "../../operator/retryWhen"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61887,7 +61904,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/retryWhen", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/sample", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/sample.js", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61945,7 +61962,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/sample", ["../OuterSubscr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/sample", ["../../Observable", "../../operator/sample"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/sample.js", ["../../Observable", "../../operator/sample"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -61957,7 +61974,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/sample", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/sampleTime", ["../Subscriber", "../scheduler/asap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/sampleTime.js", ["../Subscriber", "../scheduler/asap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62024,7 +62041,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/sampleTime", ["../Subscri
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/sampleTime", ["../../Observable", "../../operator/sampleTime"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/sampleTime.js", ["../../Observable", "../../operator/sampleTime"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62036,7 +62053,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/sampleTime", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/scan", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/scan.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62108,7 +62125,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/scan", ["../Subscriber", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/scan", ["../../Observable", "../../operator/scan"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/scan.js", ["../../Observable", "../../operator/scan"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62120,7 +62137,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/scan", ["../../Observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/multicast", ["../observable/ConnectableObservable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/multicast.js", ["../observable/ConnectableObservable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62142,7 +62159,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/multicast", ["../observab
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/share", ["./multicast", "../Subject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/share.js", ["./multicast", "../Subject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62161,7 +62178,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/share", ["./multicast", "
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/share", ["../../Observable", "../../operator/share"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/share.js", ["../../Observable", "../../operator/share"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62173,7 +62190,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/share", ["../../Obser
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/single", ["../Subscriber", "../util/tryCatch", "../util/errorObject", "../util/EmptyError"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/single.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject", "../util/EmptyError"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62251,7 +62268,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/single", ["../Subscriber"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/single", ["../../Observable", "../../operator/single"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/single.js", ["../../Observable", "../../operator/single"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62263,7 +62280,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/single", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skip", ["../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skip.js", ["../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62309,7 +62326,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skip", ["../Subscriber"],
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skip", ["../../Observable", "../../operator/skip"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skip.js", ["../../Observable", "../../operator/skip"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62321,7 +62338,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skip", ["../../Observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skipUntil", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skipUntil.js", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62385,7 +62402,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skipUntil", ["../OuterSub
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skipUntil", ["../../Observable", "../../operator/skipUntil"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skipUntil.js", ["../../Observable", "../../operator/skipUntil"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62397,7 +62414,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skipUntil", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skipWhile", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skipWhile.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62456,7 +62473,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/skipWhile", ["../Subscrib
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skipWhile", ["../../Observable", "../../operator/skipWhile"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skipWhile.js", ["../../Observable", "../../operator/skipWhile"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62468,7 +62485,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/skipWhile", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeAll-support", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeAll-support.js", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62538,7 +62555,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/mergeAll-support", ["../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concat-static", ["./mergeAll-support", "../observable/fromArray", "../util/isScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concat-static.js", ["./mergeAll-support", "../observable/fromArray", "../util/isScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62563,7 +62580,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/concat-static", ["./merge
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/startWith", ["../observable/fromArray", "../observable/ScalarObservable", "../observable/empty", "./concat-static", "../util/isScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/startWith.js", ["../observable/fromArray", "../observable/ScalarObservable", "../observable/empty", "./concat-static", "../util/isScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62598,7 +62615,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/startWith", ["../observab
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/startWith", ["../../Observable", "../../operator/startWith"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/startWith.js", ["../../Observable", "../../operator/startWith"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62610,7 +62627,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/startWith", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isNumeric", ["./isArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isNumeric.js", ["./isArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62625,7 +62642,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isNumeric", ["./isArray"], tr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/SubscribeOnObservable", ["../Observable", "../scheduler/asap", "../util/isNumeric"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/SubscribeOnObservable.js", ["../Observable", "../scheduler/asap", "../util/isNumeric"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62692,7 +62709,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/SubscribeOnObservable",
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/subscribeOn", ["../observable/SubscribeOnObservable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/subscribeOn.js", ["../observable/SubscribeOnObservable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62709,7 +62726,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/subscribeOn", ["../observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/subscribeOn", ["../../Observable", "../../operator/subscribeOn"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/subscribeOn.js", ["../../Observable", "../../operator/subscribeOn"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62721,7 +62738,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/subscribeOn", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switch", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switch.js", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62792,7 +62809,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switch", ["../OuterSubscr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switch", ["../../Observable", "../../operator/switch"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switch.js", ["../../Observable", "../../operator/switch"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62804,7 +62821,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switch", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switchMap", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switchMap.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62895,7 +62912,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switchMap", ["../util/try
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switchMap", ["../../Observable", "../../operator/switchMap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switchMap.js", ["../../Observable", "../../operator/switchMap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62907,7 +62924,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switchMap", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switchMapTo", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switchMapTo.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -62991,7 +63008,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/switchMapTo", ["../util/t
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switchMapTo", ["../../Observable", "../../operator/switchMapTo"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switchMapTo.js", ["../../Observable", "../../operator/switchMapTo"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63003,7 +63020,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/switchMapTo", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/take", ["../Subscriber", "../util/ArgumentOutOfRangeError", "../observable/empty"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/take.js", ["../Subscriber", "../util/ArgumentOutOfRangeError", "../observable/empty"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63062,7 +63079,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/take", ["../Subscriber", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/take", ["../../Observable", "../../operator/take"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/take.js", ["../../Observable", "../../operator/take"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63074,7 +63091,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/take", ["../../Observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/takeUntil", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/takeUntil.js", ["../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63120,7 +63137,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/takeUntil", ["../OuterSub
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/takeUntil", ["../../Observable", "../../operator/takeUntil"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/takeUntil.js", ["../../Observable", "../../operator/takeUntil"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63132,7 +63149,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/takeUntil", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/takeWhile", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/takeWhile.js", ["../Subscriber", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63186,7 +63203,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/takeWhile", ["../Subscrib
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/takeWhile", ["../../Observable", "../../operator/takeWhile"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/takeWhile.js", ["../../Observable", "../../operator/takeWhile"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63198,7 +63215,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/takeWhile", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/throttle", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/throttle.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63266,7 +63283,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/throttle", ["../util/tryC
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/throttle", ["../../Observable", "../../operator/throttle"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/throttle.js", ["../../Observable", "../../operator/throttle"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63278,7 +63295,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/throttle", ["../../Ob
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/throttleTime", ["../Subscriber", "../scheduler/asap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/throttleTime.js", ["../Subscriber", "../scheduler/asap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63342,7 +63359,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/throttleTime", ["../Subsc
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/throttleTime", ["../../Observable", "../../operator/throttleTime"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/throttleTime.js", ["../../Observable", "../../operator/throttleTime"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63354,7 +63371,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/throttleTime", ["../.
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/timeout", ["../scheduler/asap", "../util/isDate", "../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/timeout.js", ["../scheduler/asap", "../util/isDate", "../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63461,7 +63478,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/timeout", ["../scheduler/
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/timeout", ["../../Observable", "../../operator/timeout"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/timeout.js", ["../../Observable", "../../operator/timeout"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63473,7 +63490,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/timeout", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isDate", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isDate.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63486,7 +63503,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isDate", [], true, function($
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/timeoutWith", ["../scheduler/asap", "../util/isDate", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/timeoutWith.js", ["../scheduler/asap", "../util/isDate", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63599,7 +63616,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/timeoutWith", ["../schedu
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/timeoutWith", ["../../Observable", "../../operator/timeoutWith"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/timeoutWith.js", ["../../Observable", "../../operator/timeoutWith"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63611,7 +63628,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/timeoutWith", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/toArray", ["../Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/toArray.js", ["../Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63656,7 +63673,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/toArray", ["../Subscriber
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/toArray", ["../../Observable", "../../operator/toArray"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/toArray.js", ["../../Observable", "../../operator/toArray"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63668,7 +63685,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/toArray", ["../../Obs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/toPromise", ["../util/root"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/toPromise.js", ["../util/root"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63702,7 +63719,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/toPromise", ["../util/roo
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/toPromise", ["../../Observable", "../../operator/toPromise"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/toPromise.js", ["../../Observable", "../../operator/toPromise"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63714,7 +63731,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/toPromise", ["../../O
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/window", ["../Subscriber", "../Subject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/window.js", ["../Subscriber", "../Subject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63802,7 +63819,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/window", ["../Subscriber"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/window", ["../../Observable", "../../operator/window"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/window.js", ["../../Observable", "../../operator/window"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63814,7 +63831,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/window", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowCount", ["../Subscriber", "../Subject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowCount.js", ["../Subscriber", "../Subject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63900,7 +63917,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowCount", ["../Subscr
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowCount", ["../../Observable", "../../operator/windowCount"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowCount.js", ["../../Observable", "../../operator/windowCount"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -63912,7 +63929,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowCount", ["../..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowTime", ["../Subscriber", "../Subject", "../scheduler/asap"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowTime.js", ["../Subscriber", "../Subject", "../scheduler/asap"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64063,7 +64080,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowTime", ["../Subscri
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowTime", ["../../Observable", "../../operator/windowTime"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowTime.js", ["../../Observable", "../../operator/windowTime"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64075,7 +64092,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowTime", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowToggle", ["../Subject", "../Subscription", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowToggle.js", ["../Subject", "../Subscription", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64214,7 +64231,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowToggle", ["../Subje
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowToggle", ["../../Observable", "../../operator/windowToggle"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowToggle.js", ["../../Observable", "../../operator/windowToggle"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64226,7 +64243,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowToggle", ["../.
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowWhen", ["../Subscriber", "../Subject", "../Subscription", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowWhen.js", ["../Subscriber", "../Subject", "../Subscription", "../util/tryCatch", "../util/errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64336,7 +64353,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/windowWhen", ["../Subscri
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowWhen", ["../../Observable", "../../operator/windowWhen"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowWhen.js", ["../../Observable", "../../operator/windowWhen"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64348,7 +64365,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/windowWhen", ["../../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/withLatestFrom", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/withLatestFrom.js", ["../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64441,7 +64458,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/withLatestFrom", ["../uti
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/withLatestFrom", ["../../Observable", "../../operator/withLatestFrom"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/withLatestFrom.js", ["../../Observable", "../../operator/withLatestFrom"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64453,7 +64470,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/withLatestFrom", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/ScalarObservable", ["../Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/ScalarObservable.js", ["../Observable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64517,7 +64534,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/ScalarObservable", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/empty", ["../Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/empty.js", ["../Observable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64560,7 +64577,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/empty", ["../Observable
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isScheduler", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isScheduler.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64573,7 +64590,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isScheduler", [], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromArray", ["../Observable", "./ScalarObservable", "./empty", "../util/isScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromArray.js", ["../Observable", "./ScalarObservable", "./empty", "../util/isScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64667,7 +64684,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/fromArray", ["../Observ
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip-static", ["../observable/fromArray", "./zip-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip-static.js", ["../observable/fromArray", "./zip-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64690,7 +64707,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip-static", ["../observa
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip", ["./zip-static"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip.js", ["./zip-static"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64709,7 +64726,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip", ["./zip-static"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zip", ["../../Observable", "../../operator/zip"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zip.js", ["../../Observable", "../../operator/zip"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64721,7 +64738,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zip", ["../../Observa
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/tryCatch", ["./errorObject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/tryCatch.js", ["./errorObject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64746,7 +64763,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/tryCatch", ["./errorObject"],
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/errorObject", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/errorObject.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64756,7 +64773,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/errorObject", [], true, funct
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/OuterSubscriber", ["./Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/OuterSubscriber.js", ["./Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64792,7 +64809,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/OuterSubscriber", ["./Subscriber"]
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isPromise", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isPromise.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64805,7 +64822,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isPromise", [], true, functio
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/InnerSubscriber", ["./Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/InnerSubscriber.js", ["./Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64847,7 +64864,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/InnerSubscriber", ["./Subscriber"]
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/subscribeToResult", ["./root", "./isArray", "./isPromise", "../Observable", "./SymbolShim", "../InnerSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/subscribeToResult.js", ["./root", "./isArray", "./isPromise", "../Observable", "./SymbolShim", "../InnerSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -64922,7 +64939,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/subscribeToResult", ["./root"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip-support", ["../util/isArray", "../Subscriber", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult", "../util/SymbolShim"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip-support.js", ["../util/isArray", "../Subscriber", "../util/tryCatch", "../util/errorObject", "../OuterSubscriber", "../util/subscribeToResult", "../util/SymbolShim"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65135,7 +65152,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zip-support", ["../util/i
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zipAll", ["./zip-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zipAll.js", ["./zip-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65149,7 +65166,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/zipAll", ["./zip-support"
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zipAll", ["../../Observable", "../../operator/zipAll"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zipAll.js", ["../../Observable", "../../operator/zipAll"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65161,7 +65178,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/add/operator/zipAll", ["../../Obse
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Operator", ["./Subscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Operator.js", ["./Subscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65179,7 +65196,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Operator", ["./Subscriber"], true,
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/AsyncSubject", ["../Subject"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/AsyncSubject.js", ["../Subject"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65237,7 +65254,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/AsyncSubject", ["../Subjec
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/observeOn-support", ["../Subscriber", "../Notification"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/observeOn-support.js", ["../Subscriber", "../Notification"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65308,7 +65325,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/operator/observeOn-support", ["../
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/ReplaySubject", ["../Subject", "../scheduler/queue", "../operator/observeOn-support"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/ReplaySubject.js", ["../Subject", "../scheduler/queue", "../operator/observeOn-support"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65396,7 +65413,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/ReplaySubject", ["../Subje
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/SubjectSubscription", ["../Subscription"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/SubjectSubscription.js", ["../Subscription"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65442,7 +65459,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/SubjectSubscription", ["..
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subject", ["./Observable", "./Subscriber", "./Subscription", "./subject/SubjectSubscription", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subject.js", ["./Observable", "./Subscriber", "./Subscription", "./subject/SubjectSubscription", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65618,7 +65635,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subject", ["./Observable", "./Subs
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/BehaviorSubject", ["../Subject", "../util/throwError", "../util/ObjectUnsubscribedError"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/BehaviorSubject.js", ["../Subject", "../util/throwError", "../util/ObjectUnsubscribedError"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65678,7 +65695,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/subject/BehaviorSubject", ["../Sub
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/ConnectableObservable", ["../Observable", "../Subscriber", "../Subscription"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/ConnectableObservable.js", ["../Observable", "../Subscriber", "../Subscription"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65814,7 +65831,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/observable/ConnectableObservable",
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/noop", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/noop.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65825,7 +65842,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/noop", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/throwError", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/throwError.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65838,7 +65855,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/throwError", [], true, functi
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/tryOrThrowError", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/tryOrThrowError.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65859,7 +65876,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/tryOrThrowError", [], true, f
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Observer", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Observer.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65876,7 +65893,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Observer", [], true, function($__r
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subscriber", ["./util/noop", "./util/throwError", "./util/tryOrThrowError", "./Subscription", "./symbol/rxSubscriber", "./Observer"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subscriber.js", ["./util/noop", "./util/throwError", "./util/tryOrThrowError", "./Subscription", "./symbol/rxSubscriber", "./Observer"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -65997,7 +66014,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subscriber", ["./util/noop", "./ut
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/toSubscriber", ["../Subscriber", "../symbol/rxSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/toSubscriber.js", ["../Subscriber", "../symbol/rxSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66021,7 +66038,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/toSubscriber", ["../Subscribe
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Observable", ["./util/root", "./util/SymbolShim", "./util/toSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Observable.js", ["./util/root", "./util/SymbolShim", "./util/toSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66102,7 +66119,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Observable", ["./util/root", "./ut
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Notification", ["./Observable"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Notification.js", ["./Observable"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66175,7 +66192,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Notification", ["./Observable"], t
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/EmptyError", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/EmptyError.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66192,7 +66209,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/EmptyError", [], true, functi
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/ArgumentOutOfRangeError", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/ArgumentOutOfRangeError.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66209,7 +66226,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/ArgumentOutOfRangeError", [],
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/ObjectUnsubscribedError", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/ObjectUnsubscribedError.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66236,129 +66253,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/ObjectUnsubscribedError", [],
   return module.exports;
 });
 
-System.registerDynamic("npm:process@0.11.2/browser", [], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  var process = module.exports = {};
-  var queue = [];
-  var draining = false;
-  var currentQueue;
-  var queueIndex = -1;
-  function cleanUpNextTick() {
-    draining = false;
-    if (currentQueue.length) {
-      queue = currentQueue.concat(queue);
-    } else {
-      queueIndex = -1;
-    }
-    if (queue.length) {
-      drainQueue();
-    }
-  }
-  function drainQueue() {
-    if (draining) {
-      return;
-    }
-    var timeout = setTimeout(cleanUpNextTick);
-    draining = true;
-    var len = queue.length;
-    while (len) {
-      currentQueue = queue;
-      queue = [];
-      while (++queueIndex < len) {
-        if (currentQueue) {
-          currentQueue[queueIndex].run();
-        }
-      }
-      queueIndex = -1;
-      len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    clearTimeout(timeout);
-  }
-  process.nextTick = function(fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-      for (var i = 1; i < arguments.length; i++) {
-        args[i - 1] = arguments[i];
-      }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-      setTimeout(drainQueue, 0);
-    }
-  };
-  function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-  }
-  Item.prototype.run = function() {
-    this.fun.apply(null, this.array);
-  };
-  process.title = 'browser';
-  process.browser = true;
-  process.env = {};
-  process.argv = [];
-  process.version = '';
-  process.versions = {};
-  function noop() {}
-  process.on = noop;
-  process.addListener = noop;
-  process.once = noop;
-  process.off = noop;
-  process.removeListener = noop;
-  process.removeAllListeners = noop;
-  process.emit = noop;
-  process.binding = function(name) {
-    throw new Error('process.binding is not supported');
-  };
-  process.cwd = function() {
-    return '/';
-  };
-  process.chdir = function(dir) {
-    throw new Error('process.chdir is not supported');
-  };
-  process.umask = function() {
-    return 0;
-  };
-  global.define = __define;
-  return module.exports;
-});
-
-System.registerDynamic("npm:process@0.11.2", ["npm:process@0.11.2/browser.js"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = $__require('npm:process@0.11.2/browser.js');
-  global.define = __define;
-  return module.exports;
-});
-
-System.registerDynamic("github:jspm/nodelibs-process@0.1.2/index", ["process"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = System._nodeRequire ? process : $__require('process');
-  global.define = __define;
-  return module.exports;
-});
-
-System.registerDynamic("github:jspm/nodelibs-process@0.1.2", ["github:jspm/nodelibs-process@0.1.2/index"], true, function($__require, exports, module) {
-  ;
-  var global = this,
-      __define = global.define;
-  global.define = undefined;
-  module.exports = $__require('github:jspm/nodelibs-process@0.1.2/index');
-  global.define = __define;
-  return module.exports;
-});
-
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/Immediate", ["./root", "process"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/Immediate.js", ["./root", "process"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66550,7 +66445,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/Immediate", ["./root", "proce
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/AsapAction", ["../util/Immediate", "./FutureAction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/AsapAction.js", ["../util/Immediate", "./FutureAction"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66610,7 +66505,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/AsapAction", ["../util/I
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/AsapScheduler", ["./AsapAction", "./QueueScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/AsapScheduler.js", ["./AsapAction", "./QueueScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66641,7 +66536,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/AsapScheduler", ["./Asap
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/asap", ["./AsapScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/asap.js", ["./AsapScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66652,7 +66547,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/asap", ["./AsapScheduler
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/QueueAction", ["./FutureAction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/QueueAction.js", ["./FutureAction"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66693,7 +66588,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/QueueAction", ["./Future
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isArray", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isArray.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66705,7 +66600,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isArray", [], true, function(
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isObject", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isObject.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66718,7 +66613,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isObject", [], true, function
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isFunction", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isFunction.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66731,7 +66626,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/isFunction", [], true, functi
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subscription", ["./util/isArray", "./util/isObject", "./util/isFunction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subscription.js", ["./util/isArray", "./util/isObject", "./util/isFunction"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66813,7 +66708,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Subscription", ["./util/isArray", 
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/FutureAction", ["../util/root", "../Subscription"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/FutureAction.js", ["../util/root", "../Subscription"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66895,7 +66790,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/FutureAction", ["../util
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/QueueScheduler", ["./QueueAction", "./FutureAction"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/QueueScheduler.js", ["./QueueAction", "./FutureAction"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66941,7 +66836,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/QueueScheduler", ["./Que
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/queue", ["./QueueScheduler"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/queue.js", ["./QueueScheduler"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66952,7 +66847,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/scheduler/queue", ["./QueueSchedul
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/root", [], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/root.js", [], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -66976,7 +66871,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/root", [], true, function($__
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/SymbolShim", ["./root"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/SymbolShim.js", ["./root"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -67046,7 +66941,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/util/SymbolShim", ["./root"], true
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/symbol/rxSubscriber", ["../util/SymbolShim"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/symbol/rxSubscriber.js", ["../util/SymbolShim"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -67057,7 +66952,7 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/symbol/rxSubscriber", ["../util/Sy
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1/Rx", ["./Subject", "./Observable", "./add/operator/combineLatest-static", "./add/operator/concat-static", "./add/operator/merge-static", "./add/operator/race-static", "./add/observable/bindCallback", "./add/observable/bindNodeCallback", "./add/observable/defer", "./add/observable/empty", "./add/observable/forkJoin", "./add/observable/from", "./add/observable/fromArray", "./add/observable/fromEvent", "./add/observable/fromEventPattern", "./add/observable/fromPromise", "./add/observable/interval", "./add/observable/never", "./add/observable/range", "./add/observable/throw", "./add/observable/timer", "./add/operator/zip-static", "./add/operator/buffer", "./add/operator/bufferCount", "./add/operator/bufferTime", "./add/operator/bufferToggle", "./add/operator/bufferWhen", "./add/operator/catch", "./add/operator/combineAll", "./add/operator/combineLatest", "./add/operator/concat", "./add/operator/concatAll", "./add/operator/concatMap", "./add/operator/concatMapTo", "./add/operator/count", "./add/operator/dematerialize", "./add/operator/debounce", "./add/operator/debounceTime", "./add/operator/defaultIfEmpty", "./add/operator/delay", "./add/operator/distinctUntilChanged", "./add/operator/do", "./add/operator/expand", "./add/operator/filter", "./add/operator/finally", "./add/operator/first", "./add/operator/groupBy", "./add/operator/ignoreElements", "./add/operator/every", "./add/operator/last", "./add/operator/let", "./add/operator/map", "./add/operator/mapTo", "./add/operator/materialize", "./add/operator/merge", "./add/operator/mergeAll", "./add/operator/mergeMap", "./add/operator/mergeMapTo", "./add/operator/multicast", "./add/operator/observeOn", "./add/operator/partition", "./add/operator/pluck", "./add/operator/publish", "./add/operator/publishBehavior", "./add/operator/publishReplay", "./add/operator/publishLast", "./add/operator/race", "./add/operator/reduce", "./add/operator/repeat", "./add/operator/retry", "./add/operator/retryWhen", "./add/operator/sample", "./add/operator/sampleTime", "./add/operator/scan", "./add/operator/share", "./add/operator/single", "./add/operator/skip", "./add/operator/skipUntil", "./add/operator/skipWhile", "./add/operator/startWith", "./add/operator/subscribeOn", "./add/operator/switch", "./add/operator/switchMap", "./add/operator/switchMapTo", "./add/operator/take", "./add/operator/takeUntil", "./add/operator/takeWhile", "./add/operator/throttle", "./add/operator/throttleTime", "./add/operator/timeout", "./add/operator/timeoutWith", "./add/operator/toArray", "./add/operator/toPromise", "./add/operator/window", "./add/operator/windowCount", "./add/operator/windowTime", "./add/operator/windowToggle", "./add/operator/windowWhen", "./add/operator/withLatestFrom", "./add/operator/zip", "./add/operator/zipAll", "./Operator", "./Subscription", "./Subscriber", "./subject/AsyncSubject", "./subject/ReplaySubject", "./subject/BehaviorSubject", "./observable/ConnectableObservable", "./Notification", "./util/EmptyError", "./util/ArgumentOutOfRangeError", "./util/ObjectUnsubscribedError", "./scheduler/asap", "./scheduler/queue", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1/Rx.js", ["./Subject", "./Observable", "./add/operator/combineLatest-static", "./add/operator/concat-static", "./add/operator/merge-static", "./add/operator/race-static", "./add/observable/bindCallback", "./add/observable/bindNodeCallback", "./add/observable/defer", "./add/observable/empty", "./add/observable/forkJoin", "./add/observable/from", "./add/observable/fromArray", "./add/observable/fromEvent", "./add/observable/fromEventPattern", "./add/observable/fromPromise", "./add/observable/interval", "./add/observable/never", "./add/observable/range", "./add/observable/throw", "./add/observable/timer", "./add/operator/zip-static", "./add/operator/buffer", "./add/operator/bufferCount", "./add/operator/bufferTime", "./add/operator/bufferToggle", "./add/operator/bufferWhen", "./add/operator/catch", "./add/operator/combineAll", "./add/operator/combineLatest", "./add/operator/concat", "./add/operator/concatAll", "./add/operator/concatMap", "./add/operator/concatMapTo", "./add/operator/count", "./add/operator/dematerialize", "./add/operator/debounce", "./add/operator/debounceTime", "./add/operator/defaultIfEmpty", "./add/operator/delay", "./add/operator/distinctUntilChanged", "./add/operator/do", "./add/operator/expand", "./add/operator/filter", "./add/operator/finally", "./add/operator/first", "./add/operator/groupBy", "./add/operator/ignoreElements", "./add/operator/every", "./add/operator/last", "./add/operator/let", "./add/operator/map", "./add/operator/mapTo", "./add/operator/materialize", "./add/operator/merge", "./add/operator/mergeAll", "./add/operator/mergeMap", "./add/operator/mergeMapTo", "./add/operator/multicast", "./add/operator/observeOn", "./add/operator/partition", "./add/operator/pluck", "./add/operator/publish", "./add/operator/publishBehavior", "./add/operator/publishReplay", "./add/operator/publishLast", "./add/operator/race", "./add/operator/reduce", "./add/operator/repeat", "./add/operator/retry", "./add/operator/retryWhen", "./add/operator/sample", "./add/operator/sampleTime", "./add/operator/scan", "./add/operator/share", "./add/operator/single", "./add/operator/skip", "./add/operator/skipUntil", "./add/operator/skipWhile", "./add/operator/startWith", "./add/operator/subscribeOn", "./add/operator/switch", "./add/operator/switchMap", "./add/operator/switchMapTo", "./add/operator/take", "./add/operator/takeUntil", "./add/operator/takeWhile", "./add/operator/throttle", "./add/operator/throttleTime", "./add/operator/timeout", "./add/operator/timeoutWith", "./add/operator/toArray", "./add/operator/toPromise", "./add/operator/window", "./add/operator/windowCount", "./add/operator/windowTime", "./add/operator/windowToggle", "./add/operator/windowWhen", "./add/operator/withLatestFrom", "./add/operator/zip", "./add/operator/zipAll", "./Operator", "./Subscription", "./Subscriber", "./subject/AsyncSubject", "./subject/ReplaySubject", "./subject/BehaviorSubject", "./observable/ConnectableObservable", "./Notification", "./util/EmptyError", "./util/ArgumentOutOfRangeError", "./util/ObjectUnsubscribedError", "./scheduler/asap", "./scheduler/queue", "./symbol/rxSubscriber"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
@@ -67201,12 +67096,1608 @@ System.registerDynamic("npm:rxjs@5.0.0-beta.1/Rx", ["./Subject", "./Observable",
   return module.exports;
 });
 
-System.registerDynamic("npm:rxjs@5.0.0-beta.1", ["npm:rxjs@5.0.0-beta.1/Rx.js"], true, function($__require, exports, module) {
+System.registerDynamic("npm:rxjs@5.0.0-beta.1.js", ["npm:rxjs@5.0.0-beta.1/Rx.js"], true, function($__require, exports, module) {
   ;
   var global = this,
       __define = global.define;
   global.define = undefined;
   module.exports = $__require('npm:rxjs@5.0.0-beta.1/Rx.js');
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/core.js", ["./keys", "./patch/promise"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var keys = $__require('./keys');
+  function Zone(parentZone, data) {
+    var zone = (arguments.length) ? Object.create(parentZone) : this;
+    zone.parent = parentZone || null;
+    Object.keys(data || {}).forEach(function(property) {
+      var _property = property.substr(1);
+      if (property[0] === '$') {
+        zone[_property] = data[property](parentZone[_property] || function() {});
+      } else if (property[0] === '+') {
+        if (parentZone[_property]) {
+          zone[_property] = function() {
+            var result = parentZone[_property].apply(this, arguments);
+            data[property].apply(this, arguments);
+            return result;
+          };
+        } else {
+          zone[_property] = data[property];
+        }
+      } else if (property[0] === '-') {
+        if (parentZone[_property]) {
+          zone[_property] = function() {
+            data[property].apply(this, arguments);
+            return parentZone[_property].apply(this, arguments);
+          };
+        } else {
+          zone[_property] = data[property];
+        }
+      } else {
+        zone[property] = (typeof data[property] === 'object') ? JSON.parse(JSON.stringify(data[property])) : data[property];
+      }
+    });
+    zone.$id = Zone.nextId++;
+    return zone;
+  }
+  Zone.prototype = {
+    constructor: Zone,
+    fork: function(locals) {
+      this.onZoneCreated();
+      return new Zone(this, locals);
+    },
+    bind: function(fn, skipEnqueue) {
+      if (typeof fn !== 'function') {
+        throw new Error('Expecting function got: ' + fn);
+      }
+      skipEnqueue || this.enqueueTask(fn);
+      var zone = this.isRootZone() ? this : this.fork();
+      return function zoneBoundFn() {
+        return zone.run(fn, this, arguments);
+      };
+    },
+    bindOnce: function(fn) {
+      var boundZone = this;
+      return this.bind(function() {
+        var result = fn.apply(this, arguments);
+        boundZone.dequeueTask(fn);
+        return result;
+      });
+    },
+    isRootZone: function() {
+      return this.parent === null;
+    },
+    run: function run(fn, applyTo, applyWith) {
+      applyWith = applyWith || [];
+      var oldZone = global.zone;
+      global.zone = this;
+      try {
+        this.beforeTask();
+        return fn.apply(applyTo, applyWith);
+      } catch (e) {
+        if (this.onError) {
+          this.onError(e);
+        } else {
+          throw e;
+        }
+      } finally {
+        this.afterTask();
+        global.zone = oldZone;
+      }
+    },
+    onError: null,
+    beforeTask: function() {},
+    onZoneCreated: function() {},
+    afterTask: function() {},
+    enqueueTask: function() {},
+    dequeueTask: function() {},
+    addEventListener: function() {
+      return this[keys.common.addEventListener].apply(this, arguments);
+    },
+    removeEventListener: function() {
+      return this[keys.common.removeEventListener].apply(this, arguments);
+    }
+  };
+  Zone.nextId = 1;
+  Zone.bindPromiseFn = $__require('./patch/promise').bindPromiseFn;
+  module.exports = {Zone: Zone};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/microtask.js", ["es6-promise"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var hasNativePromise = typeof Promise !== "undefined" && Promise.toString().indexOf("[native code]") !== -1;
+  var isFirefox = global.navigator && global.navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+  var resolvedPromise;
+  if (hasNativePromise && !isFirefox) {
+    resolvedPromise = Promise.resolve();
+  }
+  var es6Promise = $__require('es6-promise').Promise;
+  if (resolvedPromise) {
+    es6Promise._setScheduler(function(fn) {
+      resolvedPromise.then(fn);
+    });
+  }
+  es6Promise._setAsap(function(fn, arg) {
+    global.zone.scheduleMicrotask(function() {
+      fn(arg);
+    });
+  });
+  function scheduleMicrotask(fn) {
+    es6Promise._asap(this.bind(fn));
+  }
+  function addMicrotaskSupport(zoneClass) {
+    zoneClass.prototype.scheduleMicrotask = scheduleMicrotask;
+    return zoneClass;
+  }
+  module.exports = {addMicrotaskSupport: addMicrotaskSupport};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/functions.js", ["../utils"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var utils = $__require('../utils');
+  function patchSetClearFunction(obj, fnNames) {
+    fnNames.map(function(name) {
+      return name[0].toUpperCase() + name.substr(1);
+    }).forEach(function(name) {
+      var setName = 'set' + name;
+      var delegate = obj[setName];
+      if (delegate) {
+        var clearName = 'clear' + name;
+        var ids = {};
+        var bindArgs = setName === 'setInterval' ? utils.bindArguments : utils.bindArgumentsOnce;
+        global.zone[setName] = function(fn) {
+          var id,
+              fnRef = fn;
+          arguments[0] = function() {
+            delete ids[id];
+            return fnRef.apply(this, arguments);
+          };
+          var args = bindArgs(arguments);
+          id = delegate.apply(obj, args);
+          ids[id] = true;
+          return id;
+        };
+        obj[setName] = function() {
+          return global.zone[setName].apply(this, arguments);
+        };
+        var clearDelegate = obj[clearName];
+        global.zone[clearName] = function(id) {
+          if (ids[id]) {
+            delete ids[id];
+            global.zone.dequeueTask();
+          }
+          return clearDelegate.apply(this, arguments);
+        };
+        obj[clearName] = function() {
+          return global.zone[clearName].apply(this, arguments);
+        };
+      }
+    });
+  }
+  ;
+  function patchRequestAnimationFrame(obj, fnNames) {
+    fnNames.forEach(function(name) {
+      var delegate = obj[name];
+      if (delegate) {
+        global.zone[name] = function(fn) {
+          var callZone = global.zone.isRootZone() ? global.zone.fork() : global.zone;
+          if (fn) {
+            arguments[0] = function() {
+              return callZone.run(fn, this, arguments);
+            };
+          }
+          return delegate.apply(obj, arguments);
+        };
+        obj[name] = function() {
+          return global.zone[name].apply(this, arguments);
+        };
+      }
+    });
+  }
+  ;
+  function patchSetFunction(obj, fnNames) {
+    fnNames.forEach(function(name) {
+      var delegate = obj[name];
+      if (delegate) {
+        global.zone[name] = function(fn) {
+          arguments[0] = function() {
+            return fn.apply(this, arguments);
+          };
+          var args = utils.bindArgumentsOnce(arguments);
+          return delegate.apply(obj, args);
+        };
+        obj[name] = function() {
+          return zone[name].apply(this, arguments);
+        };
+      }
+    });
+  }
+  ;
+  function patchFunction(obj, fnNames) {
+    fnNames.forEach(function(name) {
+      var delegate = obj[name];
+      global.zone[name] = function() {
+        return delegate.apply(obj, arguments);
+      };
+      obj[name] = function() {
+        return global.zone[name].apply(this, arguments);
+      };
+    });
+  }
+  ;
+  module.exports = {
+    patchSetClearFunction: patchSetClearFunction,
+    patchSetFunction: patchSetFunction,
+    patchRequestAnimationFrame: patchRequestAnimationFrame,
+    patchFunction: patchFunction
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/promise.js", ["../utils"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var utils = $__require('../utils');
+  var bindPromiseFn;
+  if (global.Promise) {
+    bindPromiseFn = function(delegate) {
+      return function() {
+        var delegatePromise = delegate.apply(this, arguments);
+        if (delegatePromise instanceof Promise) {
+          return delegatePromise;
+        }
+        return new Promise(function(resolve, reject) {
+          delegatePromise.then(resolve, reject);
+        });
+      };
+    };
+  } else {
+    bindPromiseFn = function(delegate) {
+      return function() {
+        return _patchThenable(delegate.apply(this, arguments));
+      };
+    };
+  }
+  function _patchPromiseFnsOnObject(objectPath, fnNames) {
+    var obj = global;
+    var exists = objectPath.every(function(segment) {
+      obj = obj[segment];
+      return obj;
+    });
+    if (!exists) {
+      return;
+    }
+    fnNames.forEach(function(name) {
+      var fn = obj[name];
+      if (fn) {
+        obj[name] = bindPromiseFn(fn);
+      }
+    });
+  }
+  function _patchThenable(thenable) {
+    var then = thenable.then;
+    thenable.then = function() {
+      var args = utils.bindArguments(arguments);
+      var nextThenable = then.apply(thenable, args);
+      return _patchThenable(nextThenable);
+    };
+    var ocatch = thenable.catch;
+    thenable.catch = function() {
+      var args = utils.bindArguments(arguments);
+      var nextThenable = ocatch.apply(thenable, args);
+      return _patchThenable(nextThenable);
+    };
+    return thenable;
+  }
+  function apply() {
+    if (global.Promise) {
+      utils.patchPrototype(Promise.prototype, ['then', 'catch']);
+      var patchFns = [[[], ['fetch']], [['Response', 'prototype'], ['arrayBuffer', 'blob', 'json', 'text']]];
+      patchFns.forEach(function(objPathAndFns) {
+        _patchPromiseFnsOnObject(objPathAndFns[0], objPathAndFns[1]);
+      });
+    }
+  }
+  module.exports = {
+    apply: apply,
+    bindPromiseFn: bindPromiseFn
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/mutation-observer.js", ["../keys"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var keys = $__require('../keys');
+  var originalInstanceKey = keys.create('originalInstance');
+  var creationZoneKey = keys.create('creationZone');
+  var isActiveKey = keys.create('isActive');
+  function patchClass(className) {
+    var OriginalClass = global[className];
+    if (!OriginalClass)
+      return;
+    global[className] = function(fn) {
+      this[originalInstanceKey] = new OriginalClass(global.zone.bind(fn, true));
+      this[creationZoneKey] = global.zone;
+    };
+    var instance = new OriginalClass(function() {});
+    global[className].prototype.disconnect = function() {
+      var result = this[originalInstanceKey].disconnect.apply(this[originalInstanceKey], arguments);
+      if (this[isActiveKey]) {
+        this[creationZoneKey].dequeueTask();
+        this[isActiveKey] = false;
+      }
+      return result;
+    };
+    global[className].prototype.observe = function() {
+      if (!this[isActiveKey]) {
+        this[creationZoneKey].enqueueTask();
+        this[isActiveKey] = true;
+      }
+      return this[originalInstanceKey].observe.apply(this[originalInstanceKey], arguments);
+    };
+    var prop;
+    for (prop in instance) {
+      (function(prop) {
+        if (typeof global[className].prototype !== 'undefined') {
+          return;
+        }
+        if (typeof instance[prop] === 'function') {
+          global[className].prototype[prop] = function() {
+            return this[originalInstanceKey][prop].apply(this[originalInstanceKey], arguments);
+          };
+        } else {
+          Object.defineProperty(global[className].prototype, prop, {
+            set: function(fn) {
+              if (typeof fn === 'function') {
+                this[originalInstanceKey][prop] = global.zone.bind(fn);
+              } else {
+                this[originalInstanceKey][prop] = fn;
+              }
+            },
+            get: function() {
+              return this[originalInstanceKey][prop];
+            }
+          });
+        }
+      }(prop));
+    }
+  }
+  ;
+  module.exports = {patchClass: patchClass};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/define-property.js", ["../keys"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var keys = $__require('../keys');
+  var _defineProperty = Object.defineProperty;
+  var _getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+  var _create = Object.create;
+  var unconfigurablesKey = keys.create('unconfigurables');
+  function apply() {
+    Object.defineProperty = function(obj, prop, desc) {
+      if (isUnconfigurable(obj, prop)) {
+        throw new TypeError('Cannot assign to read only property \'' + prop + '\' of ' + obj);
+      }
+      if (prop !== 'prototype') {
+        desc = rewriteDescriptor(obj, prop, desc);
+      }
+      return _defineProperty(obj, prop, desc);
+    };
+    Object.defineProperties = function(obj, props) {
+      Object.keys(props).forEach(function(prop) {
+        Object.defineProperty(obj, prop, props[prop]);
+      });
+      return obj;
+    };
+    Object.create = function(obj, proto) {
+      if (typeof proto === 'object') {
+        Object.keys(proto).forEach(function(prop) {
+          proto[prop] = rewriteDescriptor(obj, prop, proto[prop]);
+        });
+      }
+      return _create(obj, proto);
+    };
+    Object.getOwnPropertyDescriptor = function(obj, prop) {
+      var desc = _getOwnPropertyDescriptor(obj, prop);
+      if (isUnconfigurable(obj, prop)) {
+        desc.configurable = false;
+      }
+      return desc;
+    };
+  }
+  ;
+  function _redefineProperty(obj, prop, desc) {
+    desc = rewriteDescriptor(obj, prop, desc);
+    return _defineProperty(obj, prop, desc);
+  }
+  ;
+  function isUnconfigurable(obj, prop) {
+    return obj && obj[unconfigurablesKey] && obj[unconfigurablesKey][prop];
+  }
+  function rewriteDescriptor(obj, prop, desc) {
+    desc.configurable = true;
+    if (!desc.configurable) {
+      if (!obj[unconfigurablesKey]) {
+        _defineProperty(obj, unconfigurablesKey, {
+          writable: true,
+          value: {}
+        });
+      }
+      obj[unconfigurablesKey][prop] = true;
+    }
+    return desc;
+  }
+  module.exports = {
+    apply: apply,
+    _redefineProperty: _redefineProperty
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/register-element.js", ["./define-property", "../utils"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var _redefineProperty = $__require('./define-property')._redefineProperty;
+  var utils = $__require('../utils');
+  function apply() {
+    if (utils.isWebWorker() || !('registerElement' in global.document)) {
+      return;
+    }
+    var _registerElement = document.registerElement;
+    var callbacks = ['createdCallback', 'attachedCallback', 'detachedCallback', 'attributeChangedCallback'];
+    document.registerElement = function(name, opts) {
+      if (opts && opts.prototype) {
+        callbacks.forEach(function(callback) {
+          if (opts.prototype.hasOwnProperty(callback)) {
+            var descriptor = Object.getOwnPropertyDescriptor(opts.prototype, callback);
+            if (descriptor && descriptor.value) {
+              descriptor.value = global.zone.bind(descriptor.value);
+              _redefineProperty(opts.prototype, callback, descriptor);
+            } else {
+              opts.prototype[callback] = global.zone.bind(opts.prototype[callback]);
+            }
+          } else if (opts.prototype[callback]) {
+            opts.prototype[callback] = global.zone.bind(opts.prototype[callback]);
+          }
+        });
+      }
+      return _registerElement.apply(document, [name, opts]);
+    };
+  }
+  module.exports = {apply: apply};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/event-target.js", ["../utils"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var utils = $__require('../utils');
+  function apply() {
+    if (global.EventTarget) {
+      utils.patchEventTargetMethods(global.EventTarget.prototype);
+    } else {
+      var apis = ['ApplicationCache', 'EventSource', 'FileReader', 'InputMethodContext', 'MediaController', 'MessagePort', 'Node', 'Performance', 'SVGElementInstance', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebKitNamedFlow', 'Worker', 'WorkerGlobalScope', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'];
+      apis.forEach(function(api) {
+        var proto = global[api] && global[api].prototype;
+        if (proto && proto.addEventListener) {
+          utils.patchEventTargetMethods(proto);
+        }
+      });
+      if (typeof(window) !== 'undefined') {
+        utils.patchEventTargetMethods(window);
+      }
+    }
+  }
+  module.exports = {apply: apply};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/websocket.js", ["../utils"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var utils = $__require('../utils');
+  function apply() {
+    var WS = global.WebSocket;
+    utils.patchEventTargetMethods(WS.prototype);
+    global.WebSocket = function(a, b) {
+      var socket = arguments.length > 1 ? new WS(a, b) : new WS(a);
+      var proxySocket;
+      var onmessageDesc = Object.getOwnPropertyDescriptor(socket, 'onmessage');
+      if (onmessageDesc && onmessageDesc.configurable === false) {
+        proxySocket = Object.create(socket);
+        ['addEventListener', 'removeEventListener', 'send', 'close'].forEach(function(propName) {
+          proxySocket[propName] = function() {
+            return socket[propName].apply(socket, arguments);
+          };
+        });
+      } else {
+        proxySocket = socket;
+      }
+      utils.patchProperties(proxySocket, ['onclose', 'onerror', 'onmessage', 'onopen']);
+      return proxySocket;
+    };
+  }
+  module.exports = {apply: apply};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/property-descriptor.js", ["./websocket", "../utils", "../keys"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var webSocketPatch = $__require('./websocket');
+  var utils = $__require('../utils');
+  var keys = $__require('../keys');
+  var eventNames = 'copy cut paste abort blur focus canplay canplaythrough change click contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop durationchange emptied ended input invalid keydown keypress keyup load loadeddata loadedmetadata loadstart message mousedown mouseenter mouseleave mousemove mouseout mouseover mouseup pause play playing progress ratechange reset scroll seeked seeking select show stalled submit suspend timeupdate volumechange waiting mozfullscreenchange mozfullscreenerror mozpointerlockchange mozpointerlockerror error webglcontextrestored webglcontextlost webglcontextcreationerror'.split(' ');
+  function apply() {
+    if (utils.isWebWorker()) {
+      return;
+    }
+    var supportsWebSocket = typeof WebSocket !== 'undefined';
+    if (canPatchViaPropertyDescriptor()) {
+      var onEventNames = eventNames.map(function(property) {
+        return 'on' + property;
+      });
+      utils.patchProperties(HTMLElement.prototype, onEventNames);
+      utils.patchProperties(XMLHttpRequest.prototype);
+      if (supportsWebSocket) {
+        utils.patchProperties(WebSocket.prototype);
+      }
+    } else {
+      patchViaCapturingAllTheEvents();
+      utils.patchClass('XMLHttpRequest');
+      if (supportsWebSocket) {
+        webSocketPatch.apply();
+      }
+    }
+  }
+  function canPatchViaPropertyDescriptor() {
+    if (!Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'onclick') && typeof Element !== 'undefined') {
+      var desc = Object.getOwnPropertyDescriptor(Element.prototype, 'onclick');
+      if (desc && !desc.configurable)
+        return false;
+    }
+    Object.defineProperty(HTMLElement.prototype, 'onclick', {get: function() {
+        return true;
+      }});
+    var elt = document.createElement('div');
+    var result = !!elt.onclick;
+    Object.defineProperty(HTMLElement.prototype, 'onclick', {});
+    return result;
+  }
+  ;
+  var unboundKey = keys.create('unbound');
+  function patchViaCapturingAllTheEvents() {
+    eventNames.forEach(function(property) {
+      var onproperty = 'on' + property;
+      document.addEventListener(property, function(event) {
+        var elt = event.target,
+            bound;
+        while (elt) {
+          if (elt[onproperty] && !elt[onproperty][unboundKey]) {
+            bound = global.zone.bind(elt[onproperty]);
+            bound[unboundKey] = elt[onproperty];
+            elt[onproperty] = bound;
+          }
+          elt = elt.parentElement;
+        }
+      }, true);
+    });
+  }
+  ;
+  module.exports = {apply: apply};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/geolocation.js", ["../utils"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var utils = $__require('../utils');
+  function apply() {
+    if (global.navigator && global.navigator.geolocation) {
+      utils.patchPrototype(global.navigator.geolocation, ['getCurrentPosition', 'watchPosition']);
+    }
+  }
+  module.exports = {apply: apply};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/keys.js", [], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  function create(name) {
+    return '_zone$' + name;
+  }
+  var commonKeys = {
+    addEventListener: create('addEventListener'),
+    removeEventListener: create('removeEventListener')
+  };
+  module.exports = {
+    create: create,
+    common: commonKeys
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/utils.js", ["./keys"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var keys = $__require('./keys');
+  function bindArguments(args) {
+    for (var i = args.length - 1; i >= 0; i--) {
+      if (typeof args[i] === 'function') {
+        args[i] = global.zone.bind(args[i]);
+      }
+    }
+    return args;
+  }
+  ;
+  function bindArgumentsOnce(args) {
+    for (var i = args.length - 1; i >= 0; i--) {
+      if (typeof args[i] === 'function') {
+        args[i] = global.zone.bindOnce(args[i]);
+      }
+    }
+    return args;
+  }
+  ;
+  function patchPrototype(obj, fnNames) {
+    fnNames.forEach(function(name) {
+      var delegate = obj[name];
+      if (delegate) {
+        obj[name] = function() {
+          return delegate.apply(this, bindArguments(arguments));
+        };
+      }
+    });
+  }
+  ;
+  function isWebWorker() {
+    return (typeof document === "undefined");
+  }
+  function patchProperty(obj, prop) {
+    var desc = Object.getOwnPropertyDescriptor(obj, prop) || {
+      enumerable: true,
+      configurable: true
+    };
+    delete desc.writable;
+    delete desc.value;
+    var eventName = prop.substr(2);
+    var _prop = '_' + prop;
+    desc.set = function(fn) {
+      if (this[_prop]) {
+        this.removeEventListener(eventName, this[_prop]);
+      }
+      if (typeof fn === 'function') {
+        this[_prop] = fn;
+        this.addEventListener(eventName, fn, false);
+      } else {
+        this[_prop] = null;
+      }
+    };
+    desc.get = function() {
+      return this[_prop];
+    };
+    Object.defineProperty(obj, prop, desc);
+  }
+  ;
+  function patchProperties(obj, properties) {
+    (properties || (function() {
+      var props = [];
+      for (var prop in obj) {
+        props.push(prop);
+      }
+      return props;
+    }()).filter(function(propertyName) {
+      return propertyName.substr(0, 2) === 'on';
+    })).forEach(function(eventName) {
+      patchProperty(obj, eventName);
+    });
+  }
+  ;
+  var originalFnKey = keys.create('originalFn');
+  var boundFnsKey = keys.create('boundFns');
+  function patchEventTargetMethods(obj) {
+    obj[keys.common.addEventListener] = obj.addEventListener;
+    obj.addEventListener = function(eventName, handler, useCapturing) {
+      if (handler && handler.toString() !== "[object FunctionWrapper]") {
+        var eventType = eventName + (useCapturing ? '$capturing' : '$bubbling');
+        var fn;
+        if (handler.handleEvent) {
+          fn = (function(handler) {
+            return function() {
+              handler.handleEvent.apply(handler, arguments);
+            };
+          })(handler);
+        } else {
+          fn = handler;
+        }
+        handler[originalFnKey] = fn;
+        handler[boundFnsKey] = handler[boundFnsKey] || {};
+        handler[boundFnsKey][eventType] = handler[boundFnsKey][eventType] || zone.bind(fn);
+        arguments[1] = handler[boundFnsKey][eventType];
+      }
+      var target = this || global;
+      return global.zone.addEventListener.apply(target, arguments);
+    };
+    obj[keys.common.removeEventListener] = obj.removeEventListener;
+    obj.removeEventListener = function(eventName, handler, useCapturing) {
+      var eventType = eventName + (useCapturing ? '$capturing' : '$bubbling');
+      if (handler && handler[boundFnsKey] && handler[boundFnsKey][eventType]) {
+        var _bound = handler[boundFnsKey];
+        arguments[1] = _bound[eventType];
+        delete _bound[eventType];
+        global.zone.dequeueTask(handler[originalFnKey]);
+      }
+      var target = this || global;
+      var result = global.zone.removeEventListener.apply(target, arguments);
+      return result;
+    };
+  }
+  ;
+  var originalInstanceKey = keys.create('originalInstance');
+  function patchClass(className) {
+    var OriginalClass = global[className];
+    if (!OriginalClass)
+      return;
+    global[className] = function() {
+      var a = bindArguments(arguments);
+      switch (a.length) {
+        case 0:
+          this[originalInstanceKey] = new OriginalClass();
+          break;
+        case 1:
+          this[originalInstanceKey] = new OriginalClass(a[0]);
+          break;
+        case 2:
+          this[originalInstanceKey] = new OriginalClass(a[0], a[1]);
+          break;
+        case 3:
+          this[originalInstanceKey] = new OriginalClass(a[0], a[1], a[2]);
+          break;
+        case 4:
+          this[originalInstanceKey] = new OriginalClass(a[0], a[1], a[2], a[3]);
+          break;
+        default:
+          throw new Error('what are you even doing?');
+      }
+    };
+    var instance = new OriginalClass();
+    var prop;
+    for (prop in instance) {
+      (function(prop) {
+        if (typeof instance[prop] === 'function') {
+          global[className].prototype[prop] = function() {
+            return this[originalInstanceKey][prop].apply(this[originalInstanceKey], arguments);
+          };
+        } else {
+          Object.defineProperty(global[className].prototype, prop, {
+            set: function(fn) {
+              if (typeof fn === 'function') {
+                this[originalInstanceKey][prop] = global.zone.bind(fn);
+              } else {
+                this[originalInstanceKey][prop] = fn;
+              }
+            },
+            get: function() {
+              return this[originalInstanceKey][prop];
+            }
+          });
+        }
+      }(prop));
+    }
+    for (prop in OriginalClass) {
+      if (prop !== 'prototype' && OriginalClass.hasOwnProperty(prop)) {
+        global[className][prop] = OriginalClass[prop];
+      }
+    }
+  }
+  ;
+  module.exports = {
+    bindArguments: bindArguments,
+    bindArgumentsOnce: bindArgumentsOnce,
+    patchPrototype: patchPrototype,
+    patchProperty: patchProperty,
+    patchProperties: patchProperties,
+    patchEventTargetMethods: patchEventTargetMethods,
+    patchClass: patchClass,
+    isWebWorker: isWebWorker
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/file-reader.js", ["../utils"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var utils = $__require('../utils');
+  function apply() {
+    utils.patchClass('FileReader');
+  }
+  module.exports = {apply: apply};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/patch/browser.js", ["./functions", "./promise", "./mutation-observer", "./define-property", "./register-element", "./websocket", "./event-target", "./property-descriptor", "./geolocation", "./file-reader"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var fnPatch = $__require('./functions');
+  var promisePatch = $__require('./promise');
+  var mutationObserverPatch = $__require('./mutation-observer');
+  var definePropertyPatch = $__require('./define-property');
+  var registerElementPatch = $__require('./register-element');
+  var webSocketPatch = $__require('./websocket');
+  var eventTargetPatch = $__require('./event-target');
+  var propertyDescriptorPatch = $__require('./property-descriptor');
+  var geolocationPatch = $__require('./geolocation');
+  var fileReaderPatch = $__require('./file-reader');
+  function apply() {
+    fnPatch.patchSetClearFunction(global, ['timeout', 'interval', 'immediate']);
+    fnPatch.patchRequestAnimationFrame(global, ['requestAnimationFrame', 'mozRequestAnimationFrame', 'webkitRequestAnimationFrame']);
+    fnPatch.patchFunction(global, ['alert', 'prompt']);
+    eventTargetPatch.apply();
+    propertyDescriptorPatch.apply();
+    promisePatch.apply();
+    mutationObserverPatch.patchClass('MutationObserver');
+    mutationObserverPatch.patchClass('WebKitMutationObserver');
+    definePropertyPatch.apply();
+    registerElementPatch.apply();
+    geolocationPatch.apply();
+    fileReaderPatch.apply();
+  }
+  module.exports = {apply: apply};
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:process@0.11.2/browser.js", [], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var process = module.exports = {};
+  var queue = [];
+  var draining = false;
+  var currentQueue;
+  var queueIndex = -1;
+  function cleanUpNextTick() {
+    draining = false;
+    if (currentQueue.length) {
+      queue = currentQueue.concat(queue);
+    } else {
+      queueIndex = -1;
+    }
+    if (queue.length) {
+      drainQueue();
+    }
+  }
+  function drainQueue() {
+    if (draining) {
+      return;
+    }
+    var timeout = setTimeout(cleanUpNextTick);
+    draining = true;
+    var len = queue.length;
+    while (len) {
+      currentQueue = queue;
+      queue = [];
+      while (++queueIndex < len) {
+        if (currentQueue) {
+          currentQueue[queueIndex].run();
+        }
+      }
+      queueIndex = -1;
+      len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    clearTimeout(timeout);
+  }
+  process.nextTick = function(fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+      for (var i = 1; i < arguments.length; i++) {
+        args[i - 1] = arguments[i];
+      }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+      setTimeout(drainQueue, 0);
+    }
+  };
+  function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+  }
+  Item.prototype.run = function() {
+    this.fun.apply(null, this.array);
+  };
+  process.title = 'browser';
+  process.browser = true;
+  process.env = {};
+  process.argv = [];
+  process.version = '';
+  process.versions = {};
+  function noop() {}
+  process.on = noop;
+  process.addListener = noop;
+  process.once = noop;
+  process.off = noop;
+  process.removeListener = noop;
+  process.removeAllListeners = noop;
+  process.emit = noop;
+  process.binding = function(name) {
+    throw new Error('process.binding is not supported');
+  };
+  process.cwd = function() {
+    return '/';
+  };
+  process.chdir = function(dir) {
+    throw new Error('process.chdir is not supported');
+  };
+  process.umask = function() {
+    return 0;
+  };
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:process@0.11.2.js", ["npm:process@0.11.2/browser.js"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = $__require('npm:process@0.11.2/browser.js');
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("github:jspm/nodelibs-process@0.1.2/index.js", ["process"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = System._nodeRequire ? process : $__require('process');
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("github:jspm/nodelibs-process@0.1.2.js", ["github:jspm/nodelibs-process@0.1.2/index"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = $__require('github:jspm/nodelibs-process@0.1.2/index');
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:es6-promise@3.0.2/dist/es6-promise.js", ["process"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  "format cjs";
+  (function(process) {
+    (function() {
+      "use strict";
+      function lib$es6$promise$utils$$objectOrFunction(x) {
+        return typeof x === 'function' || (typeof x === 'object' && x !== null);
+      }
+      function lib$es6$promise$utils$$isFunction(x) {
+        return typeof x === 'function';
+      }
+      function lib$es6$promise$utils$$isMaybeThenable(x) {
+        return typeof x === 'object' && x !== null;
+      }
+      var lib$es6$promise$utils$$_isArray;
+      if (!Array.isArray) {
+        lib$es6$promise$utils$$_isArray = function(x) {
+          return Object.prototype.toString.call(x) === '[object Array]';
+        };
+      } else {
+        lib$es6$promise$utils$$_isArray = Array.isArray;
+      }
+      var lib$es6$promise$utils$$isArray = lib$es6$promise$utils$$_isArray;
+      var lib$es6$promise$asap$$len = 0;
+      var lib$es6$promise$asap$$toString = {}.toString;
+      var lib$es6$promise$asap$$vertxNext;
+      var lib$es6$promise$asap$$customSchedulerFn;
+      var lib$es6$promise$asap$$asap = function asap(callback, arg) {
+        lib$es6$promise$asap$$queue[lib$es6$promise$asap$$len] = callback;
+        lib$es6$promise$asap$$queue[lib$es6$promise$asap$$len + 1] = arg;
+        lib$es6$promise$asap$$len += 2;
+        if (lib$es6$promise$asap$$len === 2) {
+          if (lib$es6$promise$asap$$customSchedulerFn) {
+            lib$es6$promise$asap$$customSchedulerFn(lib$es6$promise$asap$$flush);
+          } else {
+            lib$es6$promise$asap$$scheduleFlush();
+          }
+        }
+      };
+      function lib$es6$promise$asap$$setScheduler(scheduleFn) {
+        lib$es6$promise$asap$$customSchedulerFn = scheduleFn;
+      }
+      function lib$es6$promise$asap$$setAsap(asapFn) {
+        lib$es6$promise$asap$$asap = asapFn;
+      }
+      var lib$es6$promise$asap$$browserWindow = (typeof window !== 'undefined') ? window : undefined;
+      var lib$es6$promise$asap$$browserGlobal = lib$es6$promise$asap$$browserWindow || {};
+      var lib$es6$promise$asap$$BrowserMutationObserver = lib$es6$promise$asap$$browserGlobal.MutationObserver || lib$es6$promise$asap$$browserGlobal.WebKitMutationObserver;
+      var lib$es6$promise$asap$$isNode = typeof process !== 'undefined' && {}.toString.call(process) === '[object process]';
+      var lib$es6$promise$asap$$isWorker = typeof Uint8ClampedArray !== 'undefined' && typeof importScripts !== 'undefined' && typeof MessageChannel !== 'undefined';
+      function lib$es6$promise$asap$$useNextTick() {
+        return function() {
+          process.nextTick(lib$es6$promise$asap$$flush);
+        };
+      }
+      function lib$es6$promise$asap$$useVertxTimer() {
+        return function() {
+          lib$es6$promise$asap$$vertxNext(lib$es6$promise$asap$$flush);
+        };
+      }
+      function lib$es6$promise$asap$$useMutationObserver() {
+        var iterations = 0;
+        var observer = new lib$es6$promise$asap$$BrowserMutationObserver(lib$es6$promise$asap$$flush);
+        var node = document.createTextNode('');
+        observer.observe(node, {characterData: true});
+        return function() {
+          node.data = (iterations = ++iterations % 2);
+        };
+      }
+      function lib$es6$promise$asap$$useMessageChannel() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = lib$es6$promise$asap$$flush;
+        return function() {
+          channel.port2.postMessage(0);
+        };
+      }
+      function lib$es6$promise$asap$$useSetTimeout() {
+        return function() {
+          setTimeout(lib$es6$promise$asap$$flush, 1);
+        };
+      }
+      var lib$es6$promise$asap$$queue = new Array(1000);
+      function lib$es6$promise$asap$$flush() {
+        for (var i = 0; i < lib$es6$promise$asap$$len; i += 2) {
+          var callback = lib$es6$promise$asap$$queue[i];
+          var arg = lib$es6$promise$asap$$queue[i + 1];
+          callback(arg);
+          lib$es6$promise$asap$$queue[i] = undefined;
+          lib$es6$promise$asap$$queue[i + 1] = undefined;
+        }
+        lib$es6$promise$asap$$len = 0;
+      }
+      function lib$es6$promise$asap$$attemptVertx() {
+        try {
+          var r = $__require;
+          var vertx = r('vertx');
+          lib$es6$promise$asap$$vertxNext = vertx.runOnLoop || vertx.runOnContext;
+          return lib$es6$promise$asap$$useVertxTimer();
+        } catch (e) {
+          return lib$es6$promise$asap$$useSetTimeout();
+        }
+      }
+      var lib$es6$promise$asap$$scheduleFlush;
+      if (lib$es6$promise$asap$$isNode) {
+        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useNextTick();
+      } else if (lib$es6$promise$asap$$BrowserMutationObserver) {
+        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useMutationObserver();
+      } else if (lib$es6$promise$asap$$isWorker) {
+        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useMessageChannel();
+      } else if (lib$es6$promise$asap$$browserWindow === undefined && typeof $__require === 'function') {
+        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$attemptVertx();
+      } else {
+        lib$es6$promise$asap$$scheduleFlush = lib$es6$promise$asap$$useSetTimeout();
+      }
+      function lib$es6$promise$$internal$$noop() {}
+      var lib$es6$promise$$internal$$PENDING = void 0;
+      var lib$es6$promise$$internal$$FULFILLED = 1;
+      var lib$es6$promise$$internal$$REJECTED = 2;
+      var lib$es6$promise$$internal$$GET_THEN_ERROR = new lib$es6$promise$$internal$$ErrorObject();
+      function lib$es6$promise$$internal$$selfFulfillment() {
+        return new TypeError("You cannot resolve a promise with itself");
+      }
+      function lib$es6$promise$$internal$$cannotReturnOwn() {
+        return new TypeError('A promises callback cannot return that same promise.');
+      }
+      function lib$es6$promise$$internal$$getThen(promise) {
+        try {
+          return promise.then;
+        } catch (error) {
+          lib$es6$promise$$internal$$GET_THEN_ERROR.error = error;
+          return lib$es6$promise$$internal$$GET_THEN_ERROR;
+        }
+      }
+      function lib$es6$promise$$internal$$tryThen(then, value, fulfillmentHandler, rejectionHandler) {
+        try {
+          then.call(value, fulfillmentHandler, rejectionHandler);
+        } catch (e) {
+          return e;
+        }
+      }
+      function lib$es6$promise$$internal$$handleForeignThenable(promise, thenable, then) {
+        lib$es6$promise$asap$$asap(function(promise) {
+          var sealed = false;
+          var error = lib$es6$promise$$internal$$tryThen(then, thenable, function(value) {
+            if (sealed) {
+              return;
+            }
+            sealed = true;
+            if (thenable !== value) {
+              lib$es6$promise$$internal$$resolve(promise, value);
+            } else {
+              lib$es6$promise$$internal$$fulfill(promise, value);
+            }
+          }, function(reason) {
+            if (sealed) {
+              return;
+            }
+            sealed = true;
+            lib$es6$promise$$internal$$reject(promise, reason);
+          }, 'Settle: ' + (promise._label || ' unknown promise'));
+          if (!sealed && error) {
+            sealed = true;
+            lib$es6$promise$$internal$$reject(promise, error);
+          }
+        }, promise);
+      }
+      function lib$es6$promise$$internal$$handleOwnThenable(promise, thenable) {
+        if (thenable._state === lib$es6$promise$$internal$$FULFILLED) {
+          lib$es6$promise$$internal$$fulfill(promise, thenable._result);
+        } else if (thenable._state === lib$es6$promise$$internal$$REJECTED) {
+          lib$es6$promise$$internal$$reject(promise, thenable._result);
+        } else {
+          lib$es6$promise$$internal$$subscribe(thenable, undefined, function(value) {
+            lib$es6$promise$$internal$$resolve(promise, value);
+          }, function(reason) {
+            lib$es6$promise$$internal$$reject(promise, reason);
+          });
+        }
+      }
+      function lib$es6$promise$$internal$$handleMaybeThenable(promise, maybeThenable) {
+        if (maybeThenable.constructor === promise.constructor) {
+          lib$es6$promise$$internal$$handleOwnThenable(promise, maybeThenable);
+        } else {
+          var then = lib$es6$promise$$internal$$getThen(maybeThenable);
+          if (then === lib$es6$promise$$internal$$GET_THEN_ERROR) {
+            lib$es6$promise$$internal$$reject(promise, lib$es6$promise$$internal$$GET_THEN_ERROR.error);
+          } else if (then === undefined) {
+            lib$es6$promise$$internal$$fulfill(promise, maybeThenable);
+          } else if (lib$es6$promise$utils$$isFunction(then)) {
+            lib$es6$promise$$internal$$handleForeignThenable(promise, maybeThenable, then);
+          } else {
+            lib$es6$promise$$internal$$fulfill(promise, maybeThenable);
+          }
+        }
+      }
+      function lib$es6$promise$$internal$$resolve(promise, value) {
+        if (promise === value) {
+          lib$es6$promise$$internal$$reject(promise, lib$es6$promise$$internal$$selfFulfillment());
+        } else if (lib$es6$promise$utils$$objectOrFunction(value)) {
+          lib$es6$promise$$internal$$handleMaybeThenable(promise, value);
+        } else {
+          lib$es6$promise$$internal$$fulfill(promise, value);
+        }
+      }
+      function lib$es6$promise$$internal$$publishRejection(promise) {
+        if (promise._onerror) {
+          promise._onerror(promise._result);
+        }
+        lib$es6$promise$$internal$$publish(promise);
+      }
+      function lib$es6$promise$$internal$$fulfill(promise, value) {
+        if (promise._state !== lib$es6$promise$$internal$$PENDING) {
+          return;
+        }
+        promise._result = value;
+        promise._state = lib$es6$promise$$internal$$FULFILLED;
+        if (promise._subscribers.length !== 0) {
+          lib$es6$promise$asap$$asap(lib$es6$promise$$internal$$publish, promise);
+        }
+      }
+      function lib$es6$promise$$internal$$reject(promise, reason) {
+        if (promise._state !== lib$es6$promise$$internal$$PENDING) {
+          return;
+        }
+        promise._state = lib$es6$promise$$internal$$REJECTED;
+        promise._result = reason;
+        lib$es6$promise$asap$$asap(lib$es6$promise$$internal$$publishRejection, promise);
+      }
+      function lib$es6$promise$$internal$$subscribe(parent, child, onFulfillment, onRejection) {
+        var subscribers = parent._subscribers;
+        var length = subscribers.length;
+        parent._onerror = null;
+        subscribers[length] = child;
+        subscribers[length + lib$es6$promise$$internal$$FULFILLED] = onFulfillment;
+        subscribers[length + lib$es6$promise$$internal$$REJECTED] = onRejection;
+        if (length === 0 && parent._state) {
+          lib$es6$promise$asap$$asap(lib$es6$promise$$internal$$publish, parent);
+        }
+      }
+      function lib$es6$promise$$internal$$publish(promise) {
+        var subscribers = promise._subscribers;
+        var settled = promise._state;
+        if (subscribers.length === 0) {
+          return;
+        }
+        var child,
+            callback,
+            detail = promise._result;
+        for (var i = 0; i < subscribers.length; i += 3) {
+          child = subscribers[i];
+          callback = subscribers[i + settled];
+          if (child) {
+            lib$es6$promise$$internal$$invokeCallback(settled, child, callback, detail);
+          } else {
+            callback(detail);
+          }
+        }
+        promise._subscribers.length = 0;
+      }
+      function lib$es6$promise$$internal$$ErrorObject() {
+        this.error = null;
+      }
+      var lib$es6$promise$$internal$$TRY_CATCH_ERROR = new lib$es6$promise$$internal$$ErrorObject();
+      function lib$es6$promise$$internal$$tryCatch(callback, detail) {
+        try {
+          return callback(detail);
+        } catch (e) {
+          lib$es6$promise$$internal$$TRY_CATCH_ERROR.error = e;
+          return lib$es6$promise$$internal$$TRY_CATCH_ERROR;
+        }
+      }
+      function lib$es6$promise$$internal$$invokeCallback(settled, promise, callback, detail) {
+        var hasCallback = lib$es6$promise$utils$$isFunction(callback),
+            value,
+            error,
+            succeeded,
+            failed;
+        if (hasCallback) {
+          value = lib$es6$promise$$internal$$tryCatch(callback, detail);
+          if (value === lib$es6$promise$$internal$$TRY_CATCH_ERROR) {
+            failed = true;
+            error = value.error;
+            value = null;
+          } else {
+            succeeded = true;
+          }
+          if (promise === value) {
+            lib$es6$promise$$internal$$reject(promise, lib$es6$promise$$internal$$cannotReturnOwn());
+            return;
+          }
+        } else {
+          value = detail;
+          succeeded = true;
+        }
+        if (promise._state !== lib$es6$promise$$internal$$PENDING) {} else if (hasCallback && succeeded) {
+          lib$es6$promise$$internal$$resolve(promise, value);
+        } else if (failed) {
+          lib$es6$promise$$internal$$reject(promise, error);
+        } else if (settled === lib$es6$promise$$internal$$FULFILLED) {
+          lib$es6$promise$$internal$$fulfill(promise, value);
+        } else if (settled === lib$es6$promise$$internal$$REJECTED) {
+          lib$es6$promise$$internal$$reject(promise, value);
+        }
+      }
+      function lib$es6$promise$$internal$$initializePromise(promise, resolver) {
+        try {
+          resolver(function resolvePromise(value) {
+            lib$es6$promise$$internal$$resolve(promise, value);
+          }, function rejectPromise(reason) {
+            lib$es6$promise$$internal$$reject(promise, reason);
+          });
+        } catch (e) {
+          lib$es6$promise$$internal$$reject(promise, e);
+        }
+      }
+      function lib$es6$promise$enumerator$$Enumerator(Constructor, input) {
+        var enumerator = this;
+        enumerator._instanceConstructor = Constructor;
+        enumerator.promise = new Constructor(lib$es6$promise$$internal$$noop);
+        if (enumerator._validateInput(input)) {
+          enumerator._input = input;
+          enumerator.length = input.length;
+          enumerator._remaining = input.length;
+          enumerator._init();
+          if (enumerator.length === 0) {
+            lib$es6$promise$$internal$$fulfill(enumerator.promise, enumerator._result);
+          } else {
+            enumerator.length = enumerator.length || 0;
+            enumerator._enumerate();
+            if (enumerator._remaining === 0) {
+              lib$es6$promise$$internal$$fulfill(enumerator.promise, enumerator._result);
+            }
+          }
+        } else {
+          lib$es6$promise$$internal$$reject(enumerator.promise, enumerator._validationError());
+        }
+      }
+      lib$es6$promise$enumerator$$Enumerator.prototype._validateInput = function(input) {
+        return lib$es6$promise$utils$$isArray(input);
+      };
+      lib$es6$promise$enumerator$$Enumerator.prototype._validationError = function() {
+        return new Error('Array Methods must be provided an Array');
+      };
+      lib$es6$promise$enumerator$$Enumerator.prototype._init = function() {
+        this._result = new Array(this.length);
+      };
+      var lib$es6$promise$enumerator$$default = lib$es6$promise$enumerator$$Enumerator;
+      lib$es6$promise$enumerator$$Enumerator.prototype._enumerate = function() {
+        var enumerator = this;
+        var length = enumerator.length;
+        var promise = enumerator.promise;
+        var input = enumerator._input;
+        for (var i = 0; promise._state === lib$es6$promise$$internal$$PENDING && i < length; i++) {
+          enumerator._eachEntry(input[i], i);
+        }
+      };
+      lib$es6$promise$enumerator$$Enumerator.prototype._eachEntry = function(entry, i) {
+        var enumerator = this;
+        var c = enumerator._instanceConstructor;
+        if (lib$es6$promise$utils$$isMaybeThenable(entry)) {
+          if (entry.constructor === c && entry._state !== lib$es6$promise$$internal$$PENDING) {
+            entry._onerror = null;
+            enumerator._settledAt(entry._state, i, entry._result);
+          } else {
+            enumerator._willSettleAt(c.resolve(entry), i);
+          }
+        } else {
+          enumerator._remaining--;
+          enumerator._result[i] = entry;
+        }
+      };
+      lib$es6$promise$enumerator$$Enumerator.prototype._settledAt = function(state, i, value) {
+        var enumerator = this;
+        var promise = enumerator.promise;
+        if (promise._state === lib$es6$promise$$internal$$PENDING) {
+          enumerator._remaining--;
+          if (state === lib$es6$promise$$internal$$REJECTED) {
+            lib$es6$promise$$internal$$reject(promise, value);
+          } else {
+            enumerator._result[i] = value;
+          }
+        }
+        if (enumerator._remaining === 0) {
+          lib$es6$promise$$internal$$fulfill(promise, enumerator._result);
+        }
+      };
+      lib$es6$promise$enumerator$$Enumerator.prototype._willSettleAt = function(promise, i) {
+        var enumerator = this;
+        lib$es6$promise$$internal$$subscribe(promise, undefined, function(value) {
+          enumerator._settledAt(lib$es6$promise$$internal$$FULFILLED, i, value);
+        }, function(reason) {
+          enumerator._settledAt(lib$es6$promise$$internal$$REJECTED, i, reason);
+        });
+      };
+      function lib$es6$promise$promise$all$$all(entries) {
+        return new lib$es6$promise$enumerator$$default(this, entries).promise;
+      }
+      var lib$es6$promise$promise$all$$default = lib$es6$promise$promise$all$$all;
+      function lib$es6$promise$promise$race$$race(entries) {
+        var Constructor = this;
+        var promise = new Constructor(lib$es6$promise$$internal$$noop);
+        if (!lib$es6$promise$utils$$isArray(entries)) {
+          lib$es6$promise$$internal$$reject(promise, new TypeError('You must pass an array to race.'));
+          return promise;
+        }
+        var length = entries.length;
+        function onFulfillment(value) {
+          lib$es6$promise$$internal$$resolve(promise, value);
+        }
+        function onRejection(reason) {
+          lib$es6$promise$$internal$$reject(promise, reason);
+        }
+        for (var i = 0; promise._state === lib$es6$promise$$internal$$PENDING && i < length; i++) {
+          lib$es6$promise$$internal$$subscribe(Constructor.resolve(entries[i]), undefined, onFulfillment, onRejection);
+        }
+        return promise;
+      }
+      var lib$es6$promise$promise$race$$default = lib$es6$promise$promise$race$$race;
+      function lib$es6$promise$promise$resolve$$resolve(object) {
+        var Constructor = this;
+        if (object && typeof object === 'object' && object.constructor === Constructor) {
+          return object;
+        }
+        var promise = new Constructor(lib$es6$promise$$internal$$noop);
+        lib$es6$promise$$internal$$resolve(promise, object);
+        return promise;
+      }
+      var lib$es6$promise$promise$resolve$$default = lib$es6$promise$promise$resolve$$resolve;
+      function lib$es6$promise$promise$reject$$reject(reason) {
+        var Constructor = this;
+        var promise = new Constructor(lib$es6$promise$$internal$$noop);
+        lib$es6$promise$$internal$$reject(promise, reason);
+        return promise;
+      }
+      var lib$es6$promise$promise$reject$$default = lib$es6$promise$promise$reject$$reject;
+      var lib$es6$promise$promise$$counter = 0;
+      function lib$es6$promise$promise$$needsResolver() {
+        throw new TypeError('You must pass a resolver function as the first argument to the promise constructor');
+      }
+      function lib$es6$promise$promise$$needsNew() {
+        throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.");
+      }
+      var lib$es6$promise$promise$$default = lib$es6$promise$promise$$Promise;
+      function lib$es6$promise$promise$$Promise(resolver) {
+        this._id = lib$es6$promise$promise$$counter++;
+        this._state = undefined;
+        this._result = undefined;
+        this._subscribers = [];
+        if (lib$es6$promise$$internal$$noop !== resolver) {
+          if (!lib$es6$promise$utils$$isFunction(resolver)) {
+            lib$es6$promise$promise$$needsResolver();
+          }
+          if (!(this instanceof lib$es6$promise$promise$$Promise)) {
+            lib$es6$promise$promise$$needsNew();
+          }
+          lib$es6$promise$$internal$$initializePromise(this, resolver);
+        }
+      }
+      lib$es6$promise$promise$$Promise.all = lib$es6$promise$promise$all$$default;
+      lib$es6$promise$promise$$Promise.race = lib$es6$promise$promise$race$$default;
+      lib$es6$promise$promise$$Promise.resolve = lib$es6$promise$promise$resolve$$default;
+      lib$es6$promise$promise$$Promise.reject = lib$es6$promise$promise$reject$$default;
+      lib$es6$promise$promise$$Promise._setScheduler = lib$es6$promise$asap$$setScheduler;
+      lib$es6$promise$promise$$Promise._setAsap = lib$es6$promise$asap$$setAsap;
+      lib$es6$promise$promise$$Promise._asap = lib$es6$promise$asap$$asap;
+      lib$es6$promise$promise$$Promise.prototype = {
+        constructor: lib$es6$promise$promise$$Promise,
+        then: function(onFulfillment, onRejection) {
+          var parent = this;
+          var state = parent._state;
+          if (state === lib$es6$promise$$internal$$FULFILLED && !onFulfillment || state === lib$es6$promise$$internal$$REJECTED && !onRejection) {
+            return this;
+          }
+          var child = new this.constructor(lib$es6$promise$$internal$$noop);
+          var result = parent._result;
+          if (state) {
+            var callback = arguments[state - 1];
+            lib$es6$promise$asap$$asap(function() {
+              lib$es6$promise$$internal$$invokeCallback(state, child, callback, result);
+            });
+          } else {
+            lib$es6$promise$$internal$$subscribe(parent, child, onFulfillment, onRejection);
+          }
+          return child;
+        },
+        'catch': function(onRejection) {
+          return this.then(null, onRejection);
+        }
+      };
+      function lib$es6$promise$polyfill$$polyfill() {
+        var local;
+        if (typeof global !== 'undefined') {
+          local = global;
+        } else if (typeof self !== 'undefined') {
+          local = self;
+        } else {
+          try {
+            local = Function('return this')();
+          } catch (e) {
+            throw new Error('polyfill failed because global object is unavailable in this environment');
+          }
+        }
+        var P = local.Promise;
+        if (P && Object.prototype.toString.call(P.resolve()) === '[object Promise]' && !P.cast) {
+          return;
+        }
+        local.Promise = lib$es6$promise$promise$$default;
+      }
+      var lib$es6$promise$polyfill$$default = lib$es6$promise$polyfill$$polyfill;
+      var lib$es6$promise$umd$$ES6Promise = {
+        'Promise': lib$es6$promise$promise$$default,
+        'polyfill': lib$es6$promise$polyfill$$default
+      };
+      if (typeof define === 'function' && define['amd']) {
+        define(function() {
+          return lib$es6$promise$umd$$ES6Promise;
+        });
+      } else if (typeof module !== 'undefined' && module['exports']) {
+        module['exports'] = lib$es6$promise$umd$$ES6Promise;
+      } else if (typeof this !== 'undefined') {
+        this['ES6Promise'] = lib$es6$promise$umd$$ES6Promise;
+      }
+      lib$es6$promise$polyfill$$default();
+    }).call(this);
+  })($__require('process'));
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:es6-promise@3.0.2.js", ["npm:es6-promise@3.0.2/dist/es6-promise.js"], true, function($__require, exports, module) {
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  module.exports = $__require('npm:es6-promise@3.0.2/dist/es6-promise.js');
+  global.define = __define;
+  return module.exports;
+});
+
+System.registerDynamic("npm:zone.js@0.5.10/lib/browser/zone-microtask.js", ["../core", "../microtask", "../patch/browser", "es6-promise"], true, function($__require, exports, module) {
+  "use strict";
+  ;
+  var global = this,
+      __define = global.define;
+  global.define = undefined;
+  var core = $__require('../core');
+  var microtask = $__require('../microtask');
+  var browserPatch = $__require('../patch/browser');
+  var es6Promise = $__require('es6-promise');
+  if (global.Zone) {
+    console.warn('Zone already exported on window the object!');
+  }
+  global.Zone = microtask.addMicrotaskSupport(core.Zone);
+  global.zone = new global.Zone();
+  global.Promise = es6Promise.Promise;
+  browserPatch.apply();
   global.define = __define;
   return module.exports;
 });
