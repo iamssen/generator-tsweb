@@ -135,10 +135,14 @@ module.exports = yo.Base.extend({
       if (module.tsd != undefined) tsd.push(module.tsd);
     });
 
-    this.spawnCommand('npm', ['install'].concat(npm, ['--save-dev', '--silent']));
-    //this.npmInstall(npm, {'saveDev': true});
-    this.spawnCommand('jspm', ['install'].concat(jspm)).on('close', () => {
+    console.log('-------- start install --------');
+    console.log('npm', ['install'].concat(npm, ['--save-dev', '--silent']).join(' '))
+    console.log('jspm', ['install'].concat(jspm).join(' '))
+    console.log('tsd', ['install'].concat(tsd, ['--resolve', '--save']).join(' '))
+    this.spawnCommand('npm', ['install'].concat(npm, ['--save-dev', '--silent'])).on('close', () => {
       this.spawnCommand('npm', ['run', 'bundle']);
+    });
+    this.spawnCommand('jspm', ['install'].concat(jspm)).on('close', () => {
     });
     this.spawnCommand('tsd', ['install'].concat(tsd, ['--resolve', '--save']));
   }

@@ -40,6 +40,16 @@
     "bundle": ["es6-promise"]
   },
   {
+    "name": "reflect-metadata",
+    "jspm": "reflect-metadata",
+    "bundle": ["reflect-metadata"]
+  },
+  {
+    "name": "zone.js",
+    "jspm": "zone.js@0.5.10",
+    "bundle": ["zone.js/lib/browser/zone-microtask"]
+  },
+  {
     "name": "angular2",
     "jspm": "angular2",
     "npm": "angular2",

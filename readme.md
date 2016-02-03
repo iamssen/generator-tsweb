@@ -13,6 +13,9 @@ yo tsweb
 
 # Update log
 
+## 2016.2.4
+- Angular2 polyfills move from `<script/>` to `boot.js`
+
 ## 2016.2.1
 - Redesign all
 
