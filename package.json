@@ -16,7 +16,7 @@
   "jspm": {
     "dependencies": {
       "angular2": "npm:angular2@^2.0.0-beta.2",
-      "angular2-reflow": "npm:angular2-reflow@^0.0.10",
+      "angular2-reflow": "npm:angular2-reflow@^0.0.12",
       "babel": "npm:babel-core@^6.4.5",
       "clean-css": "npm:clean-css@^3.4.9",
       "css": "github:systemjs/plugin-css@^0.1.20",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "angular2": "^2.0.0-beta.2",
-    "angular2-reflow": "0.0.10",
+    "angular2-reflow": "0.0.12",
     "gulp": "^3.9.0",
     "rxjs": "^5.0.0-beta.1",
     "systemjs-builder": "^0.15.6"

@@ -60,7 +60,7 @@ System.config({
 
   map: {
     "angular2": "npm:angular2@2.0.0-beta.2",
-    "angular2-reflow": "npm:angular2-reflow@0.0.10",
+    "angular2-reflow": "npm:angular2-reflow@0.0.12",
     "babel": "npm:babel-core@6.4.5",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "clean-css": "npm:clean-css@3.4.9",
@@ -160,10 +160,11 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:angular2-reflow@0.0.10": {
+    "npm:angular2-reflow@0.0.12": {
       "angular2": "npm:angular2@2.0.0-beta.2",
       "es6-promise": "npm:es6-promise@3.0.2",
-      "es6-shim": "npm:es6-shim@0.33.13"
+      "es6-shim": "npm:es6-shim@0.33.13",
+      "rxjs": "npm:rxjs@5.0.0-beta.0"
     },
     "npm:angular2@2.0.0-beta.2": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",

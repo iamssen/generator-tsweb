@@ -25,6 +25,7 @@ export class Activity implements ng.OnInit {
   private items:Item[];
 
   constructor(@ng.Inject(ACTIVITY_SERVICE) private activityService:ActivityService) {
+
   }
 
   ngOnInit() {

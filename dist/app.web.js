@@ -566,7 +566,8 @@ System.register("app/components/event-bus-listener.ts", ["angular2/core", "angul
         }
         EventBusListener.prototype.ngOnInit = function() {
           var _this = this;
-          this.listener = this.eventBus.addEventListener(events_1.ActionEvent.ACTION, function(event) {
+          this.observer = this.eventBus.observe(events_1.ActionEvent.ACTION);
+          this.observer.observe().subscribe(function(event) {
             if (_this.timeout > -1)
               clearTimeout(_this.timeout);
             _this.action = event.action;
@@ -578,8 +579,8 @@ System.register("app/components/event-bus-listener.ts", ["angular2/core", "angul
           });
         };
         EventBusListener.prototype.ngOnDestroy = function() {
-          this.listener.remove();
-          this.listener = null;
+          this.observer.destroy();
+          this.observer = null;
         };
         EventBusListener = __decorate([ng.Component({
           selector: 'event-bus-listener',
