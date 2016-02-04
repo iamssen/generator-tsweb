@@ -6,6 +6,7 @@ import {Github} from "./github";
 import {JsFiddle} from './jsfiddle';
 import {Activity} from './activity';
 import {EventBusListener} from './event-bus-listener';
+import {ANALYTICS_SERVICE, AnalyticsService} from '../services';
 import './main.css!';
 
 let context:rf.ContextFactory = new ContextFactory;
@@ -30,7 +31,8 @@ export class Main implements ng.OnInit, ng.OnDestroy {
   private routeConfig:router.RouteDefinition[];
 
   constructor(@ng.Inject(router.Location) private location:router.Location,
-              @ng.Inject(rf.CONTEXT) private context:rf.Context) {
+              @ng.Inject(rf.CONTEXT) private context:rf.Context,
+              @ng.Inject(ANALYTICS_SERVICE) private analyticsService:AnalyticsService) {
     this.routeConfig = routeConfig;
   }
 

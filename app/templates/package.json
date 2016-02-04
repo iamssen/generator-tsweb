@@ -17,7 +17,7 @@
   },
   "scripts" : {
     "build" : "gulp build.web && gulp build.electron",
-    "serve" : "live-server --open=. --port=3004",
+    "serve" : "live-server --open=. --port=3004 --browser=\"$BROWSER\"",
     "electron" : "electron .",
     "bundle" : "gulp build.vendor"
   }

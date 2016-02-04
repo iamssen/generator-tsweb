@@ -27,6 +27,7 @@ function githubHttp<T>(url):rx.Observable<T> {
   });
 }
 
+@ng.Injectable()
 export class GithubService implements service.GithubService {
   repositories():rx.Observable<github.Repository[]> {
     return githubHttp(`https://api.github.com/users/${GITHUB_USER_ID}/repos`);
@@ -37,10 +38,15 @@ export class GithubService implements service.GithubService {
   }
 }
 
+@ng.Injectable()
 export class JsFiddleService implements service.JsFiddleService {
   fiddles():rx.Observable<jsfiddle.Fiddle[]> {
     return http(`http://jsfiddle.net/api/user/${JSFIDDLE_USER_ID}/demo/list.json`);
   }
+}
+
+@ng.Injectable()
+export class AnalyticsService implements service.AnalyticsService {
 }
 
 export {ActivityService} from '../services';

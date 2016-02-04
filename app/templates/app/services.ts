@@ -6,6 +6,7 @@ import {ACTIVITY_STORE, ActivityStore} from './stores';
 export const GITHUB_SERVICE:string = 'githubService';
 export const JSFIDDLE_SERVICE:string = 'jsfiddleService';
 export const ACTIVITY_SERVICE:string = 'activityService';
+export const ANALYTICS_SERVICE:string = 'analyticsService';
 
 export interface GithubService {
   repositories():rx.Observable<github.Repository[]>;
@@ -16,6 +17,10 @@ export interface JsFiddleService {
   fiddles():rx.Observable<jsfiddle.Fiddle[]>;
 }
 
+export interface AnalyticsService {
+}
+
+@ng.Injectable()
 export class ActivityService {
   constructor(@ng.Inject(GITHUB_SERVICE) private githubService:GithubService,
               @ng.Inject(JSFIDDLE_SERVICE) private jsfiddleService:JsFiddleService,

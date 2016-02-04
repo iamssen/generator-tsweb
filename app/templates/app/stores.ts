@@ -1,9 +1,11 @@
+import * as ng from 'angular2/core';
 import {Activity} from './models';
 
 export const ACTIVITY_STORE:string = "activityStore";
 
 const CACHE_LIFE:number = 1000 * 60; // a minute
 
+@ng.Injectable()
 export class ActivityStore {
   private _activities:Activity[];
   private _activitiesCached:number;

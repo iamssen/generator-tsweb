@@ -1,6 +1,7 @@
 import * as ng from 'angular2/core';
 import * as rx from 'rxjs';
 import * as service from '../services';
+import {Router} from 'angular2/router';
 import {github, jsfiddle, Activity} from '../models';
 import {GITHUB_USER_ID, JSFIDDLE_USER_ID} from '../consts';
 
@@ -29,6 +30,7 @@ function githubHttp<T>(url):rx.Observable<T> {
   });
 }
 
+@ng.Injectable()
 export class GithubService implements service.GithubService {
   repositories():rx.Observable<github.Repository[]> {
     return githubHttp(`https://api.github.com/users/${GITHUB_USER_ID}/repos`);
@@ -39,9 +41,19 @@ export class GithubService implements service.GithubService {
   }
 }
 
+@ng.Injectable()
 export class JsFiddleService implements service.JsFiddleService {
   fiddles():rx.Observable<jsfiddle.Fiddle[]> {
     return jsonp(`http://jsfiddle.net/api/user/${JSFIDDLE_USER_ID}/demo/list.json`);
+  }
+}
+
+@ng.Injectable()
+export class AnalyticsService implements service.AnalyticsService {
+  constructor(@ng.Inject(Router) private router:Router) {
+    router.subscribe(path => {
+      ga('send', 'preview', `/${path}`);
+    });
   }
 }
 
