@@ -1,23 +1,19 @@
 [
   {
-    "name": "gulp",
-    "npm": "gulp"
-  },
-  {
     "name": "systemjs-builder",
-    "npm": "systemjs-builder"
+    "npm": "systemjs-builder@0.14.15"
   },
   {
-    "name": "babel",
-    "jspm": "babel"
-  },
-  {
-    "name": "ts",
-    "jspm": "ts"
+    "name": "typescript",
+    "jspm": "typescript"
   },
   {
     "name": "css",
     "jspm": "css"
+  },
+  {
+    "name": "scss",
+    "jspm": "scss=sass"
   },
   {
     "name": "clean-css",

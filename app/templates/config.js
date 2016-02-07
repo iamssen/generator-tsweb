@@ -1,6 +1,6 @@
 System.config({
   defaultJSExtensions: true,
-  transpiler: "babel",
+  transpiler: "typescript",
   babelOptions: {
     "optional": [
       "runtime",
@@ -24,37 +24,13 @@ System.config({
   packages: {
     "app": {
       "defaultExtension": "ts",
-      "main": "boot",
-      "meta": {
-        "*.ts": {
-          "loader": "ts"
-        },
-        "*.js": {
-          "loader": "ts"
-        }
-      }
+      "main": "boot"
     },
     "contexts.web": {
-      "defaultExtension": "ts",
-      "meta": {
-        "*.ts": {
-          "loader": "ts"
-        },
-        "*.js": {
-          "loader": "ts"
-        }
-      }
+      "defaultExtension": "ts"
     },
     "contexts.electron": {
-      "defaultExtension": "ts",
-      "meta": {
-        "*.ts": {
-          "loader": "ts"
-        },
-        "*.js": {
-          "loader": "ts"
-        }
-      }
+      "defaultExtension": "ts"
     }
   }
 });

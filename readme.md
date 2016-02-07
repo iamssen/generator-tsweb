@@ -13,6 +13,10 @@ yo tsweb
 
 # Update log
 
+## 2016.2.8
+- Remove `gulp.js` (`npm run bundle` → `gulp build.vendor` to `node build/bundle.js`)
+- `systemjs-builder` down-grade to 0.14.15 
+
 ## 2016.2.5
 - Add Google Analytics
 - Now `npm run serve` command using system environment variable `$BROWSER`

@@ -16,9 +16,9 @@
   "jspm" : {
   },
   "scripts" : {
-    "build" : "gulp build.web && gulp build.electron",
-    "serve" : "live-server --open=. --port=3004 --browser=\"$BROWSER\"",
-    "electron" : "electron .",
-    "bundle" : "gulp build.vendor"
+    "build": "node build/build.web.js && node build/build.electron.js",
+    "serve": "live-server --open=. --port=3004 --browser=\"$BROWSER\"",
+    "electron": "electron .",
+    "bundle": "node build/bundle.js"
   }
 }

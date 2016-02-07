@@ -84,7 +84,8 @@ module.exports = yo.Base.extend({
         'app',
         'assets',
         'contexts.electron',
-        'contexts.web'
+        'contexts.web',
+        'build'
       ].forEach(directory => {
         this.directory(directory, directory, null);
       });
@@ -95,7 +96,6 @@ module.exports = yo.Base.extend({
         'config.js',
         'config.web.js',
         'favicon.ico',
-        'gulpfile.js',
         'index.electron.html',
         'index.html',
         'index.js',
